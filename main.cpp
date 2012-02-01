@@ -6,9 +6,18 @@
 #include "Scene.h"
 #include "timer.h"
 
+
 #include <iostream>
+#include <stdarg.h>
 
 //#include "SDL/SDL_thread.h"
+
+
+int DEFAULT_FRAME_RATE;
+double DEFAULT_RATE;
+double RATE_RATE;
+int DEFAULT_LIMIT;
+int LIMIT_RATE;
 
 Scene* scene = NULL;
 Scene* scenes[SCENE_NUM];
@@ -25,15 +34,44 @@ bool quit = false;
 SDL_Surface *screen = NULL;
 SDL_Event  event;
 
-
+void lua_error(lua_State *L, const char *fmt, ...) {
+    va_list argp;
+    va_start(argp, fmt);
+    vfprintf(stderr, fmt, argp);
+    va_end(argp);
+    lua_close(L);
+    exit(EXIT_FAILURE);
+}
 
 void lua_init()
 {
-
     lua_State *L = luaL_newstate();
-    luaL_openlibs(L);
+    fprintf(stderr, "in lua_init function start");
 
-    luaopen_io(L); // provides io.*
+    if ( luaL_loadfile(L, "Configuration.lua") || lua_pcall(L,0,0,0))
+        lua_error(L, "cannot run config. file: %s", lua_tostring(L,-1));
+    fprintf(stderr, "in after lua_loadfile");
+
+    lua_getglobal(L, "default_frame_rate");
+    lua_getglobal(L, "default_rate");
+    lua_getglobal(L, "rate_rate");
+    lua_getglobal(L, "default_limit");
+    lua_getglobal(L, "limit_rate");
+
+    DEFAULT_FRAME_RATE = lua_tointeger(L,1);
+    DEFAULT_RATE = lua_tonumber(L,2);
+    RATE_RATE = lua_tonumber(L,3);
+    DEFAULT_LIMIT = lua_tointeger(L,5);
+    LIMIT_RATE = lua_tointeger(L,6);
+
+    fprintf(stderr, "default frame rate is %d\n", LIMIT_RATE);
+    fprintf(stderr, "LIMIT_RATE is %d\n", LIMIT_RATE);
+
+
+    //lua_State *L = luaL_newstate();
+    //luaL_openlibs(L);
+
+    //luaopen_io(L); // provides io.*
 
     std::cerr << "-- Loading file: " << "test" << std::endl;
 
@@ -122,6 +160,7 @@ int main(int argc, char* args[] )
 {
     //fprintf(stderr, "Error log ok? %s\n", SDL_GetError());
     lua_init();
+
 	int frame = 0;
 
 	if( init() == false )
@@ -159,9 +198,9 @@ int main(int argc, char* args[] )
 
 		frame++;
 
-		if( fps.get_ticks() < 1000 / FRAMES_PER_SECOND)
+		if( fps.get_ticks() < 1000 / DEFAULT_FRAME_RATE)
 		{
-			SDL_Delay( (1000/ FRAMES_PER_SECOND) - fps.get_ticks() );
+			SDL_Delay( (1000/ DEFAULT_FRAME_RATE) - fps.get_ticks() );
 		}
 		if( update.get_ticks() > 1000)
 		{

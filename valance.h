@@ -9,11 +9,17 @@ const int BAR_HEIGHT = SCREEN_HEIGHT;
 const int MAP_WIDTH = 490;
 const int MAP_HEIGHT = SCREEN_HEIGHT;
 const int CHAR_VELOCITY = 15;
-const int FRAMES_PER_SECOND = 60;
+//const int FRAMES_PER_SECOND = 60;
 const int START_GRADE =  9;
 
-const double DEFAULT_RATE = 0.06;
-const double RATE_RATE = 0.0006364;
-const int DEFAULT_LIMIT = 100000;
-const int LIMIT_RATE = 100000;
+extern int DEFAULT_FRAME_RATE;
+extern double DEFAULT_RATE;
+extern double RATE_RATE;
+extern int DEFAULT_LIMIT;
+extern int LIMIT_RATE;
+//
+//const double DEFAULT_RATE = 0.06;
+//const double RATE_RATE = 0.0006364;
+//const int DEFAULT_LIMIT = 100000;
+//const int LIMIT_RATE = 100000;
 #endif
