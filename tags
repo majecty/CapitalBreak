@@ -1,0 +1,1 @@
+ZeroMemory	common.h	/^#define ZeroMemory(Destination, length)  \\$/

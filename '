@@ -1,0 +1,39 @@
+#include "global.h"
+#include "Scene.h"
+
+void Scene::init() { ;}
+void Scene::clean_up(){;}
+void Scene::do_event(){;}
+void Scene::show(){;}
+
+StartScene::StartScene()
+{
+	;
+}
+void StartScene::init()
+{
+	background = load_image("start.png");
+
+
+	if(background == NULL || bar_map == NULL || font == NULL)
+	{
+		;
+	}
+}
+void StartScene::clean_up()
+{
+	SDL_FreeSurface(background);
+}
+void StartScene::do_event()
+{
+}
+void StartScene::show()
+{
+	apply_surface(0,0,background,screen);
+	if( SDL_Flip(screen) == -1)
+	{
+	//	return 1;
+	}
+}
+
+
