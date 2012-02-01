@@ -358,11 +358,12 @@ void WalletBar::show( )
 }
 void WalletBar::show_gage(ECard i, float ratio)
 {
+    int building_id = i - 1; // building id  is start from 1
 	SDL_Rect box;
-	box.x = cards_limits_box[i].x;
-	box.y = cards_limits_box[i].y;
-	box.w = (int)(cards_limits_box[i].w * ratio);
-	box.h = cards_limits_box[i].h;
+	box.x = cards_limits_box[building_id].x;
+	box.y = cards_limits_box[building_id].y;
+	box.w = (int)(cards_limits_box[building_id].w * ratio);
+	box.h = cards_limits_box[building_id].h;
 	SDL_FillRect(screen,&box, SDL_MapRGB(screen->format, 0,0,0));
 
 }

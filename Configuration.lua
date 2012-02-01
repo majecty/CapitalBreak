@@ -8,3 +8,5 @@ rate_rate = 0.0000634 --이자가 오르는 속도
 default_limit = 100000 -- 처음 한도
 
 limit_rate = 100000 -- 한도가 오르는 속도
+
+start_grade = 9 -- 9 is B+

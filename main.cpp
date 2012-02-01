@@ -61,8 +61,8 @@ void lua_init()
     DEFAULT_FRAME_RATE = lua_tointeger(L,1);
     DEFAULT_RATE = lua_tonumber(L,2);
     RATE_RATE = lua_tonumber(L,3);
-    DEFAULT_LIMIT = lua_tointeger(L,5);
-    LIMIT_RATE = lua_tointeger(L,6);
+    DEFAULT_LIMIT = lua_tointeger(L,4);
+    LIMIT_RATE = lua_tointeger(L,5);
 
     fprintf(stderr, "default frame rate is %d\n", LIMIT_RATE);
     fprintf(stderr, "LIMIT_RATE is %d\n", LIMIT_RATE);

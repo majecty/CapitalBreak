@@ -1,6 +1,4 @@
-in lua_init function startin after lua_loadfiledefault frame rate is 0
-LIMIT_RATE is 0
+in lua_init function startin after lua_loadfiledefault frame rate is 100000
+LIMIT_RATE is 100000
 -- Loading file: test
 
-before load credint.png ()
-before cannot load credint.png ()

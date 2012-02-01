@@ -24,6 +24,8 @@ void StartScene::init()
 	main_menu2= load_image("main_menu2.png");
 	main_menu2_over= load_image("main_menu2_un.png");
 
+        menu = 0;
+
 
 	if(background == NULL)
 	{
