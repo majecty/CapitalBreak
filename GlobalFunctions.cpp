@@ -3,6 +3,7 @@
 #include "common.h"
 #include "GlobalFunctions.h"
 #include "Scene.h"
+#include "valance.h"
 
 double GetNonInterestTime(unsigned short pGrade, ERank pRank)
 {
@@ -38,7 +39,8 @@ double GetRate(unsigned short pGrade, ERank pRank)
 	{
 	case eFirstRank:
 		{
-			return 0.06 + (13 - pGrade) * 0.000006364 * 1000000;
+                    return DEFAULT_RATE + (13-pGrade) * RATE_RATE;
+			//return 0.06 + (13 - pGrade) * 0.000006364 * 1000000;
 		}
 		break;
 	case eSecondRank:

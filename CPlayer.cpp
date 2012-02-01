@@ -1,5 +1,6 @@
 #include "common.h"
 #include "CPlayer.h"
+#include "valance.h"
 
 CPlayer::CPlayer()
 {
@@ -13,7 +14,7 @@ void CPlayer::Reset()
 	__mCreditorCount = 0;
 	__mCurrentCard = (ECard)0;
 	__mCurrentRank = eFirstRank;
-	__mGrade = 9;						// B0
+	__mGrade = START_GRADE;						// B0
 }
 
 void CPlayer::SetName(char* pName)

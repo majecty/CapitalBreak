@@ -48,7 +48,7 @@ void Hero::init()
 	set_clip();
 
 	aPlayer.SetRank(eFirstRank);
-	aPlayer.SetGrade(8);
+	//aPlayer.SetGrade(8);
 	//aPlayer.AddCard(eCardAmerican);
 	//aPlayer.SelectCard(eCardAmerican);
 	
