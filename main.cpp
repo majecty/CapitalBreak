@@ -5,6 +5,9 @@
 #include "valance.h"
 #include "Scene.h"
 #include "timer.h"
+
+#include <iostream>
+
 //#include "SDL/SDL_thread.h"
 
 Scene* scene = NULL;
@@ -24,6 +27,29 @@ SDL_Event  event;
 
 
 
+void lua_init()
+{
+
+    lua_State *L = luaL_newstate();
+    luaL_openlibs(L);
+
+    luaopen_io(L); // provides io.*
+
+    std::cerr << "-- Loading file: " << "test" << std::endl;
+
+    /*
+    //int s = luaL_loadfile(L, file);
+
+    if ( s==0 ) {
+      // execute Lua program
+      s = lua_pcall(L, 0, LUA_MULTRET, 0);
+    }
+    */
+
+    //report_errors(L, s);
+    lua_close(L);
+    std::cerr << std::endl;
+}
 
 
 bool init()
@@ -95,6 +121,7 @@ void clean_up()
 int main(int argc, char* args[] )
 {
     //fprintf(stderr, "Error log ok? %s\n", SDL_GetError());
+    lua_init();
 	int frame = 0;
 
 	if( init() == false )

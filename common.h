@@ -11,6 +11,14 @@
 #include <string>
 #include <sstream>
 
+extern "C" {
+#include "lua/lua.h"
+#include "lua/lauxlib.h"
+#include "lua/lua.hpp"
+#include "lua/luaconf.h"
+#include "lua/lualib.h"
+}
+
 #define ZeroMemory(Destination, length)  \
 { \
   memset((void*)Destination, 0, length);\

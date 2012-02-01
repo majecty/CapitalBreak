@@ -1,0 +1,6 @@
+-- Loading file: test
+
+before load credint.png ()
+before cannot load credint.png ()
+before load credint.png ()
+before cannot load credint.png ()
