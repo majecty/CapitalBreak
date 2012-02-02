@@ -1,4 +1,4 @@
-in lua_init function start main.cpp:58
+in lua_init function start main.cpp:40
 in after lua_loadfiledefault frame rate is 100000
 LIMIT_RATE is 100000
 -- Loading file: test

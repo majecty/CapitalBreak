@@ -1,8 +1,7 @@
 
+#include "GlobalFunctions.h"
 #include "common.h"
 #include "global.h"
-#include "GlobalFunctions.h"
-#include "valance.h"
 #include "Scene.h"
 #include "timer.h"
 
@@ -34,23 +33,6 @@ bool quit = false;
 SDL_Surface *screen = NULL;
 SDL_Event  event;
 
-void lua_error(lua_State *L, const char *fmt, const char *at ,...) {
-    va_list argp;
-    va_start(argp, fmt);
-    fprintf(stderr, "In %s \n", at);
-    vfprintf(stderr, fmt, argp);
-    va_end(argp);
-    lua_close(L);
-    exit(EXIT_FAILURE);
-}
-void error(const char *fmt, const char *at,  ...) {
-    va_list argp;
-    va_start(argp, fmt);
-    fprintf(stderr, "In %s \n", at);
-    vfprintf(stderr, fmt, argp);
-    va_end(argp);
-    exit(EXIT_FAILURE);
-}
 
 void lua_init()
 {
@@ -59,7 +41,7 @@ void lua_init()
 
     if ( luaL_loadfile(L, "Configuration.lua") || lua_pcall(L,0,0,0))
     //if ( luaL_loadfile(L, "luac.out") || lua_pcall(L,0,0,0))
-        lua_error(L, "cannot run config. file: %s\n", lua_tostring(L,-1));
+        maj_lua_error(L, "cannot run config. file: %s\n", lua_tostring(L,-1));
     fprintf(stderr, "in after lua_loadfile");
 
     lua_getglobal(L, "default_frame_rate");

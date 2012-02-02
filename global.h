@@ -3,7 +3,6 @@
 #ifndef _MAJECTY_GLOBAL_H__
 #define _MAJECTY_GLOBAL_H__
 #include "common.h"
-#include "valance.h"
 
 const bool DEBUG_ON = true;
 
@@ -17,7 +16,7 @@ const int UNIT_WIDTH = 30;
 const int UNIT_HEIGHT = 30;
 
 const int MESSAGE_BOX_X = 140+10;
-const int MESSAGE_BOX_Y = SCREEN_HEIGHT - 101 + 10;
+const int MESSAGE_BOX_Y = 389;
 const int MESSAGE_BOX_W = 500;
 const int MESSAGE_BOX_H = 100;
 

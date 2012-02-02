@@ -1,23 +1,26 @@
+#pragma once
 
-
-#ifndef _MAJECTY_COMMON_H__
-#define _MAJECTY_COMMON_H__
+//#ifndef _MAJECTY_COMMON_H__
+//#define _MAJECTY_COMMON_H__
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 #include "SDL/SDL_ttf.h"
 #include "Constants.h"
 #include "GlobalFunctions.h"
+#include "Configuration.h"
 #include "global.h"
 #include <string>
 #include <sstream>
 
+/*
 extern "C" {
 #include "lua/lua.h"
 #include "lua/lauxlib.h"
-#include "lua/lua.hpp"
 #include "lua/luaconf.h"
 #include "lua/lualib.h"
 }
+*/
+#include "lua/lua.hpp"
 #include <iostream>
 #include <stdarg.h>
 
@@ -30,4 +33,4 @@ extern "C" {
 #define AT __FILE__ ":" MACROTOSTRING(__LINE__)
 //#include "Card.h"
 //#include "Scene.h"
-#endif
+//#endif

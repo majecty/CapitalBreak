@@ -1,6 +1,6 @@
 #include "common.h"
 #include "CPlayer.h"
-#include "valance.h"
+#include "Configuration.h"
 
 CPlayer::CPlayer()
 {

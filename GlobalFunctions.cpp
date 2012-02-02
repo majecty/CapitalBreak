@@ -3,7 +3,6 @@
 #include "common.h"
 #include "GlobalFunctions.h"
 #include "Scene.h"
-#include "valance.h"
 
 double GetNonInterestTime(unsigned short pGrade, ERank pRank)
 {
@@ -116,7 +115,23 @@ void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination,
 	SDL_BlitSurface( source, clip, destination, &offset);
 }
 
-void lua_error(lua_State *L, const char *fmt, const char *at, ...);
-void error(const char *fmt, const char *at, ...) ;
 
 
+void maj_lua_error(lua_State *L, const char *fmt, const char *at ,...) {
+    va_list argp;
+    va_start(argp, fmt);
+    fprintf(stderr, "In %s \n", at);
+    vfprintf(stderr, fmt, argp);
+    va_end(argp);
+    lua_close(L);
+    exit(EXIT_FAILURE);
+}
+
+void error(const char *fmt, const char *at,  ...) {
+    va_list argp;
+    va_start(argp, fmt);
+    fprintf(stderr, "In %s \n", at);
+    vfprintf(stderr, fmt, argp);
+    va_end(argp);
+    exit(EXIT_FAILURE);
+}

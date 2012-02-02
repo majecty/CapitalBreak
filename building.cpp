@@ -2,7 +2,7 @@
 
 #include "building.h"
 #include "global.h"
-#include "valance.h"
+#include "Configuration.h"
 
 Building::Building(int _x, int _y, int _w, int _h)
 {

@@ -1,6 +1,5 @@
 #include "common.h"
 #include "global.h"
-#include "valance.h"
 #include "Scene.h"
 //#include "character.h"
 

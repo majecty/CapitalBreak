@@ -1,3 +1,10 @@
 
 
 * GameScreen 메시지 보드 만들기
+
+ 글로벌 파일들
+global.h
+common.h
+configuration.h
+globalfunction.h
+constants.h

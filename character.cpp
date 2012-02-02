@@ -1,5 +1,5 @@
 #include "global.h"
-#include "valance.h"
+#include "Configuration.h"
 #include "common.h"
 #include "character.h"
 #include <stdint.h>
