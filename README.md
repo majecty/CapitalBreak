@@ -7,6 +7,7 @@ this file is READFILE which be shown in main screen
 
 ## lua file
 * Configuration.lua
+
 컴파일 하지 않고도 이 파일만 바꾸면
 상수 값들이 바뀝니다.
 
@@ -16,27 +17,34 @@ this file is READFILE which be shown in main screen
 
 ## header file들
 * Constants.h   
+
 코드에서 사용되는 상수들(문자열, Enum들) 선언
 
 * common.h
+
 일반적으로 자주 쓰이는 헤더파일들 모음
 
 * GlobalFunctions.h
+
 코드 전반적으로 쓰이는 함수들 선언
 
 * Configuration.h
+
 내부적으로 Configuration.lua 와 연동되는 선언들
 과 이미지 위치들 등
 
 * global.h
+
 글로벌 변수들 선언
 
 ## cpp 파일들
 * main.cpp 
+
 맨 처음 시작되는 함수인 main이 들어있다.
 전체 프로그램의 초기화와 이벤트 처리 등 담당
 
 * Scene.cpp / GameScene.cpp
+
 각 장면들은 각각의 Scene을 가진다.
 
 맨 첫 화면은 StartScene
