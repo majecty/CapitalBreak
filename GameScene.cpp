@@ -1,6 +1,6 @@
 #include "common.h"
-#include "global.h"
 #include "Scene.h"
+#include "lua_glue.h"
 //#include "character.h"
 
 
@@ -64,6 +64,7 @@ void GameScene::do_event()
 {
     Building* building;
     std::ostringstream result;
+    std::string *msg = NULL;
 
     hero->handleInput();
 
@@ -79,9 +80,11 @@ void GameScene::do_event()
             case SDLK_SPACE:
                 if( hero->buy()) {
                     purchase_count++;
-                    message2 = "You Purchase Clock";
-                    show_message_box();
-                    message_timer2.start();
+                    
+                    print_message_2("You Purchased Clock");
+//                    message2 = "You Purchase Clock";
+//                    show_message_box();
+//                    message_timer2.start();
                 }
                 break;
             default: break;
@@ -97,15 +100,29 @@ void GameScene::do_event()
 
                 if( building->card_id == 0)
                 {
-                    message = "please press space bar to purchase";
-                    message_timer.start();
+                    print_message_1("please press space bar to purchae");
+//                    message = "please press space bar to purchase";
+//                    message_timer.start();
                     hero->can_buy();
                 } else {
+                    fire_lua_event(MESSAGE_BOX_1_EVENT);
+                    //print_message_1("You Get the Card");
                     hero->add_card((ECard)building->card_id);
                     hero->select_card((ECard)building->card_id);
                 }
 
-
+                break;
+            case MESSAGE_BOX_1_EVENT:
+                fprintf(stderr,"At %s : hereis messageevent",AT);
+                msg = (std::string*)event.user.data1;
+                print_message_1(*msg);
+                delete(msg);
+                break;
+            case MESSAGE_BOX_2_EVENT:
+                fprintf(stderr,"At %s : hereis messageevent",AT);
+                msg = (std::string*)event.user.data1;
+                print_message_2(*msg);
+                delete(msg);
                 break;
             default:
                 break;
@@ -165,23 +182,27 @@ void GameScene::show()
 	}
 	if( happy_ending_flag) {
 			
-		message = "Hurry up, Press End Key";
-		message2 = "Go to the Abroad!";
-		show_message_box();
+            print_message_1("Hurry up, Press End Key");
+            print_message_2("Go to the Abroad!");
+//		message = "Hurry up, Press End Key";
+//		message2 = "Go to the Abroad!";
+//		show_message_box();
 
 	} else {
 		if( message_timer.get_ticks()/100.0f > 1)
 		{
-			message = "";
-			show_message_box();
+//			message = "";
+//			show_message_box();
+                    print_message_1("");
 			message_timer.stop();
 			hero->cant_buy();
 
 		}
-		if( message_timer2.get_ticks()/100.0f > 1)
+		if( message_timer2.get_ticks()/1000.0f > 1)
 		{
-			message2 = "";
-			show_message_box();
+//			message2 = "";
+//			show_message_box();
+                    print_message_2("");
 			message_timer2.stop();
 		}
 	}
@@ -248,134 +269,20 @@ void GameScene::check_collide()
 
 }
 
-
-void GameScene::init_building()
+void GameScene::print_message_1(std::string msg)
 {
-	//first_building = new Building(180,70);
-	//first_building->init();
+    message = msg;//"please press space bar to purchase";
+    show_message_box();
+    message_timer.start();
 }
 
-Top::Top(int x, int y, int w, int h)
-{
-	offset.x = x;
-	offset.y = y;
-	offset.w = w;
-	offset.h = h;
-
-
-	credit_str = "";
-	total_str = "";
-}
-
-void Top::set_credit_score(int credit)
+void GameScene::print_message_2(std::string msg) 
 {
 
-	credit_str = gGradeName[credit];
-
+    message2 = msg;//"You Purchase Clock";
+    show_message_box();
+    message_timer2.start();
 }
 
-void Top::set_total_dept(int total)
-{
-	total_str = "";
-	std::ostringstream result;
-	result << total;
-	total_str += result.str();
-}
-void Top::show(SDL_Surface* background)
-{
-	SDL_Surface depth;
-	SDL_Surface grade;
-//	set_total_dept(hero->get_depth());
-	depth = *TTF_RenderText_Solid( font, total_str.c_str(), textColor);
-	grade = *TTF_RenderText_Solid(font, credit_str.c_str(), textColor);
-	
-	apply_surface(offset.x,offset.y,background,screen,&offset);
-	apply_surface(400,5,&depth,screen);
-	apply_surface(240,5,&grade,screen);
-}
-void WalletBar::init(int x, int y, int w, int h)
-{
-	cards_image = load_image("game_1s_card.png");
-	faces_image = load_image("game_face.png");
-	offset.x = x; offset.y = y; offset.w = w; offset.h = h;
-
-	for(int i=0;i<6;i++) {
-		cards[i].x = 10;
-		cards[i].y = 175 + i* 50;
-		cards[i].w = 120;
-		cards[i].h = 50;
-	}
-	for(int i=0;i<6;i++) {
-		cards_clip[i].x = 0;
-		cards_clip[i].y = 50*i;
-		cards_clip[i].w = 120;
-		cards_clip[i].h = 50;
-	}
-	for(int i=0;i<6;i++)
-	{
-		cards_limits_box[i].x = 13 + cards[i].x;
-		cards_limits_box[i].y = 13 + cards[i].y;
-		cards_limits_box[i].w = 60;
-		cards_limits_box[i].h = 10;
-	}
-	for(int i=0;i<6;i++)
-	{
-		cards_limits_clip[i].x = 20 + cards_clip[i].x;
-		cards_limits_clip[i].y = 13 + cards_clip[i].y;
-		cards_limits_clip[i].w = 60;
-		cards_limits_clip[i].h = 10;
-	}
-	for( int i=0;i<6;i++)
-	{
-		face_clip[i].x = (i%2) * 116;
-		face_clip[i].y = (i/2) * 116;
-		face_clip[i].w = 116;
-		face_clip[i].h = 116;
-	}
-
-	for(int i=0;i<6;i++) {
-		apply_surface(cards[i].x,cards[i].y, cards_image, screen, &cards_clip[i]);
-	}
-}
-
-void WalletBar::clean_up()
-{
-
-	SDL_FreeSurface(cards_image);
-	SDL_FreeSurface(faces_image);
-}
-
-void WalletBar::show( )
-{
-	apply_surface(12,42,faces_image, screen, &face_clip[frame%6]);
-	frame++;
-	;
-}
-void WalletBar::show_gage(ECard i, float ratio)
-{
-    int building_id = i - 1; // building id  is start from 1
-	SDL_Rect box;
-	box.x = cards_limits_box[building_id].x;
-	box.y = cards_limits_box[building_id].y;
-	box.w = (int)(cards_limits_box[building_id].w * ratio);
-	box.h = cards_limits_box[building_id].h;
-	SDL_FillRect(screen,&box, SDL_MapRGB(screen->format, 0,0,0));
-
-}
-
-void WalletBar::print_limit(ECard i, uint64_t money)
-{
-	std::ostringstream result;
-	result << money;
-	//total_str += result.str();
-	SDL_Surface* message_surface = NULL; 
-
-	apply_surface(cards_limits_box[i].x, cards_limits_box[i].y,cards_image,screen,&cards_limits_clip[i]);
-
-	message_surface = TTF_RenderText_Solid( font, result.str().c_str(), textColor);
-	apply_surface(cards_limits_box[i].x, cards_limits_box[i].y+1,message_surface,screen);
-
-	
-}
 
 

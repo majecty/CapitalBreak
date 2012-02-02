@@ -4,6 +4,7 @@
 #include "global.h"
 #include "Scene.h"
 #include "timer.h"
+#include "lua_glue.h"
 
 
 
@@ -28,15 +29,19 @@ SDL_Color blackColor= {0,0,0};
 
 SDL_Surface *buildings_image;
 
+
 bool quit = false;
 
 SDL_Surface *screen = NULL;
 SDL_Event  event;
 
+lua_State* L;
+
 
 void lua_init()
 {
-    lua_State *L = luaL_newstate();
+    L = luaL_newstate();
+    luaL_openlibs(L);
     fprintf(stderr, "in lua_init function start %s\n",AT );
 
     if ( luaL_loadfile(L, "Configuration.lua") || lua_pcall(L,0,0,0))
@@ -65,31 +70,12 @@ void lua_init()
     fprintf(stderr, "LIMIT_RATE is %d\n", LIMIT_RATE);
 
 
-    //lua_State *L = luaL_newstate();
-    //luaL_openlibs(L);
-
-    //luaopen_io(L); // provides io.*
-
-    std::cerr << "-- Loading file: " << "test" << std::endl;
-
-    /*
-    //int s = luaL_loadfile(L, file);
-
-    if ( s==0 ) {
-      // execute Lua program
-      s = lua_pcall(L, 0, LUA_MULTRET, 0);
-    }
-    */
-
-    //report_errors(L, s);
-    lua_close(L);
-    std::cerr << std::endl;
+    init_glue();
 }
 
 
 bool init()
 {
-    //IS_FULL_SCREEN = false;
 	quit = false;
 
 	scenes[SCENE_START] = new StartScene();
@@ -140,6 +126,7 @@ bool load_files()
 
 void clean_up()
 {
+    lua_close(L);
 
 	scene->clean_up();
 	SDL_FreeSurface(buildings_image);
@@ -159,82 +146,81 @@ void clean_up()
 
 int main(int argc, char* args[] )
 {
-    //fprintf(stderr, "Error log ok? %s\n", SDL_GetError());
     lua_init();
 
-	int frame = 0;
+    int frame = 0;
 
-	if( init() == false )
-	{
-            fprintf(stderr, "main initialize fail\n");
-		return 1;
-	}
+    if( init() == false )
+    {
+        fprintf(stderr, "main initialize fail\n");
+        return 1;
+    }
 
-	if( load_files() == false)
-	{
-            fprintf(stderr, "main loadfiles fail\n");
-		return 1;
-	}
+    if( load_files() == false)
+    {
+        fprintf(stderr, "main loadfiles fail\n");
+        return 1;
+    }
 
-	scene = scenes[SCENE_START];
+    scene = scenes[SCENE_START];
 
-	scene->init();
-
-
-	Timer fps;
-	Timer fpsMeter;
-	// Timer used to update the caption
-	Timer update;
-
-	update.start();
-	fpsMeter.start();
-
-	while (quit == false)
-	{
-		fps.start(); 
-
-		scene->show();
+    scene->init();
 
 
-                while(SDL_PollEvent ( &event))
+    Timer fps;
+    Timer fpsMeter;
+    // Timer used to update the caption
+    Timer update;
+
+    update.start();
+    fpsMeter.start();
+
+    while (quit == false)
+    {
+        fps.start(); 
+
+        scene->show();
+
+
+        while(SDL_PollEvent ( &event))
+        {
+            scene->do_event();
+
+            if ( event.type == SDL_QUIT)
+            {
+                quit = true;
+            }
+            else if (event.type == SDL_KEYDOWN)
+            {
+                switch(event.key.keysym.sym)
                 {
-                    scene->do_event();
-
-                    if ( event.type == SDL_QUIT)
-                    {
+                    case SDLK_q:
                         quit = true;
-                    }
-                    else if (event.type == SDL_KEYDOWN)
-                    {
-                        switch(event.key.keysym.sym)
-                        {
-                            case SDLK_q:
-                                quit = true;
-                                break;
-                            default: break;
-                        }
-
-                    }
+                        break;
+                    default: break;
                 }
 
-		frame++;
+            }
+        }
 
-		if( fps.get_ticks() < 1000 / DEFAULT_FRAME_RATE)
-		{
-			SDL_Delay( (1000/ DEFAULT_FRAME_RATE) - fps.get_ticks() );
-		}
-		if( update.get_ticks() > 1000)
-		{
-			std::stringstream caption;
-			caption << "Capital Break " << frame / (fpsMeter.get_ticks() / 1000.f) << "fps";
-			SDL_WM_SetCaption( caption.str().c_str(), NULL);
-			update.start();
+        frame++;
 
-		}
-	}
-	clean_up();
+        if( fps.get_ticks() < 1000 / DEFAULT_FRAME_RATE)
+        {
+            SDL_Delay( (1000/ DEFAULT_FRAME_RATE) - fps.get_ticks() );
+        }
+        if( update.get_ticks() > 1000)
+        {
+            std::stringstream caption;
+            caption << "Capital Break " << frame / (fpsMeter.get_ticks() / 1000.f) << "fps";
+            SDL_WM_SetCaption( caption.str().c_str(), NULL);
+            update.start();
 
-	return 0;
+        }
+    }
+    clean_up();
+
+    return 0;
 }
 void change_scene(int scene_num)
 {

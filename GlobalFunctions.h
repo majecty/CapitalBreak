@@ -2,7 +2,10 @@
 
 #include <string>
 #include "common.h"
-#include "lua/lua.hpp"
+extern "C" {
+#include "lua/lua.h"
+}
+//#include "lua/lua.hpp"
 
 // 무이자 기간을 초 단위로 구한다.
 double GetNonInterestTime(unsigned short pGrade, ERank pRank);

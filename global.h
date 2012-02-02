@@ -3,6 +3,7 @@
 #ifndef _MAJECTY_GLOBAL_H__
 #define _MAJECTY_GLOBAL_H__
 #include "common.h"
+//#include "lua.hpp"
 
 const bool DEBUG_ON = true;
 
@@ -31,6 +32,9 @@ const int DOOR_W = 50;
 const int DOOR_H = 16;
 
 const int OPEN_DOOR_EVENT = 100;
+const int MESSAGE_BOX_1_EVENT = 110;
+const int MESSAGE_BOX_2_EVENT = 111;
+//const int OPEN_DOOR_EVENT = 100;
 
 extern SDL_Surface *screen ;
 extern SDL_Event  event;
@@ -38,6 +42,7 @@ extern TTF_Font *font ;
 extern SDL_Color textColor ;
 extern SDL_Color whiteColor ;
 extern SDL_Color blackColor ;
+extern lua_State *L;
 
 extern bool quit ;
 

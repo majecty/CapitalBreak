@@ -1,7 +1,7 @@
 .SUFFIXES : .cpp .o
 
-OBJECTS = main.o  debug.o Scene.o GameScene.o character.o  collider.o building.o map.o gang.o CCard.o CPlayer.o  GlobalFunctions.o timer.o
-SRCS = main.cpp debug.cpp Scene.cpp GameScene.cpp character.cpp collider.cpp building.cpp map.cpp gang.cpp CCard.cpp CPlayer.cpp GlobalFunctions.cpp Timer.cpp
+OBJECTS = main.o  Scene.o GameScene.o character.o  collider.o building.o map.o gang.o CCard.o CPlayer.o  GlobalFunctions.o timer.o GameScene_GUI.o lua_glue.o
+SRCS = main.cpp debug.cpp Scene.cpp GameScene.cpp character.cpp collider.cpp building.cpp map.cpp gang.cpp CCard.cpp CPlayer.cpp GlobalFunctions.cpp Timer.cpp GameScene_GUI.cpp lua_glue.cpp
 
 CC = gcc
 CXX = g++
@@ -9,6 +9,7 @@ CXXFLAGS = -g -c -Wall
 TARGET = capitalBreak.exe
 LIBS =  -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf -llua52
 LIBDIRS = -Llua/
+INC = -Ilua/
 
 all : $(TARGET)
 	
@@ -16,7 +17,7 @@ $(TARGET) : $(OBJECTS)
 	$(CXX) -o $(TARGET) $(OBJECTS) $(LIBDIRS) $(LIBS)
 
 .cpp.o :
-	$(CXX) $(INC) $(CXXFLAGS) $< -o $@
+	$(CXX) $(INC) $(CXXFLAGS) $< -o $@ 
 
 clean:
 	rm $(OBJECTS) $(TARGET)
