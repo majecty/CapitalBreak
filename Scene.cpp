@@ -42,6 +42,29 @@ void StartScene::clean_up()
 }
 void StartScene::do_event()
 {
+    if( event.type == SDL_KEYDOWN)
+    {
+        switch(event.key.keysym.sym)
+        {
+            case SDLK_RETURN: 
+                if( menu == 0)
+                    change_scene(SCENE_GAME );
+                else
+                    change_scene(SCENE_CREDIT);
+                break;
+            case SDLK_DOWN:
+            case SDLK_UP:
+                if( menu == 0)
+                    menu = 1;
+                else
+                    menu = 0;
+                break;
+            default: break;
+        }
+    }
+}
+/*void StartScene::do_event_p()
+{
 	while( SDL_PollEvent( &event))
 	{
 		if( event.type == SDL_QUIT)
@@ -69,7 +92,7 @@ void StartScene::do_event()
 			}
 		}
 	}
-}
+} */
 void StartScene::show()
 {
 	apply_surface(0,0,background,screen);
@@ -108,6 +131,20 @@ void BadEndScene::clean_up()
 }
 void BadEndScene::do_event()
 {
+    if( event.type == SDL_KEYDOWN)
+    {
+        switch(event.key.keysym.sym)
+        {
+            case SDLK_RETURN: 
+                change_scene(SCENE_START);
+                break;
+            default: break;
+        }
+    }
+
+}
+/*void BadEndScene::do_event_p()
+{
 	while( SDL_PollEvent( &event))
 	{
 		if( event.type == SDL_QUIT)
@@ -125,7 +162,7 @@ void BadEndScene::do_event()
 			}
 		}
 	}
-}
+} */
 void BadEndScene::show()
 {
 	apply_surface(0,0,background,screen);
@@ -159,6 +196,19 @@ void GoodEndScene::clean_up()
 }
 void GoodEndScene::do_event()
 {
+    if( event.type == SDL_KEYDOWN)
+    {
+        switch(event.key.keysym.sym)
+        {
+            case SDLK_RETURN: 
+                change_scene(SCENE_CREDIT);
+                break;
+            default: break;
+        }
+    }
+}
+/*void GoodEndScene::do_event_p()
+{
 	while( SDL_PollEvent( &event))
 	{
 		if( event.type == SDL_QUIT)
@@ -176,7 +226,7 @@ void GoodEndScene::do_event()
 			}
 		}
 	}
-}
+} */
 void GoodEndScene::show()
 {
 	apply_surface(0,0,background,screen);
@@ -212,6 +262,21 @@ void CreditScene::clean_up()
 }
 void CreditScene::do_event()
 {
+    if( event.type == SDL_KEYDOWN)
+    {
+        switch(event.key.keysym.sym)
+        {
+            case SDLK_RETURN: 
+                change_scene(SCENE_START);
+                //change_scene(SCENE_GOODEND);
+                break;
+            default: break;
+        }
+    }
+
+}
+/* void CreditScene::do_event_p()
+{
 	while( SDL_PollEvent( &event))
 	{
 		if( event.type == SDL_QUIT)
@@ -230,7 +295,7 @@ void CreditScene::do_event()
 			}
 		}
 	}
-}
+} */
 void CreditScene::show()
 {
 	apply_surface(0,0,background,screen);

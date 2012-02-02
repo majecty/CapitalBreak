@@ -7,8 +7,6 @@
 #include "timer.h"
 
 
-#include <iostream>
-#include <stdarg.h>
 
 //#include "SDL/SDL_thread.h"
 
@@ -18,6 +16,8 @@ double DEFAULT_RATE;
 double RATE_RATE;
 int DEFAULT_LIMIT;
 int LIMIT_RATE;
+int START_GRADE;
+bool IS_FULL_SCREEN;
 
 Scene* scene = NULL;
 Scene* scenes[SCENE_NUM];
@@ -34,22 +34,31 @@ bool quit = false;
 SDL_Surface *screen = NULL;
 SDL_Event  event;
 
-void lua_error(lua_State *L, const char *fmt, ...) {
+void lua_error(lua_State *L, const char *fmt, const char *at ,...) {
     va_list argp;
     va_start(argp, fmt);
+    fprintf(stderr, "In %s \n", at);
     vfprintf(stderr, fmt, argp);
     va_end(argp);
     lua_close(L);
+    exit(EXIT_FAILURE);
+}
+void error(const char *fmt, const char *at,  ...) {
+    va_list argp;
+    va_start(argp, fmt);
+    fprintf(stderr, "In %s \n", at);
+    vfprintf(stderr, fmt, argp);
+    va_end(argp);
     exit(EXIT_FAILURE);
 }
 
 void lua_init()
 {
     lua_State *L = luaL_newstate();
-    fprintf(stderr, "in lua_init function start");
+    fprintf(stderr, "in lua_init function start %s\n",AT );
 
     if ( luaL_loadfile(L, "Configuration.lua") || lua_pcall(L,0,0,0))
-        lua_error(L, "cannot run config. file: %s", lua_tostring(L,-1));
+        lua_error(L, "cannot run config. file: %s\n", lua_tostring(L,-1));
     fprintf(stderr, "in after lua_loadfile");
 
     lua_getglobal(L, "default_frame_rate");
@@ -57,12 +66,17 @@ void lua_init()
     lua_getglobal(L, "rate_rate");
     lua_getglobal(L, "default_limit");
     lua_getglobal(L, "limit_rate");
+    lua_getglobal(L, "start_grade");
+
+    lua_getglobal(L, "is_full_screen");
 
     DEFAULT_FRAME_RATE = lua_tointeger(L,1);
     DEFAULT_RATE = lua_tonumber(L,2);
     RATE_RATE = lua_tonumber(L,3);
     DEFAULT_LIMIT = lua_tointeger(L,4);
     LIMIT_RATE = lua_tointeger(L,5);
+    START_GRADE = lua_tointeger(L,6);
+    IS_FULL_SCREEN = lua_toboolean(L,7);
 
     fprintf(stderr, "default frame rate is %d\n", LIMIT_RATE);
     fprintf(stderr, "LIMIT_RATE is %d\n", LIMIT_RATE);
@@ -92,6 +106,7 @@ void lua_init()
 
 bool init()
 {
+    //IS_FULL_SCREEN = false;
 	quit = false;
 
 	scenes[SCENE_START] = new StartScene();
@@ -106,7 +121,10 @@ bool init()
 		return false;
 	}
 
-	screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
+        if (IS_FULL_SCREEN)
+            screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE | SDL_FULLSCREEN);
+        else
+            screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
 
 	if (screen == NULL)
 	{
@@ -192,9 +210,29 @@ int main(int argc, char* args[] )
 	{
 		fps.start(); 
 
-		scene->do_event();
-
 		scene->show();
+
+
+                while(SDL_PollEvent ( &event))
+                {
+                    scene->do_event();
+
+                    if ( event.type == SDL_QUIT)
+                    {
+                        quit = true;
+                    }
+                    else if (event.type == SDL_KEYDOWN)
+                    {
+                        switch(event.key.keysym.sym)
+                        {
+                            case SDLK_q:
+                                quit = true;
+                                break;
+                            default: break;
+                        }
+
+                    }
+                }
 
 		frame++;
 

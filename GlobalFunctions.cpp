@@ -115,3 +115,8 @@ void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination,
 
 	SDL_BlitSurface( source, clip, destination, &offset);
 }
+
+void lua_error(lua_State *L, const char *fmt, const char *at, ...);
+void error(const char *fmt, const char *at, ...) ;
+
+

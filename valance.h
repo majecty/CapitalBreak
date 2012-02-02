@@ -11,12 +11,15 @@ const int MAP_HEIGHT = SCREEN_HEIGHT;
 const int CHAR_VELOCITY = 15;
 //const int FRAMES_PER_SECOND = 60;
 
-const int START_GRADE =  9;
+//const int START_GRADE =  9;
+//
+extern bool IS_FULL_SCREEN;
 extern int DEFAULT_FRAME_RATE;
 extern double DEFAULT_RATE;
 extern double RATE_RATE;
 extern int DEFAULT_LIMIT;
 extern int LIMIT_RATE;
+extern int START_GRADE;
 //
 //const double DEFAULT_RATE = 0.06;
 //const double RATE_RATE = 0.0006364;

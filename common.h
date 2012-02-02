@@ -18,11 +18,16 @@ extern "C" {
 #include "lua/luaconf.h"
 #include "lua/lualib.h"
 }
+#include <iostream>
+#include <stdarg.h>
 
 #define ZeroMemory(Destination, length)  \
 { \
   memset((void*)Destination, 0, length);\
 }
+#define STRINGIFY(in ) #in
+#define MACROTOSTRING(in) STRINGIFY(in)
+#define AT __FILE__ ":" MACROTOSTRING(__LINE__)
 //#include "Card.h"
 //#include "Scene.h"
 #endif
