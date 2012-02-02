@@ -114,63 +114,6 @@ void GameScene::do_event()
     }
 
 }
-/*void GameScene::do_event()
-{
-	Building* building;
-	std::ostringstream result;
-	while( SDL_PollEvent( &event))
-	{
-		hero->handleInput();
-		if( event.type == SDL_QUIT)
-		{
-			quit = true;
-		}
-		else if( event.type == SDL_KEYDOWN)
-		{
-			switch(event.key.keysym.sym)
-			{
-				case SDLK_ESCAPE:
-					change_scene(SCENE_GOODEND);
-					break;
-				case SDLK_RETURN: 
-					break;
-				case SDLK_SPACE:
-					if( hero->buy()) {
-						purchase_count++;
-						message2 = "You Purchase Clock";
-						show_message_box();
-						message_timer2.start();
-					}
-					break;
-				default: break;
-			}
-		}
-		else if(event.type == SDL_USEREVENT)
-		{
-			switch(event.user.code)
-			{
-				case OPEN_DOOR_EVENT:
-					 building = (Building*)event.user.data1;
-
-
-					if( building->card_id == 0)
-					{
-						message = "please press space bar to purchase";
-						message_timer.start();
-						hero->can_buy();
-					} else {
-						hero->add_card((ECard)building->card_id);
-						hero->select_card((ECard)building->card_id);
-					}
-
-
-					break;
-				default:
-					break;
-			}
-		}
-	}
-} */
 void GameScene::show()
 {
 

@@ -146,6 +146,8 @@ class GameScene : public Scene
 		void show_message_box();
 		void init_building();
 		void check_collide();
+//                void print_message_1(std::string msg);
+//                void print_message_2(std::string msg);
 };
 
 #endif
