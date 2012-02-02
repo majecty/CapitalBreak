@@ -58,6 +58,7 @@ void lua_init()
     fprintf(stderr, "in lua_init function start %s\n",AT );
 
     if ( luaL_loadfile(L, "Configuration.lua") || lua_pcall(L,0,0,0))
+    //if ( luaL_loadfile(L, "luac.out") || lua_pcall(L,0,0,0))
         lua_error(L, "cannot run config. file: %s\n", lua_tostring(L,-1));
     fprintf(stderr, "in after lua_loadfile");
 

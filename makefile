@@ -6,6 +6,9 @@ capitalBreak.exe: main.o  debug.o Scene.o GameScene.o character.o  collider.o bu
 lua: main.o  debug.o Scene.o GameScene.o character.o  collider.o building.o map.o gang.o CCard.o CPlayer.o  GlobalFunctions.o timer.o
 	g++ main.o  debug.o Scene.o GameScene.o character.o  building.o collider.o map.o gang.o CCard.o CPlayer.o  GlobalFunctions.o  timer.o -o capitalBreak.exe -Llua/ -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf  -llua52
 
+clean:
+	rm *.o
+
 CCard.o: CCard.cpp
 	g++ CCard.cpp -c -Wall -g
 CPlyaer.o: CPlyaer.cpp
