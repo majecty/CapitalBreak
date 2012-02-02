@@ -6,13 +6,17 @@ extern "C" {
 #include "lua/lauxlib.h"
 
 }
-#define LuaGlue extern "C" int
+#define LuaGlue  static int
+
+extern"C" {
+    LuaGlue lua_p_msg_1(lua_State*);
+    LuaGlue lua_p_msg_2(lua_State*);
+}
 
 static char* g_strEventHandler = "lua_event_handler";
 
 LuaGlue lua_p_msg_1(lua_State *L) 
 {
-    fprintf(stderr,"At %s : \n",AT);
     SDL_Event event;
     event.type = SDL_USEREVENT;
     event.user.code = MESSAGE_BOX_1_EVENT;
@@ -26,7 +30,6 @@ LuaGlue lua_p_msg_1(lua_State *L)
 }
 LuaGlue lua_p_msg_2(lua_State *L) 
 {
-    fprintf(stderr,"At %s : \n",AT);
     SDL_Event event;
     event.type = SDL_USEREVENT;
     event.user.code = MESSAGE_BOX_2_EVENT;
@@ -40,8 +43,8 @@ LuaGlue lua_p_msg_2(lua_State *L)
 
 static luaL_Reg ConsoleGlue[] = 
 {
-    {"pirnt_message_1", lua_p_msg_1},
-    {"pirnt_message_2", lua_p_msg_2},
+    {"print_message_1", lua_p_msg_1},
+    {"print_message_2", lua_p_msg_2},
     {NULL, NULL}
 };
 
@@ -49,10 +52,12 @@ void init_glue()
 {
 //    luaL_register(L, "mylib", ConsoleGlue);
 
-//    for(int i=0; ConsoleGlue[i].name; i++) {
-//        lua_register(L,
-//                ConsoleGlue[i].name, ConsoleGlue[i].func);
-//    }
+//    lua_register(L, "print_message_1", lua_p_msg_1);
+//    lua_register(L, "print_message_2", lua_p_msg_2);
+    for(int i=0; ConsoleGlue[i].name; i++) {
+        lua_register(L,
+                ConsoleGlue[i].name, ConsoleGlue[i].func);
+    }
 }
 
 void fire_lua_event(int event_id)
@@ -62,6 +67,7 @@ void fire_lua_event(int event_id)
         char buf[254];
         sprintf(buf, "%s(%d)", g_strEventHandler, event_id);
         luaL_dostring(L,buf);
+        //fprintf(stderr, "return value is %d",luaL_dostring(L,buf));
     }
 
 }

@@ -113,13 +113,13 @@ void GameScene::do_event()
 
                 break;
             case MESSAGE_BOX_1_EVENT:
-                fprintf(stderr,"At %s : hereis messageevent",AT);
+                //fprintf(stderr,"At %s : hereis messageevent",AT);
                 msg = (std::string*)event.user.data1;
                 print_message_1(*msg);
                 delete(msg);
                 break;
             case MESSAGE_BOX_2_EVENT:
-                fprintf(stderr,"At %s : hereis messageevent",AT);
+                //fprintf(stderr,"At %s : hereis messageevent",AT);
                 msg = (std::string*)event.user.data1;
                 print_message_2(*msg);
                 delete(msg);
