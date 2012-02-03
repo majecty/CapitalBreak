@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_building" kind="class" prot="public">
+    <compoundname>Building</compoundname>
+    <basecompoundref refid="class_collider" prot="public" virt="non-virtual">Collider</basecompoundref>
+    <includes refid="building_8h" local="no">building.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_building_1a87664a2940c851e36d3de78a6fa70203" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Building::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="25" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_building_1a5db5b728a7a38a955dcfef1f9440a615" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Building::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="25" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_building_1a3d66b33c743d044491a7d1eccf3420ee" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Building::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="26" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_building_1ac1d2a3c6eeeb1ca07b47a1a755b20d45" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Building::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="26" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_building_1a59d6fc4b382a885f84a4f1e32381a5d4" prot="private" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* Building::depart_image</definition>
+        <argsstring></argsstring>
+        <name>depart_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="27" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_building_1a8f25034f71288a0db1c0d283895d1286" prot="private" static="no" mutable="no">
+        <type><ref refid="class_door" kindref="compound">Door</ref> *</type>
+        <definition>Door* Building::door</definition>
+        <argsstring></argsstring>
+        <name>door</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="28" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_building_1aa2704c5a39f8d45bb94e19958df404a4" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect Building::clip</definition>
+        <argsstring></argsstring>
+        <name>clip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="29" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_building_1a853be442e19c87017130550963def9ff" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Building::card_id</definition>
+        <argsstring></argsstring>
+        <name>card_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="31" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_building_1a3196128a859083cc124e4e783f2abfe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Building::Building</definition>
+        <argsstring>(int _x, int _y, int _w, int _h)</argsstring>
+        <name>Building</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="32" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="7" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_building_1ada54cf04765575df590b78a7df573395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Building::init</definition>
+        <argsstring>(ECard pCard)</argsstring>
+        <name>init</name>
+        <param>
+          <type><ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7" kindref="member">ECard</ref></type>
+          <declname>pCard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="34" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="14" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_building_1a02c1ac48410c20319a30e6ce13433212" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Building::check_collide</definition>
+        <argsstring>(Collider *)</argsstring>
+        <name>check_collide</name>
+        <reimplements refid="class_collider_1aa14301229ec52e3219b41c17ef162925">check_collide</reimplements>
+        <param>
+          <type><ref refid="class_collider" kindref="compound">Collider</ref> *</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="35" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="57" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_building_1abb1a4ea20e451db134810c45d530e19f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect * Building::get_box</definition>
+        <argsstring>()</argsstring>
+        <name>get_box</name>
+        <reimplements refid="class_collider_1a1b6c8bc800070a1e880979378b348e8d">get_box</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="36" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="77" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_building_1adb755e094e0017cc0834dbaa81f08888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Building::clean_up</definition>
+        <argsstring>()</argsstring>
+        <name>clean_up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="37" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_building_1a4cb46a187a9c0d9d4bb68c5e8d8a801a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Building::show</definition>
+        <argsstring>()</argsstring>
+        <name>show</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="38" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_building_1a422d693cd9f6ba552a7abba9c0f7f22b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_door" kindref="compound">Door</ref> *</type>
+        <definition>Door * Building::get_door</definition>
+        <argsstring>()</argsstring>
+        <name>get_door</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="39" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>Collider</label>
+        <link refid="class_collider"/>
+      </node>
+      <node id="4">
+        <label>Building</label>
+        <link refid="class_building"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>Collider</label>
+        <link refid="class_collider"/>
+      </node>
+      <node id="6">
+        <label>Building</label>
+        <link refid="class_building"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/repo/newCapitalBreak/building.h" line="23" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="22" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_building_1a3196128a859083cc124e4e783f2abfe2" prot="public" virt="non-virtual"><scope>Building</scope><name>Building</name></member>
+      <member refid="class_building_1a853be442e19c87017130550963def9ff" prot="public" virt="non-virtual"><scope>Building</scope><name>card_id</name></member>
+      <member refid="class_building_1a02c1ac48410c20319a30e6ce13433212" prot="public" virt="virtual"><scope>Building</scope><name>check_collide</name></member>
+      <member refid="class_building_1adb755e094e0017cc0834dbaa81f08888" prot="public" virt="non-virtual"><scope>Building</scope><name>clean_up</name></member>
+      <member refid="class_building_1aa2704c5a39f8d45bb94e19958df404a4" prot="private" virt="non-virtual"><scope>Building</scope><name>clip</name></member>
+      <member refid="class_building_1a59d6fc4b382a885f84a4f1e32381a5d4" prot="private" virt="non-virtual"><scope>Building</scope><name>depart_image</name></member>
+      <member refid="class_building_1a8f25034f71288a0db1c0d283895d1286" prot="private" virt="non-virtual"><scope>Building</scope><name>door</name></member>
+      <member refid="class_building_1abb1a4ea20e451db134810c45d530e19f" prot="public" virt="virtual"><scope>Building</scope><name>get_box</name></member>
+      <member refid="class_building_1a422d693cd9f6ba552a7abba9c0f7f22b" prot="public" virt="non-virtual"><scope>Building</scope><name>get_door</name></member>
+      <member refid="class_building_1ac1d2a3c6eeeb1ca07b47a1a755b20d45" prot="private" virt="non-virtual"><scope>Building</scope><name>h</name></member>
+      <member refid="class_building_1ada54cf04765575df590b78a7df573395" prot="public" virt="non-virtual"><scope>Building</scope><name>init</name></member>
+      <member refid="class_building_1a4cb46a187a9c0d9d4bb68c5e8d8a801a" prot="public" virt="non-virtual"><scope>Building</scope><name>show</name></member>
+      <member refid="class_building_1a3d66b33c743d044491a7d1eccf3420ee" prot="private" virt="non-virtual"><scope>Building</scope><name>w</name></member>
+      <member refid="class_building_1a87664a2940c851e36d3de78a6fa70203" prot="private" virt="non-virtual"><scope>Building</scope><name>x</name></member>
+      <member refid="class_building_1a5db5b728a7a38a955dcfef1f9440a615" prot="private" virt="non-virtual"><scope>Building</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

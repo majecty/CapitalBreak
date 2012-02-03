@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="map_8cpp" kind="file">
+    <compoundname>map.cpp</compoundname>
+    <includes refid="map_8h" local="yes">map.h</includes>
+    <includes refid="global_8h" local="yes">global.h</includes>
+    <incdepgraph>
+      <node id="691">
+        <label>lua/lualib.h</label>
+      </node>
+      <node id="702">
+        <label>stdarg.h</label>
+      </node>
+      <node id="689">
+        <label>lua/lauxlib.h</label>
+      </node>
+      <node id="690">
+        <label>lua/luaconf.h</label>
+      </node>
+      <node id="704">
+        <label>collider.h</label>
+        <link refid="collider_8h"/>
+        <childnode refid="687" relation="include">
+        </childnode>
+      </node>
+      <node id="697">
+        <label>string</label>
+      </node>
+      <node id="687">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="688" relation="include">
+        </childnode>
+        <childnode refid="689" relation="include">
+        </childnode>
+        <childnode refid="690" relation="include">
+        </childnode>
+        <childnode refid="691" relation="include">
+        </childnode>
+        <childnode refid="692" relation="include">
+        </childnode>
+        <childnode refid="693" relation="include">
+        </childnode>
+        <childnode refid="694" relation="include">
+        </childnode>
+        <childnode refid="695" relation="include">
+        </childnode>
+        <childnode refid="696" relation="include">
+        </childnode>
+        <childnode refid="698" relation="include">
+        </childnode>
+        <childnode refid="699" relation="include">
+        </childnode>
+        <childnode refid="697" relation="include">
+        </childnode>
+        <childnode refid="700" relation="include">
+        </childnode>
+        <childnode refid="701" relation="include">
+        </childnode>
+        <childnode refid="702" relation="include">
+        </childnode>
+      </node>
+      <node id="695">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+      <node id="698">
+        <label>Configuration.h</label>
+        <link refid="_configuration_8h"/>
+      </node>
+      <node id="686">
+        <label>map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="703" relation="include">
+        </childnode>
+        <childnode refid="705" relation="include">
+        </childnode>
+      </node>
+      <node id="692">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="705">
+        <label>vector</label>
+      </node>
+      <node id="700">
+        <label>sstream</label>
+      </node>
+      <node id="688">
+        <label>lua/lua.h</label>
+      </node>
+      <node id="696">
+        <label>GlobalFunctions.h</label>
+        <link refid="_global_functions_8h"/>
+        <childnode refid="697" relation="include">
+        </childnode>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="688" relation="include">
+        </childnode>
+      </node>
+      <node id="693">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="699">
+        <label>global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="687" relation="include">
+        </childnode>
+      </node>
+      <node id="701">
+        <label>iostream</label>
+      </node>
+      <node id="685">
+        <label>map.cpp</label>
+        <link refid="map.cpp"/>
+        <childnode refid="686" relation="include">
+        </childnode>
+        <childnode refid="699" relation="include">
+        </childnode>
+      </node>
+      <node id="703">
+        <label>building.h</label>
+        <link refid="building_8h"/>
+        <childnode refid="687" relation="include">
+        </childnode>
+        <childnode refid="704" relation="include">
+        </childnode>
+        <childnode refid="699" relation="include">
+        </childnode>
+        <childnode refid="695" relation="include">
+        </childnode>
+      </node>
+      <node id="694">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="map_8h" kindref="compound">map.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="global_8h" kindref="compound">global.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_map_1a2ade06395a2af635981024cf2d5da6a3" kindref="member">Map::init</ref>(SDL_Surface*<sp/>back)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_building" kindref="compound">Building</ref>*<sp/>building;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a6b8ab15ba5a4d4b50e17ce50e83a66cb" kindref="member">x</ref><sp/>=<sp/><ref refid="global_8h_1a1d000590ec1414aab955a435a7f4dc4d" kindref="member">MAP_X</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a94da184f644e9b8a3e7f2ba107255531" kindref="member">y</ref><sp/>=<sp/><ref refid="global_8h_1a93c82be0f33c92bd83c288d829cd3f59" kindref="member">MAP_Y</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a5b2c9fabbf1ef526d4d75c7dd87ab026" kindref="member">w</ref><sp/>=<sp/><ref refid="global_8h_1a84babd4b3bff7ec930677dac6f88ae1a" kindref="member">MAP_W</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a58a2d68b31ac0705cc12ae1a8c9db137" kindref="member">h</ref><sp/>=<sp/><ref refid="global_8h_1af7242b5990996cdadb86ebbfed232eb5" kindref="member">MAP_H</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//background<sp/>=<sp/>load_image(&quot;map.png&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a4e5b5f8caa592075319b99fc221669da" kindref="member">background</ref><sp/>=<sp/>back;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a2a7e44e75ee69ac6f00740b1a672dcfc" kindref="member">clip</ref>.x<sp/>=<sp/><ref refid="class_map_1a6b8ab15ba5a4d4b50e17ce50e83a66cb" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a2a7e44e75ee69ac6f00740b1a672dcfc" kindref="member">clip</ref>.y<sp/>=<sp/><ref refid="class_map_1a94da184f644e9b8a3e7f2ba107255531" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a2a7e44e75ee69ac6f00740b1a672dcfc" kindref="member">clip</ref>.w<sp/>=<sp/><ref refid="class_map_1a5b2c9fabbf1ef526d4d75c7dd87ab026" kindref="member">w</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a2a7e44e75ee69ac6f00740b1a672dcfc" kindref="member">clip</ref>.h<sp/>=<sp/><ref refid="class_map_1a58a2d68b31ac0705cc12ae1a8c9db137" kindref="member">h</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_building" kindref="compound">Building</ref>(180,70,115,70);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" kindref="member">boxes</ref>.push_back(building-&gt;<ref refid="class_building_1abb1a4ea20e451db134810c45d530e19f" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>.push_back(building);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building-&gt;<ref refid="class_building_1ada54cf04765575df590b78a7df573395" kindref="member">init</ref>(<ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7a7b27df0311d8ba3d7ea1f4c470d5a672" kindref="member">eCardVissa</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_building" kindref="compound">Building</ref>(330,70,115,70);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" kindref="member">boxes</ref>.push_back(building-&gt;<ref refid="class_building_1abb1a4ea20e451db134810c45d530e19f" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>.push_back(building);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building-&gt;<ref refid="class_building_1ada54cf04765575df590b78a7df573395" kindref="member">init</ref>(<ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7ae13f5f8d751cd97b317cfe5c15fec407" kindref="member">eCardMister</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_building" kindref="compound">Building</ref>(480,70,115,70);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" kindref="member">boxes</ref>.push_back(building-&gt;<ref refid="class_building_1abb1a4ea20e451db134810c45d530e19f" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>.push_back(building);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building-&gt;<ref refid="class_building_1ada54cf04765575df590b78a7df573395" kindref="member">init</ref>(<ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7a9f4d20bb37221c0b7714cd6387e71fd1" kindref="member">eCardAmerican</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_building" kindref="compound">Building</ref>(180+130,170,170,70);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" kindref="member">boxes</ref>.push_back(building-&gt;<ref refid="class_building_1abb1a4ea20e451db134810c45d530e19f" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>.push_back(building);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building-&gt;<ref refid="class_building_1ada54cf04765575df590b78a7df573395" kindref="member">init</ref>(<ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7a915cc120c3404953cbb983d908f610b6" kindref="member">eCardNon</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_building" kindref="compound">Building</ref>(180,270,115,70);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" kindref="member">boxes</ref>.push_back(building-&gt;<ref refid="class_building_1abb1a4ea20e451db134810c45d530e19f" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>.push_back(building);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building-&gt;<ref refid="class_building_1ada54cf04765575df590b78a7df573395" kindref="member">init</ref>(<ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7a98f0bdefb918b8f9371c2ad53b298c07" kindref="member">eCardUnion</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_building" kindref="compound">Building</ref>(330,270,115,70);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" kindref="member">boxes</ref>.push_back(building-&gt;<ref refid="class_building_1abb1a4ea20e451db134810c45d530e19f" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>.push_back(building);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building-&gt;<ref refid="class_building_1ada54cf04765575df590b78a7df573395" kindref="member">init</ref>(<ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7a8c488cc9ab91c9dac433b1d8e10aace9" kindref="member">eCardJHT</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_building" kindref="compound">Building</ref>(480,270,115,70);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" kindref="member">boxes</ref>.push_back(building-&gt;<ref refid="class_building_1abb1a4ea20e451db134810c45d530e19f" kindref="member">get_box</ref>());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>.push_back(building);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>building-&gt;<ref refid="class_building_1ada54cf04765575df590b78a7df573395" kindref="member">init</ref>(<ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7aeb8f7059307a45b71ced16c7cab3f30b" kindref="member">eCardDC</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_map_1a9c05fb2a13957020c7df8cffea2ef05f" kindref="member">Map::show</ref>()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_global_functions_8cpp_1ad888a3d29e77238573439160c5e69a46" kindref="member">apply_surface</ref>(<ref refid="class_map_1a6b8ab15ba5a4d4b50e17ce50e83a66cb" kindref="member">x</ref>,<ref refid="class_map_1a94da184f644e9b8a3e7f2ba107255531" kindref="member">y</ref>,<ref refid="class_map_1a4e5b5f8caa592075319b99fc221669da" kindref="member">background</ref>,<ref refid="global_8h_1a78fa3957d73de49cb81d047857504218" kindref="member">screen</ref>,&amp;<ref refid="class_map_1a2a7e44e75ee69ac6f00740b1a672dcfc" kindref="member">clip</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;i&lt;(int)<ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>.size();i++){</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>[i]-&gt;show();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_map_1a6b56cc0bf171f6cc11ef6a5253f61d3d" kindref="member">Map::clean_up</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">vector&lt;SDL_Rect*&gt;<sp/><ref refid="class_map_1acf0685520006ad5c5a4891c8e0a4acb9" kindref="member">Map::get_boxes</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" kindref="member">boxes</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">vector&lt;Building*&gt;<sp/><ref refid="class_map_1a0fd6fb0f2f2a0852ecfc753221428ded" kindref="member">Map::get_buildings</ref>()</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" kindref="member">buildings</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/repo/newCapitalBreak/map.cpp"/>
+  </compounddef>
+</doxygen>

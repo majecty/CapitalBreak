@@ -1,0 +1,70 @@
+.TH "common.h" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+common.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'lua/lua\&.h'\fP
+.br
+\fC#include 'lua/lauxlib\&.h'\fP
+.br
+\fC#include 'lua/luaconf\&.h'\fP
+.br
+\fC#include 'lua/lualib\&.h'\fP
+.br
+\fC#include 'SDL/SDL\&.h'\fP
+.br
+\fC#include 'SDL/SDL_image\&.h'\fP
+.br
+\fC#include 'SDL/SDL_ttf\&.h'\fP
+.br
+\fC#include 'Constants\&.h'\fP
+.br
+\fC#include 'GlobalFunctions\&.h'\fP
+.br
+\fC#include 'Configuration\&.h'\fP
+.br
+\fC#include 'global\&.h'\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+
+.SS "매크로"
+
+.in +1c
+.ti -1c
+.RI "#define \fBZeroMemory\fP(Destination, length)"
+.br
+.ti -1c
+.RI "#define \fBSTRINGIFY\fP(in)   #in"
+.br
+.ti -1c
+.RI "#define \fBMACROTOSTRING\fP(in)   \fBSTRINGIFY\fP(in)"
+.br
+.ti -1c
+.RI "#define \fBAT\fP   __FILE__ ':' \fBMACROTOSTRING\fP(__LINE__)"
+.br
+.in -1c
+.SH "매크로 문서화"
+.PP 
+.SS "#define \fBAT\fP   __FILE__ ':' \fBMACROTOSTRING\fP(__LINE__)"
+.SS "#define \fBMACROTOSTRING\fP(in)   \fBSTRINGIFY\fP(in)"
+.SS "#define \fBSTRINGIFY\fP(in)   #in"
+.SS "#define \fBZeroMemory\fP(Destination, length)"\fB값:\fP
+.PP
+.nf
+{ \
+  memset((void*)Destination, 0, length);\
+}
+.fi
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

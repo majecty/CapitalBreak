@@ -10,13 +10,16 @@ class Timer
 
 		int pausedTicks;
 
+
 		bool paused;
 		bool started;
 
 	public:	
+                int period;
 		Timer();
 
 		void start();
+                void start(int);
 		void stop();
 		void pause();
 		void unpause();

@@ -1,0 +1,78 @@
+.TH "CCard" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CCard \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CCard\&.h>\fP
+.SS "Public 멤버 함수"
+
+.in +1c
+.ti -1c
+.RI "\fBCCard\fP ()"
+.br
+.ti -1c
+.RI "void \fBReset\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetCard\fP (int pCardNo)"
+.br
+.ti -1c
+.RI "void \fBSetGage\fP (int pGage)"
+.br
+.ti -1c
+.RI "void \fBPlusGage\fP (int pAdd)"
+.br
+.ti -1c
+.RI "void \fBMinusGage\fP (int pMinus)"
+.br
+.ti -1c
+.RI "bool \fBSetDept\fP (uint64_t pDept)"
+.br
+.ti -1c
+.RI "bool \fBBuySomething\fP (uint64_t pPrice)"
+.br
+.ti -1c
+.RI "bool \fBAddDept\fP (uint64_t pMoney)"
+.br
+.ti -1c
+.RI "void \fBSetLimit\fP (unsigned short pGrade, \fBERank\fP pRank)"
+.br
+.ti -1c
+.RI "int \fBGetCardNo\fP (void) const "
+.br
+.ti -1c
+.RI "int \fBGetGage\fP (void) const "
+.br
+.ti -1c
+.RI "uint64_t \fBGetDept\fP (void) const "
+.br
+.ti -1c
+.RI "uint64_t \fBGetLimit\fP (void) const "
+.br
+.in -1c
+.SH "생성자 & 소멸자 문서화"
+.PP 
+.SS "\fBCCard::CCard\fP ()"
+.SH "멤버 함수 문서화"
+.PP 
+.SS "bool \fBCCard::AddDept\fP (uint64_tpMoney)"
+.SS "bool \fBCCard::BuySomething\fP (uint64_tpPrice)"
+.SS "int \fBCCard::GetCardNo\fP (void) const"
+.SS "uint64_t \fBCCard::GetDept\fP (void) const"
+.SS "int \fBCCard::GetGage\fP (void) const"
+.SS "uint64_t \fBCCard::GetLimit\fP (void) const"
+.SS "void \fBCCard::MinusGage\fP (intpMinus)"
+.SS "void \fBCCard::PlusGage\fP (intpAdd)"
+.SS "void \fBCCard::Reset\fP (void)"
+.SS "void \fBCCard::SetCard\fP (intpCardNo)"
+.SS "bool \fBCCard::SetDept\fP (uint64_tpDept)"
+.SS "void \fBCCard::SetGage\fP (intpGage)"
+.SS "void \fBCCard::SetLimit\fP (unsigned shortpGrade, \fBERank\fPpRank)"
+
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

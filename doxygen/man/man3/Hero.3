@@ -1,0 +1,132 @@
+.TH "Hero" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Hero \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <character\&.h>\fP
+.PP
+\fBCharacter\fP, \fBCollider\fP를(을) 상속했습니다\&.
+.SS "Public 멤버 함수"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclean_up\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBmove\fP (Uint32 deltaTicks)"
+.br
+.ti -1c
+.RI "virtual void \fBshow\fP (SDL_Surface *)"
+.br
+.ti -1c
+.RI "virtual void \fBset_clip\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBadd_person\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBcheck_collide\fP (\fBCollider\fP *)"
+.br
+.ti -1c
+.RI "virtual SDL_Rect * \fBget_box\fP ()"
+.br
+.ti -1c
+.RI "void \fBhandleInput\fP ()"
+.br
+.ti -1c
+.RI "void \fBcan_buy\fP ()"
+.br
+.ti -1c
+.RI "void \fBcant_buy\fP ()"
+.br
+.ti -1c
+.RI "bool \fBbuy\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBmove_back\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBget_depth\fP ()"
+.br
+.ti -1c
+.RI "int \fBcalc_dept\fP ()"
+.br
+.ti -1c
+.RI "void \fBadd_card\fP (\fBECard\fP pCard)"
+.br
+.ti -1c
+.RI "void \fBselect_card\fP (\fBECard\fP pCard)"
+.br
+.ti -1c
+.RI "\fBECard\fP \fBget_current_card\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBget_limit\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_card\fP ()"
+.br
+.ti -1c
+.RI "unsigned short \fBget_grade\fP ()"
+.br
+.ti -1c
+.RI "void \fBdecrease_grade\fP ()"
+.br
+.ti -1c
+.RI "void \fBincrease_grade\fP ()"
+.br
+.in -1c
+.SH "멤버 함수 문서화"
+.PP 
+.SS "void \fBHero::add_card\fP (\fBECard\fPpCard)"
+.SS "void \fBHero::add_person\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "bool \fBHero::buy\fP ()"
+.SS "int \fBHero::calc_dept\fP ()"
+.SS "void \fBHero::can_buy\fP ()"
+.SS "void \fBHero::cant_buy\fP ()"
+.SS "bool \fBHero::check_collide\fP (\fBCollider\fP *other)\fC [virtual]\fP"
+.PP
+\fBCollider\fP를 구현\&.
+.SS "void \fBHero::clean_up\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "void \fBHero::decrease_grade\fP ()"
+.SS "SDL_Rect * \fBHero::get_box\fP ()\fC [virtual]\fP"
+.PP
+\fBCollider\fP를 구현\&.
+.SS "\fBECard\fP \fBHero::get_current_card\fP ()"
+.SS "uint64_t \fBHero::get_depth\fP ()"
+.SS "unsigned short \fBHero::get_grade\fP ()"
+.SS "uint64_t \fBHero::get_limit\fP ()"
+.SS "void \fBHero::handleInput\fP ()"
+.SS "bool \fBHero::has_card\fP ()"
+.SS "void \fBHero::increase_grade\fP ()"
+.SS "void \fBHero::init\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "bool \fBHero::move\fP (Uint32deltaTicks)\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "void \fBHero::move_back\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "void \fBHero::select_card\fP (\fBECard\fPpCard)"
+.SS "void \fBHero::set_clip\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "void \fBHero::show\fP (SDL_Surface *screen)\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

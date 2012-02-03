@@ -1,20 +1,132 @@
 in lua_init function start main.cpp:45
 in after lua_loadfiledefault frame rate is 100000
 LIMIT_RATE is 100000
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
-here is lua file 
+haha
+/haha
+duration is : 1000before load credint.png (SDL_UpperBlit: passed a NULL surface)
+before cannot load credint.png (SDL_UpperBlit: passed a NULL surface)
+haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 2000haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 2000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 2000haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 2000haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 2000haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 2000haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 500haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000haha
+/haha
+duration is : 1000

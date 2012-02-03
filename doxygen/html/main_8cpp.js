@@ -1,0 +1,27 @@
+var main_8cpp =
+[
+    [ "change_scene", "main_8cpp.html#a1b55550bef7e0ecfb63d64a293a2737c", null ],
+    [ "clean_up", "main_8cpp.html#ada7f892aa09adca3647631590ca1beb0", null ],
+    [ "init", "main_8cpp.html#aee8048628ff2b5c026c9e15acdcaacb8", null ],
+    [ "load_files", "main_8cpp.html#a061fddd7cbfd9faf08ad281b17471849", null ],
+    [ "lua_init", "main_8cpp.html#a6551b2c850789a25ebff9d914bdd6eac", null ],
+    [ "main", "main_8cpp.html#a700a0caa5b70a06d1064e576f9f3cf65", null ],
+    [ "blackColor", "main_8cpp.html#a38016976ba60c75e4c030060f8a54983", null ],
+    [ "buildings_image", "main_8cpp.html#a07ddce37b5e3855a4204d552e6020954", null ],
+    [ "DEFAULT_FRAME_RATE", "main_8cpp.html#a33ca3372e33da34564fef70d2c2ccf47", null ],
+    [ "DEFAULT_LIMIT", "main_8cpp.html#a91e674bbf5c97202d30695e306ef1f7a", null ],
+    [ "DEFAULT_RATE", "main_8cpp.html#a197c17e106445c844080b42846f8906d", null ],
+    [ "event", "main_8cpp.html#a6b57f01d3c576db5368dd0efc2f435a4", null ],
+    [ "font", "main_8cpp.html#abf5bfa705e66ffc1ddaa6ce46c960873", null ],
+    [ "IS_FULL_SCREEN", "main_8cpp.html#adfc9868edcb3523256495d5a53eaa358", null ],
+    [ "L", "main_8cpp.html#a62f94dfc0036bec0c14106c2f15caf3e", null ],
+    [ "LIMIT_RATE", "main_8cpp.html#af72a0cc37a1bab73a16a07bdc92c9cec", null ],
+    [ "quit", "main_8cpp.html#ac746fa6ad48d19984a159f14bec028a3", null ],
+    [ "RATE_RATE", "main_8cpp.html#a856e3296ab07af6a419c7248b701897a", null ],
+    [ "scene", "main_8cpp.html#a6de66f9ad116ce1d596c7f4edc40c521", null ],
+    [ "scenes", "main_8cpp.html#a4c980b14397e8a5c1aeb8cbe5ef76c1b", null ],
+    [ "screen", "main_8cpp.html#a78fa3957d73de49cb81d047857504218", null ],
+    [ "START_GRADE", "main_8cpp.html#a4b64ce0da17c64a5f50eea89f4aa7ed9", null ],
+    [ "textColor", "main_8cpp.html#a4ff6c3be8e2ef839fc8952fa068d94e4", null ],
+    [ "whiteColor", "main_8cpp.html#a60dd6f182904ca44127036cd18eced96", null ]
+];

@@ -1,0 +1,26 @@
+var annotated =
+[
+    [ "BadEndScene", "class_bad_end_scene.html", "class_bad_end_scene" ],
+    [ "Building", "class_building.html", "class_building" ],
+    [ "Card", "class_card.html", "class_card" ],
+    [ "CCard", "class_c_card.html", "class_c_card" ],
+    [ "Character", "class_character.html", "class_character" ],
+    [ "Collider", "class_collider.html", "class_collider" ],
+    [ "CPlayer", "class_c_player.html", "class_c_player" ],
+    [ "CreditScene", "class_credit_scene.html", "class_credit_scene" ],
+    [ "Door", "class_door.html", "class_door" ],
+    [ "GameScene", "class_game_scene.html", "class_game_scene" ],
+    [ "Gang", "class_gang.html", "class_gang" ],
+    [ "GoodEndScene", "class_good_end_scene.html", "class_good_end_scene" ],
+    [ "Hero", "class_hero.html", "class_hero" ],
+    [ "lua_Debug", "structlua___debug.html", "structlua___debug" ],
+    [ "luaL_Buffer", "structlua_l___buffer.html", "structlua_l___buffer" ],
+    [ "luaL_Reg", "structlua_l___reg.html", "structlua_l___reg" ],
+    [ "Map", "class_map.html", "class_map" ],
+    [ "Scene", "class_scene.html", "class_scene" ],
+    [ "Sprite", "class_sprite.html", "class_sprite" ],
+    [ "StartScene", "class_start_scene.html", "class_start_scene" ],
+    [ "Timer", "class_timer.html", "class_timer" ],
+    [ "Top", "class_top.html", "class_top" ],
+    [ "WalletBar", "class_wallet_bar.html", "class_wallet_bar" ]
+];

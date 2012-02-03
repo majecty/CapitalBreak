@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_good_end_scene" kind="class" prot="public">
+    <compoundname>GoodEndScene</compoundname>
+    <basecompoundref refid="class_scene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="_scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_good_end_scene_1ad04c0002e9c7cff656c6ece640ccc55e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GoodEndScene::GoodEndScene</definition>
+        <argsstring>()</argsstring>
+        <name>GoodEndScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="100" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_good_end_scene_1a63feec1f4ee968e29cf04a6c499360c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GoodEndScene::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <reimplements refid="class_scene_1abb3b6efc6fdba03cd96436edaf08a967">init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="102" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="183" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_good_end_scene_1ab3d4faec409c826ee0f6a2752ac60dee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GoodEndScene::clean_up</definition>
+        <argsstring>()</argsstring>
+        <name>clean_up</name>
+        <reimplements refid="class_scene_1a5f8c03499f5adff28224ccaaf95a8d90">clean_up</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="103" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_good_end_scene_1a2015e80af48f0e7aa53dc1186dc173e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GoodEndScene::do_event</definition>
+        <argsstring>()</argsstring>
+        <name>do_event</name>
+        <reimplements refid="class_scene_1a280970a0176e70f76d2420c50261d6fa">do_event</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="104" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="197" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_good_end_scene_1a29207c910451e85aab64796959ad8e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GoodEndScene::show</definition>
+        <argsstring>()</argsstring>
+        <name>show</name>
+        <reimplements refid="class_scene_1a6f447a90b1f9009acfb72df711473875">show</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="105" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="230" bodyend="238"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="43">
+        <label>Scene</label>
+        <link refid="class_scene"/>
+      </node>
+      <node id="42">
+        <label>GoodEndScene</label>
+        <link refid="class_good_end_scene"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="45">
+        <label>Scene</label>
+        <link refid="class_scene"/>
+      </node>
+      <node id="44">
+        <label>GoodEndScene</label>
+        <link refid="class_good_end_scene"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/repo/newCapitalBreak/Scene.h" line="97" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="96" bodyend="106"/>
+    <listofallmembers>
+      <member refid="class_scene_1a718f0a2f6a7a3290c176e3ec451f612d" prot="protected" virt="non-virtual"><scope>GoodEndScene</scope><name>background</name></member>
+      <member refid="class_good_end_scene_1ab3d4faec409c826ee0f6a2752ac60dee" prot="public" virt="virtual"><scope>GoodEndScene</scope><name>clean_up</name></member>
+      <member refid="class_good_end_scene_1a2015e80af48f0e7aa53dc1186dc173e9" prot="public" virt="virtual"><scope>GoodEndScene</scope><name>do_event</name></member>
+      <member refid="class_good_end_scene_1ad04c0002e9c7cff656c6ece640ccc55e" prot="public" virt="non-virtual"><scope>GoodEndScene</scope><name>GoodEndScene</name></member>
+      <member refid="class_good_end_scene_1a63feec1f4ee968e29cf04a6c499360c3" prot="public" virt="virtual"><scope>GoodEndScene</scope><name>init</name></member>
+      <member refid="class_good_end_scene_1a29207c910451e85aab64796959ad8e6d" prot="public" virt="virtual"><scope>GoodEndScene</scope><name>show</name></member>
+      <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="virtual"><scope>GoodEndScene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

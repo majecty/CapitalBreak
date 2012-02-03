@@ -1,0 +1,663 @@
+.TH "lua.h" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lua.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include 'luaconf\&.h'\fP
+.br
+
+.SS "클래스"
+
+.in +1c
+.ti -1c
+.RI "struct \fBlua_Debug\fP"
+.br
+.in -1c
+.SS "매크로"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLUA_VERSION\fP   'Lua 5\&.1'"
+.br
+.ti -1c
+.RI "#define \fBLUA_RELEASE\fP   'Lua 5\&.1\&.4'"
+.br
+.ti -1c
+.RI "#define \fBLUA_VERSION_NUM\fP   501"
+.br
+.ti -1c
+.RI "#define \fBLUA_COPYRIGHT\fP   'Copyright (C) 1994-2008 Lua\&.org, PUC-Rio'"
+.br
+.ti -1c
+.RI "#define \fBLUA_AUTHORS\fP   'R\&. Ierusalimschy, L\&. H\&. de Figueiredo & W\&. Celes'"
+.br
+.ti -1c
+.RI "#define \fBLUA_SIGNATURE\fP   '\\033Lua'"
+.br
+.ti -1c
+.RI "#define \fBLUA_MULTRET\fP   (-1)"
+.br
+.ti -1c
+.RI "#define \fBLUA_REGISTRYINDEX\fP   (-10000)"
+.br
+.ti -1c
+.RI "#define \fBLUA_ENVIRONINDEX\fP   (-10001)"
+.br
+.ti -1c
+.RI "#define \fBLUA_GLOBALSINDEX\fP   (-10002)"
+.br
+.ti -1c
+.RI "#define \fBlua_upvalueindex\fP(i)   (\fBLUA_GLOBALSINDEX\fP-(i))"
+.br
+.ti -1c
+.RI "#define \fBLUA_YIELD\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLUA_ERRRUN\fP   2"
+.br
+.ti -1c
+.RI "#define \fBLUA_ERRSYNTAX\fP   3"
+.br
+.ti -1c
+.RI "#define \fBLUA_ERRMEM\fP   4"
+.br
+.ti -1c
+.RI "#define \fBLUA_ERRERR\fP   5"
+.br
+.ti -1c
+.RI "#define \fBLUA_TNONE\fP   (-1)"
+.br
+.ti -1c
+.RI "#define \fBLUA_TNIL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBLUA_TBOOLEAN\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLUA_TLIGHTUSERDATA\fP   2"
+.br
+.ti -1c
+.RI "#define \fBLUA_TNUMBER\fP   3"
+.br
+.ti -1c
+.RI "#define \fBLUA_TSTRING\fP   4"
+.br
+.ti -1c
+.RI "#define \fBLUA_TTABLE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBLUA_TFUNCTION\fP   6"
+.br
+.ti -1c
+.RI "#define \fBLUA_TUSERDATA\fP   7"
+.br
+.ti -1c
+.RI "#define \fBLUA_TTHREAD\fP   8"
+.br
+.ti -1c
+.RI "#define \fBLUA_MINSTACK\fP   20"
+.br
+.ti -1c
+.RI "#define \fBLUA_GCSTOP\fP   0"
+.br
+.ti -1c
+.RI "#define \fBLUA_GCRESTART\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLUA_GCCOLLECT\fP   2"
+.br
+.ti -1c
+.RI "#define \fBLUA_GCCOUNT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBLUA_GCCOUNTB\fP   4"
+.br
+.ti -1c
+.RI "#define \fBLUA_GCSTEP\fP   5"
+.br
+.ti -1c
+.RI "#define \fBLUA_GCSETPAUSE\fP   6"
+.br
+.ti -1c
+.RI "#define \fBLUA_GCSETSTEPMUL\fP   7"
+.br
+.ti -1c
+.RI "#define \fBlua_pop\fP(\fBL\fP, n)   \fBlua_settop\fP(\fBL\fP, -(n)-1)"
+.br
+.ti -1c
+.RI "#define \fBlua_newtable\fP(\fBL\fP)   \fBlua_createtable\fP(\fBL\fP, 0, 0)"
+.br
+.ti -1c
+.RI "#define \fBlua_register\fP(\fBL\fP, n, f)   (\fBlua_pushcfunction\fP(\fBL\fP, (f)), \fBlua_setglobal\fP(\fBL\fP, (n)))"
+.br
+.ti -1c
+.RI "#define \fBlua_pushcfunction\fP(\fBL\fP, f)   \fBlua_pushcclosure\fP(\fBL\fP, (f), 0)"
+.br
+.ti -1c
+.RI "#define \fBlua_strlen\fP(\fBL\fP, i)   \fBlua_objlen\fP(\fBL\fP, (i))"
+.br
+.ti -1c
+.RI "#define \fBlua_isfunction\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TFUNCTION\fP)"
+.br
+.ti -1c
+.RI "#define \fBlua_istable\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TTABLE\fP)"
+.br
+.ti -1c
+.RI "#define \fBlua_islightuserdata\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TLIGHTUSERDATA\fP)"
+.br
+.ti -1c
+.RI "#define \fBlua_isnil\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TNIL\fP)"
+.br
+.ti -1c
+.RI "#define \fBlua_isboolean\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TBOOLEAN\fP)"
+.br
+.ti -1c
+.RI "#define \fBlua_isthread\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TTHREAD\fP)"
+.br
+.ti -1c
+.RI "#define \fBlua_isnone\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TNONE\fP)"
+.br
+.ti -1c
+.RI "#define \fBlua_isnoneornil\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) <= 0)"
+.br
+.ti -1c
+.RI "#define \fBlua_pushliteral\fP(\fBL\fP, s)   \fBlua_pushlstring\fP(\fBL\fP, '' s, (sizeof(s)/sizeof(char))-1)"
+.br
+.ti -1c
+.RI "#define \fBlua_setglobal\fP(\fBL\fP, s)   \fBlua_setfield\fP(\fBL\fP, \fBLUA_GLOBALSINDEX\fP, (s))"
+.br
+.ti -1c
+.RI "#define \fBlua_getglobal\fP(\fBL\fP, s)   \fBlua_getfield\fP(\fBL\fP, \fBLUA_GLOBALSINDEX\fP, (s))"
+.br
+.ti -1c
+.RI "#define \fBlua_tostring\fP(\fBL\fP, i)   \fBlua_tolstring\fP(\fBL\fP, (i), NULL)"
+.br
+.ti -1c
+.RI "#define \fBlua_open\fP()   \fBluaL_newstate\fP()"
+.br
+.ti -1c
+.RI "#define \fBlua_getregistry\fP(\fBL\fP)   \fBlua_pushvalue\fP(\fBL\fP, \fBLUA_REGISTRYINDEX\fP)"
+.br
+.ti -1c
+.RI "#define \fBlua_getgccount\fP(\fBL\fP)   \fBlua_gc\fP(\fBL\fP, \fBLUA_GCCOUNT\fP, 0)"
+.br
+.ti -1c
+.RI "#define \fBlua_Chunkreader\fP   \fBlua_Reader\fP"
+.br
+.ti -1c
+.RI "#define \fBlua_Chunkwriter\fP   \fBlua_Writer\fP"
+.br
+.ti -1c
+.RI "#define \fBLUA_HOOKCALL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBLUA_HOOKRET\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLUA_HOOKLINE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBLUA_HOOKCOUNT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBLUA_HOOKTAILRET\fP   4"
+.br
+.ti -1c
+.RI "#define \fBLUA_MASKCALL\fP   (1 << \fBLUA_HOOKCALL\fP)"
+.br
+.ti -1c
+.RI "#define \fBLUA_MASKRET\fP   (1 << \fBLUA_HOOKRET\fP)"
+.br
+.ti -1c
+.RI "#define \fBLUA_MASKLINE\fP   (1 << \fBLUA_HOOKLINE\fP)"
+.br
+.ti -1c
+.RI "#define \fBLUA_MASKCOUNT\fP   (1 << \fBLUA_HOOKCOUNT\fP)"
+.br
+.in -1c
+.SS "타입정의"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBlua_State\fP \fBlua_State\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBlua_CFunction\fP )(\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "typedef const char *(* \fBlua_Reader\fP )(\fBlua_State\fP *\fBL\fP, void *ud, size_t *sz)"
+.br
+.ti -1c
+.RI "typedef int(* \fBlua_Writer\fP )(\fBlua_State\fP *\fBL\fP, const void *p, size_t sz, void *ud)"
+.br
+.ti -1c
+.RI "typedef void *(* \fBlua_Alloc\fP )(void *ud, void *ptr, size_t osize, size_t nsize)"
+.br
+.ti -1c
+.RI "typedef \fBLUA_NUMBER\fP \fBlua_Number\fP"
+.br
+.ti -1c
+.RI "typedef \fBLUA_INTEGER\fP \fBlua_Integer\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBlua_Debug\fP \fBlua_Debug\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBlua_Hook\fP )(\fBlua_State\fP *\fBL\fP, \fBlua_Debug\fP *ar)"
+.br
+.in -1c
+.SS "함수"
+
+.in +1c
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_State\fP *() \fBlua_newstate\fP (\fBlua_Alloc\fP f, void *ud)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_close\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_State\fP *() \fBlua_newthread\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_CFunction\fP() \fBlua_atpanic\fP (\fBlua_State\fP *\fBL\fP, \fBlua_CFunction\fP panicf)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_gettop\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_settop\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushvalue\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_remove\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_insert\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_replace\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_checkstack\fP (\fBlua_State\fP *\fBL\fP, int sz)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_xmove\fP (\fBlua_State\fP *from, \fBlua_State\fP *to, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_isnumber\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_isstring\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_iscfunction\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_isuserdata\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_type\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const char *() \fBlua_typename\fP (\fBlua_State\fP *\fBL\fP, int tp)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_equal\fP (\fBlua_State\fP *\fBL\fP, int idx1, int idx2)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_rawequal\fP (\fBlua_State\fP *\fBL\fP, int idx1, int idx2)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_lessthan\fP (\fBlua_State\fP *\fBL\fP, int idx1, int idx2)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_Number\fP() \fBlua_tonumber\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_Integer\fP() \fBlua_tointeger\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_toboolean\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const char *() \fBlua_tolstring\fP (\fBlua_State\fP *\fBL\fP, int idx, size_t *len)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP size_t() \fBlua_objlen\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_CFunction\fP() \fBlua_tocfunction\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void *() \fBlua_touserdata\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_State\fP *() \fBlua_tothread\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const void *() \fBlua_topointer\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushnil\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushnumber\fP (\fBlua_State\fP *\fBL\fP, \fBlua_Number\fP n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushinteger\fP (\fBlua_State\fP *\fBL\fP, \fBlua_Integer\fP n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushlstring\fP (\fBlua_State\fP *\fBL\fP, const char *s, size_t l)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushstring\fP (\fBlua_State\fP *\fBL\fP, const char *s)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const char *() \fBlua_pushvfstring\fP (\fBlua_State\fP *\fBL\fP, const char *fmt, va_list argp)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const char *() \fBlua_pushfstring\fP (\fBlua_State\fP *\fBL\fP, const char *fmt,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushcclosure\fP (\fBlua_State\fP *\fBL\fP, \fBlua_CFunction\fP fn, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushboolean\fP (\fBlua_State\fP *\fBL\fP, int b)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_pushlightuserdata\fP (\fBlua_State\fP *\fBL\fP, void *p)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_pushthread\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_gettable\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_getfield\fP (\fBlua_State\fP *\fBL\fP, int idx, const char *k)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_rawget\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_rawgeti\fP (\fBlua_State\fP *\fBL\fP, int idx, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_createtable\fP (\fBlua_State\fP *\fBL\fP, int narr, int nrec)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void *() \fBlua_newuserdata\fP (\fBlua_State\fP *\fBL\fP, size_t sz)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_getmetatable\fP (\fBlua_State\fP *\fBL\fP, int objindex)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_getfenv\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_settable\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_setfield\fP (\fBlua_State\fP *\fBL\fP, int idx, const char *k)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_rawset\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_rawseti\fP (\fBlua_State\fP *\fBL\fP, int idx, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_setmetatable\fP (\fBlua_State\fP *\fBL\fP, int objindex)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_setfenv\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_call\fP (\fBlua_State\fP *\fBL\fP, int nargs, int nresults)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_pcall\fP (\fBlua_State\fP *\fBL\fP, int nargs, int nresults, int errfunc)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_cpcall\fP (\fBlua_State\fP *\fBL\fP, \fBlua_CFunction\fP func, void *ud)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_load\fP (\fBlua_State\fP *\fBL\fP, \fBlua_Reader\fP reader, void *dt, const char *chunkname)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_dump\fP (\fBlua_State\fP *\fBL\fP, \fBlua_Writer\fP writer, void *data)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_yield\fP (\fBlua_State\fP *\fBL\fP, int nresults)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_resume\fP (\fBlua_State\fP *\fBL\fP, int narg)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_status\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_gc\fP (\fBlua_State\fP *\fBL\fP, int what, int data)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_error\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int() \fBlua_next\fP (\fBlua_State\fP *\fBL\fP, int idx)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void() \fBlua_concat\fP (\fBlua_State\fP *\fBL\fP, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_Alloc\fP() \fBlua_getallocf\fP (\fBlua_State\fP *\fBL\fP, void **ud)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void \fBlua_setallocf\fP (\fBlua_State\fP *\fBL\fP, \fBlua_Alloc\fP f, void *ud)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP void \fBlua_setlevel\fP (\fBlua_State\fP *from, \fBlua_State\fP *to)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int \fBlua_getstack\fP (\fBlua_State\fP *\fBL\fP, int level, \fBlua_Debug\fP *ar)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int \fBlua_getinfo\fP (\fBlua_State\fP *\fBL\fP, const char *what, \fBlua_Debug\fP *ar)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const char * \fBlua_getlocal\fP (\fBlua_State\fP *\fBL\fP, const \fBlua_Debug\fP *ar, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const char * \fBlua_setlocal\fP (\fBlua_State\fP *\fBL\fP, const \fBlua_Debug\fP *ar, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const char * \fBlua_getupvalue\fP (\fBlua_State\fP *\fBL\fP, int funcindex, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP const char * \fBlua_setupvalue\fP (\fBlua_State\fP *\fBL\fP, int funcindex, int n)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int \fBlua_sethook\fP (\fBlua_State\fP *\fBL\fP, \fBlua_Hook\fP func, int mask, int count)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP \fBlua_Hook\fP \fBlua_gethook\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int \fBlua_gethookmask\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUA_API\fP int \fBlua_gethookcount\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.in -1c
+.SH "매크로 문서화"
+.PP 
+.SS "#define \fBLUA_AUTHORS\fP   'R\&. Ierusalimschy, L\&. H\&. de Figueiredo & W\&. Celes'"
+.SS "#define \fBlua_Chunkreader\fP   \fBlua_Reader\fP"
+.SS "#define \fBlua_Chunkwriter\fP   \fBlua_Writer\fP"
+.SS "#define \fBLUA_COPYRIGHT\fP   'Copyright (C) 1994-2008 Lua\&.org, PUC-Rio'"
+.SS "#define \fBLUA_ENVIRONINDEX\fP   (-10001)"
+.SS "#define \fBLUA_ERRERR\fP   5"
+.SS "#define \fBLUA_ERRMEM\fP   4"
+.SS "#define \fBLUA_ERRRUN\fP   2"
+.SS "#define \fBLUA_ERRSYNTAX\fP   3"
+.SS "#define \fBLUA_GCCOLLECT\fP   2"
+.SS "#define \fBLUA_GCCOUNT\fP   3"
+.SS "#define \fBLUA_GCCOUNTB\fP   4"
+.SS "#define \fBLUA_GCRESTART\fP   1"
+.SS "#define \fBLUA_GCSETPAUSE\fP   6"
+.SS "#define \fBLUA_GCSETSTEPMUL\fP   7"
+.SS "#define \fBLUA_GCSTEP\fP   5"
+.SS "#define \fBLUA_GCSTOP\fP   0"
+.SS "#define \fBlua_getgccount\fP(\fBL\fP)   \fBlua_gc\fP(\fBL\fP, \fBLUA_GCCOUNT\fP, 0)"
+.SS "#define \fBlua_getglobal\fP(\fBL\fP, s)   \fBlua_getfield\fP(\fBL\fP, \fBLUA_GLOBALSINDEX\fP, (s))"
+.SS "#define \fBlua_getregistry\fP(\fBL\fP)   \fBlua_pushvalue\fP(\fBL\fP, \fBLUA_REGISTRYINDEX\fP)"
+.SS "#define \fBLUA_GLOBALSINDEX\fP   (-10002)"
+.SS "#define \fBLUA_HOOKCALL\fP   0"
+.SS "#define \fBLUA_HOOKCOUNT\fP   3"
+.SS "#define \fBLUA_HOOKLINE\fP   2"
+.SS "#define \fBLUA_HOOKRET\fP   1"
+.SS "#define \fBLUA_HOOKTAILRET\fP   4"
+.SS "#define \fBlua_isboolean\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TBOOLEAN\fP)"
+.SS "#define \fBlua_isfunction\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TFUNCTION\fP)"
+.SS "#define \fBlua_islightuserdata\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TLIGHTUSERDATA\fP)"
+.SS "#define \fBlua_isnil\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TNIL\fP)"
+.SS "#define \fBlua_isnone\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TNONE\fP)"
+.SS "#define \fBlua_isnoneornil\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) <= 0)"
+.SS "#define \fBlua_istable\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TTABLE\fP)"
+.SS "#define \fBlua_isthread\fP(\fBL\fP, n)   (\fBlua_type\fP(\fBL\fP, (n)) == \fBLUA_TTHREAD\fP)"
+.SS "#define \fBLUA_MASKCALL\fP   (1 << \fBLUA_HOOKCALL\fP)"
+.SS "#define \fBLUA_MASKCOUNT\fP   (1 << \fBLUA_HOOKCOUNT\fP)"
+.SS "#define \fBLUA_MASKLINE\fP   (1 << \fBLUA_HOOKLINE\fP)"
+.SS "#define \fBLUA_MASKRET\fP   (1 << \fBLUA_HOOKRET\fP)"
+.SS "#define \fBLUA_MINSTACK\fP   20"
+.SS "#define \fBLUA_MULTRET\fP   (-1)"
+.SS "#define \fBlua_newtable\fP(\fBL\fP)   \fBlua_createtable\fP(\fBL\fP, 0, 0)"
+.SS "#define \fBlua_open\fP()   \fBluaL_newstate\fP()"
+.SS "#define \fBlua_pop\fP(\fBL\fP, n)   \fBlua_settop\fP(\fBL\fP, -(n)-1)"
+.SS "#define \fBlua_pushcfunction\fP(\fBL\fP, f)   \fBlua_pushcclosure\fP(\fBL\fP, (f), 0)"
+.SS "#define \fBlua_pushliteral\fP(\fBL\fP, s)   \fBlua_pushlstring\fP(\fBL\fP, '' s, (sizeof(s)/sizeof(char))-1)"
+.SS "#define \fBlua_register\fP(\fBL\fP, n, f)   (\fBlua_pushcfunction\fP(\fBL\fP, (f)), \fBlua_setglobal\fP(\fBL\fP, (n)))"
+.SS "#define \fBLUA_REGISTRYINDEX\fP   (-10000)"
+.SS "#define \fBLUA_RELEASE\fP   'Lua 5\&.1\&.4'"
+.SS "#define \fBlua_setglobal\fP(\fBL\fP, s)   \fBlua_setfield\fP(\fBL\fP, \fBLUA_GLOBALSINDEX\fP, (s))"
+.SS "#define \fBLUA_SIGNATURE\fP   '\\033Lua'"
+.SS "#define \fBlua_strlen\fP(\fBL\fP, i)   \fBlua_objlen\fP(\fBL\fP, (i))"
+.SS "#define \fBLUA_TBOOLEAN\fP   1"
+.SS "#define \fBLUA_TFUNCTION\fP   6"
+.SS "#define \fBLUA_TLIGHTUSERDATA\fP   2"
+.SS "#define \fBLUA_TNIL\fP   0"
+.SS "#define \fBLUA_TNONE\fP   (-1)"
+.SS "#define \fBLUA_TNUMBER\fP   3"
+.SS "#define \fBlua_tostring\fP(\fBL\fP, i)   \fBlua_tolstring\fP(\fBL\fP, (i), NULL)"
+.SS "#define \fBLUA_TSTRING\fP   4"
+.SS "#define \fBLUA_TTABLE\fP   5"
+.SS "#define \fBLUA_TTHREAD\fP   8"
+.SS "#define \fBLUA_TUSERDATA\fP   7"
+.SS "#define \fBlua_upvalueindex\fP(i)   (\fBLUA_GLOBALSINDEX\fP-(i))"
+.SS "#define \fBLUA_VERSION\fP   'Lua 5\&.1'"
+.SS "#define \fBLUA_VERSION_NUM\fP   501"
+.SS "#define \fBLUA_YIELD\fP   1"
+.SH "타입정의 문서화"
+.PP 
+.SS "typedef void*(* \fBlua_Alloc\fP)(void *ud, void *ptr, size_t osize, size_t nsize)"
+.SS "typedef int(* \fBlua_CFunction\fP)(\fBlua_State\fP *\fBL\fP)"
+.SS "typedef struct \fBlua_Debug\fP \fBlua_Debug\fP"
+.SS "typedef void(* \fBlua_Hook\fP)(\fBlua_State\fP *\fBL\fP, \fBlua_Debug\fP *ar)"
+.SS "typedef \fBLUA_INTEGER\fP \fBlua_Integer\fP"
+.SS "typedef \fBLUA_NUMBER\fP \fBlua_Number\fP"
+.SS "typedef const char*(* \fBlua_Reader\fP)(\fBlua_State\fP *\fBL\fP, void *ud, size_t *sz)"
+.SS "typedef struct \fBlua_State\fP \fBlua_State\fP"
+.SS "typedef int(* \fBlua_Writer\fP)(\fBlua_State\fP *\fBL\fP, const void *p, size_t sz, void *ud)"
+.SH "함수 문서화"
+.PP 
+.SS "\fBLUA_API\fP \fBlua_CFunction\fP() \fBlua_atpanic\fP (\fBlua_State\fP *L, \fBlua_CFunction\fPpanicf)"
+.SS "\fBLUA_API\fP void() \fBlua_call\fP (\fBlua_State\fP *L, intnargs, intnresults)"
+.SS "\fBLUA_API\fP int() \fBlua_checkstack\fP (\fBlua_State\fP *L, intsz)"
+.SS "\fBLUA_API\fP void() \fBlua_close\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP void() \fBlua_concat\fP (\fBlua_State\fP *L, intn)"
+.SS "\fBLUA_API\fP int() \fBlua_cpcall\fP (\fBlua_State\fP *L, \fBlua_CFunction\fPfunc, void *ud)"
+.SS "\fBLUA_API\fP void() \fBlua_createtable\fP (\fBlua_State\fP *L, intnarr, intnrec)"
+.SS "\fBLUA_API\fP int() \fBlua_dump\fP (\fBlua_State\fP *L, \fBlua_Writer\fPwriter, void *data)"
+.SS "\fBLUA_API\fP int() \fBlua_equal\fP (\fBlua_State\fP *L, intidx1, intidx2)"
+.SS "\fBLUA_API\fP int() \fBlua_error\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP int() \fBlua_gc\fP (\fBlua_State\fP *L, intwhat, intdata)"
+.SS "\fBLUA_API\fP \fBlua_Alloc\fP() \fBlua_getallocf\fP (\fBlua_State\fP *L, void **ud)"
+.SS "\fBLUA_API\fP void() \fBlua_getfenv\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP void() \fBlua_getfield\fP (\fBlua_State\fP *L, intidx, const char *k)"
+.SS "\fBLUA_API\fP \fBlua_Hook\fP \fBlua_gethook\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP int \fBlua_gethookcount\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP int \fBlua_gethookmask\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP int \fBlua_getinfo\fP (\fBlua_State\fP *L, const char *what, \fBlua_Debug\fP *ar)"
+.SS "\fBLUA_API\fP const char* \fBlua_getlocal\fP (\fBlua_State\fP *L, const \fBlua_Debug\fP *ar, intn)"
+.SS "\fBLUA_API\fP int() \fBlua_getmetatable\fP (\fBlua_State\fP *L, intobjindex)"
+.SS "\fBLUA_API\fP int \fBlua_getstack\fP (\fBlua_State\fP *L, intlevel, \fBlua_Debug\fP *ar)"
+.SS "\fBLUA_API\fP void() \fBlua_gettable\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_gettop\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP const char* \fBlua_getupvalue\fP (\fBlua_State\fP *L, intfuncindex, intn)"
+.SS "\fBLUA_API\fP void() \fBlua_insert\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_iscfunction\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_isnumber\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_isstring\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_isuserdata\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_lessthan\fP (\fBlua_State\fP *L, intidx1, intidx2)"
+.SS "\fBLUA_API\fP int() \fBlua_load\fP (\fBlua_State\fP *L, \fBlua_Reader\fPreader, void *dt, const char *chunkname)"
+.SS "\fBLUA_API\fP \fBlua_State\fP*() \fBlua_newstate\fP (\fBlua_Alloc\fPf, void *ud)"
+.SS "\fBLUA_API\fP \fBlua_State\fP*() \fBlua_newthread\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP void*() \fBlua_newuserdata\fP (\fBlua_State\fP *L, size_tsz)"
+.SS "\fBLUA_API\fP int() \fBlua_next\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP size_t() \fBlua_objlen\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_pcall\fP (\fBlua_State\fP *L, intnargs, intnresults, interrfunc)"
+.SS "\fBLUA_API\fP void() \fBlua_pushboolean\fP (\fBlua_State\fP *L, intb)"
+.SS "\fBLUA_API\fP void() \fBlua_pushcclosure\fP (\fBlua_State\fP *L, \fBlua_CFunction\fPfn, intn)"
+.SS "\fBLUA_API\fP const char*() \fBlua_pushfstring\fP (\fBlua_State\fP *L, const char *fmt, \&.\&.\&.)"
+.SS "\fBLUA_API\fP void() \fBlua_pushinteger\fP (\fBlua_State\fP *L, \fBlua_Integer\fPn)"
+.SS "\fBLUA_API\fP void() \fBlua_pushlightuserdata\fP (\fBlua_State\fP *L, void *p)"
+.SS "\fBLUA_API\fP void() \fBlua_pushlstring\fP (\fBlua_State\fP *L, const char *s, size_tl)"
+.SS "\fBLUA_API\fP void() \fBlua_pushnil\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP void() \fBlua_pushnumber\fP (\fBlua_State\fP *L, \fBlua_Number\fPn)"
+.SS "\fBLUA_API\fP void() \fBlua_pushstring\fP (\fBlua_State\fP *L, const char *s)"
+.SS "\fBLUA_API\fP int() \fBlua_pushthread\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP void() \fBlua_pushvalue\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP const char*() \fBlua_pushvfstring\fP (\fBlua_State\fP *L, const char *fmt, va_listargp)"
+.SS "\fBLUA_API\fP int() \fBlua_rawequal\fP (\fBlua_State\fP *L, intidx1, intidx2)"
+.SS "\fBLUA_API\fP void() \fBlua_rawget\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP void() \fBlua_rawgeti\fP (\fBlua_State\fP *L, intidx, intn)"
+.SS "\fBLUA_API\fP void() \fBlua_rawset\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP void() \fBlua_rawseti\fP (\fBlua_State\fP *L, intidx, intn)"
+.SS "\fBLUA_API\fP void() \fBlua_remove\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP void() \fBlua_replace\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_resume\fP (\fBlua_State\fP *L, intnarg)"
+.SS "\fBLUA_API\fP void \fBlua_setallocf\fP (\fBlua_State\fP *L, \fBlua_Alloc\fPf, void *ud)"
+.SS "\fBLUA_API\fP int() \fBlua_setfenv\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP void() \fBlua_setfield\fP (\fBlua_State\fP *L, intidx, const char *k)"
+.SS "\fBLUA_API\fP int \fBlua_sethook\fP (\fBlua_State\fP *L, \fBlua_Hook\fPfunc, intmask, intcount)"
+.SS "\fBLUA_API\fP void \fBlua_setlevel\fP (\fBlua_State\fP *from, \fBlua_State\fP *to)"
+.SS "\fBLUA_API\fP const char* \fBlua_setlocal\fP (\fBlua_State\fP *L, const \fBlua_Debug\fP *ar, intn)"
+.SS "\fBLUA_API\fP int() \fBlua_setmetatable\fP (\fBlua_State\fP *L, intobjindex)"
+.SS "\fBLUA_API\fP void() \fBlua_settable\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP void() \fBlua_settop\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP const char* \fBlua_setupvalue\fP (\fBlua_State\fP *L, intfuncindex, intn)"
+.SS "\fBLUA_API\fP int() \fBlua_status\fP (\fBlua_State\fP *L)"
+.SS "\fBLUA_API\fP int() \fBlua_toboolean\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP \fBlua_CFunction\fP() \fBlua_tocfunction\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP \fBlua_Integer\fP() \fBlua_tointeger\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP const char*() \fBlua_tolstring\fP (\fBlua_State\fP *L, intidx, size_t *len)"
+.SS "\fBLUA_API\fP \fBlua_Number\fP() \fBlua_tonumber\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP const void*() \fBlua_topointer\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP \fBlua_State\fP*() \fBlua_tothread\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP void*() \fBlua_touserdata\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP int() \fBlua_type\fP (\fBlua_State\fP *L, intidx)"
+.SS "\fBLUA_API\fP const char*() \fBlua_typename\fP (\fBlua_State\fP *L, inttp)"
+.SS "\fBLUA_API\fP void() \fBlua_xmove\fP (\fBlua_State\fP *from, \fBlua_State\fP *to, intn)"
+.SS "\fBLUA_API\fP int() \fBlua_yield\fP (\fBlua_State\fP *L, intnresults)"
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

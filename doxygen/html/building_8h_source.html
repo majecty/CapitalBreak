@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Capital Break: building.h 소스 파일</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Capital Break
+   &#160;<span id="projectnumber">test</span>
+   </div>
+   <div id="projectbrief">ggg</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 다음에 의해 생성됨 :  Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('building_8h.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">building.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="building_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00002"></a>00002 <span class="preprocessor">#ifndef __MAJECTY_BUILDING_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#define __MAJECTY_BUILDING_H_</span>
+<a name="l00004"></a>00004 <span class="preprocessor"></span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">common.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="collider_8h.html">collider.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="global_8h.html">global.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_constants_8h.html">Constants.h</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="class_door.html">00011</a> <span class="keyword">class </span><a class="code" href="class_door.html">Door</a> : <span class="keyword">public</span> <a class="code" href="class_collider.html">Collider</a>
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013         <span class="keyword">private</span>:
+<a name="l00014"></a>00014                 <span class="keywordtype">int</span> x,y;
+<a name="l00015"></a>00015                 <span class="keywordtype">int</span> w,h;
+<a name="l00016"></a>00016         <span class="keyword">public</span>:
+<a name="l00017"></a>00017                 <a class="code" href="class_door.html#a494e2d4a8fdd198e2229b066e5473997">Door</a>(<span class="keywordtype">int</span> building_x, <span class="keywordtype">int</span> building_y, <span class="keywordtype">int</span> _x = <a class="code" href="global_8h.html#aca0bd9ade5788664bbf47fc95c52f9bb">DOOR_X</a>, <span class="keywordtype">int</span> _y = <a class="code" href="global_8h.html#a2070dd4270c9575cdcd0f507d75104d0">DOOR_Y</a>, <span class="keywordtype">int</span> _w= <a class="code" href="global_8h.html#ac41cbf633f73b0077c07daf186768497">DOOR_W</a>, <span class="keywordtype">int</span> _h = <a class="code" href="global_8h.html#a1989de9fa88a8b55e0c7b7a77f6913f9">DOOR_H</a>);
+<a name="l00018"></a>00018                 <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_door.html#a38deff918ee0218bc61a732834591795">check_collide</a>(<a class="code" href="class_collider.html">Collider</a>*);
+<a name="l00019"></a>00019                 <span class="keyword">virtual</span> SDL_Rect* <a class="code" href="class_door.html#a2664d8a7636d1eb1e297c8ffd237c379">get_box</a>();
+<a name="l00020"></a>00020 };
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="class_building.html">00022</a> <span class="keyword">class </span><a class="code" href="class_building.html">Building</a> : <span class="keyword">public</span> <a class="code" href="class_collider.html">Collider</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024         <span class="keyword">private</span>:
+<a name="l00025"></a>00025                 <span class="keywordtype">int</span> x,y;
+<a name="l00026"></a>00026                 <span class="keywordtype">int</span> w,h;
+<a name="l00027"></a>00027                 SDL_Surface *depart_image;
+<a name="l00028"></a>00028                 <a class="code" href="class_door.html">Door</a> *door;
+<a name="l00029"></a>00029                 SDL_Rect clip;
+<a name="l00030"></a>00030         <span class="keyword">public</span>:
+<a name="l00031"></a><a class="code" href="class_building.html#a853be442e19c87017130550963def9ff">00031</a>                 <span class="keywordtype">int</span> <a class="code" href="class_building.html#a853be442e19c87017130550963def9ff">card_id</a>;
+<a name="l00032"></a>00032                 <a class="code" href="class_building.html#a3196128a859083cc124e4e783f2abfe2">Building</a>(<span class="keywordtype">int</span> _x, <span class="keywordtype">int</span> _y,<span class="keywordtype">int</span> _w, <span class="keywordtype">int</span> _h);
+<a name="l00033"></a>00033                 <span class="comment">//void init(int id);</span>
+<a name="l00034"></a>00034                 <span class="keywordtype">void</span> <a class="code" href="class_building.html#ada54cf04765575df590b78a7df573395">init</a>(<a class="code" href="_constants_8h.html#a03f7ec9e12b891db1bbeda07eb4099d7">ECard</a> pCard);
+<a name="l00035"></a>00035                 <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_building.html#a02c1ac48410c20319a30e6ce13433212">check_collide</a>(<a class="code" href="class_collider.html">Collider</a>*);
+<a name="l00036"></a>00036                 <span class="keyword">virtual</span> SDL_Rect* <a class="code" href="class_building.html#abb1a4ea20e451db134810c45d530e19f">get_box</a>();
+<a name="l00037"></a>00037                 <span class="keywordtype">void</span> <a class="code" href="class_building.html#adb755e094e0017cc0834dbaa81f08888">clean_up</a>();
+<a name="l00038"></a>00038                 <span class="keywordtype">void</span> <a class="code" href="class_building.html#a4cb46a187a9c0d9d4bb68c5e8d8a801a">show</a>();
+<a name="l00039"></a>00039                 <a class="code" href="class_door.html">Door</a>* <a class="code" href="class_building.html#a422d693cd9f6ba552a7abba9c0f7f22b">get_door</a>();
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 };
+<a name="l00042"></a>00042 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="building_8h.html">building.h</a>      </li>
+
+    <li class="footer">생성시간 : 금 2월 3 2012 20:06:45, 프로젝트명 : Capital Break, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

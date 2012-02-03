@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="collider_8h" kind="file">
+    <compoundname>collider.h</compoundname>
+    <includes refid="common_8h" local="yes">common.h</includes>
+    <includedby refid="building_8h" local="yes">building.h</includedby>
+    <includedby refid="character_8h" local="yes">character.h</includedby>
+    <includedby refid="collider_8cpp" local="yes">collider.cpp</includedby>
+    <includedby refid="_scene_8h" local="yes">Scene.h</includedby>
+    <incdepgraph>
+      <node id="196">
+        <label>lua/lualib.h</label>
+      </node>
+      <node id="207">
+        <label>stdarg.h</label>
+      </node>
+      <node id="194">
+        <label>lua/lauxlib.h</label>
+      </node>
+      <node id="195">
+        <label>lua/luaconf.h</label>
+      </node>
+      <node id="191">
+        <label>collider.h</label>
+        <link refid="collider.h"/>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="202">
+        <label>string</label>
+      </node>
+      <node id="192">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="207" relation="include">
+        </childnode>
+      </node>
+      <node id="200">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+      <node id="203">
+        <label>Configuration.h</label>
+        <link refid="_configuration_8h"/>
+      </node>
+      <node id="197">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="205">
+        <label>sstream</label>
+      </node>
+      <node id="193">
+        <label>lua/lua.h</label>
+      </node>
+      <node id="201">
+        <label>GlobalFunctions.h</label>
+        <link refid="_global_functions_8h"/>
+        <childnode refid="202" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+      </node>
+      <node id="198">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="204">
+        <label>global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="206">
+        <label>iostream</label>
+      </node>
+      <node id="199">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="214">
+        <label>GlobalFunctions.cpp</label>
+        <link refid="_global_functions_8cpp"/>
+      </node>
+      <node id="208">
+        <label>collider.h</label>
+        <link refid="collider.h"/>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>character.h</label>
+        <link refid="character_8h"/>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="222">
+        <label>gang.cpp</label>
+        <link refid="gang_8cpp"/>
+      </node>
+      <node id="223">
+        <label>collider.cpp</label>
+        <link refid="collider_8cpp"/>
+      </node>
+      <node id="218">
+        <label>map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="215">
+        <label>lua_glue.cpp</label>
+        <link refid="lua__glue_8cpp"/>
+      </node>
+      <node id="219">
+        <label>map.cpp</label>
+        <link refid="map_8cpp"/>
+      </node>
+      <node id="212">
+        <label>GameScene.cpp</label>
+        <link refid="_game_scene_8cpp"/>
+      </node>
+      <node id="209">
+        <label>building.h</label>
+        <link refid="building_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="210">
+        <label>building.cpp</label>
+        <link refid="building_8cpp"/>
+      </node>
+      <node id="221">
+        <label>character.cpp</label>
+        <link refid="character_8cpp"/>
+      </node>
+      <node id="213">
+        <label>GameScene_GUI.cpp</label>
+        <link refid="_game_scene___g_u_i_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_collider" prot="public">Collider</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__MAJECTY_COLLIDER_H__</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__MAJECTY_COLLIDER_H__</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_8h" kindref="compound">common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_collider" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_collider" kindref="compound">Collider</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_collider_1aa14301229ec52e3219b41c17ef162925" kindref="member">check_collide</ref>(<ref refid="class_collider" kindref="compound">Collider</ref>*)=0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>SDL_Rect*<sp/><ref refid="class_collider_1a1b6c8bc800070a1e880979378b348e8d" kindref="member">get_box</ref>()=0;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="D:/repo/newCapitalBreak/collider.h"/>
+  </compounddef>
+</doxygen>

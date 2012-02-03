@@ -1,0 +1,138 @@
+\documentclass[a4paper]{book}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage{hfont}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large \-Capital \-Break \\[1ex]\large test }\\
+\vspace*{1cm}
+{\large 다음에 의해 생성됨 \-:  Doxygen 1.7.6.1}\\
+\vspace*{0.5cm}
+{\small 금 2월 3 2012 20:06:46}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{클래스 색인}
+\input{hierarchy}
+\chapter{클래스 색인}
+\input{annotated}
+\chapter{파일 색인}
+\input{files}
+\chapter{클래스 문서화}
+\input{class_bad_end_scene}
+\input{class_building}
+\input{class_card}
+\input{class_c_card}
+\input{class_character}
+\input{class_collider}
+\input{class_c_player}
+\input{class_credit_scene}
+\input{class_door}
+\input{class_game_scene}
+\input{class_gang}
+\input{class_good_end_scene}
+\input{class_hero}
+\input{structlua___debug}
+\input{structlua_l___buffer}
+\input{structlua_l___reg}
+\input{class_map}
+\input{class_scene}
+\input{class_sprite}
+\input{class_start_scene}
+\input{class_timer}
+\input{class_top}
+\input{class_wallet_bar}
+\chapter{파일 문서화}
+\input{building_8cpp}
+\input{building_8h}
+\input{_card_8cpp}
+\input{_card_8h}
+\input{_c_card_8cpp}
+\input{_c_card_8h}
+\input{character_8cpp}
+\input{character_8h}
+\input{collider_8cpp}
+\input{collider_8h}
+\input{common_8h}
+\input{_configuration_8h}
+\input{_constants_8h}
+\input{_c_player_8cpp}
+\input{_c_player_8h}
+\input{_game_scene_8cpp}
+\input{_game_scene___g_u_i_8cpp}
+\input{gang_8cpp}
+\input{global_8h}
+\input{_global_functions_8cpp}
+\input{_global_functions_8h}
+\input{lauxlib_8h}
+\input{lua_8h}
+\input{lua_8hpp}
+\input{lua__glue_8cpp}
+\input{lua__glue_8h}
+\input{luaconf_8h}
+\input{lualib_8h}
+\input{main_8cpp}
+\input{map_8cpp}
+\input{map_8h}
+\input{resource_8h}
+\input{_scene_8cpp}
+\input{_scene_8h}
+\input{sprite_8h}
+\input{stdafx_8cpp}
+\input{stdafx_8h}
+\input{targetver_8h}
+\input{_timer_8cpp}
+\input{timer_8h}
+\printindex
+\end{document}

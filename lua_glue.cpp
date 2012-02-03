@@ -14,6 +14,7 @@ extern"C" {
 }
 
 static char* g_strEventHandler = "lua_event_handler";
+static char* g_messageEventHalder = "message_handler";
 
 LuaGlue lua_p_msg_1(lua_State *L) 
 {
@@ -22,7 +23,10 @@ LuaGlue lua_p_msg_1(lua_State *L)
     event.user.code = MESSAGE_BOX_1_EVENT;
 
     std::string* msg = new std::string(lua_tolstring(L,1,NULL));
+    int duration = lua_tointeger(L,2);
+
     event.user.data1 = (void*)msg;
+    event.user.data2 = (void*)duration;
 
     SDL_PushEvent(&event);
     //print_message_1(msg);
@@ -34,8 +38,10 @@ LuaGlue lua_p_msg_2(lua_State *L)
     event.type = SDL_USEREVENT;
     event.user.code = MESSAGE_BOX_2_EVENT;
     std::string* msg = new std::string(lua_tolstring(L,1,NULL));
+    int duration = lua_tointeger(L,2);
 
     event.user.data1 = (void*)msg;
+    event.user.data2 = (void*)duration;
     SDL_PushEvent(&event);
     //print_message_2(msg);
     return 0;
@@ -65,10 +71,22 @@ void fire_lua_event(int event_id)
     if( g_strEventHandler != "")
     {
         char buf[254];
-        sprintf(buf, "%s(%d)", g_strEventHandler, event_id);
+        //sprintf(buf, "%s(%d)", g_strEventHandler, event_id);
+        sprintf(buf, "%s(\"%s\")", g_strEventHandler, Script_Name[event_id]);
         luaL_dostring(L,buf);
         //fprintf(stderr, "return value is %d",luaL_dostring(L,buf));
     }
 
+}
+
+void fire_message_event(int message_id)
+{
+    if( g_messageEventHalder != "")
+    {
+        char buf[254];
+        sprintf(buf, "%s(\"%s\")", g_messageEventHalder
+                , Script_Name[message_id]);
+        luaL_dostring(L,buf);
+    }
 }
 

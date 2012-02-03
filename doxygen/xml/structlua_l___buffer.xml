@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="structlua_l___buffer" kind="struct" prot="public">
+    <compoundname>luaL_Buffer</compoundname>
+    <includes refid="lauxlib_8h" local="no">lauxlib.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlua_l___buffer_1a0af2235170aa873ae30b2dab5a92d78f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* luaL_Buffer::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lauxlib.h" line="130" bodyfile="D:/repo/newCapitalBreak/lauxlib.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlua_l___buffer_1a5edc23a360999279c335bac6f33121db" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int luaL_Buffer::lvl</definition>
+        <argsstring></argsstring>
+        <name>lvl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lauxlib.h" line="131" bodyfile="D:/repo/newCapitalBreak/lauxlib.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlua_l___buffer_1a66ae63716768952c74910da4351886fb" prot="public" static="no" mutable="no">
+        <type><ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref> *</type>
+        <definition>lua_State* luaL_Buffer::L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lauxlib.h" line="132" bodyfile="D:/repo/newCapitalBreak/lauxlib.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlua_l___buffer_1a848307dbf02455a3acfe690a6b3f9a71" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char luaL_Buffer::buffer[LUAL_BUFFERSIZE]</definition>
+        <argsstring>[LUAL_BUFFERSIZE]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lauxlib.h" line="133" bodyfile="D:/repo/newCapitalBreak/lauxlib.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/repo/newCapitalBreak/lauxlib.h" line="129" bodyfile="D:/repo/newCapitalBreak/lauxlib.h" bodystart="129" bodyend="134"/>
+    <listofallmembers>
+      <member refid="structlua_l___buffer_1a848307dbf02455a3acfe690a6b3f9a71" prot="public" virt="non-virtual"><scope>luaL_Buffer</scope><name>buffer</name></member>
+      <member refid="structlua_l___buffer_1a66ae63716768952c74910da4351886fb" prot="public" virt="non-virtual"><scope>luaL_Buffer</scope><name>L</name></member>
+      <member refid="structlua_l___buffer_1a5edc23a360999279c335bac6f33121db" prot="public" virt="non-virtual"><scope>luaL_Buffer</scope><name>lvl</name></member>
+      <member refid="structlua_l___buffer_1a0af2235170aa873ae30b2dab5a92d78f" prot="public" virt="non-virtual"><scope>luaL_Buffer</scope><name>p</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

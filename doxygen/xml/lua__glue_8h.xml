@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="lua__glue_8h" kind="file">
+    <compoundname>lua_glue.h</compoundname>
+    <includedby refid="_game_scene_8cpp" local="yes">GameScene.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <invincdepgraph>
+      <node id="636">
+        <label>lua_glue.h</label>
+        <link refid="lua_glue.h"/>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="638" relation="include">
+        </childnode>
+      </node>
+      <node id="638">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="637">
+        <label>GameScene.cpp</label>
+        <link refid="_game_scene_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lua__glue_8h_1a89dc1688d1f7eab832ca9bfa59717461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_glue</definition>
+        <argsstring>()</argsstring>
+        <name>init_glue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.h" line="4" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="lua__glue_8h_1a93c9b3a7c671fb685a557c5a0e2a7928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fire_lua_event</definition>
+        <argsstring>(int)</argsstring>
+        <name>fire_lua_event</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.h" line="5" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="63" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lua__glue_8cpp_1a89dc1688d1f7eab832ca9bfa59717461" kindref="member">init_glue</ref>();</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lua__glue_8cpp_1ad02d0769a9163d8235e641cc1c8540c4" kindref="member">fire_lua_event</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+    </programlisting>
+    <location file="D:/repo/newCapitalBreak/lua_glue.h"/>
+  </compounddef>
+</doxygen>

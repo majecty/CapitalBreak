@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="gang_8cpp" kind="file">
+    <compoundname>gang.cpp</compoundname>
+    <includes refid="global_8h" local="yes">global.h</includes>
+    <includes refid="common_8h" local="yes">common.h</includes>
+    <includes refid="character_8h" local="yes">character.h</includes>
+    <includes local="no">stdint.h</includes>
+    <incdepgraph>
+      <node id="444">
+        <label>lua/lualib.h</label>
+      </node>
+      <node id="454">
+        <label>stdarg.h</label>
+      </node>
+      <node id="442">
+        <label>lua/lauxlib.h</label>
+      </node>
+      <node id="443">
+        <label>lua/luaconf.h</label>
+      </node>
+      <node id="459">
+        <label>stdint.h</label>
+      </node>
+      <node id="456">
+        <label>collider.h</label>
+        <link refid="collider_8h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+      </node>
+      <node id="450">
+        <label>string</label>
+      </node>
+      <node id="455">
+        <label>character.h</label>
+        <link refid="character_8h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+      </node>
+      <node id="440">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="448">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+      <node id="460">
+        <label>map</label>
+      </node>
+      <node id="457">
+        <label>CPlayer.h</label>
+        <link refid="_c_player_8h"/>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>Configuration.h</label>
+        <link refid="_configuration_8h"/>
+      </node>
+      <node id="458">
+        <label>CCard.h</label>
+        <link refid="_c_card_8h"/>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="438">
+        <label>gang.cpp</label>
+        <link refid="gang.cpp"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="445">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="452">
+        <label>sstream</label>
+      </node>
+      <node id="441">
+        <label>lua/lua.h</label>
+      </node>
+      <node id="449">
+        <label>GlobalFunctions.h</label>
+        <link refid="_global_functions_8h"/>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+      </node>
+      <node id="446">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="439">
+        <label>global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+      </node>
+      <node id="453">
+        <label>iostream</label>
+      </node>
+      <node id="447">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="global_8h" kindref="compound">global.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_8h" kindref="compound">common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="character_8h" kindref="compound">character.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gang_1a3788b8ace6c57cdcdc464a2f96169484" kindref="member">Gang::init</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>=<sp/><ref refid="_configuration_8h_1a3482785bd2a4c8b307f9e0b6f54e2c36" kindref="member">SCREEN_WIDTH</ref>/2<sp/>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1ac3c6fdfe5ccb5e984c83e20c28e7e4f2" kindref="member">p_x</ref><sp/>=<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/>=<sp/><ref refid="_configuration_8h_1ab454541ae58bcf6555e8d723b1eb95e7" kindref="member">SCREEN_HEIGHT</ref>/2;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a9d10eb04b9cb779d432707f34171fb79" kindref="member">p_y</ref><sp/>=<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1adf848d11acd46785ec3408a018b4dabe" kindref="member">w</ref><sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a5a455718929221529a9c01781579927b" kindref="member">h</ref><sp/>=<sp/>30;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a1769b630de33a3da0dd7456e71350a84" kindref="member">image</ref><sp/>=<sp/><ref refid="_global_functions_8cpp_1ab78f833db4a62b8ef578da79cd72734f" kindref="member">load_image</ref>(</highlight><highlight class="stringliteral">&quot;character_gang.png&quot;</highlight><highlight class="normal">);;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gang_1af4463fb95507a172b1495fae411bfba5" kindref="member">set_clip</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gang_1af472124b9a8c3e4a5950562342ec8162" kindref="member">Gang::clean_up</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>object_point<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(object_point);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_FreeSurface(<ref refid="class_character_1a1769b630de33a3da0dd7456e71350a84" kindref="member">image</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_gang_1abccb863ee9ef936fad5031a0d93e1b55" kindref="member">Gang::move</ref>(Uint32<sp/>deltaTicks)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_gang_1a9984bed5cfe0541a97e00e2972666bae" kindref="member">follow</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1ac3c6fdfe5ccb5e984c83e20c28e7e4f2" kindref="member">p_x</ref><sp/>=<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a9d10eb04b9cb779d432707f34171fb79" kindref="member">p_y</ref><sp/>=<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>+=<sp/><ref refid="class_character_1a769c5656e887d69472f08f9de9589eb5" kindref="member">xVel</ref><sp/>*<sp/>((int32_t)deltaTicks<sp/>/<sp/>10.f);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>&lt;<sp/><ref refid="global_8h_1a1d000590ec1414aab955a435a7f4dc4d" kindref="member">MAP_X</ref>)<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>=<sp/><ref refid="global_8h_1a1d000590ec1414aab955a435a7f4dc4d" kindref="member">MAP_X</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>+<sp/><ref refid="class_character_1adf848d11acd46785ec3408a018b4dabe" kindref="member">w</ref>&gt;<sp/><ref refid="global_8h_1a1d000590ec1414aab955a435a7f4dc4d" kindref="member">MAP_X</ref><sp/>+<sp/><ref refid="global_8h_1a84babd4b3bff7ec930677dac6f88ae1a" kindref="member">MAP_W</ref>)<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>=<sp/><ref refid="global_8h_1a1d000590ec1414aab955a435a7f4dc4d" kindref="member">MAP_X</ref><sp/>+<sp/><ref refid="global_8h_1a84babd4b3bff7ec930677dac6f88ae1a" kindref="member">MAP_W</ref><sp/>-<ref refid="class_character_1adf848d11acd46785ec3408a018b4dabe" kindref="member">w</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/>+=<sp/><ref refid="class_character_1aba005243607dd2e77f798e70675af9f5" kindref="member">yVel</ref><sp/>*<sp/>((int32_t)deltaTicks<sp/>/<sp/>10.f);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/>&lt;<sp/><ref refid="global_8h_1a93c82be0f33c92bd83c288d829cd3f59" kindref="member">MAP_Y</ref>)<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/>=<sp/><ref refid="global_8h_1a93c82be0f33c92bd83c288d829cd3f59" kindref="member">MAP_Y</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/><sp/>+<sp/><ref refid="class_character_1a5a455718929221529a9c01781579927b" kindref="member">h</ref>&gt;<sp/><ref refid="global_8h_1a93c82be0f33c92bd83c288d829cd3f59" kindref="member">MAP_Y</ref><sp/>+<sp/><ref refid="global_8h_1af7242b5990996cdadb86ebbfed232eb5" kindref="member">MAP_H</ref>)<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/>=<sp/><ref refid="global_8h_1a93c82be0f33c92bd83c288d829cd3f59" kindref="member">MAP_Y</ref><sp/>+<sp/><ref refid="global_8h_1af7242b5990996cdadb86ebbfed232eb5" kindref="member">MAP_H</ref><sp/>-<ref refid="class_character_1a5a455718929221529a9c01781579927b" kindref="member">h</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>==<sp/>object_point-&gt;x<sp/>&amp;&amp;<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/>==<sp/>object_point-&gt;y)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>object_point<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gang_1a29330bf2df1bd60644513b2cb27f29e6" kindref="member">Gang::show</ref>(SDL_Surface*<sp/><ref refid="global_8h_1a78fa3957d73de49cb81d047857504218" kindref="member">screen</ref>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status<sp/>=<sp/><ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_character_1a769c5656e887d69472f08f9de9589eb5" kindref="member">xVel</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref>++;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_character_1a769c5656e887d69472f08f9de9589eb5" kindref="member">xVel</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref>++;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_character_1aba005243607dd2e77f798e70675af9f5" kindref="member">yVel</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref>++;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_character_1aba005243607dd2e77f798e70675af9f5" kindref="member">yVel</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/><ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref>++;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref><sp/>&gt;<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref>/2<sp/>&lt;=<sp/>2)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_global_functions_8cpp_1ad888a3d29e77238573439160c5e69a46" kindref="member">apply_surface</ref>(<ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>,<ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>,<ref refid="class_character_1a1769b630de33a3da0dd7456e71350a84" kindref="member">image</ref>,screen,<sp/>&amp;<ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[status][<ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref>/2]);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_character_1a78ea8d15292e89650d12d98878bac42c" kindref="member">frame</ref>/2<sp/>==<sp/>3)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_global_functions_8cpp_1ad888a3d29e77238573439160c5e69a46" kindref="member">apply_surface</ref>(<ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>,<ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>,<ref refid="class_character_1a1769b630de33a3da0dd7456e71350a84" kindref="member">image</ref>,screen,<sp/>&amp;<ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[status][1]);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_global_functions_8cpp_1ad888a3d29e77238573439160c5e69a46" kindref="member">apply_surface</ref>(<ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>,<ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>,<ref refid="class_character_1a1769b630de33a3da0dd7456e71350a84" kindref="member">image</ref>,screen,<sp/>&amp;<ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[status][0]);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gang_1af4463fb95507a172b1495fae411bfba5" kindref="member">Gang::set_clip</ref>()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][0].x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][0].y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][0].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][0].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][1].x<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][1].y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][1].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][1].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][2].x<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][2].y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][2].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a434e4725f04fa366ed1341f04d38521d" kindref="member">DOWN</ref>][2].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][0].x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][0].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][0].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][0].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][1].x<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][1].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][1].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][1].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][2].x<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][2].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][2].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a08e9e19b88c4004c6d1daa0ed765c569" kindref="member">LEFT</ref>][2].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][0].x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][0].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][0].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][0].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][1].x<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][1].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][1].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][1].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][2].x<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][2].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][2].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1a088fe0153a918af361dc8f4e775d020e" kindref="member">RIGHT</ref>][2].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][0].x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][0].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref><sp/>*<sp/>3;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][0].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][0].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][1].x<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][1].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref><sp/>*<sp/>3;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][1].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][1].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][2].x<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][2].y<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref><sp/>*<sp/>3;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][2].w<sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a597a53af58019f1654e70714bacab249" kindref="member">clip</ref>[<ref refid="character_8h_1ac58327b7b857c0d4c71c07aa602ace58" kindref="member">UP</ref>][2].h<sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_gang_1ae97a9f4995e999fde4265663e3a838f7" kindref="member">Gang::check_collide</ref>(<ref refid="class_collider" kindref="compound">Collider</ref>*<sp/>other)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Rect*<sp/>other_box;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Rect<sp/>offset;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>other_box<sp/>=<sp/>other-&gt;<ref refid="class_collider_1a1b6c8bc800070a1e880979378b348e8d" kindref="member">get_box</ref>();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>+<sp/><ref refid="class_character_1adf848d11acd46785ec3408a018b4dabe" kindref="member">w</ref><sp/>&gt;<sp/>other_box-&gt;x<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>other_box-&gt;x<sp/>+<sp/>other_box-&gt;w<sp/>&gt;<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/>+<sp/>h<sp/>&gt;<sp/>other_box-&gt;y<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>other_box-&gt;y<sp/>+<sp/>other_box-&gt;h<sp/>&gt;<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//x<sp/>=<sp/>other_box-&gt;x<sp/>+<sp/>other_box-&gt;w;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//y<sp/>=<sp/>other_box-&gt;y<sp/>+<sp/>other_box-&gt;h;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(other_box);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">SDL_Rect*<sp/><ref refid="class_gang_1aebd4bd585e284c70b97782ac9af904ee" kindref="member">Gang::get_box</ref>()</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Rect*<sp/>box<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SDL_Rect();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>box-&gt;x<sp/>=<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>box-&gt;y<sp/>=<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>box-&gt;w<sp/>=<sp/><ref refid="class_character_1adf848d11acd46785ec3408a018b4dabe" kindref="member">w</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>box-&gt;h<sp/>=<sp/><ref refid="class_character_1a5a455718929221529a9c01781579927b" kindref="member">h</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>box;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_gang_1a9984bed5cfe0541a97e00e2972666bae" kindref="member">Gang::follow</ref>()</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(object_point<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>div<sp/>=<sp/><ref refid="_configuration_8h_1acd7dc9ec163b370b106e7250a6865e89" kindref="member">CHAR_VELOCITY</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>div<sp/>=<sp/>1/CHAR_VELOCITY;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(object_point-&gt;x<sp/>&lt;<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a769c5656e887d69472f08f9de9589eb5" kindref="member">xVel</ref><sp/>=<sp/>-<ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>/div;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(object_point-&gt;x<sp/>&gt;<sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a769c5656e887d69472f08f9de9589eb5" kindref="member">xVel</ref><sp/>=<sp/><ref refid="global_8h_1a222dcad4500ac4b3318af62bd058cb69" kindref="member">UNIT_WIDTH</ref>/div;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a769c5656e887d69472f08f9de9589eb5" kindref="member">xVel</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(object_point-&gt;y<sp/>&lt;<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1aba005243607dd2e77f798e70675af9f5" kindref="member">yVel</ref><sp/>=<sp/>-<ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>/div;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(object_point-&gt;y<sp/>&gt;<sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1aba005243607dd2e77f798e70675af9f5" kindref="member">yVel</ref><sp/>=<sp/><ref refid="global_8h_1a37fbc92ef15fbc507865e80f94ac1661" kindref="member">UNIT_HEIGHT</ref>/div;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1aba005243607dd2e77f798e70675af9f5" kindref="member">yVel</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gang_1a74c369149d11573fbad437d997266c36" kindref="member">Gang::set_object</ref>(SDL_Rect*<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>object_point<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(object_point);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>object_point<sp/>=<sp/>object;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gang_1ac3aa2c0e70ecf1e7ce42192f684d1398" kindref="member">Gang::move_back</ref>()</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" kindref="member">x</ref><sp/>=<sp/><ref refid="class_character_1ac3c6fdfe5ccb5e984c83e20c28e7e4f2" kindref="member">p_x</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" kindref="member">y</ref><sp/>=<sp/><ref refid="class_character_1a9d10eb04b9cb779d432707f34171fb79" kindref="member">p_y</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gang_1ad177257ab75d22c409b6b7b89c5d0870" kindref="member">Gang::add_person</ref>(<sp/>){</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_person<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_person-&gt;<ref refid="class_gang_1ad177257ab75d22c409b6b7b89c5d0870" kindref="member">add_person</ref>();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_person<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_gang" kindref="compound">Gang</ref>();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_person-&gt;<ref refid="class_gang_1a3788b8ace6c57cdcdc464a2f96169484" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/repo/newCapitalBreak/gang.cpp"/>
+  </compounddef>
+</doxygen>

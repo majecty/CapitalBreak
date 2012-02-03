@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="stdafx_8cpp" kind="file">
+    <compoundname>stdafx.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <incdepgraph>
+      <node id="816">
+        <label>lua/lualib.h</label>
+      </node>
+      <node id="824">
+        <label>stdarg.h</label>
+      </node>
+      <node id="814">
+        <label>lua/lauxlib.h</label>
+      </node>
+      <node id="803">
+        <label>stdafx.cpp</label>
+        <link refid="stdafx.cpp"/>
+        <childnode refid="804" relation="include">
+        </childnode>
+      </node>
+      <node id="815">
+        <label>lua/luaconf.h</label>
+      </node>
+      <node id="804">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="807" relation="include">
+        </childnode>
+        <childnode refid="808" relation="include">
+        </childnode>
+        <childnode refid="809" relation="include">
+        </childnode>
+        <childnode refid="810" relation="include">
+        </childnode>
+      </node>
+      <node id="811">
+        <label>string</label>
+      </node>
+      <node id="812">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="813" relation="include">
+        </childnode>
+        <childnode refid="814" relation="include">
+        </childnode>
+        <childnode refid="815" relation="include">
+        </childnode>
+        <childnode refid="816" relation="include">
+        </childnode>
+        <childnode refid="817" relation="include">
+        </childnode>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="809" relation="include">
+        </childnode>
+        <childnode refid="810" relation="include">
+        </childnode>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="821" relation="include">
+        </childnode>
+        <childnode refid="811" relation="include">
+        </childnode>
+        <childnode refid="822" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+        <childnode refid="824" relation="include">
+        </childnode>
+      </node>
+      <node id="809">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+      <node id="820">
+        <label>Configuration.h</label>
+        <link refid="_configuration_8h"/>
+      </node>
+      <node id="805">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+      </node>
+      <node id="817">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="808">
+        <label>WinSock2.h</label>
+      </node>
+      <node id="822">
+        <label>sstream</label>
+      </node>
+      <node id="813">
+        <label>lua/lua.h</label>
+      </node>
+      <node id="810">
+        <label>GlobalFunctions.h</label>
+        <link refid="_global_functions_8h"/>
+        <childnode refid="811" relation="include">
+        </childnode>
+        <childnode refid="812" relation="include">
+        </childnode>
+        <childnode refid="813" relation="include">
+        </childnode>
+      </node>
+      <node id="818">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="821">
+        <label>global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="812" relation="include">
+        </childnode>
+      </node>
+      <node id="823">
+        <label>iostream</label>
+      </node>
+      <node id="807">
+        <label>tchar.h</label>
+      </node>
+      <node id="806">
+        <label>stdio.h</label>
+      </node>
+      <node id="819">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>stdafx.cpp<sp/>:<sp/>표준<sp/>포함<sp/>파일만<sp/>들어<sp/>있는<sp/>소스<sp/>파일입니다.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DeptLogical.pch는<sp/>미리<sp/>컴파일된<sp/>헤더가<sp/>됩니다.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>stdafx.obj에는<sp/>미리<sp/>컴파일된<sp/>형식<sp/>정보가<sp/>포함됩니다.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>필요한<sp/>추가<sp/>헤더는</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>이<sp/>파일이<sp/>아닌<sp/>STDAFX.H에서<sp/>참조합니다.</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/repo/newCapitalBreak/stdafx.cpp"/>
+  </compounddef>
+</doxygen>

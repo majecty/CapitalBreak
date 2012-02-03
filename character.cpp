@@ -33,6 +33,7 @@ Character::~Character()
 
 void Hero::init()
 {
+        indoor = false;
 	is_buyable = false;
 	frame = 0;
 	x = SCREEN_WIDTH/2;
@@ -360,4 +361,16 @@ void Hero::decrease_grade()
 void Hero::increase_grade()
 {
 	aPlayer.IncreaseGrade();
+}
+bool Hero::is_indoor()
+{
+    return  indoor;
+}
+void Hero::enter_building()
+{
+    indoor = true;
+}
+void Hero::exit_building()
+{
+    indoor = false;
 }

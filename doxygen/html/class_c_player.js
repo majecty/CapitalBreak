@@ -1,0 +1,25 @@
+var class_c_player =
+[
+    [ "TCardInven", "class_c_player.html#afc2e175de7122626d649da43d3db40a2", null ],
+    [ "TCardInvenItr", "class_c_player.html#a956d26e71ea17e57ac43279eab7eaf3b", null ],
+    [ "CPlayer", "class_c_player.html#a931a59adf2ada5376122e30b33ae2c4c", null ],
+    [ "AddCard", "class_c_player.html#a18b2124b5135497c522d83b42a003d9f", null ],
+    [ "AddCreditorCount", "class_c_player.html#a794b0017abea4805822cd7b45ad87a9b", null ],
+    [ "AddDept", "class_c_player.html#a8c6227c3a234b86be05de01cefb5523d", null ],
+    [ "BuySomething", "class_c_player.html#a4649279fe3c5b1f48693f82d96d4f78d", null ],
+    [ "CalcDept", "class_c_player.html#a5ab4c5d7ec31884412907a1bbdadad5c", null ],
+    [ "DecreaseGrade", "class_c_player.html#a0fc3b3c7cd8023dbbbdc2b882f0bb332", null ],
+    [ "GetCardInven", "class_c_player.html#adab4b115cbcac118da7ce6b362de9e0f", null ],
+    [ "GetCreditorCount", "class_c_player.html#a73cd6d410fba5f19c498e58a3df02a90", null ],
+    [ "GetCurrentCard", "class_c_player.html#a78464f332f77bee53c7acd94b78c40bb", null ],
+    [ "GetDept", "class_c_player.html#a5de57603460102d5ca5c0993d5e7355c", null ],
+    [ "GetGrade", "class_c_player.html#aaa70c733b82d5b1145d206282b49e4dc", null ],
+    [ "GetPlayerName", "class_c_player.html#a5ae1229e6474d6cf7979d60bdcfbf889", null ],
+    [ "GetRank", "class_c_player.html#a3837ca31414dc04f376efcf82413293f", null ],
+    [ "IncreaseGrade", "class_c_player.html#a57cbfab5dbea898e0f1e6d6ef59a299e", null ],
+    [ "Reset", "class_c_player.html#acf628f08c81409913cb0833bb115cdb3", null ],
+    [ "SelectCard", "class_c_player.html#ab5eb413c887a4054e7f596f0d579cd9f", null ],
+    [ "SetGrade", "class_c_player.html#ad57bf753f80586ec0f64c60e0c4ea0fb", null ],
+    [ "SetName", "class_c_player.html#a9913e32cb613756cc092eee3a5b51a2b", null ],
+    [ "SetRank", "class_c_player.html#a51451db1a48869676883ad6f3f405d14", null ]
+];

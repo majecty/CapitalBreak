@@ -1,0 +1,34 @@
+.TH "Collider" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Collider \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <collider\&.h>\fP
+.PP
+\fBBuilding\fP, \fBDoor\fP, \fBGang\fP, \fBHero\fP에 의해 상속되었습니다\&.
+.SS "Public 멤버 함수"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBcheck_collide\fP (\fBCollider\fP *)=0"
+.br
+.ti -1c
+.RI "virtual SDL_Rect * \fBget_box\fP ()=0"
+.br
+.in -1c
+.SH "멤버 함수 문서화"
+.PP 
+.SS "virtual bool \fBCollider::check_collide\fP (\fBCollider\fP *)\fC [pure virtual]\fP"
+.PP
+\fBGang\fP, \fBHero\fP, \fBBuilding\fP, \fBDoor\fP에서 구현되었습니다\&.
+.SS "virtual SDL_Rect* \fBCollider::get_box\fP ()\fC [pure virtual]\fP"
+.PP
+\fBGang\fP, \fBHero\fP, \fBBuilding\fP, \fBDoor\fP에서 구현되었습니다\&.
+
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_wallet_bar" kind="class" prot="public">
+    <compoundname>WalletBar</compoundname>
+    <includes refid="_scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_wallet_bar_1a0f46bbc31c9af9b1eb9184fc5c87468d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WalletBar::frame</definition>
+        <argsstring></argsstring>
+        <name>frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="34" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1a5ff78d74500668b1cee4afa36956934d" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect WalletBar::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="35" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1a610493e9b631c7fcc629206c7f6eb4ff" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect WalletBar::cards[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>cards</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="36" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1a43622ee6ab0ae2340c06bed054569770" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect WalletBar::cards_clip[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>cards_clip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="37" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1a515f0a1bebe54e647d634306d39a2cdc" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect WalletBar::cards_limits_box[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>cards_limits_box</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="38" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1a63c5d62548e495af118774bc3486c08a" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect WalletBar::cards_limits_clip[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>cards_limits_clip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="39" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1ac6ff4610d289bedfaca8bfc0d5662954" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect WalletBar::card_gage[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>card_gage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="40" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1aecbbfcef4af1fcf468958538d0d6ee02" prot="private" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* WalletBar::cards_image</definition>
+        <argsstring></argsstring>
+        <name>cards_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="41" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1ab3446486f698c6f269729dd701ce727d" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect WalletBar::face_clip[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>face_clip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="42" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wallet_bar_1aee8a27474d839cfc9f9d551ccd6d0535" prot="private" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* WalletBar::faces_image</definition>
+        <argsstring></argsstring>
+        <name>faces_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="43" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_wallet_bar_1a0e06514afd3b4f67b4b84c42f8d660b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WalletBar::init</definition>
+        <argsstring>(int x, int y, int w, int h)</argsstring>
+        <name>init</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="46" bodyfile="D:/repo/newCapitalBreak/GameScene_GUI.cpp" bodystart="43" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wallet_bar_1a5f41d329128d28f73a8c1c8dadae3eb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WalletBar::clean_up</definition>
+        <argsstring>()</argsstring>
+        <name>clean_up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="47" bodyfile="D:/repo/newCapitalBreak/GameScene_GUI.cpp" bodystart="88" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wallet_bar_1a28e4d7b035ef6ac5aff8db6b0350bc9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WalletBar::show</definition>
+        <argsstring>()</argsstring>
+        <name>show</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="48" bodyfile="D:/repo/newCapitalBreak/GameScene_GUI.cpp" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wallet_bar_1ade5b8ead100246a0b8da4fba1fc3ffc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WalletBar::print_limit</definition>
+        <argsstring>(ECard, uint64_t)</argsstring>
+        <name>print_limit</name>
+        <param>
+          <type><ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7" kindref="member">ECard</ref></type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <defname>money</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="49" bodyfile="D:/repo/newCapitalBreak/GameScene_GUI.cpp" bodystart="113" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wallet_bar_1a9be459da1602fe0432ca83d92a20faf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WalletBar::show_gage</definition>
+        <argsstring>(ECard, float)</argsstring>
+        <name>show_gage</name>
+        <param>
+          <type><ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7" kindref="member">ECard</ref></type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <defname>ratio</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="50" bodyfile="D:/repo/newCapitalBreak/GameScene_GUI.cpp" bodystart="101" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/repo/newCapitalBreak/Scene.h" line="32" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="31" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_wallet_bar_1ac6ff4610d289bedfaca8bfc0d5662954" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>card_gage</name></member>
+      <member refid="class_wallet_bar_1a610493e9b631c7fcc629206c7f6eb4ff" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>cards</name></member>
+      <member refid="class_wallet_bar_1a43622ee6ab0ae2340c06bed054569770" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>cards_clip</name></member>
+      <member refid="class_wallet_bar_1aecbbfcef4af1fcf468958538d0d6ee02" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>cards_image</name></member>
+      <member refid="class_wallet_bar_1a515f0a1bebe54e647d634306d39a2cdc" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>cards_limits_box</name></member>
+      <member refid="class_wallet_bar_1a63c5d62548e495af118774bc3486c08a" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>cards_limits_clip</name></member>
+      <member refid="class_wallet_bar_1a5f41d329128d28f73a8c1c8dadae3eb7" prot="public" virt="non-virtual"><scope>WalletBar</scope><name>clean_up</name></member>
+      <member refid="class_wallet_bar_1ab3446486f698c6f269729dd701ce727d" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>face_clip</name></member>
+      <member refid="class_wallet_bar_1aee8a27474d839cfc9f9d551ccd6d0535" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>faces_image</name></member>
+      <member refid="class_wallet_bar_1a0f46bbc31c9af9b1eb9184fc5c87468d" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>frame</name></member>
+      <member refid="class_wallet_bar_1a0e06514afd3b4f67b4b84c42f8d660b2" prot="public" virt="non-virtual"><scope>WalletBar</scope><name>init</name></member>
+      <member refid="class_wallet_bar_1a5ff78d74500668b1cee4afa36956934d" prot="private" virt="non-virtual"><scope>WalletBar</scope><name>offset</name></member>
+      <member refid="class_wallet_bar_1ade5b8ead100246a0b8da4fba1fc3ffc8" prot="public" virt="non-virtual"><scope>WalletBar</scope><name>print_limit</name></member>
+      <member refid="class_wallet_bar_1a28e4d7b035ef6ac5aff8db6b0350bc9c" prot="public" virt="non-virtual"><scope>WalletBar</scope><name>show</name></member>
+      <member refid="class_wallet_bar_1a9be459da1602fe0432ca83d92a20faf5" prot="public" virt="non-virtual"><scope>WalletBar</scope><name>show_gage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

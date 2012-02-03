@@ -46,7 +46,12 @@ void GameScene::init()
 	show_message_box();
 	interest_timer.start();
 	wallet->init(0,30,140,450);
+
+
 	delta.start();
+
+        fire_message_event(eDescription);
+        
 }
 void GameScene::clean_up()
 {
@@ -81,7 +86,8 @@ void GameScene::do_event()
                 if( hero->buy()) {
                     purchase_count++;
                     
-                    print_message_2("You Purchased Clock");
+                    //print_message_2("You Purchased Clock", 1000);
+                    fire_message_event(eBuy);
 //                    message2 = "You Purchase Clock";
 //                    show_message_box();
 //                    message_timer2.start();
@@ -100,12 +106,11 @@ void GameScene::do_event()
 
                 if( building->card_id == 0)
                 {
-                    print_message_1("please press space bar to purchae");
-//                    message = "please press space bar to purchase";
-//                    message_timer.start();
+                    //print_message_1("please press space bar to purchae", 1000);
+                    fire_message_event(eEnterShop);
                     hero->can_buy();
                 } else {
-                    fire_lua_event(MESSAGE_BOX_1_EVENT);
+                    fire_message_event(eEnterCardShop);
                     //print_message_1("You Get the Card");
                     hero->add_card((ECard)building->card_id);
                     hero->select_card((ECard)building->card_id);
@@ -115,13 +120,14 @@ void GameScene::do_event()
             case MESSAGE_BOX_1_EVENT:
                 //fprintf(stderr,"At %s : hereis messageevent",AT);
                 msg = (std::string*)event.user.data1;
-                print_message_1(*msg);
+                print_message_1(*msg, (int)event.user.data2);
+                fprintf(stderr, "duration is : %d",(int)event.user.data2);
                 delete(msg);
                 break;
             case MESSAGE_BOX_2_EVENT:
                 //fprintf(stderr,"At %s : hereis messageevent",AT);
                 msg = (std::string*)event.user.data1;
-                print_message_2(*msg);
+                print_message_2(*msg, (int)event.user.data2);
                 delete(msg);
                 break;
             default:
@@ -181,28 +187,28 @@ void GameScene::show()
 
 	}
 	if( happy_ending_flag) {
+            fire_message_event(eHappyEnd);
 			
-            print_message_1("Hurry up, Press End Key");
-            print_message_2("Go to the Abroad!");
+            //print_message_1("Hurry up, Press End Key", 1000);
+            //print_message_2("Go to the Abroad!", 1000);
 //		message = "Hurry up, Press End Key";
 //		message2 = "Go to the Abroad!";
 //		show_message_box();
 
 	} else {
-		if( message_timer.get_ticks()/100.0f > 1)
+		if( message_timer.get_ticks()> message_timer.period  )
 		{
 //			message = "";
 //			show_message_box();
-                    print_message_1("");
+                        print_message_1("",1000);
 			message_timer.stop();
-			hero->cant_buy();
 
 		}
-		if( message_timer2.get_ticks()/1000.0f > 1)
+		if( message_timer2.get_ticks() > message_timer2.period  )
 		{
 //			message2 = "";
 //			show_message_box();
-                    print_message_2("");
+                        print_message_2("",1000);
 			message_timer2.stop();
 		}
 	}
@@ -254,34 +260,42 @@ void GameScene::check_collide()
 	event.user.code = OPEN_DOOR_EVENT;
 
 	vector<Building*> boxes = map->get_buildings();
+
+
 	for(int i=0; i<(int)boxes.size();i++) {
 		if (hero -> check_collide(boxes[i]) == true) {
 			if( hero->check_collide(boxes[i]->get_door())){
-				event.user.data1 = (void*)boxes[i];
-				SDL_PushEvent(&event);
+                                if (hero->is_indoor() == false ) {
+                                    event.user.data1 = (void*)boxes[i];
+                                    SDL_PushEvent(&event);
+                                }
+                                hero->enter_building();
 			} else {
 				hero->move_back();
+
 			}
 
 			return;
 		}
 	}
+        hero->exit_building();
+        hero->cant_buy();
 
 }
 
-void GameScene::print_message_1(std::string msg)
+void GameScene::print_message_1(std::string msg, int duration)
 {
     message = msg;//"please press space bar to purchase";
     show_message_box();
-    message_timer.start();
+    message_timer.start(duration);
 }
 
-void GameScene::print_message_2(std::string msg) 
+void GameScene::print_message_2(std::string msg, int duration) 
 {
 
     message2 = msg;//"You Purchase Clock";
     show_message_box();
-    message_timer2.start();
+    message_timer2.start(duration);
 }
 
 

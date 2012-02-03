@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="lua__glue_8cpp" kind="file">
+    <compoundname>lua_glue.cpp</compoundname>
+    <includes refid="common_8h" local="yes">common.h</includes>
+    <includes refid="_scene_8h" local="yes">Scene.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">lua/lauxlib.h</includes>
+    <incdepgraph>
+      <node id="610">
+        <label>lua/lualib.h</label>
+      </node>
+      <node id="621">
+        <label>stdarg.h</label>
+      </node>
+      <node id="608">
+        <label>lua/lauxlib.h</label>
+      </node>
+      <node id="609">
+        <label>lua/luaconf.h</label>
+      </node>
+      <node id="627">
+        <label>stdint.h</label>
+      </node>
+      <node id="624">
+        <label>collider.h</label>
+        <link refid="collider_8h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+      </node>
+      <node id="616">
+        <label>string</label>
+      </node>
+      <node id="623">
+        <label>character.h</label>
+        <link refid="character_8h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+      </node>
+      <node id="606">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="607" relation="include">
+        </childnode>
+        <childnode refid="608" relation="include">
+        </childnode>
+        <childnode refid="609" relation="include">
+        </childnode>
+        <childnode refid="610" relation="include">
+        </childnode>
+        <childnode refid="611" relation="include">
+        </childnode>
+        <childnode refid="612" relation="include">
+        </childnode>
+        <childnode refid="613" relation="include">
+        </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+        <childnode refid="615" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="620" relation="include">
+        </childnode>
+        <childnode refid="621" relation="include">
+        </childnode>
+      </node>
+      <node id="614">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+      <node id="628">
+        <label>map</label>
+      </node>
+      <node id="625">
+        <label>CPlayer.h</label>
+        <link refid="_c_player_8h"/>
+        <childnode refid="614" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+      </node>
+      <node id="617">
+        <label>Configuration.h</label>
+        <link refid="_configuration_8h"/>
+      </node>
+      <node id="626">
+        <label>CCard.h</label>
+        <link refid="_c_card_8h"/>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+        <childnode refid="615" relation="include">
+        </childnode>
+      </node>
+      <node id="631">
+        <label>map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+      </node>
+      <node id="611">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="632">
+        <label>vector</label>
+      </node>
+      <node id="619">
+        <label>sstream</label>
+      </node>
+      <node id="607">
+        <label>lua/lua.h</label>
+      </node>
+      <node id="605">
+        <label>lua_glue.cpp</label>
+        <link refid="lua_glue.cpp"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="622" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="608" relation="include">
+        </childnode>
+      </node>
+      <node id="615">
+        <label>GlobalFunctions.h</label>
+        <link refid="_global_functions_8h"/>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="607" relation="include">
+        </childnode>
+      </node>
+      <node id="612">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="618">
+        <label>global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+      </node>
+      <node id="620">
+        <label>iostream</label>
+      </node>
+      <node id="630">
+        <label>building.h</label>
+        <link refid="building_8h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+      </node>
+      <node id="622">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+        <childnode refid="623" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="624" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="615" relation="include">
+        </childnode>
+      </node>
+      <node id="633">
+        <label>stdio.h</label>
+      </node>
+      <node id="613">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+      <node id="629">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="606" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lua__glue_8cpp_1ac83fe1cc6c4559da775361b619a38d1d" prot="public" static="no">
+        <name>LuaGlue</name>
+        <initializer>static int</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.cpp" line="9" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="lua__glue_8cpp_1ac75db90983bb217579fa3983d6aaedeb" prot="public" static="yes" mutable="no">
+        <type>char *</type>
+        <definition>char* g_strEventHandler</definition>
+        <argsstring></argsstring>
+        <name>g_strEventHandler</name>
+        <initializer>&quot;lua_event_handler&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.cpp" line="16" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="lua__glue_8cpp_1adbca9f7cf988fb3c644d8669e02b25b8" prot="public" static="yes" mutable="no">
+        <type><ref refid="structlua_l___reg" kindref="compound">luaL_Reg</ref></type>
+        <definition>luaL_Reg ConsoleGlue[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ConsoleGlue</name>
+        <initializer> 
+{
+    {&quot;print_message_1&quot;, lua_p_msg_1},
+    {&quot;print_message_2&quot;, lua_p_msg_2},
+    {NULL, NULL}
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.cpp" line="49" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lua__glue_8cpp_1aa116244c3fece7118c90a101f66e61d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="lua__glue_8cpp_1ac83fe1cc6c4559da775361b619a38d1d" kindref="member">LuaGlue</ref></type>
+        <definition>LuaGlue lua_p_msg_1</definition>
+        <argsstring>(lua_State *)</argsstring>
+        <name>lua_p_msg_1</name>
+        <param>
+          <type><ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref> *</type>
+          <defname>L</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.cpp" line="12" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="18" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="lua__glue_8cpp_1a95960dc65c7a48758fb42e0ae95daf39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="lua__glue_8cpp_1ac83fe1cc6c4559da775361b619a38d1d" kindref="member">LuaGlue</ref></type>
+        <definition>LuaGlue lua_p_msg_2</definition>
+        <argsstring>(lua_State *)</argsstring>
+        <name>lua_p_msg_2</name>
+        <param>
+          <type><ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref> *</type>
+          <defname>L</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.cpp" line="13" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="31" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="lua__glue_8cpp_1a89dc1688d1f7eab832ca9bfa59717461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_glue</definition>
+        <argsstring>()</argsstring>
+        <name>init_glue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.cpp" line="52" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="lua__glue_8cpp_1ad02d0769a9163d8235e641cc1c8540c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fire_lua_event</definition>
+        <argsstring>(int event_id)</argsstring>
+        <name>fire_lua_event</name>
+        <param>
+          <type>int</type>
+          <declname>event_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/lua_glue.cpp" line="64" bodyfile="D:/repo/newCapitalBreak/lua_glue.cpp" bodystart="63" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_8h" kindref="compound">common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lua/lauxlib.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LuaGlue<sp/><sp/>static<sp/>int</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua__glue_8cpp_1ac83fe1cc6c4559da775361b619a38d1d" kindref="member">LuaGlue</ref><sp/><ref refid="lua__glue_8cpp_1aa116244c3fece7118c90a101f66e61d3" kindref="member">lua_p_msg_1</ref>(<ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref>*);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua__glue_8cpp_1ac83fe1cc6c4559da775361b619a38d1d" kindref="member">LuaGlue</ref><sp/><ref refid="lua__glue_8cpp_1a95960dc65c7a48758fb42e0ae95daf39" kindref="member">lua_p_msg_2</ref>(<ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref>*);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>g_strEventHandler<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;lua_event_handler&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="lua__glue_8cpp_1ac83fe1cc6c4559da775361b619a38d1d" kindref="member">LuaGlue</ref><sp/><ref refid="lua__glue_8cpp_1aa116244c3fece7118c90a101f66e61d3" kindref="member">lua_p_msg_1</ref>(<ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref><sp/>*<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>)<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Event<sp/><ref refid="global_8h_1a6b57f01d3c576db5368dd0efc2f435a4" kindref="member">event</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.type<sp/>=<sp/>SDL_USEREVENT;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.user.code<sp/>=<sp/><ref refid="global_8h_1a7d47cf00cac255f3d9091bc483638f0d" kindref="member">MESSAGE_BOX_1_EVENT</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string*<sp/>msg<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::string(<ref refid="lua_8h_1aabf845b1c7ffc0462988b67ba83955cf" kindref="member">lua_tolstring</ref>(L,1,NULL));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.user.data1<sp/>=<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)msg;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_PushEvent(&amp;event);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//print_message_1(msg);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="lua__glue_8cpp_1ac83fe1cc6c4559da775361b619a38d1d" kindref="member">LuaGlue</ref><sp/><ref refid="lua__glue_8cpp_1a95960dc65c7a48758fb42e0ae95daf39" kindref="member">lua_p_msg_2</ref>(<ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref><sp/>*L)<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_Event<sp/><ref refid="global_8h_1a6b57f01d3c576db5368dd0efc2f435a4" kindref="member">event</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.type<sp/>=<sp/>SDL_USEREVENT;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.user.code<sp/>=<sp/><ref refid="global_8h_1adead7cb8d1e741842d6674ed3e6d76e3" kindref="member">MESSAGE_BOX_2_EVENT</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string*<sp/>msg<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::string(<ref refid="lua_8h_1aabf845b1c7ffc0462988b67ba83955cf" kindref="member">lua_tolstring</ref>(L,1,NULL));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.user.data1<sp/>=<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)msg;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>SDL_PushEvent(&amp;event);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//print_message_2(msg);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structlua_l___reg" kindref="compound">luaL_Reg</ref><sp/>ConsoleGlue[]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;print_message_1&quot;</highlight><highlight class="normal">,<sp/><ref refid="lua__glue_8cpp_1aa116244c3fece7118c90a101f66e61d3" kindref="member">lua_p_msg_1</ref>},</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;print_message_2&quot;</highlight><highlight class="normal">,<sp/><ref refid="lua__glue_8cpp_1a95960dc65c7a48758fb42e0ae95daf39" kindref="member">lua_p_msg_2</ref>},</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{NULL,<sp/>NULL}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lua__glue_8cpp_1a89dc1688d1f7eab832ca9bfa59717461" kindref="member">init_glue</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>luaL_register(L,<sp/>&quot;mylib&quot;,<sp/>ConsoleGlue);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>lua_register(L,<sp/>&quot;print_message_1&quot;,<sp/>lua_p_msg_1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>lua_register(L,<sp/>&quot;print_message_2&quot;,<sp/>lua_p_msg_2);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>ConsoleGlue[i].<ref refid="structlua_l___reg_1a58b99f63b304e5c489b90d812f92cba2" kindref="member">name</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lua_8h_1ae1162e4a80396145544aa03312c60d8c" kindref="member">lua_register</ref>(L,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ConsoleGlue[i].name,<sp/>ConsoleGlue[i].func);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="lua__glue_8cpp_1ad02d0769a9163d8235e641cc1c8540c4" kindref="member">fire_lua_event</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>event_id)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>g_strEventHandler<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[254];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(buf,<sp/></highlight><highlight class="stringliteral">&quot;%s(%d)&quot;</highlight><highlight class="normal">,<sp/>g_strEventHandler,<sp/>event_id);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="lauxlib_8h_1a1a0639bfde6b1e2f6181af45b0137cf5" kindref="member">luaL_dostring</ref>(L,buf);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fprintf(stderr,<sp/>&quot;return<sp/>value<sp/>is<sp/>%d&quot;,luaL_dostring(L,buf));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/repo/newCapitalBreak/lua_glue.cpp"/>
+  </compounddef>
+</doxygen>

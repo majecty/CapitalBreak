@@ -1,0 +1,113 @@
+\hypertarget{class_building}{\section{\-Building 클래스 참조}
+\label{class_building}\index{\-Building@{\-Building}}
+}
+
+
+{\ttfamily \#include $<$building.\-h$>$}
+
+\-Building에 대한 상속 다이어그램 \-: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_building}
+\end{center}
+\end{figure}
+\subsection*{\-Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_building_a3196128a859083cc124e4e783f2abfe2}{\-Building} (int \-\_\-x, int \-\_\-y, int \-\_\-w, int \-\_\-h)
+\item 
+void \hyperlink{class_building_ada54cf04765575df590b78a7df573395}{init} (\hyperlink{_constants_8h_a03f7ec9e12b891db1bbeda07eb4099d7}{\-E\-Card} p\-Card)
+\item 
+virtual bool \hyperlink{class_building_a02c1ac48410c20319a30e6ce13433212}{check\-\_\-collide} (\hyperlink{class_collider}{\-Collider} $\ast$)
+\item 
+virtual \-S\-D\-L\-\_\-\-Rect $\ast$ \hyperlink{class_building_abb1a4ea20e451db134810c45d530e19f}{get\-\_\-box} ()
+\item 
+void \hyperlink{class_building_adb755e094e0017cc0834dbaa81f08888}{clean\-\_\-up} ()
+\item 
+void \hyperlink{class_building_a4cb46a187a9c0d9d4bb68c5e8d8a801a}{show} ()
+\item 
+\hyperlink{class_door}{\-Door} $\ast$ \hyperlink{class_building_a422d693cd9f6ba552a7abba9c0f7f22b}{get\-\_\-door} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_building_a853be442e19c87017130550963def9ff}{card\-\_\-id}
+\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_building_a3196128a859083cc124e4e783f2abfe2}{\index{\-Building@{\-Building}!\-Building@{\-Building}}
+\index{\-Building@{\-Building}!Building@{\-Building}}
+\subsubsection[{\-Building}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Building\-::\-Building} (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-x, }
+\item[{int}]{\-\_\-y, }
+\item[{int}]{\-\_\-w, }
+\item[{int}]{\-\_\-h}
+\end{DoxyParamCaption}
+)}}\label{class_building_a3196128a859083cc124e4e783f2abfe2}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_building_a02c1ac48410c20319a30e6ce13433212}{\index{\-Building@{\-Building}!check\-\_\-collide@{check\-\_\-collide}}
+\index{check\-\_\-collide@{check\-\_\-collide}!Building@{\-Building}}
+\subsubsection[{check\-\_\-collide}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Building\-::check\-\_\-collide} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Collider} $\ast$}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_building_a02c1ac48410c20319a30e6ce13433212}
+
+
+\hyperlink{class_collider_aa14301229ec52e3219b41c17ef162925}{\-Collider}를 구현.
+
+\hypertarget{class_building_adb755e094e0017cc0834dbaa81f08888}{\index{\-Building@{\-Building}!clean\-\_\-up@{clean\-\_\-up}}
+\index{clean\-\_\-up@{clean\-\_\-up}!Building@{\-Building}}
+\subsubsection[{clean\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Building\-::clean\-\_\-up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_building_adb755e094e0017cc0834dbaa81f08888}
+\hypertarget{class_building_abb1a4ea20e451db134810c45d530e19f}{\index{\-Building@{\-Building}!get\-\_\-box@{get\-\_\-box}}
+\index{get\-\_\-box@{get\-\_\-box}!Building@{\-Building}}
+\subsubsection[{get\-\_\-box}]{\setlength{\rightskip}{0pt plus 5cm}\-S\-D\-L\-\_\-\-Rect $\ast$ {\bf \-Building\-::get\-\_\-box} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_building_abb1a4ea20e451db134810c45d530e19f}
+
+
+\hyperlink{class_collider_a1b6c8bc800070a1e880979378b348e8d}{\-Collider}를 구현.
+
+\hypertarget{class_building_a422d693cd9f6ba552a7abba9c0f7f22b}{\index{\-Building@{\-Building}!get\-\_\-door@{get\-\_\-door}}
+\index{get\-\_\-door@{get\-\_\-door}!Building@{\-Building}}
+\subsubsection[{get\-\_\-door}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Door} $\ast$ {\bf \-Building\-::get\-\_\-door} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_building_a422d693cd9f6ba552a7abba9c0f7f22b}
+\hypertarget{class_building_ada54cf04765575df590b78a7df573395}{\index{\-Building@{\-Building}!init@{init}}
+\index{init@{init}!Building@{\-Building}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Building\-::init} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-Card}}]{p\-Card}
+\end{DoxyParamCaption}
+)}}\label{class_building_ada54cf04765575df590b78a7df573395}
+\hypertarget{class_building_a4cb46a187a9c0d9d4bb68c5e8d8a801a}{\index{\-Building@{\-Building}!show@{show}}
+\index{show@{show}!Building@{\-Building}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Building\-::show} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_building_a4cb46a187a9c0d9d4bb68c5e8d8a801a}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_building_a853be442e19c87017130550963def9ff}{\index{\-Building@{\-Building}!card\-\_\-id@{card\-\_\-id}}
+\index{card\-\_\-id@{card\-\_\-id}!Building@{\-Building}}
+\subsubsection[{card\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Building\-::card\-\_\-id}}}\label{class_building_a853be442e19c87017130550963def9ff}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{building_8h}{building.\-h}\item 
+\hyperlink{building_8cpp}{building.\-cpp}\end{DoxyCompactItemize}

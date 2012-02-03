@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_door" kind="class" prot="public">
+    <compoundname>Door</compoundname>
+    <basecompoundref refid="class_collider" prot="public" virt="non-virtual">Collider</basecompoundref>
+    <includes refid="building_8h" local="no">building.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_door_1a0190ed16f5b572ab27305f946c0ece00" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Door::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="14" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_door_1aedd686ae400cb6f9e986df6aa5ba49d6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Door::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="14" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_door_1af264d3ffba3e28c333a19cec76eb469e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Door::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="15" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_door_1a678b93485d1fdf1a95dafa53e574d479" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Door::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="15" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_door_1a494e2d4a8fdd198e2229b066e5473997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Door::Door</definition>
+        <argsstring>(int building_x, int building_y, int _x=DOOR_X, int _y=DOOR_Y, int _w=DOOR_W, int _h=DOOR_H)</argsstring>
+        <name>Door</name>
+        <param>
+          <type>int</type>
+          <declname>building_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>building_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+          <defval><ref refid="global_8h_1aca0bd9ade5788664bbf47fc95c52f9bb" kindref="member">DOOR_X</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+          <defval><ref refid="global_8h_1a2070dd4270c9575cdcd0f507d75104d0" kindref="member">DOOR_Y</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_w</declname>
+          <defval><ref refid="global_8h_1ac41cbf633f73b0077c07daf186768497" kindref="member">DOOR_W</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_h</declname>
+          <defval><ref refid="global_8h_1a1989de9fa88a8b55e0c7b7a77f6913f9" kindref="member">DOOR_H</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="17" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="93" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_door_1a38deff918ee0218bc61a732834591795" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Door::check_collide</definition>
+        <argsstring>(Collider *)</argsstring>
+        <name>check_collide</name>
+        <reimplements refid="class_collider_1aa14301229ec52e3219b41c17ef162925">check_collide</reimplements>
+        <param>
+          <type><ref refid="class_collider" kindref="compound">Collider</ref> *</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="18" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="101" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_door_1a2664d8a7636d1eb1e297c8ffd237c379" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect * Door::get_box</definition>
+        <argsstring>()</argsstring>
+        <name>get_box</name>
+        <reimplements refid="class_collider_1a1b6c8bc800070a1e880979378b348e8d">get_box</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/building.h" line="19" bodyfile="D:/repo/newCapitalBreak/building.cpp" bodystart="121" bodyend="132"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="28">
+        <label>Door</label>
+        <link refid="class_door"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Collider</label>
+        <link refid="class_collider"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="30">
+        <label>Door</label>
+        <link refid="class_door"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Collider</label>
+        <link refid="class_collider"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/repo/newCapitalBreak/building.h" line="12" bodyfile="D:/repo/newCapitalBreak/building.h" bodystart="11" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_door_1a38deff918ee0218bc61a732834591795" prot="public" virt="virtual"><scope>Door</scope><name>check_collide</name></member>
+      <member refid="class_door_1a494e2d4a8fdd198e2229b066e5473997" prot="public" virt="non-virtual"><scope>Door</scope><name>Door</name></member>
+      <member refid="class_door_1a2664d8a7636d1eb1e297c8ffd237c379" prot="public" virt="virtual"><scope>Door</scope><name>get_box</name></member>
+      <member refid="class_door_1a678b93485d1fdf1a95dafa53e574d479" prot="private" virt="non-virtual"><scope>Door</scope><name>h</name></member>
+      <member refid="class_door_1af264d3ffba3e28c333a19cec76eb469e" prot="private" virt="non-virtual"><scope>Door</scope><name>w</name></member>
+      <member refid="class_door_1a0190ed16f5b572ab27305f946c0ece00" prot="private" virt="non-virtual"><scope>Door</scope><name>x</name></member>
+      <member refid="class_door_1aedd686ae400cb6f9e986df6aa5ba49d6" prot="private" virt="non-virtual"><scope>Door</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

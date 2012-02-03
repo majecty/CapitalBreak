@@ -1,0 +1,152 @@
+.TH "global.h" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+global.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'common\&.h'\fP
+.br
+
+.SS "변수"
+
+.in +1c
+.ti -1c
+.RI "const bool \fBDEBUG_ON\fP = true"
+.br
+.ti -1c
+.RI "const int \fBSCENE_START\fP = 0"
+.br
+.ti -1c
+.RI "const int \fBSCENE_GAME\fP = 1"
+.br
+.ti -1c
+.RI "const int \fBSCENE_BADEND\fP = 2"
+.br
+.ti -1c
+.RI "const int \fBSCENE_GOODEND\fP = 3"
+.br
+.ti -1c
+.RI "const int \fBSCENE_CREDIT\fP = 4"
+.br
+.ti -1c
+.RI "const int \fBSCENE_NUM\fP = 5"
+.br
+.ti -1c
+.RI "const int \fBUNIT_WIDTH\fP = 30"
+.br
+.ti -1c
+.RI "const int \fBUNIT_HEIGHT\fP = 30"
+.br
+.ti -1c
+.RI "const int \fBMESSAGE_BOX_X\fP = 140+10"
+.br
+.ti -1c
+.RI "const int \fBMESSAGE_BOX_Y\fP = 389"
+.br
+.ti -1c
+.RI "const int \fBMESSAGE_BOX_W\fP = 500"
+.br
+.ti -1c
+.RI "const int \fBMESSAGE_BOX_H\fP = 100"
+.br
+.ti -1c
+.RI "const int \fBMAP_X\fP = 140"
+.br
+.ti -1c
+.RI "const int \fBMAP_Y\fP = 30"
+.br
+.ti -1c
+.RI "const int \fBMAP_W\fP = 500"
+.br
+.ti -1c
+.RI "const int \fBMAP_H\fP = 340"
+.br
+.ti -1c
+.RI "const int \fBDOOR_X\fP = 40"
+.br
+.ti -1c
+.RI "const int \fBDOOR_Y\fP = 60"
+.br
+.ti -1c
+.RI "const int \fBDOOR_W\fP = 50"
+.br
+.ti -1c
+.RI "const int \fBDOOR_H\fP = 16"
+.br
+.ti -1c
+.RI "const int \fBOPEN_DOOR_EVENT\fP = 100"
+.br
+.ti -1c
+.RI "const int \fBMESSAGE_BOX_1_EVENT\fP = 110"
+.br
+.ti -1c
+.RI "const int \fBMESSAGE_BOX_2_EVENT\fP = 111"
+.br
+.ti -1c
+.RI "SDL_Surface * \fBscreen\fP"
+.br
+.ti -1c
+.RI "SDL_Event \fBevent\fP"
+.br
+.ti -1c
+.RI "TTF_Font * \fBfont\fP"
+.br
+.ti -1c
+.RI "SDL_Color \fBtextColor\fP"
+.br
+.ti -1c
+.RI "SDL_Color \fBwhiteColor\fP"
+.br
+.ti -1c
+.RI "SDL_Color \fBblackColor\fP"
+.br
+.ti -1c
+.RI "\fBlua_State\fP * \fBL\fP"
+.br
+.ti -1c
+.RI "bool \fBquit\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fBbuildings_image\fP"
+.br
+.in -1c
+.SH "변수 문서화"
+.PP 
+.SS "SDL_Color \fBblackColor\fP"
+.SS "SDL_Surface* \fBbuildings_image\fP"
+.SS "const bool \fBDEBUG_ON\fP = true"
+.SS "const int \fBDOOR_H\fP = 16"
+.SS "const int \fBDOOR_W\fP = 50"
+.SS "const int \fBDOOR_X\fP = 40"
+.SS "const int \fBDOOR_Y\fP = 60"
+.SS "SDL_Event \fBevent\fP"
+.SS "TTF_Font* \fBfont\fP"
+.SS "\fBlua_State\fP* \fBL\fP"
+.SS "const int \fBMAP_H\fP = 340"
+.SS "const int \fBMAP_W\fP = 500"
+.SS "const int \fBMAP_X\fP = 140"
+.SS "const int \fBMAP_Y\fP = 30"
+.SS "const int \fBMESSAGE_BOX_1_EVENT\fP = 110"
+.SS "const int \fBMESSAGE_BOX_2_EVENT\fP = 111"
+.SS "const int \fBMESSAGE_BOX_H\fP = 100"
+.SS "const int \fBMESSAGE_BOX_W\fP = 500"
+.SS "const int \fBMESSAGE_BOX_X\fP = 140+10"
+.SS "const int \fBMESSAGE_BOX_Y\fP = 389"
+.SS "const int \fBOPEN_DOOR_EVENT\fP = 100"
+.SS "bool \fBquit\fP"
+.SS "const int \fBSCENE_BADEND\fP = 2"
+.SS "const int \fBSCENE_CREDIT\fP = 4"
+.SS "const int \fBSCENE_GAME\fP = 1"
+.SS "const int \fBSCENE_GOODEND\fP = 3"
+.SS "const int \fBSCENE_NUM\fP = 5"
+.SS "const int \fBSCENE_START\fP = 0"
+.SS "SDL_Surface* \fBscreen\fP"
+.SS "SDL_Color \fBtextColor\fP"
+.SS "const int \fBUNIT_HEIGHT\fP = 30"
+.SS "const int \fBUNIT_WIDTH\fP = 30"
+.SS "SDL_Color \fBwhiteColor\fP"
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

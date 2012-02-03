@@ -1,0 +1,66 @@
+.TH "Building" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Building \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <building\&.h>\fP
+.PP
+\fBCollider\fP를(을) 상속했습니다\&.
+.SS "Public 멤버 함수"
+
+.in +1c
+.ti -1c
+.RI "\fBBuilding\fP (int _x, int _y, int _w, int _h)"
+.br
+.ti -1c
+.RI "void \fBinit\fP (\fBECard\fP pCard)"
+.br
+.ti -1c
+.RI "virtual bool \fBcheck_collide\fP (\fBCollider\fP *)"
+.br
+.ti -1c
+.RI "virtual SDL_Rect * \fBget_box\fP ()"
+.br
+.ti -1c
+.RI "void \fBclean_up\fP ()"
+.br
+.ti -1c
+.RI "void \fBshow\fP ()"
+.br
+.ti -1c
+.RI "\fBDoor\fP * \fBget_door\fP ()"
+.br
+.in -1c
+.SS "Public 속성"
+
+.in +1c
+.ti -1c
+.RI "int \fBcard_id\fP"
+.br
+.in -1c
+.SH "생성자 & 소멸자 문서화"
+.PP 
+.SS "\fBBuilding::Building\fP (int_x, int_y, int_w, int_h)"
+.SH "멤버 함수 문서화"
+.PP 
+.SS "bool \fBBuilding::check_collide\fP (\fBCollider\fP *other)\fC [virtual]\fP"
+.PP
+\fBCollider\fP를 구현\&.
+.SS "void \fBBuilding::clean_up\fP ()"
+.SS "SDL_Rect * \fBBuilding::get_box\fP ()\fC [virtual]\fP"
+.PP
+\fBCollider\fP를 구현\&.
+.SS "\fBDoor\fP * \fBBuilding::get_door\fP ()"
+.SS "void \fBBuilding::init\fP (\fBECard\fPpCard)"
+.SS "void \fBBuilding::show\fP ()"
+.SH "멤버 데이타 문서화"
+.PP 
+.SS "int \fBBuilding::card_id\fP"
+
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

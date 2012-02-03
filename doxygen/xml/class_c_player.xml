@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_c_player" kind="class" prot="public">
+    <compoundname>CPlayer</compoundname>
+    <includes refid="_c_player_8h" local="no">CPlayer.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_c_player_1afc2e175de7122626d649da43d3db40a2" prot="public" static="no">
+        <type>std::map&lt; int, <ref refid="class_c_card" kindref="compound">CCard</ref> &gt;</type>
+        <definition>typedef std::map&lt;int, CCard&gt; CPlayer::TCardInven</definition>
+        <argsstring></argsstring>
+        <name>TCardInven</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="12" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_c_player_1a956d26e71ea17e57ac43279eab7eaf3b" prot="public" static="no">
+        <type>TCardInven::iterator</type>
+        <definition>typedef TCardInven::iterator CPlayer::TCardInvenItr</definition>
+        <argsstring></argsstring>
+        <name>TCardInvenItr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="13" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_player_1a0bc78defde1e6d5a2668b929cf9c448f" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CPlayer::__mPlayerName[MAX_PLAYER_NAME_LEN+1]</definition>
+        <argsstring>[MAX_PLAYER_NAME_LEN+1]</argsstring>
+        <name>__mPlayerName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="16" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_player_1afaabfe33c82d922466b1e11a9c9154a5" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t CPlayer::__mDept</definition>
+        <argsstring></argsstring>
+        <name>__mDept</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="17" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_player_1abcd01390238a00e96010085cd1a21813" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CPlayer::__mCreditorCount</definition>
+        <argsstring></argsstring>
+        <name>__mCreditorCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="18" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_player_1a0874220f87c787e1db65014342472eef" prot="private" static="no" mutable="no">
+        <type><ref refid="class_c_player_1afc2e175de7122626d649da43d3db40a2" kindref="member">TCardInven</ref></type>
+        <definition>TCardInven CPlayer::__mCardInven</definition>
+        <argsstring></argsstring>
+        <name>__mCardInven</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="19" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_player_1a5e3f8139aeaac8e7c5207c3b1f546423" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CPlayer::__mCurrentCard</definition>
+        <argsstring></argsstring>
+        <name>__mCurrentCard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="20" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_player_1a375d45b270aa4dcd418bb230fd2dbfcd" prot="private" static="no" mutable="no">
+        <type><ref refid="_constants_8h_1a4db5fb2e90acc4ef6c281d6cca4dea4e" kindref="member">ERank</ref></type>
+        <definition>ERank CPlayer::__mCurrentRank</definition>
+        <argsstring></argsstring>
+        <name>__mCurrentRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="21" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_player_1ab84d25616292240c645d709f807874ca" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short CPlayer::__mGrade</definition>
+        <argsstring></argsstring>
+        <name>__mGrade</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="22" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_player_1a931a59adf2ada5376122e30b33ae2c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPlayer::CPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>CPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="25" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1acf628f08c81409913cb0833bb115cdb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::Reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>Reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="26" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="10" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a9913e32cb613756cc092eee3a5b51a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::SetName</definition>
+        <argsstring>(char *pName)</argsstring>
+        <name>SetName</name>
+        <param>
+          <type>char *</type>
+          <declname>pName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="28" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a51451db1a48869676883ad6f3f405d14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::SetRank</definition>
+        <argsstring>(ERank pRank)</argsstring>
+        <name>SetRank</name>
+        <param>
+          <type><ref refid="_constants_8h_1a4db5fb2e90acc4ef6c281d6cca4dea4e" kindref="member">ERank</ref></type>
+          <declname>pRank</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="29" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1ad57bf753f80586ec0f64c60e0c4ea0fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::SetGrade</definition>
+        <argsstring>(unsigned short pGrade)</argsstring>
+        <name>SetGrade</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>pGrade</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="30" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="33" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a57cbfab5dbea898e0f1e6d6ef59a299e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::IncreaseGrade</definition>
+        <argsstring>(void)</argsstring>
+        <name>IncreaseGrade</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="31" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="41" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a0fc3b3c7cd8023dbbbdc2b882f0bb332" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::DecreaseGrade</definition>
+        <argsstring>(void)</argsstring>
+        <name>DecreaseGrade</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="32" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a794b0017abea4805822cd7b45ad87a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::AddCreditorCount</definition>
+        <argsstring>(int pCount)</argsstring>
+        <name>AddCreditorCount</name>
+        <param>
+          <type>int</type>
+          <declname>pCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="33" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a4649279fe3c5b1f48693f82d96d4f78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CPlayer::BuySomething</definition>
+        <argsstring>(uint64_t pPrice)</argsstring>
+        <name>BuySomething</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>pPrice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="34" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="62" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a8c6227c3a234b86be05de01cefb5523d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::AddDept</definition>
+        <argsstring>(uint64_t pDept)</argsstring>
+        <name>AddDept</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>pDept</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="35" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="80" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a18b2124b5135497c522d83b42a003d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CPlayer::AddCard</definition>
+        <argsstring>(ECard pCard)</argsstring>
+        <name>AddCard</name>
+        <param>
+          <type><ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7" kindref="member">ECard</ref></type>
+          <declname>pCard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="36" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="93" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1ab5eb413c887a4054e7f596f0d579cd9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CPlayer::SelectCard</definition>
+        <argsstring>(ECard pCard)</argsstring>
+        <name>SelectCard</name>
+        <param>
+          <type><ref refid="_constants_8h_1a03f7ec9e12b891db1bbeda07eb4099d7" kindref="member">ECard</ref></type>
+          <declname>pCard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="37" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="103" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a5ab4c5d7ec31884412907a1bbdadad5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t CPlayer::CalcDept</definition>
+        <argsstring>(void)</argsstring>
+        <name>CalcDept</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="38" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="113" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a5ae1229e6474d6cf7979d60bdcfbf889" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * CPlayer::GetPlayerName</definition>
+        <argsstring>(void) const </argsstring>
+        <name>GetPlayerName</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="40" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a5de57603460102d5ca5c0993d5e7355c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t CPlayer::GetDept</definition>
+        <argsstring>(void) const </argsstring>
+        <name>GetDept</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="41" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a73cd6d410fba5f19c498e58a3df02a90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CPlayer::GetCreditorCount</definition>
+        <argsstring>(void) const </argsstring>
+        <name>GetCreditorCount</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="42" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1adab4b115cbcac118da7ce6b362de9e0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_player_1afc2e175de7122626d649da43d3db40a2" kindref="member">TCardInven</ref> *</type>
+        <definition>CPlayer::TCardInven * CPlayer::GetCardInven</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetCardInven</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="43" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a78464f332f77bee53c7acd94b78c40bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_card" kindref="compound">CCard</ref> *</type>
+        <definition>CCard * CPlayer::GetCurrentCard</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetCurrentCard</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="44" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="147" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1a3837ca31414dc04f376efcf82413293f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_constants_8h_1a4db5fb2e90acc4ef6c281d6cca4dea4e" kindref="member">ERank</ref></type>
+        <definition>ERank CPlayer::GetRank</definition>
+        <argsstring>(void) const </argsstring>
+        <name>GetRank</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="45" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_player_1aaa70c733b82d5b1145d206282b49e4dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short CPlayer::GetGrade</definition>
+        <argsstring>(void) const </argsstring>
+        <name>GetGrade</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/CPlayer.h" line="46" bodyfile="D:/repo/newCapitalBreak/CPlayer.cpp" bodystart="161" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/repo/newCapitalBreak/CPlayer.h" line="10" bodyfile="D:/repo/newCapitalBreak/CPlayer.h" bodystart="9" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_c_player_1a0874220f87c787e1db65014342472eef" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>__mCardInven</name></member>
+      <member refid="class_c_player_1abcd01390238a00e96010085cd1a21813" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>__mCreditorCount</name></member>
+      <member refid="class_c_player_1a5e3f8139aeaac8e7c5207c3b1f546423" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>__mCurrentCard</name></member>
+      <member refid="class_c_player_1a375d45b270aa4dcd418bb230fd2dbfcd" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>__mCurrentRank</name></member>
+      <member refid="class_c_player_1afaabfe33c82d922466b1e11a9c9154a5" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>__mDept</name></member>
+      <member refid="class_c_player_1ab84d25616292240c645d709f807874ca" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>__mGrade</name></member>
+      <member refid="class_c_player_1a0bc78defde1e6d5a2668b929cf9c448f" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>__mPlayerName</name></member>
+      <member refid="class_c_player_1a18b2124b5135497c522d83b42a003d9f" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>AddCard</name></member>
+      <member refid="class_c_player_1a794b0017abea4805822cd7b45ad87a9b" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>AddCreditorCount</name></member>
+      <member refid="class_c_player_1a8c6227c3a234b86be05de01cefb5523d" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>AddDept</name></member>
+      <member refid="class_c_player_1a4649279fe3c5b1f48693f82d96d4f78d" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>BuySomething</name></member>
+      <member refid="class_c_player_1a5ab4c5d7ec31884412907a1bbdadad5c" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>CalcDept</name></member>
+      <member refid="class_c_player_1a931a59adf2ada5376122e30b33ae2c4c" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>CPlayer</name></member>
+      <member refid="class_c_player_1a0fc3b3c7cd8023dbbbdc2b882f0bb332" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>DecreaseGrade</name></member>
+      <member refid="class_c_player_1adab4b115cbcac118da7ce6b362de9e0f" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>GetCardInven</name></member>
+      <member refid="class_c_player_1a73cd6d410fba5f19c498e58a3df02a90" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>GetCreditorCount</name></member>
+      <member refid="class_c_player_1a78464f332f77bee53c7acd94b78c40bb" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>GetCurrentCard</name></member>
+      <member refid="class_c_player_1a5de57603460102d5ca5c0993d5e7355c" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>GetDept</name></member>
+      <member refid="class_c_player_1aaa70c733b82d5b1145d206282b49e4dc" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>GetGrade</name></member>
+      <member refid="class_c_player_1a5ae1229e6474d6cf7979d60bdcfbf889" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>GetPlayerName</name></member>
+      <member refid="class_c_player_1a3837ca31414dc04f376efcf82413293f" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>GetRank</name></member>
+      <member refid="class_c_player_1a57cbfab5dbea898e0f1e6d6ef59a299e" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>IncreaseGrade</name></member>
+      <member refid="class_c_player_1acf628f08c81409913cb0833bb115cdb3" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>Reset</name></member>
+      <member refid="class_c_player_1ab5eb413c887a4054e7f596f0d579cd9f" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>SelectCard</name></member>
+      <member refid="class_c_player_1ad57bf753f80586ec0f64c60e0c4ea0fb" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>SetGrade</name></member>
+      <member refid="class_c_player_1a9913e32cb613756cc092eee3a5b51a2b" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>SetName</name></member>
+      <member refid="class_c_player_1a51451db1a48869676883ad6f3f405d14" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>SetRank</name></member>
+      <member refid="class_c_player_1afc2e175de7122626d649da43d3db40a2" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>TCardInven</name></member>
+      <member refid="class_c_player_1a956d26e71ea17e57ac43279eab7eaf3b" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>TCardInvenItr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

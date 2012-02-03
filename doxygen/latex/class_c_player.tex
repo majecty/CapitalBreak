@@ -1,0 +1,218 @@
+\hypertarget{class_c_player}{\section{\-C\-Player 클래스 참조}
+\label{class_c_player}\index{\-C\-Player@{\-C\-Player}}
+}
+
+
+{\ttfamily \#include $<$\-C\-Player.\-h$>$}
+
+\subsection*{\-Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map$<$ int, \hyperlink{class_c_card}{\-C\-Card} $>$ \hyperlink{class_c_player_afc2e175de7122626d649da43d3db40a2}{\-T\-Card\-Inven}
+\item 
+typedef \-T\-Card\-Inven\-::iterator \hyperlink{class_c_player_a956d26e71ea17e57ac43279eab7eaf3b}{\-T\-Card\-Inven\-Itr}
+\end{DoxyCompactItemize}
+\subsection*{\-Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_player_a931a59adf2ada5376122e30b33ae2c4c}{\-C\-Player} ()
+\item 
+void \hyperlink{class_c_player_acf628f08c81409913cb0833bb115cdb3}{\-Reset} (void)
+\item 
+void \hyperlink{class_c_player_a9913e32cb613756cc092eee3a5b51a2b}{\-Set\-Name} (char $\ast$p\-Name)
+\item 
+void \hyperlink{class_c_player_a51451db1a48869676883ad6f3f405d14}{\-Set\-Rank} (\hyperlink{_constants_8h_a4db5fb2e90acc4ef6c281d6cca4dea4e}{\-E\-Rank} p\-Rank)
+\item 
+void \hyperlink{class_c_player_ad57bf753f80586ec0f64c60e0c4ea0fb}{\-Set\-Grade} (unsigned short p\-Grade)
+\item 
+void \hyperlink{class_c_player_a57cbfab5dbea898e0f1e6d6ef59a299e}{\-Increase\-Grade} (void)
+\item 
+void \hyperlink{class_c_player_a0fc3b3c7cd8023dbbbdc2b882f0bb332}{\-Decrease\-Grade} (void)
+\item 
+void \hyperlink{class_c_player_a794b0017abea4805822cd7b45ad87a9b}{\-Add\-Creditor\-Count} (int p\-Count)
+\item 
+bool \hyperlink{class_c_player_a4649279fe3c5b1f48693f82d96d4f78d}{\-Buy\-Something} (uint64\-\_\-t p\-Price)
+\item 
+void \hyperlink{class_c_player_a8c6227c3a234b86be05de01cefb5523d}{\-Add\-Dept} (uint64\-\_\-t p\-Dept)
+\item 
+bool \hyperlink{class_c_player_a18b2124b5135497c522d83b42a003d9f}{\-Add\-Card} (\hyperlink{_constants_8h_a03f7ec9e12b891db1bbeda07eb4099d7}{\-E\-Card} p\-Card)
+\item 
+bool \hyperlink{class_c_player_ab5eb413c887a4054e7f596f0d579cd9f}{\-Select\-Card} (\hyperlink{_constants_8h_a03f7ec9e12b891db1bbeda07eb4099d7}{\-E\-Card} p\-Card)
+\item 
+uint64\-\_\-t \hyperlink{class_c_player_a5ab4c5d7ec31884412907a1bbdadad5c}{\-Calc\-Dept} (void)
+\item 
+const char $\ast$ \hyperlink{class_c_player_a5ae1229e6474d6cf7979d60bdcfbf889}{\-Get\-Player\-Name} (void) const 
+\item 
+uint64\-\_\-t \hyperlink{class_c_player_a5de57603460102d5ca5c0993d5e7355c}{\-Get\-Dept} (void) const 
+\item 
+int \hyperlink{class_c_player_a73cd6d410fba5f19c498e58a3df02a90}{\-Get\-Creditor\-Count} (void) const 
+\item 
+\hyperlink{class_c_player_afc2e175de7122626d649da43d3db40a2}{\-T\-Card\-Inven} $\ast$ \hyperlink{class_c_player_adab4b115cbcac118da7ce6b362de9e0f}{\-Get\-Card\-Inven} (void)
+\item 
+\hyperlink{class_c_card}{\-C\-Card} $\ast$ \hyperlink{class_c_player_a78464f332f77bee53c7acd94b78c40bb}{\-Get\-Current\-Card} (void)
+\item 
+\hyperlink{_constants_8h_a4db5fb2e90acc4ef6c281d6cca4dea4e}{\-E\-Rank} \hyperlink{class_c_player_a3837ca31414dc04f376efcf82413293f}{\-Get\-Rank} (void) const 
+\item 
+unsigned short \hyperlink{class_c_player_aaa70c733b82d5b1145d206282b49e4dc}{\-Get\-Grade} (void) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{멤버 타입정의 문서화}
+\hypertarget{class_c_player_afc2e175de7122626d649da43d3db40a2}{\index{\-C\-Player@{\-C\-Player}!\-T\-Card\-Inven@{\-T\-Card\-Inven}}
+\index{\-T\-Card\-Inven@{\-T\-Card\-Inven}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-T\-Card\-Inven}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$int, {\bf \-C\-Card}$>$ {\bf \-C\-Player\-::\-T\-Card\-Inven}}}\label{class_c_player_afc2e175de7122626d649da43d3db40a2}
+\hypertarget{class_c_player_a956d26e71ea17e57ac43279eab7eaf3b}{\index{\-C\-Player@{\-C\-Player}!\-T\-Card\-Inven\-Itr@{\-T\-Card\-Inven\-Itr}}
+\index{\-T\-Card\-Inven\-Itr@{\-T\-Card\-Inven\-Itr}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-T\-Card\-Inven\-Itr}]{\setlength{\rightskip}{0pt plus 5cm}typedef \-T\-Card\-Inven\-::iterator {\bf \-C\-Player\-::\-T\-Card\-Inven\-Itr}}}\label{class_c_player_a956d26e71ea17e57ac43279eab7eaf3b}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_c_player_a931a59adf2ada5376122e30b33ae2c4c}{\index{\-C\-Player@{\-C\-Player}!\-C\-Player@{\-C\-Player}}
+\index{\-C\-Player@{\-C\-Player}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-C\-Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-Player\-::\-C\-Player} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a931a59adf2ada5376122e30b33ae2c4c}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_c_player_a18b2124b5135497c522d83b42a003d9f}{\index{\-C\-Player@{\-C\-Player}!\-Add\-Card@{\-Add\-Card}}
+\index{\-Add\-Card@{\-Add\-Card}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Add\-Card}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-Player\-::\-Add\-Card} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-Card}}]{p\-Card}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a18b2124b5135497c522d83b42a003d9f}
+\hypertarget{class_c_player_a794b0017abea4805822cd7b45ad87a9b}{\index{\-C\-Player@{\-C\-Player}!\-Add\-Creditor\-Count@{\-Add\-Creditor\-Count}}
+\index{\-Add\-Creditor\-Count@{\-Add\-Creditor\-Count}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Add\-Creditor\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-Player\-::\-Add\-Creditor\-Count} (
+\begin{DoxyParamCaption}
+\item[{int}]{p\-Count}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a794b0017abea4805822cd7b45ad87a9b}
+\hypertarget{class_c_player_a8c6227c3a234b86be05de01cefb5523d}{\index{\-C\-Player@{\-C\-Player}!\-Add\-Dept@{\-Add\-Dept}}
+\index{\-Add\-Dept@{\-Add\-Dept}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Add\-Dept}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-Player\-::\-Add\-Dept} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{p\-Dept}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a8c6227c3a234b86be05de01cefb5523d}
+\hypertarget{class_c_player_a4649279fe3c5b1f48693f82d96d4f78d}{\index{\-C\-Player@{\-C\-Player}!\-Buy\-Something@{\-Buy\-Something}}
+\index{\-Buy\-Something@{\-Buy\-Something}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Buy\-Something}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-Player\-::\-Buy\-Something} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{p\-Price}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a4649279fe3c5b1f48693f82d96d4f78d}
+\hypertarget{class_c_player_a5ab4c5d7ec31884412907a1bbdadad5c}{\index{\-C\-Player@{\-C\-Player}!\-Calc\-Dept@{\-Calc\-Dept}}
+\index{\-Calc\-Dept@{\-Calc\-Dept}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Calc\-Dept}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-C\-Player\-::\-Calc\-Dept} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a5ab4c5d7ec31884412907a1bbdadad5c}
+\hypertarget{class_c_player_a0fc3b3c7cd8023dbbbdc2b882f0bb332}{\index{\-C\-Player@{\-C\-Player}!\-Decrease\-Grade@{\-Decrease\-Grade}}
+\index{\-Decrease\-Grade@{\-Decrease\-Grade}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Decrease\-Grade}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-Player\-::\-Decrease\-Grade} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a0fc3b3c7cd8023dbbbdc2b882f0bb332}
+\hypertarget{class_c_player_adab4b115cbcac118da7ce6b362de9e0f}{\index{\-C\-Player@{\-C\-Player}!\-Get\-Card\-Inven@{\-Get\-Card\-Inven}}
+\index{\-Get\-Card\-Inven@{\-Get\-Card\-Inven}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Get\-Card\-Inven}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-Player\-::\-T\-Card\-Inven} $\ast$ {\bf \-C\-Player\-::\-Get\-Card\-Inven} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_adab4b115cbcac118da7ce6b362de9e0f}
+\hypertarget{class_c_player_a73cd6d410fba5f19c498e58a3df02a90}{\index{\-C\-Player@{\-C\-Player}!\-Get\-Creditor\-Count@{\-Get\-Creditor\-Count}}
+\index{\-Get\-Creditor\-Count@{\-Get\-Creditor\-Count}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Get\-Creditor\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-C\-Player\-::\-Get\-Creditor\-Count} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_player_a73cd6d410fba5f19c498e58a3df02a90}
+\hypertarget{class_c_player_a78464f332f77bee53c7acd94b78c40bb}{\index{\-C\-Player@{\-C\-Player}!\-Get\-Current\-Card@{\-Get\-Current\-Card}}
+\index{\-Get\-Current\-Card@{\-Get\-Current\-Card}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Get\-Current\-Card}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-Card} $\ast$ {\bf \-C\-Player\-::\-Get\-Current\-Card} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a78464f332f77bee53c7acd94b78c40bb}
+\hypertarget{class_c_player_a5de57603460102d5ca5c0993d5e7355c}{\index{\-C\-Player@{\-C\-Player}!\-Get\-Dept@{\-Get\-Dept}}
+\index{\-Get\-Dept@{\-Get\-Dept}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Get\-Dept}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-C\-Player\-::\-Get\-Dept} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_player_a5de57603460102d5ca5c0993d5e7355c}
+\hypertarget{class_c_player_aaa70c733b82d5b1145d206282b49e4dc}{\index{\-C\-Player@{\-C\-Player}!\-Get\-Grade@{\-Get\-Grade}}
+\index{\-Get\-Grade@{\-Get\-Grade}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Get\-Grade}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short {\bf \-C\-Player\-::\-Get\-Grade} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_player_aaa70c733b82d5b1145d206282b49e4dc}
+\hypertarget{class_c_player_a5ae1229e6474d6cf7979d60bdcfbf889}{\index{\-C\-Player@{\-C\-Player}!\-Get\-Player\-Name@{\-Get\-Player\-Name}}
+\index{\-Get\-Player\-Name@{\-Get\-Player\-Name}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Get\-Player\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf \-C\-Player\-::\-Get\-Player\-Name} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_player_a5ae1229e6474d6cf7979d60bdcfbf889}
+\hypertarget{class_c_player_a3837ca31414dc04f376efcf82413293f}{\index{\-C\-Player@{\-C\-Player}!\-Get\-Rank@{\-Get\-Rank}}
+\index{\-Get\-Rank@{\-Get\-Rank}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Get\-Rank}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-Rank} {\bf \-C\-Player\-::\-Get\-Rank} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_player_a3837ca31414dc04f376efcf82413293f}
+\hypertarget{class_c_player_a57cbfab5dbea898e0f1e6d6ef59a299e}{\index{\-C\-Player@{\-C\-Player}!\-Increase\-Grade@{\-Increase\-Grade}}
+\index{\-Increase\-Grade@{\-Increase\-Grade}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Increase\-Grade}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-Player\-::\-Increase\-Grade} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a57cbfab5dbea898e0f1e6d6ef59a299e}
+\hypertarget{class_c_player_acf628f08c81409913cb0833bb115cdb3}{\index{\-C\-Player@{\-C\-Player}!\-Reset@{\-Reset}}
+\index{\-Reset@{\-Reset}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-Player\-::\-Reset} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_acf628f08c81409913cb0833bb115cdb3}
+\hypertarget{class_c_player_ab5eb413c887a4054e7f596f0d579cd9f}{\index{\-C\-Player@{\-C\-Player}!\-Select\-Card@{\-Select\-Card}}
+\index{\-Select\-Card@{\-Select\-Card}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Select\-Card}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-Player\-::\-Select\-Card} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-Card}}]{p\-Card}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_ab5eb413c887a4054e7f596f0d579cd9f}
+\hypertarget{class_c_player_ad57bf753f80586ec0f64c60e0c4ea0fb}{\index{\-C\-Player@{\-C\-Player}!\-Set\-Grade@{\-Set\-Grade}}
+\index{\-Set\-Grade@{\-Set\-Grade}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Set\-Grade}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-Player\-::\-Set\-Grade} (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{p\-Grade}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_ad57bf753f80586ec0f64c60e0c4ea0fb}
+\hypertarget{class_c_player_a9913e32cb613756cc092eee3a5b51a2b}{\index{\-C\-Player@{\-C\-Player}!\-Set\-Name@{\-Set\-Name}}
+\index{\-Set\-Name@{\-Set\-Name}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-Player\-::\-Set\-Name} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{p\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a9913e32cb613756cc092eee3a5b51a2b}
+\hypertarget{class_c_player_a51451db1a48869676883ad6f3f405d14}{\index{\-C\-Player@{\-C\-Player}!\-Set\-Rank@{\-Set\-Rank}}
+\index{\-Set\-Rank@{\-Set\-Rank}!CPlayer@{\-C\-Player}}
+\subsubsection[{\-Set\-Rank}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-Player\-::\-Set\-Rank} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-E\-Rank}}]{p\-Rank}
+\end{DoxyParamCaption}
+)}}\label{class_c_player_a51451db1a48869676883ad6f3f405d14}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_c_player_8h}{\-C\-Player.\-h}\item 
+\hyperlink{_c_player_8cpp}{\-C\-Player.\-cpp}\end{DoxyCompactItemize}

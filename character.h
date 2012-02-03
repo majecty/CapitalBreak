@@ -42,6 +42,7 @@ class Hero : public Character ,public Collider
 		Character* next_person;
 		bool is_buyable;
 		CPlayer  aPlayer;
+                bool indoor;
 	public:
 		virtual void init();
 		virtual void clean_up();
@@ -72,6 +73,10 @@ class Hero : public Character ,public Collider
 		void decrease_grade();
 		void increase_grade();
 
+                bool is_indoor();
+                void enter_building();
+                void exit_building();
+
 };
 
 class Gang: public Character, public Collider
@@ -79,6 +84,7 @@ class Gang: public Character, public Collider
 	private:
 		Gang* next_person;
 		SDL_Rect* object_point;
+
 	public:
 
 		virtual void init();
@@ -93,6 +99,7 @@ class Gang: public Character, public Collider
 		virtual void set_object(SDL_Rect *object);
 		virtual void move_back();
 		bool follow();
+                    
 		//void handleInput();
 		//void move_back();
 

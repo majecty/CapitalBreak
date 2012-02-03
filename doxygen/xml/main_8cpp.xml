@@ -1,0 +1,800 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="main_8cpp" kind="file">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="_global_functions_8h" local="yes">GlobalFunctions.h</includes>
+    <includes refid="common_8h" local="yes">common.h</includes>
+    <includes refid="global_8h" local="yes">global.h</includes>
+    <includes refid="_scene_8h" local="yes">Scene.h</includes>
+    <includes refid="timer_8h" local="yes">timer.h</includes>
+    <includes refid="lua__glue_8h" local="yes">lua_glue.h</includes>
+    <incdepgraph>
+      <node id="662">
+        <label>lua/lualib.h</label>
+      </node>
+      <node id="671">
+        <label>stdarg.h</label>
+      </node>
+      <node id="660">
+        <label>lua/lauxlib.h</label>
+      </node>
+      <node id="661">
+        <label>lua/luaconf.h</label>
+      </node>
+      <node id="677">
+        <label>stdint.h</label>
+      </node>
+      <node id="674">
+        <label>collider.h</label>
+        <link refid="collider_8h"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+      </node>
+      <node id="657">
+        <label>string</label>
+      </node>
+      <node id="673">
+        <label>character.h</label>
+        <link refid="character_8h"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="666" relation="include">
+        </childnode>
+      </node>
+      <node id="658">
+        <label>common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="659" relation="include">
+        </childnode>
+        <childnode refid="660" relation="include">
+        </childnode>
+        <childnode refid="661" relation="include">
+        </childnode>
+        <childnode refid="662" relation="include">
+        </childnode>
+        <childnode refid="663" relation="include">
+        </childnode>
+        <childnode refid="664" relation="include">
+        </childnode>
+        <childnode refid="665" relation="include">
+        </childnode>
+        <childnode refid="666" relation="include">
+        </childnode>
+        <childnode refid="656" relation="include">
+        </childnode>
+        <childnode refid="667" relation="include">
+        </childnode>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="657" relation="include">
+        </childnode>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="670" relation="include">
+        </childnode>
+        <childnode refid="671" relation="include">
+        </childnode>
+      </node>
+      <node id="666">
+        <label>Constants.h</label>
+        <link refid="_constants_8h"/>
+      </node>
+      <node id="678">
+        <label>map</label>
+      </node>
+      <node id="675">
+        <label>CPlayer.h</label>
+        <link refid="_c_player_8h"/>
+        <childnode refid="666" relation="include">
+        </childnode>
+        <childnode refid="676" relation="include">
+        </childnode>
+        <childnode refid="678" relation="include">
+        </childnode>
+        <childnode refid="677" relation="include">
+        </childnode>
+      </node>
+      <node id="667">
+        <label>Configuration.h</label>
+        <link refid="_configuration_8h"/>
+      </node>
+      <node id="676">
+        <label>CCard.h</label>
+        <link refid="_c_card_8h"/>
+        <childnode refid="677" relation="include">
+        </childnode>
+        <childnode refid="666" relation="include">
+        </childnode>
+        <childnode refid="656" relation="include">
+        </childnode>
+      </node>
+      <node id="681">
+        <label>map.h</label>
+        <link refid="map_8h"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="680" relation="include">
+        </childnode>
+        <childnode refid="682" relation="include">
+        </childnode>
+      </node>
+      <node id="663">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="682">
+        <label>vector</label>
+      </node>
+      <node id="683">
+        <label>lua_glue.h</label>
+        <link refid="lua__glue_8h"/>
+      </node>
+      <node id="655">
+        <label>main.cpp</label>
+        <link refid="main.cpp"/>
+        <childnode refid="656" relation="include">
+        </childnode>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="672" relation="include">
+        </childnode>
+        <childnode refid="679" relation="include">
+        </childnode>
+        <childnode refid="683" relation="include">
+        </childnode>
+      </node>
+      <node id="669">
+        <label>sstream</label>
+      </node>
+      <node id="659">
+        <label>lua/lua.h</label>
+      </node>
+      <node id="656">
+        <label>GlobalFunctions.h</label>
+        <link refid="_global_functions_8h"/>
+        <childnode refid="657" relation="include">
+        </childnode>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="659" relation="include">
+        </childnode>
+      </node>
+      <node id="664">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="668">
+        <label>global.h</label>
+        <link refid="global_8h"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+      </node>
+      <node id="670">
+        <label>iostream</label>
+      </node>
+      <node id="680">
+        <label>building.h</label>
+        <link refid="building_8h"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+        <childnode refid="668" relation="include">
+        </childnode>
+        <childnode refid="666" relation="include">
+        </childnode>
+      </node>
+      <node id="672">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="673" relation="include">
+        </childnode>
+        <childnode refid="679" relation="include">
+        </childnode>
+        <childnode refid="674" relation="include">
+        </childnode>
+        <childnode refid="680" relation="include">
+        </childnode>
+        <childnode refid="681" relation="include">
+        </childnode>
+        <childnode refid="669" relation="include">
+        </childnode>
+        <childnode refid="657" relation="include">
+        </childnode>
+        <childnode refid="675" relation="include">
+        </childnode>
+        <childnode refid="656" relation="include">
+        </childnode>
+      </node>
+      <node id="665">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+      <node id="679">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cpp_1a33ca3372e33da34564fef70d2c2ccf47" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DEFAULT_FRAME_RATE</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_FRAME_RATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="14" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a197c17e106445c844080b42846f8906d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DEFAULT_RATE</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_RATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="15" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a856e3296ab07af6a419c7248b701897a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double RATE_RATE</definition>
+        <argsstring></argsstring>
+        <name>RATE_RATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="16" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a91e674bbf5c97202d30695e306ef1f7a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DEFAULT_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_LIMIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="17" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1af72a0cc37a1bab73a16a07bdc92c9cec" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LIMIT_RATE</definition>
+        <argsstring></argsstring>
+        <name>LIMIT_RATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="18" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a4b64ce0da17c64a5f50eea89f4aa7ed9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int START_GRADE</definition>
+        <argsstring></argsstring>
+        <name>START_GRADE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="19" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1adfc9868edcb3523256495d5a53eaa358" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool IS_FULL_SCREEN</definition>
+        <argsstring></argsstring>
+        <name>IS_FULL_SCREEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="20" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a6de66f9ad116ce1d596c7f4edc40c521" prot="public" static="no" mutable="no">
+        <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <initializer> NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="22" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a4c980b14397e8a5c1aeb8cbe5ef76c1b" prot="public" static="no" mutable="no">
+        <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* scenes[SCENE_NUM]</definition>
+        <argsstring>[SCENE_NUM]</argsstring>
+        <name>scenes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="23" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1abf5bfa705e66ffc1ddaa6ce46c960873" prot="public" static="no" mutable="no">
+        <type>TTF_Font *</type>
+        <definition>TTF_Font* font</definition>
+        <argsstring></argsstring>
+        <name>font</name>
+        <initializer> NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="25" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a4ff6c3be8e2ef839fc8952fa068d94e4" prot="public" static="no" mutable="no">
+        <type>SDL_Color</type>
+        <definition>SDL_Color textColor</definition>
+        <argsstring></argsstring>
+        <name>textColor</name>
+        <initializer> {0,0,0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="26" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a60dd6f182904ca44127036cd18eced96" prot="public" static="no" mutable="no">
+        <type>SDL_Color</type>
+        <definition>SDL_Color whiteColor</definition>
+        <argsstring></argsstring>
+        <name>whiteColor</name>
+        <initializer> {0xff,0xff,0xff}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="27" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a38016976ba60c75e4c030060f8a54983" prot="public" static="no" mutable="no">
+        <type>SDL_Color</type>
+        <definition>SDL_Color blackColor</definition>
+        <argsstring></argsstring>
+        <name>blackColor</name>
+        <initializer> {0,0,0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="28" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a07ddce37b5e3855a4204d552e6020954" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* buildings_image</definition>
+        <argsstring></argsstring>
+        <name>buildings_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="30" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ac746fa6ad48d19984a159f14bec028a3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool quit</definition>
+        <argsstring></argsstring>
+        <name>quit</name>
+        <initializer> false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="33" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a78fa3957d73de49cb81d047857504218" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* screen</definition>
+        <argsstring></argsstring>
+        <name>screen</name>
+        <initializer> NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="35" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a6b57f01d3c576db5368dd0efc2f435a4" prot="public" static="no" mutable="no">
+        <type>SDL_Event</type>
+        <definition>SDL_Event event</definition>
+        <argsstring></argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="36" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a62f94dfc0036bec0c14106c2f15caf3e" prot="public" static="no" mutable="no">
+        <type><ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref> *</type>
+        <definition>lua_State* L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="38" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a6551b2c850789a25ebff9d914bdd6eac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lua_init</definition>
+        <argsstring>()</argsstring>
+        <name>lua_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="42" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="41" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1aee8048628ff2b5c026c9e15acdcaacb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="78" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="77" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a061fddd7cbfd9faf08ad281b17471849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool load_files</definition>
+        <argsstring>()</argsstring>
+        <name>load_files</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="115" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="114" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1ada7f892aa09adca3647631590ca1beb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clean_up</definition>
+        <argsstring>()</argsstring>
+        <name>clean_up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="128" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="127" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a700a0caa5b70a06d1064e576f9f3cf65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *args[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>args</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="148" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="147" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a1b55550bef7e0ecfb63d64a293a2737c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void change_scene</definition>
+        <argsstring>(int scene_num)</argsstring>
+        <name>change_scene</name>
+        <param>
+          <type>int</type>
+          <declname>scene_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/main.cpp" line="226" bodyfile="D:/repo/newCapitalBreak/main.cpp" bodystart="225" bodyend="231"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_global_functions_8h" kindref="compound">GlobalFunctions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_8h" kindref="compound">common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="global_8h" kindref="compound">global.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lua__glue_8h" kindref="compound">lua_glue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;SDL/SDL_thread.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_configuration_8h_1a33ca3372e33da34564fef70d2c2ccf47" kindref="member">DEFAULT_FRAME_RATE</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_configuration_8h_1a197c17e106445c844080b42846f8906d" kindref="member">DEFAULT_RATE</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_configuration_8h_1a856e3296ab07af6a419c7248b701897a" kindref="member">RATE_RATE</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_configuration_8h_1a91e674bbf5c97202d30695e306ef1f7a" kindref="member">DEFAULT_LIMIT</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_configuration_8h_1af72a0cc37a1bab73a16a07bdc92c9cec" kindref="member">LIMIT_RATE</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_configuration_8h_1a4b64ce0da17c64a5f50eea89f4aa7ed9" kindref="member">START_GRADE</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_configuration_8h_1adfc9868edcb3523256495d5a53eaa358" kindref="member">IS_FULL_SCREEN</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="class_scene" kindref="compound">Scene</ref>*<sp/><ref refid="main_8cpp_1a6de66f9ad116ce1d596c7f4edc40c521" kindref="member">scene</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="class_scene" kindref="compound">Scene</ref>*<sp/><ref refid="main_8cpp_1a4c980b14397e8a5c1aeb8cbe5ef76c1b" kindref="member">scenes</ref>[<ref refid="global_8h_1a91135fa4dbb2d61bfac01a1f1e0a7b25" kindref="member">SCENE_NUM</ref>];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">TTF_Font<sp/>*<ref refid="global_8h_1abf5bfa705e66ffc1ddaa6ce46c960873" kindref="member">font</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">SDL_Color<sp/><ref refid="global_8h_1a4ff6c3be8e2ef839fc8952fa068d94e4" kindref="member">textColor</ref><sp/>=<sp/>{0,0,0};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">SDL_Color<sp/><ref refid="global_8h_1a60dd6f182904ca44127036cd18eced96" kindref="member">whiteColor</ref>=<sp/>{0xff,0xff,0xff};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">SDL_Color<sp/><ref refid="global_8h_1a38016976ba60c75e4c030060f8a54983" kindref="member">blackColor</ref>=<sp/>{0,0,0};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">SDL_Surface<sp/>*<ref refid="global_8h_1a07ddce37b5e3855a4204d552e6020954" kindref="member">buildings_image</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="global_8h_1ac746fa6ad48d19984a159f14bec028a3" kindref="member">quit</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">SDL_Surface<sp/>*<ref refid="global_8h_1a78fa3957d73de49cb81d047857504218" kindref="member">screen</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">SDL_Event<sp/><sp/><ref refid="global_8h_1a6b57f01d3c576db5368dd0efc2f435a4" kindref="member">event</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="lua_8h_1a28186297f2e9f2de0652504633de8fb3" kindref="member">lua_State</ref>*<sp/><ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a6551b2c850789a25ebff9d914bdd6eac" kindref="member">lua_init</ref>()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref><sp/>=<sp/><ref refid="lauxlib_8h_1a7d8712fcede90ae93d5a9a7b409c586e" kindref="member">luaL_newstate</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lualib_8h_1a3744dadc460fb2a20df474eef4d4253d" kindref="member">luaL_openlibs</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;in<sp/>lua_init<sp/>function<sp/>start<sp/>%s\n&quot;</highlight><highlight class="normal">,<ref refid="common_8h_1ad37a804df2a1060b453ce07fe0ee3cbc" kindref="member">AT</ref><sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="lauxlib_8h_1afa862c5bdbbcfc8f46e0cac9f32a771e" kindref="member">luaL_loadfile</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Configuration.lua&quot;</highlight><highlight class="normal">)<sp/>||<sp/><ref refid="lua_8h_1a513752286ffd536ea5ce1988e4ebf884" kindref="member">lua_pcall</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,0,0,0))</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(<sp/>luaL_loadfile(L,<sp/>&quot;luac.out&quot;)<sp/>||<sp/>lua_pcall(L,0,0,0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_global_functions_8cpp_1ad10e239d652afbc280833118ac86b730" kindref="member">maj_lua_error</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;cannot<sp/>run<sp/>config.<sp/>file:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="lua_8h_1ac813fc3bc1886ba17c363d5b4c6e7ef1" kindref="member">lua_tostring</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,-1));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;in<sp/>after<sp/>lua_loadfile&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua_8h_1abc2f6fef4682c1d4cdc33206aaf42bec" kindref="member">lua_getglobal</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;default_frame_rate&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua_8h_1abc2f6fef4682c1d4cdc33206aaf42bec" kindref="member">lua_getglobal</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;default_rate&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua_8h_1abc2f6fef4682c1d4cdc33206aaf42bec" kindref="member">lua_getglobal</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;rate_rate&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua_8h_1abc2f6fef4682c1d4cdc33206aaf42bec" kindref="member">lua_getglobal</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;default_limit&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua_8h_1abc2f6fef4682c1d4cdc33206aaf42bec" kindref="member">lua_getglobal</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;limit_rate&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua_8h_1abc2f6fef4682c1d4cdc33206aaf42bec" kindref="member">lua_getglobal</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;start_grade&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua_8h_1abc2f6fef4682c1d4cdc33206aaf42bec" kindref="member">lua_getglobal</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,<sp/></highlight><highlight class="stringliteral">&quot;is_full_screen&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_configuration_8h_1a33ca3372e33da34564fef70d2c2ccf47" kindref="member">DEFAULT_FRAME_RATE</ref><sp/>=<sp/><ref refid="lua_8h_1a90582a1c67153e7aaa7e45649fd21d50" kindref="member">lua_tointeger</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,1);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_configuration_8h_1a197c17e106445c844080b42846f8906d" kindref="member">DEFAULT_RATE</ref><sp/>=<sp/><ref refid="lua_8h_1ab93cb1edc97ca887c90dbcbd43e1df88" kindref="member">lua_tonumber</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,2);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_configuration_8h_1a856e3296ab07af6a419c7248b701897a" kindref="member">RATE_RATE</ref><sp/>=<sp/><ref refid="lua_8h_1ab93cb1edc97ca887c90dbcbd43e1df88" kindref="member">lua_tonumber</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,3);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_configuration_8h_1a91e674bbf5c97202d30695e306ef1f7a" kindref="member">DEFAULT_LIMIT</ref><sp/>=<sp/><ref refid="lua_8h_1a90582a1c67153e7aaa7e45649fd21d50" kindref="member">lua_tointeger</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,4);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_configuration_8h_1af72a0cc37a1bab73a16a07bdc92c9cec" kindref="member">LIMIT_RATE</ref><sp/>=<sp/><ref refid="lua_8h_1a90582a1c67153e7aaa7e45649fd21d50" kindref="member">lua_tointeger</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,5);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_configuration_8h_1a4b64ce0da17c64a5f50eea89f4aa7ed9" kindref="member">START_GRADE</ref><sp/>=<sp/><ref refid="lua_8h_1a90582a1c67153e7aaa7e45649fd21d50" kindref="member">lua_tointeger</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,6);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_configuration_8h_1adfc9868edcb3523256495d5a53eaa358" kindref="member">IS_FULL_SCREEN</ref><sp/>=<sp/><ref refid="lua_8h_1a0f530f104aeaddeeb63b27dc18b42d27" kindref="member">lua_toboolean</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>,7);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;default<sp/>frame<sp/>rate<sp/>is<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_configuration_8h_1af72a0cc37a1bab73a16a07bdc92c9cec" kindref="member">LIMIT_RATE</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;LIMIT_RATE<sp/>is<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="_configuration_8h_1af72a0cc37a1bab73a16a07bdc92c9cec" kindref="member">LIMIT_RATE</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua__glue_8cpp_1a89dc1688d1f7eab832ca9bfa59717461" kindref="member">init_glue</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1aee8048628ff2b5c026c9e15acdcaacb8" kindref="member">init</ref>()</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8h_1ac746fa6ad48d19984a159f14bec028a3" kindref="member">quit</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scenes[<ref refid="global_8h_1aede1f8faea65b59af97c89b68b7db3d2" kindref="member">SCENE_START</ref>]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_start_scene" kindref="compound">StartScene</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scenes[<ref refid="global_8h_1ac8765435805041f5b2a058ebcb42babc" kindref="member">SCENE_GAME</ref>]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_game_scene" kindref="compound">GameScene</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scenes[<ref refid="global_8h_1a7ef8cff416ccb6e51d4365a544316dda" kindref="member">SCENE_BADEND</ref>]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_bad_end_scene" kindref="compound">BadEndScene</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scenes[<ref refid="global_8h_1a773baa9b4b43b8c1f4068eea2d5f9fd6" kindref="member">SCENE_GOODEND</ref>]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_good_end_scene" kindref="compound">GoodEndScene</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scenes[<ref refid="global_8h_1a1d2a9c4aa3ed3d3055c0672587764b2e" kindref="member">SCENE_CREDIT</ref>]<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_credit_scene" kindref="compound">CreditScene</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>SDL_Init(SDL_INIT_EVERYTHING)<sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_configuration_8h_1adfc9868edcb3523256495d5a53eaa358" kindref="member">IS_FULL_SCREEN</ref>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8h_1a78fa3957d73de49cb81d047857504218" kindref="member">screen</ref><sp/>=<sp/>SDL_SetVideoMode(<ref refid="_configuration_8h_1a3482785bd2a4c8b307f9e0b6f54e2c36" kindref="member">SCREEN_WIDTH</ref>,<sp/><ref refid="_configuration_8h_1ab454541ae58bcf6555e8d723b1eb95e7" kindref="member">SCREEN_HEIGHT</ref>,<sp/><ref refid="_configuration_8h_1a8194731fdeea643e725e3a89d2f7ec59" kindref="member">SCREEN_BPP</ref>,<sp/>SDL_SWSURFACE<sp/>|<sp/>SDL_FULLSCREEN);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8h_1a78fa3957d73de49cb81d047857504218" kindref="member">screen</ref><sp/>=<sp/>SDL_SetVideoMode(<ref refid="_configuration_8h_1a3482785bd2a4c8b307f9e0b6f54e2c36" kindref="member">SCREEN_WIDTH</ref>,<sp/><ref refid="_configuration_8h_1ab454541ae58bcf6555e8d723b1eb95e7" kindref="member">SCREEN_HEIGHT</ref>,<sp/><ref refid="_configuration_8h_1a8194731fdeea643e725e3a89d2f7ec59" kindref="member">SCREEN_BPP</ref>,<sp/>SDL_SWSURFACE<sp/>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="global_8h_1a78fa3957d73de49cb81d047857504218" kindref="member">screen</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>TTF_Init()<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WM_SetCaption(</highlight><highlight class="stringliteral">&quot;Capital<sp/>Break&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a061fddd7cbfd9faf08ad281b17471849" kindref="member">load_files</ref>()</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8h_1abf5bfa705e66ffc1ddaa6ce46c960873" kindref="member">font</ref><sp/>=<sp/>TTF_OpenFont(</highlight><highlight class="stringliteral">&quot;SangSangTitleM.ttf&quot;</highlight><highlight class="normal">,<sp/>25);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8h_1a07ddce37b5e3855a4204d552e6020954" kindref="member">buildings_image</ref><sp/>=<sp/><ref refid="_global_functions_8cpp_1ab78f833db4a62b8ef578da79cd72734f" kindref="member">load_image</ref>(</highlight><highlight class="stringliteral">&quot;game_1s_building.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="global_8h_1abf5bfa705e66ffc1ddaa6ce46c960873" kindref="member">font</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ada7f892aa09adca3647631590ca1beb0" kindref="member">clean_up</ref>()</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lua_8h_1afe030a97e84f24dfab3afb598faa2fff" kindref="member">lua_close</ref>(<ref refid="global_8h_1a62f94dfc0036bec0c14106c2f15caf3e" kindref="member">L</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="class_scene_1a5f8c03499f5adff28224ccaaf95a8d90" kindref="member">clean_up</ref>();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_FreeSurface(<ref refid="global_8h_1a07ddce37b5e3855a4204d552e6020954" kindref="member">buildings_image</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>(scenes[<ref refid="global_8h_1aede1f8faea65b59af97c89b68b7db3d2" kindref="member">SCENE_START</ref>]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>(scenes[<ref refid="global_8h_1ac8765435805041f5b2a058ebcb42babc" kindref="member">SCENE_GAME</ref>]<sp/>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>(scenes[<ref refid="global_8h_1a7ef8cff416ccb6e51d4365a544316dda" kindref="member">SCENE_BADEND</ref>]);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<sp/>scenes[<ref refid="global_8h_1a773baa9b4b43b8c1f4068eea2d5f9fd6" kindref="member">SCENE_GOODEND</ref>]);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">(<sp/>scenes[<ref refid="global_8h_1a1d2a9c4aa3ed3d3055c0672587764b2e" kindref="member">SCENE_CREDIT</ref>]);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TTF_CloseFont(<sp/><ref refid="global_8h_1abf5bfa705e66ffc1ddaa6ce46c960873" kindref="member">font</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TTF_Quit();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Quit();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a700a0caa5b70a06d1064e576f9f3cf65" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>args[]<sp/>)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a6551b2c850789a25ebff9d914bdd6eac" kindref="member">lua_init</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frame<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="main_8cpp_1aee8048628ff2b5c026c9e15acdcaacb8" kindref="member">init</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;main<sp/>initialize<sp/>fail\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="main_8cpp_1a061fddd7cbfd9faf08ad281b17471849" kindref="member">load_files</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;main<sp/>loadfiles<sp/>fail\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>scene<sp/>=<sp/>scenes[<ref refid="global_8h_1aede1f8faea65b59af97c89b68b7db3d2" kindref="member">SCENE_START</ref>];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="class_scene_1abb3b6efc6fdba03cd96436edaf08a967" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref><sp/>fps;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref><sp/>fpsMeter;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Timer<sp/>used<sp/>to<sp/>update<sp/>the<sp/>caption</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref><sp/>update;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>update.<ref refid="class_timer_1a3a8b5272198d029779dc9302a54305a8" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>fpsMeter.<ref refid="class_timer_1a3a8b5272198d029779dc9302a54305a8" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="global_8h_1ac746fa6ad48d19984a159f14bec028a3" kindref="member">quit</ref><sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fps.<ref refid="class_timer_1a3a8b5272198d029779dc9302a54305a8" kindref="member">start</ref>();<sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="class_scene_1a6f447a90b1f9009acfb72df711473875" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(SDL_PollEvent<sp/>(<sp/>&amp;<ref refid="global_8h_1a6b57f01d3c576db5368dd0efc2f435a4" kindref="member">event</ref>))</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="class_scene_1a280970a0176e70f76d2420c50261d6fa" kindref="member">do_event</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="global_8h_1a6b57f01d3c576db5368dd0efc2f435a4" kindref="member">event</ref>.type<sp/>==<sp/>SDL_QUIT)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8h_1ac746fa6ad48d19984a159f14bec028a3" kindref="member">quit</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="global_8h_1a6b57f01d3c576db5368dd0efc2f435a4" kindref="member">event</ref>.type<sp/>==<sp/>SDL_KEYDOWN)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="global_8h_1a6b57f01d3c576db5368dd0efc2f435a4" kindref="member">event</ref>.key.keysym.sym)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SDLK_q:</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="global_8h_1ac746fa6ad48d19984a159f14bec028a3" kindref="member">quit</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame++;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>fps.<ref refid="class_timer_1a56d411d072f1cc22b53f6ccb74cc7f63" kindref="member">get_ticks</ref>()<sp/>&lt;<sp/>1000<sp/>/<sp/><ref refid="_configuration_8h_1a33ca3372e33da34564fef70d2c2ccf47" kindref="member">DEFAULT_FRAME_RATE</ref>)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_Delay(<sp/>(1000/<sp/><ref refid="_configuration_8h_1a33ca3372e33da34564fef70d2c2ccf47" kindref="member">DEFAULT_FRAME_RATE</ref>)<sp/>-<sp/>fps.<ref refid="class_timer_1a56d411d072f1cc22b53f6ccb74cc7f63" kindref="member">get_ticks</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>update.<ref refid="class_timer_1a56d411d072f1cc22b53f6ccb74cc7f63" kindref="member">get_ticks</ref>()<sp/>&gt;<sp/>1000)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>caption;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>caption<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Capital<sp/>Break<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>frame<sp/>/<sp/>(fpsMeter.<ref refid="class_timer_1a56d411d072f1cc22b53f6ccb74cc7f63" kindref="member">get_ticks</ref>()<sp/>/<sp/>1000.f)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;fps&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SDL_WM_SetCaption(<sp/>caption.str().c_str(),<sp/>NULL);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>update.<ref refid="class_timer_1a3a8b5272198d029779dc9302a54305a8" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ada7f892aa09adca3647631590ca1beb0" kindref="member">clean_up</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_global_functions_8h_1a1b55550bef7e0ecfb63d64a293a2737c" kindref="member">change_scene</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scene_num)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="class_scene_1a5f8c03499f5adff28224ccaaf95a8d90" kindref="member">clean_up</ref>();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene<sp/>=<sp/>scenes[scene_num];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="class_scene_1abb3b6efc6fdba03cd96436edaf08a967" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/repo/newCapitalBreak/main.cpp"/>
+  </compounddef>
+</doxygen>

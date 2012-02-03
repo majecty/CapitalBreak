@@ -1,0 +1,1326 @@
+\hypertarget{lua_8h}{\section{lua.\-h 파일 참조}
+\label{lua_8h}\index{lua.\-h@{lua.\-h}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\*
+{\ttfamily \#include $<$stddef.\-h$>$}\*
+{\ttfamily \#include \char`\"{}luaconf.\-h\char`\"{}}\*
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlua___debug}{lua\-\_\-\-Debug}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lua_8h_a3818e6f6538c9f42e9522c74334df03d}{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N}~\char`\"{}\-Lua 5.\-1\char`\"{}
+\item 
+\#define \hyperlink{lua_8h_abeb7a5ea7080e8ef597181124801f759}{\-L\-U\-A\-\_\-\-R\-E\-L\-E\-A\-S\-E}~\char`\"{}\-Lua 5.\-1.\-4\char`\"{}
+\item 
+\#define \hyperlink{lua_8h_a4c575ef5fb9bad1872613a9d832486a5}{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-N\-U\-M}~501
+\item 
+\#define \hyperlink{lua_8h_a5126fa04dbeee0b9118c769beadcd62d}{\-L\-U\-A\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}~\char`\"{}\-Copyright (\-C) 1994-\/2008 \-Lua.\-org, \-P\-U\-C-\/\-Rio\char`\"{}
+\item 
+\#define \hyperlink{lua_8h_ab6ff0964a416a9a7c1e90337c965f102}{\-L\-U\-A\-\_\-\-A\-U\-T\-H\-O\-R\-S}~\char`\"{}\-R. \-Ierusalimschy, \-L. \-H. de \-Figueiredo \& \-W. \-Celes\char`\"{}
+\item 
+\#define \hyperlink{lua_8h_af21c9fa681dc005c17a7b288882cae1b}{\-L\-U\-A\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}~\char`\"{}$\backslash$033\-Lua\char`\"{}
+\item 
+\#define \hyperlink{lua_8h_ace3545adc11664c2f2b152fbe8b6283c}{\-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}~(-\/1)
+\item 
+\#define \hyperlink{lua_8h_a3524c2bbc8fcf847dc083246b62945dd}{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}~(-\/10000)
+\item 
+\#define \hyperlink{lua_8h_a7f265c572db9a8ff4fe6069ae8b40995}{\-L\-U\-A\-\_\-\-E\-N\-V\-I\-R\-O\-N\-I\-N\-D\-E\-X}~(-\/10001)
+\item 
+\#define \hyperlink{lua_8h_adcd23d4ad1ec6e825daea03ee83c8c73}{\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}~(-\/10002)
+\item 
+\#define \hyperlink{lua_8h_ac3aa6665c25070f282c9827ec919fe6a}{lua\-\_\-upvalueindex}(i)~(\hyperlink{lua_8h_adcd23d4ad1ec6e825daea03ee83c8c73}{\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}-\/(i))
+\item 
+\#define \hyperlink{lua_8h_ab69f4bd0c0693d4c8fcfc0ebaeb2806b}{\-L\-U\-A\-\_\-\-Y\-I\-E\-L\-D}~1
+\item 
+\#define \hyperlink{lua_8h_af4bd6d4de5f10de738f81d007982abed}{\-L\-U\-A\-\_\-\-E\-R\-R\-R\-U\-N}~2
+\item 
+\#define \hyperlink{lua_8h_a779d4c0fc1c9da41b7d983646267e11f}{\-L\-U\-A\-\_\-\-E\-R\-R\-S\-Y\-N\-T\-A\-X}~3
+\item 
+\#define \hyperlink{lua_8h_ac28ced8d63f58b5164a298d7d254f658}{\-L\-U\-A\-\_\-\-E\-R\-R\-M\-E\-M}~4
+\item 
+\#define \hyperlink{lua_8h_a295ea44b6036e266b06e5de0f8ff24e0}{\-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R}~5
+\item 
+\#define \hyperlink{lua_8h_a39c27eef097c704eee3536906dea5380}{\-L\-U\-A\-\_\-\-T\-N\-O\-N\-E}~(-\/1)
+\item 
+\#define \hyperlink{lua_8h_ae38a6fb8c687b8bfab211b7675a695ef}{\-L\-U\-A\-\_\-\-T\-N\-I\-L}~0
+\item 
+\#define \hyperlink{lua_8h_a611808ed12d4c2aee2a9e298a9d9a9bf}{\-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N}~1
+\item 
+\#define \hyperlink{lua_8h_aa030c2d649070173902c8094d8e0e2cd}{\-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A}~2
+\item 
+\#define \hyperlink{lua_8h_a7f62ecb240cb38da9c8a53b41fe21ed9}{\-L\-U\-A\-\_\-\-T\-N\-U\-M\-B\-E\-R}~3
+\item 
+\#define \hyperlink{lua_8h_a57de20d87bb5131a3159f2bd52e3fab6}{\-L\-U\-A\-\_\-\-T\-S\-T\-R\-I\-N\-G}~4
+\item 
+\#define \hyperlink{lua_8h_a31620fd8da5b655b7879e16a116ec31a}{\-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E}~5
+\item 
+\#define \hyperlink{lua_8h_adaa7fa6e2561c1bc428ba8d265171494}{\-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N}~6
+\item 
+\#define \hyperlink{lua_8h_a84fd4c52cea4073671a4cd0eb7026dc7}{\-L\-U\-A\-\_\-\-T\-U\-S\-E\-R\-D\-A\-T\-A}~7
+\item 
+\#define \hyperlink{lua_8h_a028a8d8aae9580c465aabcd0c11334d9}{\-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D}~8
+\item 
+\#define \hyperlink{lua_8h_ad0180b89de8a4425cb2a1a3e3f793aa5}{\-L\-U\-A\-\_\-\-M\-I\-N\-S\-T\-A\-C\-K}~20
+\item 
+\#define \hyperlink{lua_8h_a7080a7110a1b37afc6ea2f706e944bc3}{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-O\-P}~0
+\item 
+\#define \hyperlink{lua_8h_a73701e5990022e938e90828a2c8291a4}{\-L\-U\-A\-\_\-\-G\-C\-R\-E\-S\-T\-A\-R\-T}~1
+\item 
+\#define \hyperlink{lua_8h_a59b8b65be08a10442ea2ae41289f5073}{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-L\-L\-E\-C\-T}~2
+\item 
+\#define \hyperlink{lua_8h_a3f8f1ebdffa4dbfe2dd89c2fd86bd7f4}{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T}~3
+\item 
+\#define \hyperlink{lua_8h_a99f1685cd6789e0b9bbd2a4c080fbaed}{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T\-B}~4
+\item 
+\#define \hyperlink{lua_8h_a9e7f3eaf2e269c3422aea3fd7c8973ef}{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-E\-P}~5
+\item 
+\#define \hyperlink{lua_8h_a28342bd4f96a077c7447489073dfa376}{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-P\-A\-U\-S\-E}~6
+\item 
+\#define \hyperlink{lua_8h_af07b3449c8e3ffdd62649443f32e1931}{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-S\-T\-E\-P\-M\-U\-L}~7
+\item 
+\#define \hyperlink{lua_8h_abb8eae2164badeafdb037bc1e03cc822}{lua\-\_\-pop}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~\hyperlink{lua_8h_a6cb9c62b9d85b1ad2a04d72bcb733816}{lua\-\_\-settop}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, -\/(n)-\/1)
+\item 
+\#define \hyperlink{lua_8h_aa59db6b784aa1ec954599a44168c7761}{lua\-\_\-newtable}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})~\hyperlink{lua_8h_a022ddaeee46ccb89860c78480e54db05}{lua\-\_\-createtable}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, 0, 0)
+\item 
+\#define \hyperlink{lua_8h_ae1162e4a80396145544aa03312c60d8c}{lua\-\_\-register}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n, f)~(\hyperlink{lua_8h_a2e4fbbe97182bf90004379202202f2b9}{lua\-\_\-pushcfunction}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (f)), \hyperlink{lua_8h_ab9c7b1411a77d9dff74f2930fc51f796}{lua\-\_\-setglobal}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)))
+\item 
+\#define \hyperlink{lua_8h_a2e4fbbe97182bf90004379202202f2b9}{lua\-\_\-pushcfunction}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, f)~\hyperlink{lua_8h_a89f758ed8996c5f405cb7dfb41f78337}{lua\-\_\-pushcclosure}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (f), 0)
+\item 
+\#define \hyperlink{lua_8h_af1950fb3c542d036245559b5f5ae9346}{lua\-\_\-strlen}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, i)~\hyperlink{lua_8h_a07bd1384def434a4a3efdcd48b771ca9}{lua\-\_\-objlen}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (i))
+\item 
+\#define \hyperlink{lua_8h_a7537af276c81906c144f29cd25b93315}{lua\-\_\-isfunction}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)) == \hyperlink{lua_8h_adaa7fa6e2561c1bc428ba8d265171494}{\-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N})
+\item 
+\#define \hyperlink{lua_8h_a161af51893c5f79dacc1c382416a5f27}{lua\-\_\-istable}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)) == \hyperlink{lua_8h_a31620fd8da5b655b7879e16a116ec31a}{\-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E})
+\item 
+\#define \hyperlink{lua_8h_a46c0d924f3492bbe10007a74e00b43aa}{lua\-\_\-islightuserdata}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)) == \hyperlink{lua_8h_aa030c2d649070173902c8094d8e0e2cd}{\-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A})
+\item 
+\#define \hyperlink{lua_8h_a86d737d7002e7e94023765397c6eef20}{lua\-\_\-isnil}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)) == \hyperlink{lua_8h_ae38a6fb8c687b8bfab211b7675a695ef}{\-L\-U\-A\-\_\-\-T\-N\-I\-L})
+\item 
+\#define \hyperlink{lua_8h_af4f579ead7d5ea837d8d708186033502}{lua\-\_\-isboolean}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)) == \hyperlink{lua_8h_a611808ed12d4c2aee2a9e298a9d9a9bf}{\-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N})
+\item 
+\#define \hyperlink{lua_8h_a0c346eeb2eee1d2e9b9920fb9b9d7fc9}{lua\-\_\-isthread}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)) == \hyperlink{lua_8h_a028a8d8aae9580c465aabcd0c11334d9}{\-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D})
+\item 
+\#define \hyperlink{lua_8h_ad054300429f1094d3692313abc733ddf}{lua\-\_\-isnone}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)) == \hyperlink{lua_8h_a39c27eef097c704eee3536906dea5380}{\-L\-U\-A\-\_\-\-T\-N\-O\-N\-E})
+\item 
+\#define \hyperlink{lua_8h_af51702bb75a31bb4a279953ee386d533}{lua\-\_\-isnoneornil}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)) $<$= 0)
+\item 
+\#define \hyperlink{lua_8h_a47854189a679002ed743ebbcb30b1b26}{lua\-\_\-pushliteral}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, s)~\hyperlink{lua_8h_a8c01dd1b5018c60a078bcf58dd1fe2e8}{lua\-\_\-pushlstring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \char`\"{}\char`\"{} s, (sizeof(s)/sizeof(char))-\/1)
+\item 
+\#define \hyperlink{lua_8h_ab9c7b1411a77d9dff74f2930fc51f796}{lua\-\_\-setglobal}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, s)~\hyperlink{lua_8h_a9580a15c141cbe4bf2a63fea625c3878}{lua\-\_\-setfield}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_adcd23d4ad1ec6e825daea03ee83c8c73}{\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}, (s))
+\item 
+\#define \hyperlink{lua_8h_abc2f6fef4682c1d4cdc33206aaf42bec}{lua\-\_\-getglobal}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, s)~\hyperlink{lua_8h_ac3112bb28ba217adc46f13da8e9e6585}{lua\-\_\-getfield}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_adcd23d4ad1ec6e825daea03ee83c8c73}{\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}, (s))
+\item 
+\#define \hyperlink{lua_8h_ac813fc3bc1886ba17c363d5b4c6e7ef1}{lua\-\_\-tostring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, i)~\hyperlink{lua_8h_aabf845b1c7ffc0462988b67ba83955cf}{lua\-\_\-tolstring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (i), \-N\-U\-L\-L)
+\item 
+\#define \hyperlink{lua_8h_a0d9ba6517cbe11049d830829dce90b4d}{lua\-\_\-open}()~\hyperlink{lauxlib_8h_a7d8712fcede90ae93d5a9a7b409c586e}{lua\-L\-\_\-newstate}()
+\item 
+\#define \hyperlink{lua_8h_a0a90c2d2632800a015eca27b7812e329}{lua\-\_\-getregistry}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})~\hyperlink{lua_8h_a95e1c0a61aff11059655e6d246bcace7}{lua\-\_\-pushvalue}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a3524c2bbc8fcf847dc083246b62945dd}{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X})
+\item 
+\#define \hyperlink{lua_8h_a1d036311a62bf9c9cc376de2f46433e2}{lua\-\_\-getgccount}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})~\hyperlink{lua_8h_a6bac487d3f900b21271e8c591bd801cd}{lua\-\_\-gc}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a3f8f1ebdffa4dbfe2dd89c2fd86bd7f4}{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T}, 0)
+\item 
+\#define \hyperlink{lua_8h_ab7f9d507684f7d5bb0a21e709b3569b8}{lua\-\_\-\-Chunkreader}~\hyperlink{lua_8h_a49bb2f99132c1ae9f80ce809cce40455}{lua\-\_\-\-Reader}
+\item 
+\#define \hyperlink{lua_8h_a2e8f683ec38d7c55ccc8c327d8bfd7c5}{lua\-\_\-\-Chunkwriter}~\hyperlink{lua_8h_a739e0fce611e90942d1f15c302187e05}{lua\-\_\-\-Writer}
+\item 
+\#define \hyperlink{lua_8h_ab7cc83a523db06d92466167ebc3a65f2}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L}~0
+\item 
+\#define \hyperlink{lua_8h_a86f6d196d7c800de07bafe9603881485}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T}~1
+\item 
+\#define \hyperlink{lua_8h_af2e15cf6167fde2aab753f2a8228de06}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E}~2
+\item 
+\#define \hyperlink{lua_8h_a6c7cb905c4d6a2d21e6261b6ccec7298}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T}~3
+\item 
+\#define \hyperlink{lua_8h_a24f781b21e8aeebc3015db84e63f0bab}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-T\-A\-I\-L\-R\-E\-T}~4
+\item 
+\#define \hyperlink{lua_8h_a3b3ff95f914cf6ff4d46c87e8a648489}{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-A\-L\-L}~(1 $<$$<$ \hyperlink{lua_8h_ab7cc83a523db06d92466167ebc3a65f2}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L})
+\item 
+\#define \hyperlink{lua_8h_af0345e20a0268525a82cd71ab3ecb5da}{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-R\-E\-T}~(1 $<$$<$ \hyperlink{lua_8h_a86f6d196d7c800de07bafe9603881485}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T})
+\item 
+\#define \hyperlink{lua_8h_a671bc8ae0eddd679411c7f2401a594cf}{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-L\-I\-N\-E}~(1 $<$$<$ \hyperlink{lua_8h_af2e15cf6167fde2aab753f2a8228de06}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E})
+\item 
+\#define \hyperlink{lua_8h_a29927bc26e642df4f842e0235d290c56}{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-O\-U\-N\-T}~(1 $<$$<$ \hyperlink{lua_8h_a6c7cb905c4d6a2d21e6261b6ccec7298}{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T})
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} \hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State}
+\item 
+typedef int($\ast$ \hyperlink{lua_8h_a5f5bedea265eccf43c6e404e020988ce}{lua\-\_\-\-C\-Function} )(\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+typedef const char $\ast$($\ast$ \hyperlink{lua_8h_a49bb2f99132c1ae9f80ce809cce40455}{lua\-\_\-\-Reader} )(\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, void $\ast$ud, size\-\_\-t $\ast$sz)
+\item 
+typedef int($\ast$ \hyperlink{lua_8h_a739e0fce611e90942d1f15c302187e05}{lua\-\_\-\-Writer} )(\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const void $\ast$p, size\-\_\-t sz, void $\ast$ud)
+\item 
+typedef void $\ast$($\ast$ \hyperlink{lua_8h_a1c6fb648cd80375673a99321e15fcc36}{lua\-\_\-\-Alloc} )(void $\ast$ud, void $\ast$ptr, size\-\_\-t osize, size\-\_\-t nsize)
+\item 
+typedef \hyperlink{luaconf_8h_a459532244178d9e61e65aaf40fb42de1}{\-L\-U\-A\-\_\-\-N\-U\-M\-B\-E\-R} \hyperlink{lua_8h_af0a6ed3b852d680769cfc410a0672172}{lua\-\_\-\-Number}
+\item 
+typedef \hyperlink{luaconf_8h_a6f5fe82d222b54d1913327404c8d18c5}{\-L\-U\-A\-\_\-\-I\-N\-T\-E\-G\-E\-R} \hyperlink{lua_8h_a362144baa0cfb14dc38fd21438053d73}{lua\-\_\-\-Integer}
+\item 
+typedef struct \hyperlink{structlua___debug}{lua\-\_\-\-Debug} \hyperlink{lua_8h_a13a607c625e9cb25bf453b41323857f8}{lua\-\_\-\-Debug}
+\item 
+typedef void($\ast$ \hyperlink{lua_8h_ae9fa3596803178b98fa911d2ba0af0f4}{lua\-\_\-\-Hook} )(\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{structlua___debug}{lua\-\_\-\-Debug} $\ast$ar)
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$() \hyperlink{lua_8h_af722e4ac7fc0eba5920f59f0162c1b97}{lua\-\_\-newstate} (\hyperlink{lua_8h_a1c6fb648cd80375673a99321e15fcc36}{lua\-\_\-\-Alloc} f, void $\ast$ud)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_afe030a97e84f24dfab3afb598faa2fff}{lua\-\_\-close} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$() \hyperlink{lua_8h_a6a7867e39b589ae581e2ed837cbc6ea4}{lua\-\_\-newthread} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a5f5bedea265eccf43c6e404e020988ce}{lua\-\_\-\-C\-Function}() \hyperlink{lua_8h_a21ccd6b330c56c62fc3d0f15dd59f7a7}{lua\-\_\-atpanic} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a5f5bedea265eccf43c6e404e020988ce}{lua\-\_\-\-C\-Function} panicf)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_ac5d7d4db9186b87ab018916e8826f008}{lua\-\_\-gettop} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a6cb9c62b9d85b1ad2a04d72bcb733816}{lua\-\_\-settop} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a95e1c0a61aff11059655e6d246bcace7}{lua\-\_\-pushvalue} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_acb96e065629db2dedb0624524a9b34d4}{lua\-\_\-remove} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a9185776cc77b691daca1eb94fd8e9807}{lua\-\_\-insert} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a40a5a870b611d40f44e82ca3c9678b62}{lua\-\_\-replace} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a587f91654912f901426c7118ecc5348c}{lua\-\_\-checkstack} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int sz)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a389cf4bf773f353508a28293143d403e}{lua\-\_\-xmove} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$from, \hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$to, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a2b5321e5370d82564c138e9dd8ffc9a5}{lua\-\_\-isnumber} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a70f6031d538713cb3b6093adbc658909}{lua\-\_\-isstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a6b2ce32286576a8e36fe4629662cb536}{lua\-\_\-iscfunction} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_af4cc013f4e4e84fc89bab292bd410981}{lua\-\_\-isuserdata} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const char $\ast$() \hyperlink{lua_8h_a963a421b920cd7ce229f82091eab18a9}{lua\-\_\-typename} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int tp)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_ae22897869083c78bde3055b6189b7d0c}{lua\-\_\-equal} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx1, int idx2)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a2cd7fef8e86adabbfec04ddb15aeebda}{lua\-\_\-rawequal} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx1, int idx2)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a9d0b4eabdb4ebe518e9de3779e50d884}{lua\-\_\-lessthan} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx1, int idx2)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_af0a6ed3b852d680769cfc410a0672172}{lua\-\_\-\-Number}() \hyperlink{lua_8h_ab93cb1edc97ca887c90dbcbd43e1df88}{lua\-\_\-tonumber} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a362144baa0cfb14dc38fd21438053d73}{lua\-\_\-\-Integer}() \hyperlink{lua_8h_a90582a1c67153e7aaa7e45649fd21d50}{lua\-\_\-tointeger} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a0f530f104aeaddeeb63b27dc18b42d27}{lua\-\_\-toboolean} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const char $\ast$() \hyperlink{lua_8h_aabf845b1c7ffc0462988b67ba83955cf}{lua\-\_\-tolstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx, size\-\_\-t $\ast$len)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} size\-\_\-t() \hyperlink{lua_8h_a07bd1384def434a4a3efdcd48b771ca9}{lua\-\_\-objlen} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a5f5bedea265eccf43c6e404e020988ce}{lua\-\_\-\-C\-Function}() \hyperlink{lua_8h_a8c9a532a84b03d90b0a103c007f871b8}{lua\-\_\-tocfunction} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void $\ast$() \hyperlink{lua_8h_a3b3106346d9739a64d48be4e30368dec}{lua\-\_\-touserdata} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$() \hyperlink{lua_8h_a8ad0bb2b578f5b6e84511431260a5818}{lua\-\_\-tothread} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const void $\ast$() \hyperlink{lua_8h_ae00a730cd408773f7a4122fccfbbb91a}{lua\-\_\-topointer} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a8bd9c4137a90833221f48dd16659c9e4}{lua\-\_\-pushnil} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a77807056ba032d64b2def2b57dc53d53}{lua\-\_\-pushnumber} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_af0a6ed3b852d680769cfc410a0672172}{lua\-\_\-\-Number} n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_aea46fa9bf358947f5c0a1bf266b26154}{lua\-\_\-pushinteger} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a362144baa0cfb14dc38fd21438053d73}{lua\-\_\-\-Integer} n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a8c01dd1b5018c60a078bcf58dd1fe2e8}{lua\-\_\-pushlstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$s, size\-\_\-t l)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_af2db74e1d8e7062bf5d1a2a779e53369}{lua\-\_\-pushstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$s)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const char $\ast$() \hyperlink{lua_8h_a13fb1100c2e3942aa6c69baaf7e3f7cd}{lua\-\_\-pushvfstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$fmt, va\-\_\-list argp)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const char $\ast$() \hyperlink{lua_8h_af4a7bd8fa65e507e36aff61af8db117d}{lua\-\_\-pushfstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$fmt,...)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a89f758ed8996c5f405cb7dfb41f78337}{lua\-\_\-pushcclosure} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a5f5bedea265eccf43c6e404e020988ce}{lua\-\_\-\-C\-Function} fn, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a9d7bacf1769dcf7cff7ba7271041e61c}{lua\-\_\-pushboolean} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int b)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a9d6c960026cbee9ffb95a9d1753675e2}{lua\-\_\-pushlightuserdata} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, void $\ast$p)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a118bd9effa8d54ddcbe37bd5cb70a4b6}{lua\-\_\-pushthread} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a8d82fa181a3003e9a304040c0bbed9ac}{lua\-\_\-gettable} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_ac3112bb28ba217adc46f13da8e9e6585}{lua\-\_\-getfield} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx, const char $\ast$k)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_af5ed4eb4ccc6e6f7921fdaee8485cb3f}{lua\-\_\-rawget} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a83de0bf688c2a389db2e444aa34e752a}{lua\-\_\-rawgeti} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a022ddaeee46ccb89860c78480e54db05}{lua\-\_\-createtable} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int narr, int nrec)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void $\ast$() \hyperlink{lua_8h_a0ed440a42dac5e7faaf51163b274c43c}{lua\-\_\-newuserdata} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, size\-\_\-t sz)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a15b983a1c2fd3c7ab7810c4aa0096567}{lua\-\_\-getmetatable} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int objindex)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a94bd8786ad09c9a233d397688d7b21b0}{lua\-\_\-getfenv} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_aeda173d104e3a566ccaac89a1f64a5eb}{lua\-\_\-settable} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a9580a15c141cbe4bf2a63fea625c3878}{lua\-\_\-setfield} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx, const char $\ast$k)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a3db5cd3ce7ae703c39d54495be44aafc}{lua\-\_\-rawset} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a32f51f8a97b4f005f7a3c378dcf71df2}{lua\-\_\-rawseti} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a0b834b6a9cd96b141385df14bd0272a4}{lua\-\_\-setmetatable} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int objindex)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a31404abda0b6d6f331b63bb651a82830}{lua\-\_\-setfenv} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a76a93304f9e313c5e8b9f2d95c1f05fe}{lua\-\_\-call} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int nargs, int nresults)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a513752286ffd536ea5ce1988e4ebf884}{lua\-\_\-pcall} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int nargs, int nresults, int errfunc)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_aecf554be5e84a1577c9e19455bfad16c}{lua\-\_\-cpcall} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a5f5bedea265eccf43c6e404e020988ce}{lua\-\_\-\-C\-Function} func, void $\ast$ud)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a5589c19a7f18954a49e945f50fcba94a}{lua\-\_\-load} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a49bb2f99132c1ae9f80ce809cce40455}{lua\-\_\-\-Reader} reader, void $\ast$dt, const char $\ast$chunkname)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a29ceb6e6217ff14d061922a539c59eac}{lua\-\_\-dump} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a739e0fce611e90942d1f15c302187e05}{lua\-\_\-\-Writer} writer, void $\ast$data)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a235fa5c4bb5251a499bcd492183fc8c8}{lua\-\_\-yield} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int nresults)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a138eae7b52d8a657534ef289ee6946e2}{lua\-\_\-resume} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int narg)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_af5cd8db0ed930193f1bf67c583666f91}{lua\-\_\-status} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a6bac487d3f900b21271e8c591bd801cd}{lua\-\_\-gc} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int what, int data)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_aae6c05ddea7bd110a3e84595ef92e601}{lua\-\_\-error} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int() \hyperlink{lua_8h_a2a62b957ab95d9b542bf7d02794181e6}{lua\-\_\-next} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void() \hyperlink{lua_8h_a4eba0457df5bafff4d44071d1d8080b6}{lua\-\_\-concat} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a1c6fb648cd80375673a99321e15fcc36}{lua\-\_\-\-Alloc}() \hyperlink{lua_8h_ab5b8729206c208fbb794c9c2840b0812}{lua\-\_\-getallocf} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, void $\ast$$\ast$ud)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void \hyperlink{lua_8h_ac890276f9590df6a4d6aabdad9c558f0}{lua\-\_\-setallocf} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a1c6fb648cd80375673a99321e15fcc36}{lua\-\_\-\-Alloc} f, void $\ast$ud)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} void \hyperlink{lua_8h_a23ba67a2597f1bce7e408f44ff5bc4f4}{lua\-\_\-setlevel} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$from, \hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$to)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int \hyperlink{lua_8h_ac1fc03c27ee46caa4037df2d70f22110}{lua\-\_\-getstack} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int level, \hyperlink{structlua___debug}{lua\-\_\-\-Debug} $\ast$ar)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int \hyperlink{lua_8h_acaafc35d8e385c4d167229486165df6d}{lua\-\_\-getinfo} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$what, \hyperlink{structlua___debug}{lua\-\_\-\-Debug} $\ast$ar)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const char $\ast$ \hyperlink{lua_8h_aaaf420ee0b0e79a45b823d9da4905667}{lua\-\_\-getlocal} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const \hyperlink{structlua___debug}{lua\-\_\-\-Debug} $\ast$ar, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const char $\ast$ \hyperlink{lua_8h_a425c37b17caf76545f1541a5bb81dfc6}{lua\-\_\-setlocal} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const \hyperlink{structlua___debug}{lua\-\_\-\-Debug} $\ast$ar, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const char $\ast$ \hyperlink{lua_8h_afd5e7d6995dc52a5cb9e370ee3a710e6}{lua\-\_\-getupvalue} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int funcindex, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} const char $\ast$ \hyperlink{lua_8h_a6e2e5717e848fca56335a64739a8f2c0}{lua\-\_\-setupvalue} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int funcindex, int n)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int \hyperlink{lua_8h_a664ce25a0c30d2c1b1e89e7ea25be7f0}{lua\-\_\-sethook} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_ae9fa3596803178b98fa911d2ba0af0f4}{lua\-\_\-\-Hook} func, int mask, int count)
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} \hyperlink{lua_8h_ae9fa3596803178b98fa911d2ba0af0f4}{lua\-\_\-\-Hook} \hyperlink{lua_8h_a44b9923035977dcfa57279761f7379b4}{lua\-\_\-gethook} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int \hyperlink{lua_8h_a0b41dd9ab46652c8433b861f679fadb8}{lua\-\_\-gethookmask} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\item 
+\hyperlink{luaconf_8h_af88575eb79fdd88b1cce4533ab5cbe69}{\-L\-U\-A\-\_\-\-A\-P\-I} int \hyperlink{lua_8h_a18f065f752cfa08eefd338b4cbd7254b}{lua\-\_\-gethookcount} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L})
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{lua_8h_ab6ff0964a416a9a7c1e90337c965f102}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-A\-U\-T\-H\-O\-R\-S@{\-L\-U\-A\-\_\-\-A\-U\-T\-H\-O\-R\-S}}
+\index{\-L\-U\-A\-\_\-\-A\-U\-T\-H\-O\-R\-S@{\-L\-U\-A\-\_\-\-A\-U\-T\-H\-O\-R\-S}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-A\-U\-T\-H\-O\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-A\-U\-T\-H\-O\-R\-S}~\char`\"{}\-R. \-Ierusalimschy, \-L. \-H. de \-Figueiredo \& \-W. \-Celes\char`\"{}}}\label{lua_8h_ab6ff0964a416a9a7c1e90337c965f102}
+\hypertarget{lua_8h_ab7f9d507684f7d5bb0a21e709b3569b8}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Chunkreader@{lua\-\_\-\-Chunkreader}}
+\index{lua\-\_\-\-Chunkreader@{lua\-\_\-\-Chunkreader}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Chunkreader}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-\-Chunkreader}~{\bf lua\-\_\-\-Reader}}}\label{lua_8h_ab7f9d507684f7d5bb0a21e709b3569b8}
+\hypertarget{lua_8h_a2e8f683ec38d7c55ccc8c327d8bfd7c5}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Chunkwriter@{lua\-\_\-\-Chunkwriter}}
+\index{lua\-\_\-\-Chunkwriter@{lua\-\_\-\-Chunkwriter}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Chunkwriter}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-\-Chunkwriter}~{\bf lua\-\_\-\-Writer}}}\label{lua_8h_a2e8f683ec38d7c55ccc8c327d8bfd7c5}
+\hypertarget{lua_8h_a5126fa04dbeee0b9118c769beadcd62d}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T@{\-L\-U\-A\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}}
+\index{\-L\-U\-A\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T@{\-L\-U\-A\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}~\char`\"{}\-Copyright (\-C) 1994-\/2008 \-Lua.\-org, \-P\-U\-C-\/\-Rio\char`\"{}}}\label{lua_8h_a5126fa04dbeee0b9118c769beadcd62d}
+\hypertarget{lua_8h_a7f265c572db9a8ff4fe6069ae8b40995}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-E\-N\-V\-I\-R\-O\-N\-I\-N\-D\-E\-X@{\-L\-U\-A\-\_\-\-E\-N\-V\-I\-R\-O\-N\-I\-N\-D\-E\-X}}
+\index{\-L\-U\-A\-\_\-\-E\-N\-V\-I\-R\-O\-N\-I\-N\-D\-E\-X@{\-L\-U\-A\-\_\-\-E\-N\-V\-I\-R\-O\-N\-I\-N\-D\-E\-X}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-E\-N\-V\-I\-R\-O\-N\-I\-N\-D\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-E\-N\-V\-I\-R\-O\-N\-I\-N\-D\-E\-X}~(-\/10001)}}\label{lua_8h_a7f265c572db9a8ff4fe6069ae8b40995}
+\hypertarget{lua_8h_a295ea44b6036e266b06e5de0f8ff24e0}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R@{\-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R}}
+\index{\-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R@{\-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R}~5}}\label{lua_8h_a295ea44b6036e266b06e5de0f8ff24e0}
+\hypertarget{lua_8h_ac28ced8d63f58b5164a298d7d254f658}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-E\-R\-R\-M\-E\-M@{\-L\-U\-A\-\_\-\-E\-R\-R\-M\-E\-M}}
+\index{\-L\-U\-A\-\_\-\-E\-R\-R\-M\-E\-M@{\-L\-U\-A\-\_\-\-E\-R\-R\-M\-E\-M}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-E\-R\-R\-M\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-E\-R\-R\-M\-E\-M}~4}}\label{lua_8h_ac28ced8d63f58b5164a298d7d254f658}
+\hypertarget{lua_8h_af4bd6d4de5f10de738f81d007982abed}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-E\-R\-R\-R\-U\-N@{\-L\-U\-A\-\_\-\-E\-R\-R\-R\-U\-N}}
+\index{\-L\-U\-A\-\_\-\-E\-R\-R\-R\-U\-N@{\-L\-U\-A\-\_\-\-E\-R\-R\-R\-U\-N}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-E\-R\-R\-R\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-E\-R\-R\-R\-U\-N}~2}}\label{lua_8h_af4bd6d4de5f10de738f81d007982abed}
+\hypertarget{lua_8h_a779d4c0fc1c9da41b7d983646267e11f}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-E\-R\-R\-S\-Y\-N\-T\-A\-X@{\-L\-U\-A\-\_\-\-E\-R\-R\-S\-Y\-N\-T\-A\-X}}
+\index{\-L\-U\-A\-\_\-\-E\-R\-R\-S\-Y\-N\-T\-A\-X@{\-L\-U\-A\-\_\-\-E\-R\-R\-S\-Y\-N\-T\-A\-X}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-E\-R\-R\-S\-Y\-N\-T\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-E\-R\-R\-S\-Y\-N\-T\-A\-X}~3}}\label{lua_8h_a779d4c0fc1c9da41b7d983646267e11f}
+\hypertarget{lua_8h_a59b8b65be08a10442ea2ae41289f5073}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-C\-C\-O\-L\-L\-E\-C\-T@{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-L\-L\-E\-C\-T}}
+\index{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-L\-L\-E\-C\-T@{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-L\-L\-E\-C\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-L\-L\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-C\-C\-O\-L\-L\-E\-C\-T}~2}}\label{lua_8h_a59b8b65be08a10442ea2ae41289f5073}
+\hypertarget{lua_8h_a3f8f1ebdffa4dbfe2dd89c2fd86bd7f4}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T@{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T}}
+\index{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T@{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T}~3}}\label{lua_8h_a3f8f1ebdffa4dbfe2dd89c2fd86bd7f4}
+\hypertarget{lua_8h_a99f1685cd6789e0b9bbd2a4c080fbaed}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T\-B@{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T\-B}}
+\index{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T\-B@{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T\-B}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T\-B}~4}}\label{lua_8h_a99f1685cd6789e0b9bbd2a4c080fbaed}
+\hypertarget{lua_8h_a73701e5990022e938e90828a2c8291a4}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-C\-R\-E\-S\-T\-A\-R\-T@{\-L\-U\-A\-\_\-\-G\-C\-R\-E\-S\-T\-A\-R\-T}}
+\index{\-L\-U\-A\-\_\-\-G\-C\-R\-E\-S\-T\-A\-R\-T@{\-L\-U\-A\-\_\-\-G\-C\-R\-E\-S\-T\-A\-R\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-C\-R\-E\-S\-T\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-C\-R\-E\-S\-T\-A\-R\-T}~1}}\label{lua_8h_a73701e5990022e938e90828a2c8291a4}
+\hypertarget{lua_8h_a28342bd4f96a077c7447489073dfa376}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-P\-A\-U\-S\-E@{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-P\-A\-U\-S\-E}}
+\index{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-P\-A\-U\-S\-E@{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-P\-A\-U\-S\-E}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-P\-A\-U\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-P\-A\-U\-S\-E}~6}}\label{lua_8h_a28342bd4f96a077c7447489073dfa376}
+\hypertarget{lua_8h_af07b3449c8e3ffdd62649443f32e1931}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-S\-T\-E\-P\-M\-U\-L@{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-S\-T\-E\-P\-M\-U\-L}}
+\index{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-S\-T\-E\-P\-M\-U\-L@{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-S\-T\-E\-P\-M\-U\-L}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-S\-T\-E\-P\-M\-U\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-C\-S\-E\-T\-S\-T\-E\-P\-M\-U\-L}~7}}\label{lua_8h_af07b3449c8e3ffdd62649443f32e1931}
+\hypertarget{lua_8h_a9e7f3eaf2e269c3422aea3fd7c8973ef}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-C\-S\-T\-E\-P@{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-E\-P}}
+\index{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-E\-P@{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-E\-P}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-C\-S\-T\-E\-P}~5}}\label{lua_8h_a9e7f3eaf2e269c3422aea3fd7c8973ef}
+\hypertarget{lua_8h_a7080a7110a1b37afc6ea2f706e944bc3}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-C\-S\-T\-O\-P@{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-O\-P}}
+\index{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-O\-P@{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-O\-P}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-C\-S\-T\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-C\-S\-T\-O\-P}~0}}\label{lua_8h_a7080a7110a1b37afc6ea2f706e944bc3}
+\hypertarget{lua_8h_a1d036311a62bf9c9cc376de2f46433e2}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getgccount@{lua\-\_\-getgccount}}
+\index{lua\-\_\-getgccount@{lua\-\_\-getgccount}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getgccount}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-getgccount}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-gc}({\bf \-L}, {\bf \-L\-U\-A\-\_\-\-G\-C\-C\-O\-U\-N\-T}, 0)}}\label{lua_8h_a1d036311a62bf9c9cc376de2f46433e2}
+\hypertarget{lua_8h_abc2f6fef4682c1d4cdc33206aaf42bec}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getglobal@{lua\-\_\-getglobal}}
+\index{lua\-\_\-getglobal@{lua\-\_\-getglobal}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getglobal}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-getglobal}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-getfield}({\bf \-L}, {\bf \-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}, (s))}}\label{lua_8h_abc2f6fef4682c1d4cdc33206aaf42bec}
+\hypertarget{lua_8h_a0a90c2d2632800a015eca27b7812e329}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getregistry@{lua\-\_\-getregistry}}
+\index{lua\-\_\-getregistry@{lua\-\_\-getregistry}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getregistry}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-getregistry}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-pushvalue}({\bf \-L}, {\bf \-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X})}}\label{lua_8h_a0a90c2d2632800a015eca27b7812e329}
+\hypertarget{lua_8h_adcd23d4ad1ec6e825daea03ee83c8c73}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X@{\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}}
+\index{\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X@{\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}~(-\/10002)}}\label{lua_8h_adcd23d4ad1ec6e825daea03ee83c8c73}
+\hypertarget{lua_8h_ab7cc83a523db06d92466167ebc3a65f2}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L}}
+\index{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L}~0}}\label{lua_8h_ab7cc83a523db06d92466167ebc3a65f2}
+\hypertarget{lua_8h_a6c7cb905c4d6a2d21e6261b6ccec7298}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T}}
+\index{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T}~3}}\label{lua_8h_a6c7cb905c4d6a2d21e6261b6ccec7298}
+\hypertarget{lua_8h_af2e15cf6167fde2aab753f2a8228de06}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E}}
+\index{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E}~2}}\label{lua_8h_af2e15cf6167fde2aab753f2a8228de06}
+\hypertarget{lua_8h_a86f6d196d7c800de07bafe9603881485}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T}}
+\index{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T}~1}}\label{lua_8h_a86f6d196d7c800de07bafe9603881485}
+\hypertarget{lua_8h_a24f781b21e8aeebc3015db84e63f0bab}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-H\-O\-O\-K\-T\-A\-I\-L\-R\-E\-T@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-T\-A\-I\-L\-R\-E\-T}}
+\index{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-T\-A\-I\-L\-R\-E\-T@{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-T\-A\-I\-L\-R\-E\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-H\-O\-O\-K\-T\-A\-I\-L\-R\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-T\-A\-I\-L\-R\-E\-T}~4}}\label{lua_8h_a24f781b21e8aeebc3015db84e63f0bab}
+\hypertarget{lua_8h_af4f579ead7d5ea837d8d708186033502}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isboolean@{lua\-\_\-isboolean}}
+\index{lua\-\_\-isboolean@{lua\-\_\-isboolean}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isboolean}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-isboolean}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-type}({\bf \-L}, (n)) == {\bf \-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N})}}\label{lua_8h_af4f579ead7d5ea837d8d708186033502}
+\hypertarget{lua_8h_a7537af276c81906c144f29cd25b93315}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isfunction@{lua\-\_\-isfunction}}
+\index{lua\-\_\-isfunction@{lua\-\_\-isfunction}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isfunction}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-isfunction}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-type}({\bf \-L}, (n)) == {\bf \-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N})}}\label{lua_8h_a7537af276c81906c144f29cd25b93315}
+\hypertarget{lua_8h_a46c0d924f3492bbe10007a74e00b43aa}{\index{lua.\-h@{lua.\-h}!lua\-\_\-islightuserdata@{lua\-\_\-islightuserdata}}
+\index{lua\-\_\-islightuserdata@{lua\-\_\-islightuserdata}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-islightuserdata}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-islightuserdata}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-type}({\bf \-L}, (n)) == {\bf \-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A})}}\label{lua_8h_a46c0d924f3492bbe10007a74e00b43aa}
+\hypertarget{lua_8h_a86d737d7002e7e94023765397c6eef20}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isnil@{lua\-\_\-isnil}}
+\index{lua\-\_\-isnil@{lua\-\_\-isnil}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isnil}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-isnil}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-type}({\bf \-L}, (n)) == {\bf \-L\-U\-A\-\_\-\-T\-N\-I\-L})}}\label{lua_8h_a86d737d7002e7e94023765397c6eef20}
+\hypertarget{lua_8h_ad054300429f1094d3692313abc733ddf}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isnone@{lua\-\_\-isnone}}
+\index{lua\-\_\-isnone@{lua\-\_\-isnone}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isnone}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-isnone}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-type}({\bf \-L}, (n)) == {\bf \-L\-U\-A\-\_\-\-T\-N\-O\-N\-E})}}\label{lua_8h_ad054300429f1094d3692313abc733ddf}
+\hypertarget{lua_8h_af51702bb75a31bb4a279953ee386d533}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isnoneornil@{lua\-\_\-isnoneornil}}
+\index{lua\-\_\-isnoneornil@{lua\-\_\-isnoneornil}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isnoneornil}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-isnoneornil}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-type}({\bf \-L}, (n)) $<$= 0)}}\label{lua_8h_af51702bb75a31bb4a279953ee386d533}
+\hypertarget{lua_8h_a161af51893c5f79dacc1c382416a5f27}{\index{lua.\-h@{lua.\-h}!lua\-\_\-istable@{lua\-\_\-istable}}
+\index{lua\-\_\-istable@{lua\-\_\-istable}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-istable}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-istable}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-type}({\bf \-L}, (n)) == {\bf \-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E})}}\label{lua_8h_a161af51893c5f79dacc1c382416a5f27}
+\hypertarget{lua_8h_a0c346eeb2eee1d2e9b9920fb9b9d7fc9}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isthread@{lua\-\_\-isthread}}
+\index{lua\-\_\-isthread@{lua\-\_\-isthread}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isthread}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-isthread}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-type}({\bf \-L}, (n)) == {\bf \-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D})}}\label{lua_8h_a0c346eeb2eee1d2e9b9920fb9b9d7fc9}
+\hypertarget{lua_8h_a3b3ff95f914cf6ff4d46c87e8a648489}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-A\-L\-L@{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-A\-L\-L}}
+\index{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-A\-L\-L@{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-A\-L\-L}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-A\-L\-L}~(1 $<$$<$ {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-A\-L\-L})}}\label{lua_8h_a3b3ff95f914cf6ff4d46c87e8a648489}
+\hypertarget{lua_8h_a29927bc26e642df4f842e0235d290c56}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-O\-U\-N\-T@{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-O\-U\-N\-T}}
+\index{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-O\-U\-N\-T@{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-O\-U\-N\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-M\-A\-S\-K\-C\-O\-U\-N\-T}~(1 $<$$<$ {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-C\-O\-U\-N\-T})}}\label{lua_8h_a29927bc26e642df4f842e0235d290c56}
+\hypertarget{lua_8h_a671bc8ae0eddd679411c7f2401a594cf}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-M\-A\-S\-K\-L\-I\-N\-E@{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-L\-I\-N\-E}}
+\index{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-L\-I\-N\-E@{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-L\-I\-N\-E}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-L\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-M\-A\-S\-K\-L\-I\-N\-E}~(1 $<$$<$ {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-L\-I\-N\-E})}}\label{lua_8h_a671bc8ae0eddd679411c7f2401a594cf}
+\hypertarget{lua_8h_af0345e20a0268525a82cd71ab3ecb5da}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-M\-A\-S\-K\-R\-E\-T@{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-R\-E\-T}}
+\index{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-R\-E\-T@{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-R\-E\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-M\-A\-S\-K\-R\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-M\-A\-S\-K\-R\-E\-T}~(1 $<$$<$ {\bf \-L\-U\-A\-\_\-\-H\-O\-O\-K\-R\-E\-T})}}\label{lua_8h_af0345e20a0268525a82cd71ab3ecb5da}
+\hypertarget{lua_8h_ad0180b89de8a4425cb2a1a3e3f793aa5}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-M\-I\-N\-S\-T\-A\-C\-K@{\-L\-U\-A\-\_\-\-M\-I\-N\-S\-T\-A\-C\-K}}
+\index{\-L\-U\-A\-\_\-\-M\-I\-N\-S\-T\-A\-C\-K@{\-L\-U\-A\-\_\-\-M\-I\-N\-S\-T\-A\-C\-K}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-M\-I\-N\-S\-T\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-M\-I\-N\-S\-T\-A\-C\-K}~20}}\label{lua_8h_ad0180b89de8a4425cb2a1a3e3f793aa5}
+\hypertarget{lua_8h_ace3545adc11664c2f2b152fbe8b6283c}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T@{\-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}}
+\index{\-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T@{\-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}~(-\/1)}}\label{lua_8h_ace3545adc11664c2f2b152fbe8b6283c}
+\hypertarget{lua_8h_aa59db6b784aa1ec954599a44168c7761}{\index{lua.\-h@{lua.\-h}!lua\-\_\-newtable@{lua\-\_\-newtable}}
+\index{lua\-\_\-newtable@{lua\-\_\-newtable}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-newtable}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-newtable}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-createtable}({\bf \-L}, 0, 0)}}\label{lua_8h_aa59db6b784aa1ec954599a44168c7761}
+\hypertarget{lua_8h_a0d9ba6517cbe11049d830829dce90b4d}{\index{lua.\-h@{lua.\-h}!lua\-\_\-open@{lua\-\_\-open}}
+\index{lua\-\_\-open@{lua\-\_\-open}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-open}(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf lua\-L\-\_\-newstate}()}}\label{lua_8h_a0d9ba6517cbe11049d830829dce90b4d}
+\hypertarget{lua_8h_abb8eae2164badeafdb037bc1e03cc822}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pop@{lua\-\_\-pop}}
+\index{lua\-\_\-pop@{lua\-\_\-pop}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-pop}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-settop}({\bf \-L}, -\/(n)-\/1)}}\label{lua_8h_abb8eae2164badeafdb037bc1e03cc822}
+\hypertarget{lua_8h_a2e4fbbe97182bf90004379202202f2b9}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushcfunction@{lua\-\_\-pushcfunction}}
+\index{lua\-\_\-pushcfunction@{lua\-\_\-pushcfunction}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushcfunction}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-pushcfunction}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-pushcclosure}({\bf \-L}, (f), 0)}}\label{lua_8h_a2e4fbbe97182bf90004379202202f2b9}
+\hypertarget{lua_8h_a47854189a679002ed743ebbcb30b1b26}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushliteral@{lua\-\_\-pushliteral}}
+\index{lua\-\_\-pushliteral@{lua\-\_\-pushliteral}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushliteral}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-pushliteral}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-pushlstring}({\bf \-L}, \char`\"{}\char`\"{} s, (sizeof(s)/sizeof(char))-\/1)}}\label{lua_8h_a47854189a679002ed743ebbcb30b1b26}
+\hypertarget{lua_8h_ae1162e4a80396145544aa03312c60d8c}{\index{lua.\-h@{lua.\-h}!lua\-\_\-register@{lua\-\_\-register}}
+\index{lua\-\_\-register@{lua\-\_\-register}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-register}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-register}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n, }
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-pushcfunction}({\bf \-L}, (f)), {\bf lua\-\_\-setglobal}({\bf \-L}, (n)))}}\label{lua_8h_ae1162e4a80396145544aa03312c60d8c}
+\hypertarget{lua_8h_a3524c2bbc8fcf847dc083246b62945dd}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X@{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}}
+\index{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X@{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}~(-\/10000)}}\label{lua_8h_a3524c2bbc8fcf847dc083246b62945dd}
+\hypertarget{lua_8h_abeb7a5ea7080e8ef597181124801f759}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-R\-E\-L\-E\-A\-S\-E@{\-L\-U\-A\-\_\-\-R\-E\-L\-E\-A\-S\-E}}
+\index{\-L\-U\-A\-\_\-\-R\-E\-L\-E\-A\-S\-E@{\-L\-U\-A\-\_\-\-R\-E\-L\-E\-A\-S\-E}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-R\-E\-L\-E\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-R\-E\-L\-E\-A\-S\-E}~\char`\"{}\-Lua 5.\-1.\-4\char`\"{}}}\label{lua_8h_abeb7a5ea7080e8ef597181124801f759}
+\hypertarget{lua_8h_ab9c7b1411a77d9dff74f2930fc51f796}{\index{lua.\-h@{lua.\-h}!lua\-\_\-setglobal@{lua\-\_\-setglobal}}
+\index{lua\-\_\-setglobal@{lua\-\_\-setglobal}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-setglobal}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-setglobal}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-setfield}({\bf \-L}, {\bf \-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}, (s))}}\label{lua_8h_ab9c7b1411a77d9dff74f2930fc51f796}
+\hypertarget{lua_8h_af21c9fa681dc005c17a7b288882cae1b}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E@{\-L\-U\-A\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}}
+\index{\-L\-U\-A\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E@{\-L\-U\-A\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}~\char`\"{}$\backslash$033\-Lua\char`\"{}}}\label{lua_8h_af21c9fa681dc005c17a7b288882cae1b}
+\hypertarget{lua_8h_af1950fb3c542d036245559b5f5ae9346}{\index{lua.\-h@{lua.\-h}!lua\-\_\-strlen@{lua\-\_\-strlen}}
+\index{lua\-\_\-strlen@{lua\-\_\-strlen}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-strlen}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-strlen}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-objlen}({\bf \-L}, (i))}}\label{lua_8h_af1950fb3c542d036245559b5f5ae9346}
+\hypertarget{lua_8h_a611808ed12d4c2aee2a9e298a9d9a9bf}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N@{\-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N}}
+\index{\-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N@{\-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-B\-O\-O\-L\-E\-A\-N}~1}}\label{lua_8h_a611808ed12d4c2aee2a9e298a9d9a9bf}
+\hypertarget{lua_8h_adaa7fa6e2561c1bc428ba8d265171494}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N@{\-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N}}
+\index{\-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N@{\-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-F\-U\-N\-C\-T\-I\-O\-N}~6}}\label{lua_8h_adaa7fa6e2561c1bc428ba8d265171494}
+\hypertarget{lua_8h_aa030c2d649070173902c8094d8e0e2cd}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A@{\-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A}}
+\index{\-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A@{\-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-L\-I\-G\-H\-T\-U\-S\-E\-R\-D\-A\-T\-A}~2}}\label{lua_8h_aa030c2d649070173902c8094d8e0e2cd}
+\hypertarget{lua_8h_ae38a6fb8c687b8bfab211b7675a695ef}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-N\-I\-L@{\-L\-U\-A\-\_\-\-T\-N\-I\-L}}
+\index{\-L\-U\-A\-\_\-\-T\-N\-I\-L@{\-L\-U\-A\-\_\-\-T\-N\-I\-L}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-N\-I\-L}~0}}\label{lua_8h_ae38a6fb8c687b8bfab211b7675a695ef}
+\hypertarget{lua_8h_a39c27eef097c704eee3536906dea5380}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-N\-O\-N\-E@{\-L\-U\-A\-\_\-\-T\-N\-O\-N\-E}}
+\index{\-L\-U\-A\-\_\-\-T\-N\-O\-N\-E@{\-L\-U\-A\-\_\-\-T\-N\-O\-N\-E}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-N\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-N\-O\-N\-E}~(-\/1)}}\label{lua_8h_a39c27eef097c704eee3536906dea5380}
+\hypertarget{lua_8h_a7f62ecb240cb38da9c8a53b41fe21ed9}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-N\-U\-M\-B\-E\-R@{\-L\-U\-A\-\_\-\-T\-N\-U\-M\-B\-E\-R}}
+\index{\-L\-U\-A\-\_\-\-T\-N\-U\-M\-B\-E\-R@{\-L\-U\-A\-\_\-\-T\-N\-U\-M\-B\-E\-R}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-N\-U\-M\-B\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-N\-U\-M\-B\-E\-R}~3}}\label{lua_8h_a7f62ecb240cb38da9c8a53b41fe21ed9}
+\hypertarget{lua_8h_ac813fc3bc1886ba17c363d5b4c6e7ef1}{\index{lua.\-h@{lua.\-h}!lua\-\_\-tostring@{lua\-\_\-tostring}}
+\index{lua\-\_\-tostring@{lua\-\_\-tostring}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-tostring}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-tostring}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-tolstring}({\bf \-L}, (i), \-N\-U\-L\-L)}}\label{lua_8h_ac813fc3bc1886ba17c363d5b4c6e7ef1}
+\hypertarget{lua_8h_a57de20d87bb5131a3159f2bd52e3fab6}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-S\-T\-R\-I\-N\-G@{\-L\-U\-A\-\_\-\-T\-S\-T\-R\-I\-N\-G}}
+\index{\-L\-U\-A\-\_\-\-T\-S\-T\-R\-I\-N\-G@{\-L\-U\-A\-\_\-\-T\-S\-T\-R\-I\-N\-G}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-S\-T\-R\-I\-N\-G}~4}}\label{lua_8h_a57de20d87bb5131a3159f2bd52e3fab6}
+\hypertarget{lua_8h_a31620fd8da5b655b7879e16a116ec31a}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E@{\-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E}}
+\index{\-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E@{\-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-T\-A\-B\-L\-E}~5}}\label{lua_8h_a31620fd8da5b655b7879e16a116ec31a}
+\hypertarget{lua_8h_a028a8d8aae9580c465aabcd0c11334d9}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D@{\-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D}}
+\index{\-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D@{\-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-T\-H\-R\-E\-A\-D}~8}}\label{lua_8h_a028a8d8aae9580c465aabcd0c11334d9}
+\hypertarget{lua_8h_a84fd4c52cea4073671a4cd0eb7026dc7}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-T\-U\-S\-E\-R\-D\-A\-T\-A@{\-L\-U\-A\-\_\-\-T\-U\-S\-E\-R\-D\-A\-T\-A}}
+\index{\-L\-U\-A\-\_\-\-T\-U\-S\-E\-R\-D\-A\-T\-A@{\-L\-U\-A\-\_\-\-T\-U\-S\-E\-R\-D\-A\-T\-A}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-T\-U\-S\-E\-R\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-T\-U\-S\-E\-R\-D\-A\-T\-A}~7}}\label{lua_8h_a84fd4c52cea4073671a4cd0eb7026dc7}
+\hypertarget{lua_8h_ac3aa6665c25070f282c9827ec919fe6a}{\index{lua.\-h@{lua.\-h}!lua\-\_\-upvalueindex@{lua\-\_\-upvalueindex}}
+\index{lua\-\_\-upvalueindex@{lua\-\_\-upvalueindex}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-upvalueindex}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-upvalueindex}(
+\begin{DoxyParamCaption}
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~({\bf \-L\-U\-A\-\_\-\-G\-L\-O\-B\-A\-L\-S\-I\-N\-D\-E\-X}-\/(i))}}\label{lua_8h_ac3aa6665c25070f282c9827ec919fe6a}
+\hypertarget{lua_8h_a3818e6f6538c9f42e9522c74334df03d}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N@{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N@{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N}~\char`\"{}\-Lua 5.\-1\char`\"{}}}\label{lua_8h_a3818e6f6538c9f42e9522c74334df03d}
+\hypertarget{lua_8h_a4c575ef5fb9bad1872613a9d832486a5}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-N\-U\-M@{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-N\-U\-M}}
+\index{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-N\-U\-M@{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-N\-U\-M}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-N\-U\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-N\-U\-M}~501}}\label{lua_8h_a4c575ef5fb9bad1872613a9d832486a5}
+\hypertarget{lua_8h_ab69f4bd0c0693d4c8fcfc0ebaeb2806b}{\index{lua.\-h@{lua.\-h}!\-L\-U\-A\-\_\-\-Y\-I\-E\-L\-D@{\-L\-U\-A\-\_\-\-Y\-I\-E\-L\-D}}
+\index{\-L\-U\-A\-\_\-\-Y\-I\-E\-L\-D@{\-L\-U\-A\-\_\-\-Y\-I\-E\-L\-D}!lua.h@{lua.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-Y\-I\-E\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-Y\-I\-E\-L\-D}~1}}\label{lua_8h_ab69f4bd0c0693d4c8fcfc0ebaeb2806b}
+
+
+\subsection{타입정의 문서화}
+\hypertarget{lua_8h_a1c6fb648cd80375673a99321e15fcc36}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Alloc@{lua\-\_\-\-Alloc}}
+\index{lua\-\_\-\-Alloc@{lua\-\_\-\-Alloc}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$($\ast$ {\bf lua\-\_\-\-Alloc})(void $\ast$ud, void $\ast$ptr, size\-\_\-t osize, size\-\_\-t nsize)}}\label{lua_8h_a1c6fb648cd80375673a99321e15fcc36}
+\hypertarget{lua_8h_a5f5bedea265eccf43c6e404e020988ce}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-C\-Function@{lua\-\_\-\-C\-Function}}
+\index{lua\-\_\-\-C\-Function@{lua\-\_\-\-C\-Function}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-C\-Function}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ {\bf lua\-\_\-\-C\-Function})({\bf lua\-\_\-\-State} $\ast${\bf \-L})}}\label{lua_8h_a5f5bedea265eccf43c6e404e020988ce}
+\hypertarget{lua_8h_a13a607c625e9cb25bf453b41323857f8}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Debug@{lua\-\_\-\-Debug}}
+\index{lua\-\_\-\-Debug@{lua\-\_\-\-Debug}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf lua\-\_\-\-Debug} {\bf lua\-\_\-\-Debug}}}\label{lua_8h_a13a607c625e9cb25bf453b41323857f8}
+\hypertarget{lua_8h_ae9fa3596803178b98fa911d2ba0af0f4}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Hook@{lua\-\_\-\-Hook}}
+\index{lua\-\_\-\-Hook@{lua\-\_\-\-Hook}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Hook}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf lua\-\_\-\-Hook})({\bf lua\-\_\-\-State} $\ast${\bf \-L}, {\bf lua\-\_\-\-Debug} $\ast$ar)}}\label{lua_8h_ae9fa3596803178b98fa911d2ba0af0f4}
+\hypertarget{lua_8h_a362144baa0cfb14dc38fd21438053d73}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Integer@{lua\-\_\-\-Integer}}
+\index{lua\-\_\-\-Integer@{lua\-\_\-\-Integer}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Integer}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-L\-U\-A\-\_\-\-I\-N\-T\-E\-G\-E\-R} {\bf lua\-\_\-\-Integer}}}\label{lua_8h_a362144baa0cfb14dc38fd21438053d73}
+\hypertarget{lua_8h_af0a6ed3b852d680769cfc410a0672172}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Number@{lua\-\_\-\-Number}}
+\index{lua\-\_\-\-Number@{lua\-\_\-\-Number}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Number}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-L\-U\-A\-\_\-\-N\-U\-M\-B\-E\-R} {\bf lua\-\_\-\-Number}}}\label{lua_8h_af0a6ed3b852d680769cfc410a0672172}
+\hypertarget{lua_8h_a49bb2f99132c1ae9f80ce809cce40455}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Reader@{lua\-\_\-\-Reader}}
+\index{lua\-\_\-\-Reader@{lua\-\_\-\-Reader}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}typedef const char$\ast$($\ast$ {\bf lua\-\_\-\-Reader})({\bf lua\-\_\-\-State} $\ast${\bf \-L}, void $\ast$ud, size\-\_\-t $\ast$sz)}}\label{lua_8h_a49bb2f99132c1ae9f80ce809cce40455}
+\hypertarget{lua_8h_a28186297f2e9f2de0652504633de8fb3}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-State@{lua\-\_\-\-State}}
+\index{lua\-\_\-\-State@{lua\-\_\-\-State}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-State}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf lua\-\_\-\-State} {\bf lua\-\_\-\-State}}}\label{lua_8h_a28186297f2e9f2de0652504633de8fb3}
+\hypertarget{lua_8h_a739e0fce611e90942d1f15c302187e05}{\index{lua.\-h@{lua.\-h}!lua\-\_\-\-Writer@{lua\-\_\-\-Writer}}
+\index{lua\-\_\-\-Writer@{lua\-\_\-\-Writer}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ {\bf lua\-\_\-\-Writer})({\bf lua\-\_\-\-State} $\ast${\bf \-L}, const void $\ast$p, size\-\_\-t sz, void $\ast$ud)}}\label{lua_8h_a739e0fce611e90942d1f15c302187e05}
+
+
+\subsection{함수 문서화}
+\hypertarget{lua_8h_a21ccd6b330c56c62fc3d0f15dd59f7a7}{\index{lua.\-h@{lua.\-h}!lua\-\_\-atpanic@{lua\-\_\-atpanic}}
+\index{lua\-\_\-atpanic@{lua\-\_\-atpanic}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-atpanic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-C\-Function}() {\bf lua\-\_\-atpanic} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-C\-Function}}]{panicf}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a21ccd6b330c56c62fc3d0f15dd59f7a7}
+\hypertarget{lua_8h_a76a93304f9e313c5e8b9f2d95c1f05fe}{\index{lua.\-h@{lua.\-h}!lua\-\_\-call@{lua\-\_\-call}}
+\index{lua\-\_\-call@{lua\-\_\-call}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-call} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{nargs, }
+\item[{int}]{nresults}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a76a93304f9e313c5e8b9f2d95c1f05fe}
+\hypertarget{lua_8h_a587f91654912f901426c7118ecc5348c}{\index{lua.\-h@{lua.\-h}!lua\-\_\-checkstack@{lua\-\_\-checkstack}}
+\index{lua\-\_\-checkstack@{lua\-\_\-checkstack}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-checkstack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-checkstack} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{sz}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a587f91654912f901426c7118ecc5348c}
+\hypertarget{lua_8h_afe030a97e84f24dfab3afb598faa2fff}{\index{lua.\-h@{lua.\-h}!lua\-\_\-close@{lua\-\_\-close}}
+\index{lua\-\_\-close@{lua\-\_\-close}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-close} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_afe030a97e84f24dfab3afb598faa2fff}
+\hypertarget{lua_8h_a4eba0457df5bafff4d44071d1d8080b6}{\index{lua.\-h@{lua.\-h}!lua\-\_\-concat@{lua\-\_\-concat}}
+\index{lua\-\_\-concat@{lua\-\_\-concat}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-concat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-concat} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a4eba0457df5bafff4d44071d1d8080b6}
+\hypertarget{lua_8h_aecf554be5e84a1577c9e19455bfad16c}{\index{lua.\-h@{lua.\-h}!lua\-\_\-cpcall@{lua\-\_\-cpcall}}
+\index{lua\-\_\-cpcall@{lua\-\_\-cpcall}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-cpcall}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-cpcall} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-C\-Function}}]{func, }
+\item[{void $\ast$}]{ud}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_aecf554be5e84a1577c9e19455bfad16c}
+\hypertarget{lua_8h_a022ddaeee46ccb89860c78480e54db05}{\index{lua.\-h@{lua.\-h}!lua\-\_\-createtable@{lua\-\_\-createtable}}
+\index{lua\-\_\-createtable@{lua\-\_\-createtable}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-createtable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-createtable} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{narr, }
+\item[{int}]{nrec}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a022ddaeee46ccb89860c78480e54db05}
+\hypertarget{lua_8h_a29ceb6e6217ff14d061922a539c59eac}{\index{lua.\-h@{lua.\-h}!lua\-\_\-dump@{lua\-\_\-dump}}
+\index{lua\-\_\-dump@{lua\-\_\-dump}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-dump}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-dump} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-Writer}}]{writer, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a29ceb6e6217ff14d061922a539c59eac}
+\hypertarget{lua_8h_ae22897869083c78bde3055b6189b7d0c}{\index{lua.\-h@{lua.\-h}!lua\-\_\-equal@{lua\-\_\-equal}}
+\index{lua\-\_\-equal@{lua\-\_\-equal}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-equal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-equal} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx1, }
+\item[{int}]{idx2}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_ae22897869083c78bde3055b6189b7d0c}
+\hypertarget{lua_8h_aae6c05ddea7bd110a3e84595ef92e601}{\index{lua.\-h@{lua.\-h}!lua\-\_\-error@{lua\-\_\-error}}
+\index{lua\-\_\-error@{lua\-\_\-error}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-error} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_aae6c05ddea7bd110a3e84595ef92e601}
+\hypertarget{lua_8h_a6bac487d3f900b21271e8c591bd801cd}{\index{lua.\-h@{lua.\-h}!lua\-\_\-gc@{lua\-\_\-gc}}
+\index{lua\-\_\-gc@{lua\-\_\-gc}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-gc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-gc} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{what, }
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a6bac487d3f900b21271e8c591bd801cd}
+\hypertarget{lua_8h_ab5b8729206c208fbb794c9c2840b0812}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getallocf@{lua\-\_\-getallocf}}
+\index{lua\-\_\-getallocf@{lua\-\_\-getallocf}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getallocf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-Alloc}() {\bf lua\-\_\-getallocf} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{void $\ast$$\ast$}]{ud}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_ab5b8729206c208fbb794c9c2840b0812}
+\hypertarget{lua_8h_a94bd8786ad09c9a233d397688d7b21b0}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getfenv@{lua\-\_\-getfenv}}
+\index{lua\-\_\-getfenv@{lua\-\_\-getfenv}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getfenv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-getfenv} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a94bd8786ad09c9a233d397688d7b21b0}
+\hypertarget{lua_8h_ac3112bb28ba217adc46f13da8e9e6585}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getfield@{lua\-\_\-getfield}}
+\index{lua\-\_\-getfield@{lua\-\_\-getfield}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getfield}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-getfield} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx, }
+\item[{const char $\ast$}]{k}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_ac3112bb28ba217adc46f13da8e9e6585}
+\hypertarget{lua_8h_a44b9923035977dcfa57279761f7379b4}{\index{lua.\-h@{lua.\-h}!lua\-\_\-gethook@{lua\-\_\-gethook}}
+\index{lua\-\_\-gethook@{lua\-\_\-gethook}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-gethook}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-Hook} {\bf lua\-\_\-gethook} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a44b9923035977dcfa57279761f7379b4}
+\hypertarget{lua_8h_a18f065f752cfa08eefd338b4cbd7254b}{\index{lua.\-h@{lua.\-h}!lua\-\_\-gethookcount@{lua\-\_\-gethookcount}}
+\index{lua\-\_\-gethookcount@{lua\-\_\-gethookcount}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-gethookcount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int {\bf lua\-\_\-gethookcount} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a18f065f752cfa08eefd338b4cbd7254b}
+\hypertarget{lua_8h_a0b41dd9ab46652c8433b861f679fadb8}{\index{lua.\-h@{lua.\-h}!lua\-\_\-gethookmask@{lua\-\_\-gethookmask}}
+\index{lua\-\_\-gethookmask@{lua\-\_\-gethookmask}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-gethookmask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int {\bf lua\-\_\-gethookmask} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a0b41dd9ab46652c8433b861f679fadb8}
+\hypertarget{lua_8h_acaafc35d8e385c4d167229486165df6d}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getinfo@{lua\-\_\-getinfo}}
+\index{lua\-\_\-getinfo@{lua\-\_\-getinfo}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getinfo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int {\bf lua\-\_\-getinfo} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{what, }
+\item[{{\bf lua\-\_\-\-Debug} $\ast$}]{ar}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_acaafc35d8e385c4d167229486165df6d}
+\hypertarget{lua_8h_aaaf420ee0b0e79a45b823d9da4905667}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getlocal@{lua\-\_\-getlocal}}
+\index{lua\-\_\-getlocal@{lua\-\_\-getlocal}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getlocal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const char$\ast$ {\bf lua\-\_\-getlocal} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const {\bf lua\-\_\-\-Debug} $\ast$}]{ar, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_aaaf420ee0b0e79a45b823d9da4905667}
+\hypertarget{lua_8h_a15b983a1c2fd3c7ab7810c4aa0096567}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getmetatable@{lua\-\_\-getmetatable}}
+\index{lua\-\_\-getmetatable@{lua\-\_\-getmetatable}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getmetatable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-getmetatable} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{objindex}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a15b983a1c2fd3c7ab7810c4aa0096567}
+\hypertarget{lua_8h_ac1fc03c27ee46caa4037df2d70f22110}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getstack@{lua\-\_\-getstack}}
+\index{lua\-\_\-getstack@{lua\-\_\-getstack}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getstack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int {\bf lua\-\_\-getstack} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{level, }
+\item[{{\bf lua\-\_\-\-Debug} $\ast$}]{ar}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_ac1fc03c27ee46caa4037df2d70f22110}
+\hypertarget{lua_8h_a8d82fa181a3003e9a304040c0bbed9ac}{\index{lua.\-h@{lua.\-h}!lua\-\_\-gettable@{lua\-\_\-gettable}}
+\index{lua\-\_\-gettable@{lua\-\_\-gettable}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-gettable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-gettable} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a8d82fa181a3003e9a304040c0bbed9ac}
+\hypertarget{lua_8h_ac5d7d4db9186b87ab018916e8826f008}{\index{lua.\-h@{lua.\-h}!lua\-\_\-gettop@{lua\-\_\-gettop}}
+\index{lua\-\_\-gettop@{lua\-\_\-gettop}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-gettop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-gettop} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_ac5d7d4db9186b87ab018916e8826f008}
+\hypertarget{lua_8h_afd5e7d6995dc52a5cb9e370ee3a710e6}{\index{lua.\-h@{lua.\-h}!lua\-\_\-getupvalue@{lua\-\_\-getupvalue}}
+\index{lua\-\_\-getupvalue@{lua\-\_\-getupvalue}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-getupvalue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const char$\ast$ {\bf lua\-\_\-getupvalue} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{funcindex, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_afd5e7d6995dc52a5cb9e370ee3a710e6}
+\hypertarget{lua_8h_a9185776cc77b691daca1eb94fd8e9807}{\index{lua.\-h@{lua.\-h}!lua\-\_\-insert@{lua\-\_\-insert}}
+\index{lua\-\_\-insert@{lua\-\_\-insert}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-insert} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a9185776cc77b691daca1eb94fd8e9807}
+\hypertarget{lua_8h_a6b2ce32286576a8e36fe4629662cb536}{\index{lua.\-h@{lua.\-h}!lua\-\_\-iscfunction@{lua\-\_\-iscfunction}}
+\index{lua\-\_\-iscfunction@{lua\-\_\-iscfunction}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-iscfunction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-iscfunction} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a6b2ce32286576a8e36fe4629662cb536}
+\hypertarget{lua_8h_a2b5321e5370d82564c138e9dd8ffc9a5}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isnumber@{lua\-\_\-isnumber}}
+\index{lua\-\_\-isnumber@{lua\-\_\-isnumber}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isnumber}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-isnumber} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a2b5321e5370d82564c138e9dd8ffc9a5}
+\hypertarget{lua_8h_a70f6031d538713cb3b6093adbc658909}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isstring@{lua\-\_\-isstring}}
+\index{lua\-\_\-isstring@{lua\-\_\-isstring}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-isstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a70f6031d538713cb3b6093adbc658909}
+\hypertarget{lua_8h_af4cc013f4e4e84fc89bab292bd410981}{\index{lua.\-h@{lua.\-h}!lua\-\_\-isuserdata@{lua\-\_\-isuserdata}}
+\index{lua\-\_\-isuserdata@{lua\-\_\-isuserdata}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-isuserdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-isuserdata} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_af4cc013f4e4e84fc89bab292bd410981}
+\hypertarget{lua_8h_a9d0b4eabdb4ebe518e9de3779e50d884}{\index{lua.\-h@{lua.\-h}!lua\-\_\-lessthan@{lua\-\_\-lessthan}}
+\index{lua\-\_\-lessthan@{lua\-\_\-lessthan}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-lessthan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-lessthan} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx1, }
+\item[{int}]{idx2}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a9d0b4eabdb4ebe518e9de3779e50d884}
+\hypertarget{lua_8h_a5589c19a7f18954a49e945f50fcba94a}{\index{lua.\-h@{lua.\-h}!lua\-\_\-load@{lua\-\_\-load}}
+\index{lua\-\_\-load@{lua\-\_\-load}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-load} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-Reader}}]{reader, }
+\item[{void $\ast$}]{dt, }
+\item[{const char $\ast$}]{chunkname}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a5589c19a7f18954a49e945f50fcba94a}
+\hypertarget{lua_8h_af722e4ac7fc0eba5920f59f0162c1b97}{\index{lua.\-h@{lua.\-h}!lua\-\_\-newstate@{lua\-\_\-newstate}}
+\index{lua\-\_\-newstate@{lua\-\_\-newstate}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-newstate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-State}$\ast$() {\bf lua\-\_\-newstate} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-Alloc}}]{f, }
+\item[{void $\ast$}]{ud}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_af722e4ac7fc0eba5920f59f0162c1b97}
+\hypertarget{lua_8h_a6a7867e39b589ae581e2ed837cbc6ea4}{\index{lua.\-h@{lua.\-h}!lua\-\_\-newthread@{lua\-\_\-newthread}}
+\index{lua\-\_\-newthread@{lua\-\_\-newthread}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-newthread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-State}$\ast$() {\bf lua\-\_\-newthread} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a6a7867e39b589ae581e2ed837cbc6ea4}
+\hypertarget{lua_8h_a0ed440a42dac5e7faaf51163b274c43c}{\index{lua.\-h@{lua.\-h}!lua\-\_\-newuserdata@{lua\-\_\-newuserdata}}
+\index{lua\-\_\-newuserdata@{lua\-\_\-newuserdata}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-newuserdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void$\ast$() {\bf lua\-\_\-newuserdata} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{size\-\_\-t}]{sz}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a0ed440a42dac5e7faaf51163b274c43c}
+\hypertarget{lua_8h_a2a62b957ab95d9b542bf7d02794181e6}{\index{lua.\-h@{lua.\-h}!lua\-\_\-next@{lua\-\_\-next}}
+\index{lua\-\_\-next@{lua\-\_\-next}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-next} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a2a62b957ab95d9b542bf7d02794181e6}
+\hypertarget{lua_8h_a07bd1384def434a4a3efdcd48b771ca9}{\index{lua.\-h@{lua.\-h}!lua\-\_\-objlen@{lua\-\_\-objlen}}
+\index{lua\-\_\-objlen@{lua\-\_\-objlen}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-objlen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} size\-\_\-t() {\bf lua\-\_\-objlen} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a07bd1384def434a4a3efdcd48b771ca9}
+\hypertarget{lua_8h_a513752286ffd536ea5ce1988e4ebf884}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pcall@{lua\-\_\-pcall}}
+\index{lua\-\_\-pcall@{lua\-\_\-pcall}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pcall}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-pcall} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{nargs, }
+\item[{int}]{nresults, }
+\item[{int}]{errfunc}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a513752286ffd536ea5ce1988e4ebf884}
+\hypertarget{lua_8h_a9d7bacf1769dcf7cff7ba7271041e61c}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushboolean@{lua\-\_\-pushboolean}}
+\index{lua\-\_\-pushboolean@{lua\-\_\-pushboolean}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushboolean}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushboolean} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a9d7bacf1769dcf7cff7ba7271041e61c}
+\hypertarget{lua_8h_a89f758ed8996c5f405cb7dfb41f78337}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushcclosure@{lua\-\_\-pushcclosure}}
+\index{lua\-\_\-pushcclosure@{lua\-\_\-pushcclosure}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushcclosure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushcclosure} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-C\-Function}}]{fn, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a89f758ed8996c5f405cb7dfb41f78337}
+\hypertarget{lua_8h_af4a7bd8fa65e507e36aff61af8db117d}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushfstring@{lua\-\_\-pushfstring}}
+\index{lua\-\_\-pushfstring@{lua\-\_\-pushfstring}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushfstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const char$\ast$() {\bf lua\-\_\-pushfstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_af4a7bd8fa65e507e36aff61af8db117d}
+\hypertarget{lua_8h_aea46fa9bf358947f5c0a1bf266b26154}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushinteger@{lua\-\_\-pushinteger}}
+\index{lua\-\_\-pushinteger@{lua\-\_\-pushinteger}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushinteger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushinteger} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-Integer}}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_aea46fa9bf358947f5c0a1bf266b26154}
+\hypertarget{lua_8h_a9d6c960026cbee9ffb95a9d1753675e2}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushlightuserdata@{lua\-\_\-pushlightuserdata}}
+\index{lua\-\_\-pushlightuserdata@{lua\-\_\-pushlightuserdata}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushlightuserdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushlightuserdata} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{void $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a9d6c960026cbee9ffb95a9d1753675e2}
+\hypertarget{lua_8h_a8c01dd1b5018c60a078bcf58dd1fe2e8}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushlstring@{lua\-\_\-pushlstring}}
+\index{lua\-\_\-pushlstring@{lua\-\_\-pushlstring}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushlstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushlstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{s, }
+\item[{size\-\_\-t}]{l}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a8c01dd1b5018c60a078bcf58dd1fe2e8}
+\hypertarget{lua_8h_a8bd9c4137a90833221f48dd16659c9e4}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushnil@{lua\-\_\-pushnil}}
+\index{lua\-\_\-pushnil@{lua\-\_\-pushnil}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushnil}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushnil} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a8bd9c4137a90833221f48dd16659c9e4}
+\hypertarget{lua_8h_a77807056ba032d64b2def2b57dc53d53}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushnumber@{lua\-\_\-pushnumber}}
+\index{lua\-\_\-pushnumber@{lua\-\_\-pushnumber}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushnumber}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushnumber} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-Number}}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a77807056ba032d64b2def2b57dc53d53}
+\hypertarget{lua_8h_af2db74e1d8e7062bf5d1a2a779e53369}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushstring@{lua\-\_\-pushstring}}
+\index{lua\-\_\-pushstring@{lua\-\_\-pushstring}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_af2db74e1d8e7062bf5d1a2a779e53369}
+\hypertarget{lua_8h_a118bd9effa8d54ddcbe37bd5cb70a4b6}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushthread@{lua\-\_\-pushthread}}
+\index{lua\-\_\-pushthread@{lua\-\_\-pushthread}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushthread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-pushthread} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a118bd9effa8d54ddcbe37bd5cb70a4b6}
+\hypertarget{lua_8h_a95e1c0a61aff11059655e6d246bcace7}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushvalue@{lua\-\_\-pushvalue}}
+\index{lua\-\_\-pushvalue@{lua\-\_\-pushvalue}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushvalue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-pushvalue} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a95e1c0a61aff11059655e6d246bcace7}
+\hypertarget{lua_8h_a13fb1100c2e3942aa6c69baaf7e3f7cd}{\index{lua.\-h@{lua.\-h}!lua\-\_\-pushvfstring@{lua\-\_\-pushvfstring}}
+\index{lua\-\_\-pushvfstring@{lua\-\_\-pushvfstring}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-pushvfstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const char$\ast$() {\bf lua\-\_\-pushvfstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{fmt, }
+\item[{va\-\_\-list}]{argp}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a13fb1100c2e3942aa6c69baaf7e3f7cd}
+\hypertarget{lua_8h_a2cd7fef8e86adabbfec04ddb15aeebda}{\index{lua.\-h@{lua.\-h}!lua\-\_\-rawequal@{lua\-\_\-rawequal}}
+\index{lua\-\_\-rawequal@{lua\-\_\-rawequal}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-rawequal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-rawequal} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx1, }
+\item[{int}]{idx2}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a2cd7fef8e86adabbfec04ddb15aeebda}
+\hypertarget{lua_8h_af5ed4eb4ccc6e6f7921fdaee8485cb3f}{\index{lua.\-h@{lua.\-h}!lua\-\_\-rawget@{lua\-\_\-rawget}}
+\index{lua\-\_\-rawget@{lua\-\_\-rawget}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-rawget}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-rawget} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_af5ed4eb4ccc6e6f7921fdaee8485cb3f}
+\hypertarget{lua_8h_a83de0bf688c2a389db2e444aa34e752a}{\index{lua.\-h@{lua.\-h}!lua\-\_\-rawgeti@{lua\-\_\-rawgeti}}
+\index{lua\-\_\-rawgeti@{lua\-\_\-rawgeti}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-rawgeti}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-rawgeti} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a83de0bf688c2a389db2e444aa34e752a}
+\hypertarget{lua_8h_a3db5cd3ce7ae703c39d54495be44aafc}{\index{lua.\-h@{lua.\-h}!lua\-\_\-rawset@{lua\-\_\-rawset}}
+\index{lua\-\_\-rawset@{lua\-\_\-rawset}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-rawset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-rawset} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a3db5cd3ce7ae703c39d54495be44aafc}
+\hypertarget{lua_8h_a32f51f8a97b4f005f7a3c378dcf71df2}{\index{lua.\-h@{lua.\-h}!lua\-\_\-rawseti@{lua\-\_\-rawseti}}
+\index{lua\-\_\-rawseti@{lua\-\_\-rawseti}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-rawseti}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-rawseti} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a32f51f8a97b4f005f7a3c378dcf71df2}
+\hypertarget{lua_8h_acb96e065629db2dedb0624524a9b34d4}{\index{lua.\-h@{lua.\-h}!lua\-\_\-remove@{lua\-\_\-remove}}
+\index{lua\-\_\-remove@{lua\-\_\-remove}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-remove} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_acb96e065629db2dedb0624524a9b34d4}
+\hypertarget{lua_8h_a40a5a870b611d40f44e82ca3c9678b62}{\index{lua.\-h@{lua.\-h}!lua\-\_\-replace@{lua\-\_\-replace}}
+\index{lua\-\_\-replace@{lua\-\_\-replace}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-replace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-replace} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a40a5a870b611d40f44e82ca3c9678b62}
+\hypertarget{lua_8h_a138eae7b52d8a657534ef289ee6946e2}{\index{lua.\-h@{lua.\-h}!lua\-\_\-resume@{lua\-\_\-resume}}
+\index{lua\-\_\-resume@{lua\-\_\-resume}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-resume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-resume} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{narg}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a138eae7b52d8a657534ef289ee6946e2}
+\hypertarget{lua_8h_ac890276f9590df6a4d6aabdad9c558f0}{\index{lua.\-h@{lua.\-h}!lua\-\_\-setallocf@{lua\-\_\-setallocf}}
+\index{lua\-\_\-setallocf@{lua\-\_\-setallocf}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-setallocf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void {\bf lua\-\_\-setallocf} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-Alloc}}]{f, }
+\item[{void $\ast$}]{ud}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_ac890276f9590df6a4d6aabdad9c558f0}
+\hypertarget{lua_8h_a31404abda0b6d6f331b63bb651a82830}{\index{lua.\-h@{lua.\-h}!lua\-\_\-setfenv@{lua\-\_\-setfenv}}
+\index{lua\-\_\-setfenv@{lua\-\_\-setfenv}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-setfenv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-setfenv} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a31404abda0b6d6f331b63bb651a82830}
+\hypertarget{lua_8h_a9580a15c141cbe4bf2a63fea625c3878}{\index{lua.\-h@{lua.\-h}!lua\-\_\-setfield@{lua\-\_\-setfield}}
+\index{lua\-\_\-setfield@{lua\-\_\-setfield}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-setfield}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-setfield} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx, }
+\item[{const char $\ast$}]{k}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a9580a15c141cbe4bf2a63fea625c3878}
+\hypertarget{lua_8h_a664ce25a0c30d2c1b1e89e7ea25be7f0}{\index{lua.\-h@{lua.\-h}!lua\-\_\-sethook@{lua\-\_\-sethook}}
+\index{lua\-\_\-sethook@{lua\-\_\-sethook}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-sethook}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int {\bf lua\-\_\-sethook} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-\_\-\-Hook}}]{func, }
+\item[{int}]{mask, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a664ce25a0c30d2c1b1e89e7ea25be7f0}
+\hypertarget{lua_8h_a23ba67a2597f1bce7e408f44ff5bc4f4}{\index{lua.\-h@{lua.\-h}!lua\-\_\-setlevel@{lua\-\_\-setlevel}}
+\index{lua\-\_\-setlevel@{lua\-\_\-setlevel}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-setlevel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void {\bf lua\-\_\-setlevel} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{from, }
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{to}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a23ba67a2597f1bce7e408f44ff5bc4f4}
+\hypertarget{lua_8h_a425c37b17caf76545f1541a5bb81dfc6}{\index{lua.\-h@{lua.\-h}!lua\-\_\-setlocal@{lua\-\_\-setlocal}}
+\index{lua\-\_\-setlocal@{lua\-\_\-setlocal}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-setlocal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const char$\ast$ {\bf lua\-\_\-setlocal} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const {\bf lua\-\_\-\-Debug} $\ast$}]{ar, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a425c37b17caf76545f1541a5bb81dfc6}
+\hypertarget{lua_8h_a0b834b6a9cd96b141385df14bd0272a4}{\index{lua.\-h@{lua.\-h}!lua\-\_\-setmetatable@{lua\-\_\-setmetatable}}
+\index{lua\-\_\-setmetatable@{lua\-\_\-setmetatable}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-setmetatable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-setmetatable} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{objindex}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a0b834b6a9cd96b141385df14bd0272a4}
+\hypertarget{lua_8h_aeda173d104e3a566ccaac89a1f64a5eb}{\index{lua.\-h@{lua.\-h}!lua\-\_\-settable@{lua\-\_\-settable}}
+\index{lua\-\_\-settable@{lua\-\_\-settable}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-settable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-settable} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_aeda173d104e3a566ccaac89a1f64a5eb}
+\hypertarget{lua_8h_a6cb9c62b9d85b1ad2a04d72bcb733816}{\index{lua.\-h@{lua.\-h}!lua\-\_\-settop@{lua\-\_\-settop}}
+\index{lua\-\_\-settop@{lua\-\_\-settop}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-settop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-settop} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a6cb9c62b9d85b1ad2a04d72bcb733816}
+\hypertarget{lua_8h_a6e2e5717e848fca56335a64739a8f2c0}{\index{lua.\-h@{lua.\-h}!lua\-\_\-setupvalue@{lua\-\_\-setupvalue}}
+\index{lua\-\_\-setupvalue@{lua\-\_\-setupvalue}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-setupvalue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const char$\ast$ {\bf lua\-\_\-setupvalue} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{funcindex, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a6e2e5717e848fca56335a64739a8f2c0}
+\hypertarget{lua_8h_af5cd8db0ed930193f1bf67c583666f91}{\index{lua.\-h@{lua.\-h}!lua\-\_\-status@{lua\-\_\-status}}
+\index{lua\-\_\-status@{lua\-\_\-status}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-status} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_af5cd8db0ed930193f1bf67c583666f91}
+\hypertarget{lua_8h_a0f530f104aeaddeeb63b27dc18b42d27}{\index{lua.\-h@{lua.\-h}!lua\-\_\-toboolean@{lua\-\_\-toboolean}}
+\index{lua\-\_\-toboolean@{lua\-\_\-toboolean}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-toboolean}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-toboolean} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a0f530f104aeaddeeb63b27dc18b42d27}
+\hypertarget{lua_8h_a8c9a532a84b03d90b0a103c007f871b8}{\index{lua.\-h@{lua.\-h}!lua\-\_\-tocfunction@{lua\-\_\-tocfunction}}
+\index{lua\-\_\-tocfunction@{lua\-\_\-tocfunction}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-tocfunction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-C\-Function}() {\bf lua\-\_\-tocfunction} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a8c9a532a84b03d90b0a103c007f871b8}
+\hypertarget{lua_8h_a90582a1c67153e7aaa7e45649fd21d50}{\index{lua.\-h@{lua.\-h}!lua\-\_\-tointeger@{lua\-\_\-tointeger}}
+\index{lua\-\_\-tointeger@{lua\-\_\-tointeger}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-tointeger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-Integer}() {\bf lua\-\_\-tointeger} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a90582a1c67153e7aaa7e45649fd21d50}
+\hypertarget{lua_8h_aabf845b1c7ffc0462988b67ba83955cf}{\index{lua.\-h@{lua.\-h}!lua\-\_\-tolstring@{lua\-\_\-tolstring}}
+\index{lua\-\_\-tolstring@{lua\-\_\-tolstring}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-tolstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const char$\ast$() {\bf lua\-\_\-tolstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx, }
+\item[{size\-\_\-t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_aabf845b1c7ffc0462988b67ba83955cf}
+\hypertarget{lua_8h_ab93cb1edc97ca887c90dbcbd43e1df88}{\index{lua.\-h@{lua.\-h}!lua\-\_\-tonumber@{lua\-\_\-tonumber}}
+\index{lua\-\_\-tonumber@{lua\-\_\-tonumber}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-tonumber}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-Number}() {\bf lua\-\_\-tonumber} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_ab93cb1edc97ca887c90dbcbd43e1df88}
+\hypertarget{lua_8h_ae00a730cd408773f7a4122fccfbbb91a}{\index{lua.\-h@{lua.\-h}!lua\-\_\-topointer@{lua\-\_\-topointer}}
+\index{lua\-\_\-topointer@{lua\-\_\-topointer}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-topointer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const void$\ast$() {\bf lua\-\_\-topointer} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_ae00a730cd408773f7a4122fccfbbb91a}
+\hypertarget{lua_8h_a8ad0bb2b578f5b6e84511431260a5818}{\index{lua.\-h@{lua.\-h}!lua\-\_\-tothread@{lua\-\_\-tothread}}
+\index{lua\-\_\-tothread@{lua\-\_\-tothread}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-tothread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-State}$\ast$() {\bf lua\-\_\-tothread} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a8ad0bb2b578f5b6e84511431260a5818}
+\hypertarget{lua_8h_a3b3106346d9739a64d48be4e30368dec}{\index{lua.\-h@{lua.\-h}!lua\-\_\-touserdata@{lua\-\_\-touserdata}}
+\index{lua\-\_\-touserdata@{lua\-\_\-touserdata}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-touserdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void$\ast$() {\bf lua\-\_\-touserdata} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a3b3106346d9739a64d48be4e30368dec}
+\hypertarget{lua_8h_aa988ba5b97ff838ccb92babd63063273}{\index{lua.\-h@{lua.\-h}!lua\-\_\-type@{lua\-\_\-type}}
+\index{lua\-\_\-type@{lua\-\_\-type}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-type} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_aa988ba5b97ff838ccb92babd63063273}
+\hypertarget{lua_8h_a963a421b920cd7ce229f82091eab18a9}{\index{lua.\-h@{lua.\-h}!lua\-\_\-typename@{lua\-\_\-typename}}
+\index{lua\-\_\-typename@{lua\-\_\-typename}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-typename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} const char$\ast$() {\bf lua\-\_\-typename} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{tp}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a963a421b920cd7ce229f82091eab18a9}
+\hypertarget{lua_8h_a389cf4bf773f353508a28293143d403e}{\index{lua.\-h@{lua.\-h}!lua\-\_\-xmove@{lua\-\_\-xmove}}
+\index{lua\-\_\-xmove@{lua\-\_\-xmove}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-xmove}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} void() {\bf lua\-\_\-xmove} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{from, }
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{to, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a389cf4bf773f353508a28293143d403e}
+\hypertarget{lua_8h_a235fa5c4bb5251a499bcd492183fc8c8}{\index{lua.\-h@{lua.\-h}!lua\-\_\-yield@{lua\-\_\-yield}}
+\index{lua\-\_\-yield@{lua\-\_\-yield}!lua.h@{lua.\-h}}
+\subsubsection[{lua\-\_\-yield}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-\_\-\-A\-P\-I} int() {\bf lua\-\_\-yield} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{nresults}
+\end{DoxyParamCaption}
+)}}\label{lua_8h_a235fa5c4bb5251a499bcd492183fc8c8}

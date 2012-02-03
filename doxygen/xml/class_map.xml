@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_map" kind="class" prot="public">
+    <compoundname>Map</compoundname>
+    <includes refid="map_8h" local="no">map.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_map_1a6b8ab15ba5a4d4b50e17ce50e83a66cb" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Map::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="18" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_1a94da184f644e9b8a3e7f2ba107255531" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Map::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="18" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_1a5b2c9fabbf1ef526d4d75c7dd87ab026" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Map::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="19" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_1a58a2d68b31ac0705cc12ae1a8c9db137" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Map::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="19" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_1a4e5b5f8caa592075319b99fc221669da" prot="protected" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* Map::background</definition>
+        <argsstring></argsstring>
+        <name>background</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="20" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_building" kindref="compound">Building</ref> * &gt;</type>
+        <definition>vector&lt;Building*&gt; Map::buildings</definition>
+        <argsstring></argsstring>
+        <name>buildings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="21" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_1af3b1ee73a67bb6f90056f28a57c20480" prot="protected" static="no" mutable="no">
+        <type>vector&lt; SDL_Rect * &gt;</type>
+        <definition>vector&lt;SDL_Rect*&gt; Map::boxes</definition>
+        <argsstring></argsstring>
+        <name>boxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="22" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_map_1a2a7e44e75ee69ac6f00740b1a672dcfc" prot="protected" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect Map::clip</definition>
+        <argsstring></argsstring>
+        <name>clip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="23" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_map_1a2ade06395a2af635981024cf2d5da6a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Map::init</definition>
+        <argsstring>(SDL_Surface *back)</argsstring>
+        <name>init</name>
+        <param>
+          <type>SDL_Surface *</type>
+          <declname>back</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="26" bodyfile="D:/repo/newCapitalBreak/map.cpp" bodystart="8" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_1a9c05fb2a13957020c7df8cffea2ef05f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Map::show</definition>
+        <argsstring>()</argsstring>
+        <name>show</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="27" bodyfile="D:/repo/newCapitalBreak/map.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_1a6b56cc0bf171f6cc11ef6a5253f61d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Map::clean_up</definition>
+        <argsstring>()</argsstring>
+        <name>clean_up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="28" bodyfile="D:/repo/newCapitalBreak/map.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_1acf0685520006ad5c5a4891c8e0a4acb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; SDL_Rect * &gt;</type>
+        <definition>vector&lt; SDL_Rect * &gt; Map::get_boxes</definition>
+        <argsstring>()</argsstring>
+        <name>get_boxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="29" bodyfile="D:/repo/newCapitalBreak/map.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_map_1a0fd6fb0f2f2a0852ecfc753221428ded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="class_building" kindref="compound">Building</ref> * &gt;</type>
+        <definition>vector&lt; Building * &gt; Map::get_buildings</definition>
+        <argsstring>()</argsstring>
+        <name>get_buildings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/map.h" line="30" bodyfile="D:/repo/newCapitalBreak/map.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/repo/newCapitalBreak/map.h" line="16" bodyfile="D:/repo/newCapitalBreak/map.h" bodystart="15" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_map_1a4e5b5f8caa592075319b99fc221669da" prot="protected" virt="non-virtual"><scope>Map</scope><name>background</name></member>
+      <member refid="class_map_1af3b1ee73a67bb6f90056f28a57c20480" prot="protected" virt="non-virtual"><scope>Map</scope><name>boxes</name></member>
+      <member refid="class_map_1a40e2372d08f74add7a26f60e28e3d6f7" prot="protected" virt="non-virtual"><scope>Map</scope><name>buildings</name></member>
+      <member refid="class_map_1a6b56cc0bf171f6cc11ef6a5253f61d3d" prot="public" virt="non-virtual"><scope>Map</scope><name>clean_up</name></member>
+      <member refid="class_map_1a2a7e44e75ee69ac6f00740b1a672dcfc" prot="protected" virt="non-virtual"><scope>Map</scope><name>clip</name></member>
+      <member refid="class_map_1acf0685520006ad5c5a4891c8e0a4acb9" prot="public" virt="non-virtual"><scope>Map</scope><name>get_boxes</name></member>
+      <member refid="class_map_1a0fd6fb0f2f2a0852ecfc753221428ded" prot="public" virt="non-virtual"><scope>Map</scope><name>get_buildings</name></member>
+      <member refid="class_map_1a58a2d68b31ac0705cc12ae1a8c9db137" prot="protected" virt="non-virtual"><scope>Map</scope><name>h</name></member>
+      <member refid="class_map_1a2ade06395a2af635981024cf2d5da6a3" prot="public" virt="non-virtual"><scope>Map</scope><name>init</name></member>
+      <member refid="class_map_1a9c05fb2a13957020c7df8cffea2ef05f" prot="public" virt="non-virtual"><scope>Map</scope><name>show</name></member>
+      <member refid="class_map_1a5b2c9fabbf1ef526d4d75c7dd87ab026" prot="protected" virt="non-virtual"><scope>Map</scope><name>w</name></member>
+      <member refid="class_map_1a6b8ab15ba5a4d4b50e17ce50e83a66cb" prot="protected" virt="non-virtual"><scope>Map</scope><name>x</name></member>
+      <member refid="class_map_1a94da184f644e9b8a3e7f2ba107255531" prot="protected" virt="non-virtual"><scope>Map</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

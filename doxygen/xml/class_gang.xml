@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_gang" kind="class" prot="public">
+    <compoundname>Gang</compoundname>
+    <basecompoundref refid="class_character" prot="public" virt="non-virtual">Character</basecompoundref>
+    <basecompoundref refid="class_collider" prot="public" virt="non-virtual">Collider</basecompoundref>
+    <includes refid="character_8h" local="no">character.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_gang_1a98b8352c6154f7cf36d5ecce48706adb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_gang" kindref="compound">Gang</ref> *</type>
+        <definition>Gang* Gang::next_person</definition>
+        <argsstring></argsstring>
+        <name>next_person</name>
+        <reimplements refid="class_character_1a036d8fdf333ea6c7c9af127cac3c9f01">next_person</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="80" bodyfile="D:/repo/newCapitalBreak/character.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_gang_1ac45cec1a192c41528e74ed3ae9526dbb" prot="private" static="no" mutable="no">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect* Gang::object_point</definition>
+        <argsstring></argsstring>
+        <name>object_point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="81" bodyfile="D:/repo/newCapitalBreak/character.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_gang_1a3788b8ace6c57cdcdc464a2f96169484" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gang::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <reimplements refid="class_character_1ae026a3baf7b9a31c270b9b0596c5e181">init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="84" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="7" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1af472124b9a8c3e4a5950562342ec8162" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gang::clean_up</definition>
+        <argsstring>()</argsstring>
+        <name>clean_up</name>
+        <reimplements refid="class_character_1a2304027ce7b4caf5a1851e371f3071cd">clean_up</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="85" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1abccb863ee9ef936fad5031a0d93e1b55" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Gang::move</definition>
+        <argsstring>(Uint32 deltaTicks)</argsstring>
+        <name>move</name>
+        <reimplements refid="class_character_1a32f64bd79aac4bcdfa3878b34ffd39da">move</reimplements>
+        <param>
+          <type>Uint32</type>
+          <declname>deltaTicks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="86" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="25" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1a29330bf2df1bd60644513b2cb27f29e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gang::show</definition>
+        <argsstring>(SDL_Surface *)</argsstring>
+        <name>show</name>
+        <reimplements refid="class_character_1aee8d4cab5de7363e08ebcaf14171a454">show</reimplements>
+        <param>
+          <type>SDL_Surface *</type>
+          <defname>screen</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="87" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="46" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1af4463fb95507a172b1495fae411bfba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gang::set_clip</definition>
+        <argsstring>()</argsstring>
+        <name>set_clip</name>
+        <reimplements refid="class_character_1ae29d39664b615ddee1fd855569cade90">set_clip</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="88" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="83" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1ad177257ab75d22c409b6b7b89c5d0870" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gang::add_person</definition>
+        <argsstring>()</argsstring>
+        <name>add_person</name>
+        <reimplements refid="class_character_1a074348cfffee21b386e6ed3d950a7f2f">add_person</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="89" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="222" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1ae97a9f4995e999fde4265663e3a838f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Gang::check_collide</definition>
+        <argsstring>(Collider *)</argsstring>
+        <name>check_collide</name>
+        <reimplements refid="class_collider_1aa14301229ec52e3219b41c17ef162925">check_collide</reimplements>
+        <param>
+          <type><ref refid="class_collider" kindref="compound">Collider</ref> *</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="91" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="146" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1aebd4bd585e284c70b97782ac9af904ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>SDL_Rect *</type>
+        <definition>SDL_Rect * Gang::get_box</definition>
+        <argsstring>()</argsstring>
+        <name>get_box</name>
+        <reimplements refid="class_collider_1a1b6c8bc800070a1e880979378b348e8d">get_box</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="92" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="171" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1a74c369149d11573fbad437d997266c36" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gang::set_object</definition>
+        <argsstring>(SDL_Rect *object)</argsstring>
+        <name>set_object</name>
+        <reimplements refid="class_character_1a24e66bb11b377efa0079393d6ed99e89">set_object</reimplements>
+        <param>
+          <type>SDL_Rect *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="93" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="210" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1ac3aa2c0e70ecf1e7ce42192f684d1398" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Gang::move_back</definition>
+        <argsstring>()</argsstring>
+        <name>move_back</name>
+        <reimplements refid="class_character_1a33e738893b424f6e890f49d756c7ffe6">move_back</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="94" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="217" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_gang_1a9984bed5cfe0541a97e00e2972666bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Gang::follow</definition>
+        <argsstring>()</argsstring>
+        <name>follow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/character.h" line="95" bodyfile="D:/repo/newCapitalBreak/gang.cpp" bodystart="184" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="38">
+        <label>Collider</label>
+        <link refid="class_collider"/>
+      </node>
+      <node id="37">
+        <label>Character</label>
+        <link refid="class_character"/>
+      </node>
+      <node id="36">
+        <label>Gang</label>
+        <link refid="class_gang"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="41">
+        <label>Collider</label>
+        <link refid="class_collider"/>
+      </node>
+      <node id="40">
+        <label>Character</label>
+        <link refid="class_character"/>
+      </node>
+      <node id="39">
+        <label>Gang</label>
+        <link refid="class_gang"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/repo/newCapitalBreak/character.h" line="78" bodyfile="D:/repo/newCapitalBreak/character.h" bodystart="77" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_gang_1ad177257ab75d22c409b6b7b89c5d0870" prot="public" virt="virtual"><scope>Gang</scope><name>add_person</name></member>
+      <member refid="class_gang_1ae97a9f4995e999fde4265663e3a838f7" prot="public" virt="virtual"><scope>Gang</scope><name>check_collide</name></member>
+      <member refid="class_gang_1af472124b9a8c3e4a5950562342ec8162" prot="public" virt="virtual"><scope>Gang</scope><name>clean_up</name></member>
+      <member refid="class_character_1a597a53af58019f1654e70714bacab249" prot="protected" virt="non-virtual"><scope>Gang</scope><name>clip</name></member>
+      <member refid="class_gang_1a9984bed5cfe0541a97e00e2972666bae" prot="public" virt="non-virtual"><scope>Gang</scope><name>follow</name></member>
+      <member refid="class_character_1a78ea8d15292e89650d12d98878bac42c" prot="protected" virt="non-virtual"><scope>Gang</scope><name>frame</name></member>
+      <member refid="class_gang_1aebd4bd585e284c70b97782ac9af904ee" prot="public" virt="virtual"><scope>Gang</scope><name>get_box</name></member>
+      <member refid="class_character_1a5a455718929221529a9c01781579927b" prot="protected" virt="non-virtual"><scope>Gang</scope><name>h</name></member>
+      <member refid="class_character_1a1769b630de33a3da0dd7456e71350a84" prot="protected" virt="non-virtual"><scope>Gang</scope><name>image</name></member>
+      <member refid="class_gang_1a3788b8ace6c57cdcdc464a2f96169484" prot="public" virt="virtual"><scope>Gang</scope><name>init</name></member>
+      <member refid="class_gang_1abccb863ee9ef936fad5031a0d93e1b55" prot="public" virt="virtual"><scope>Gang</scope><name>move</name></member>
+      <member refid="class_gang_1ac3aa2c0e70ecf1e7ce42192f684d1398" prot="public" virt="virtual"><scope>Gang</scope><name>move_back</name></member>
+      <member refid="class_gang_1a98b8352c6154f7cf36d5ecce48706adb" prot="private" virt="non-virtual"><scope>Gang</scope><name>next_person</name></member>
+      <member refid="class_gang_1ac45cec1a192c41528e74ed3ae9526dbb" prot="private" virt="non-virtual"><scope>Gang</scope><name>object_point</name></member>
+      <member refid="class_character_1ac3c6fdfe5ccb5e984c83e20c28e7e4f2" prot="protected" virt="non-virtual"><scope>Gang</scope><name>p_x</name></member>
+      <member refid="class_character_1a9d10eb04b9cb779d432707f34171fb79" prot="protected" virt="non-virtual"><scope>Gang</scope><name>p_y</name></member>
+      <member refid="class_gang_1af4463fb95507a172b1495fae411bfba5" prot="public" virt="virtual"><scope>Gang</scope><name>set_clip</name></member>
+      <member refid="class_gang_1a74c369149d11573fbad437d997266c36" prot="public" virt="virtual"><scope>Gang</scope><name>set_object</name></member>
+      <member refid="class_gang_1a29330bf2df1bd60644513b2cb27f29e6" prot="public" virt="virtual"><scope>Gang</scope><name>show</name></member>
+      <member refid="class_character_1adf848d11acd46785ec3408a018b4dabe" prot="protected" virt="non-virtual"><scope>Gang</scope><name>w</name></member>
+      <member refid="class_character_1a03d37d245f17ffb4302f8b37141390bb" prot="protected" virt="non-virtual"><scope>Gang</scope><name>x</name></member>
+      <member refid="class_character_1a769c5656e887d69472f08f9de9589eb5" prot="protected" virt="non-virtual"><scope>Gang</scope><name>xVel</name></member>
+      <member refid="class_character_1a3b64a782ef7f82581760ccaf68521be3" prot="protected" virt="non-virtual"><scope>Gang</scope><name>y</name></member>
+      <member refid="class_character_1aba005243607dd2e77f798e70675af9f5" prot="protected" virt="non-virtual"><scope>Gang</scope><name>yVel</name></member>
+      <member refid="class_character_1a9e9be564d05ded80962b2045aa70b3fc" prot="public" virt="virtual"><scope>Gang</scope><name>~Character</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

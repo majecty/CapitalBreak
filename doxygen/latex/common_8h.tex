@@ -1,0 +1,63 @@
+\hypertarget{common_8h}{\section{common.\-h 파일 참조}
+\label{common_8h}\index{common.\-h@{common.\-h}}
+}
+{\ttfamily \#include \char`\"{}lua/lua.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}lua/lauxlib.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}lua/luaconf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}lua/lualib.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-S\-D\-L/\-S\-D\-L.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-S\-D\-L/\-S\-D\-L\-\_\-image.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-S\-D\-L/\-S\-D\-L\-\_\-ttf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Constants.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Global\-Functions.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Configuration.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}global.\-h\char`\"{}}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$sstream$>$}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\*
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{common_8h_a57f592e69956624c719715cde79ba958}{\-Zero\-Memory}(\-Destination, length)
+\item 
+\#define \hyperlink{common_8h_a47c1b39adb45ac8d69be4817fd2a7fc9}{\-S\-T\-R\-I\-N\-G\-I\-F\-Y}(in)~\#in
+\item 
+\#define \hyperlink{common_8h_abf9698ecc3d25eed8464247a96718d81}{\-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G}(in)~\hyperlink{common_8h_a47c1b39adb45ac8d69be4817fd2a7fc9}{\-S\-T\-R\-I\-N\-G\-I\-F\-Y}(in)
+\item 
+\#define \hyperlink{common_8h_ad37a804df2a1060b453ce07fe0ee3cbc}{\-A\-T}~\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\- \char`\"{}\-:\char`\"{} \hyperlink{common_8h_abf9698ecc3d25eed8464247a96718d81}{\-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G}(\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-)
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{common_8h_ad37a804df2a1060b453ce07fe0ee3cbc}{\index{common.\-h@{common.\-h}!\-A\-T@{\-A\-T}}
+\index{\-A\-T@{\-A\-T}!common.h@{common.\-h}}
+\subsubsection[{\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-T}~\-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\- \char`\"{}\-:\char`\"{} {\bf \-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G}(\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-)}}\label{common_8h_ad37a804df2a1060b453ce07fe0ee3cbc}
+\hypertarget{common_8h_abf9698ecc3d25eed8464247a96718d81}{\index{common.\-h@{common.\-h}!\-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G@{\-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G}}
+\index{\-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G@{\-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G}!common.h@{common.\-h}}
+\subsubsection[{\-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-C\-R\-O\-T\-O\-S\-T\-R\-I\-N\-G}(
+\begin{DoxyParamCaption}
+\item[{}]{in}
+\end{DoxyParamCaption}
+)~{\bf \-S\-T\-R\-I\-N\-G\-I\-F\-Y}(in)}}\label{common_8h_abf9698ecc3d25eed8464247a96718d81}
+\hypertarget{common_8h_a47c1b39adb45ac8d69be4817fd2a7fc9}{\index{common.\-h@{common.\-h}!\-S\-T\-R\-I\-N\-G\-I\-F\-Y@{\-S\-T\-R\-I\-N\-G\-I\-F\-Y}}
+\index{\-S\-T\-R\-I\-N\-G\-I\-F\-Y@{\-S\-T\-R\-I\-N\-G\-I\-F\-Y}!common.h@{common.\-h}}
+\subsubsection[{\-S\-T\-R\-I\-N\-G\-I\-F\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-T\-R\-I\-N\-G\-I\-F\-Y}(
+\begin{DoxyParamCaption}
+\item[{}]{in}
+\end{DoxyParamCaption}
+)~\#in}}\label{common_8h_a47c1b39adb45ac8d69be4817fd2a7fc9}
+\hypertarget{common_8h_a57f592e69956624c719715cde79ba958}{\index{common.\-h@{common.\-h}!\-Zero\-Memory@{\-Zero\-Memory}}
+\index{\-Zero\-Memory@{\-Zero\-Memory}!common.h@{common.\-h}}
+\subsubsection[{\-Zero\-Memory}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-Zero\-Memory}(
+\begin{DoxyParamCaption}
+\item[{}]{\-Destination, }
+\item[{}]{length}
+\end{DoxyParamCaption}
+)}}\label{common_8h_a57f592e69956624c719715cde79ba958}
+{\bfseries 값\-:}
+\begin{DoxyCode}
+{ \
+  memset((void*)Destination, 0, length);\
+}
+\end{DoxyCode}

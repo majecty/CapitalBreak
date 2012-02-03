@@ -1,0 +1,86 @@
+.TH "Gang" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Gang \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <character\&.h>\fP
+.PP
+\fBCharacter\fP, \fBCollider\fP를(을) 상속했습니다\&.
+.SS "Public 멤버 함수"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBclean_up\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBmove\fP (Uint32 deltaTicks)"
+.br
+.ti -1c
+.RI "virtual void \fBshow\fP (SDL_Surface *)"
+.br
+.ti -1c
+.RI "virtual void \fBset_clip\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBadd_person\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBcheck_collide\fP (\fBCollider\fP *)"
+.br
+.ti -1c
+.RI "virtual SDL_Rect * \fBget_box\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBset_object\fP (SDL_Rect *object)"
+.br
+.ti -1c
+.RI "virtual void \fBmove_back\fP ()"
+.br
+.ti -1c
+.RI "bool \fBfollow\fP ()"
+.br
+.in -1c
+.SH "멤버 함수 문서화"
+.PP 
+.SS "void \fBGang::add_person\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "bool \fBGang::check_collide\fP (\fBCollider\fP *other)\fC [virtual]\fP"
+.PP
+\fBCollider\fP를 구현\&.
+.SS "void \fBGang::clean_up\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "bool \fBGang::follow\fP ()"
+.SS "SDL_Rect * \fBGang::get_box\fP ()\fC [virtual]\fP"
+.PP
+\fBCollider\fP를 구현\&.
+.SS "void \fBGang::init\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "bool \fBGang::move\fP (Uint32deltaTicks)\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "void \fBGang::move_back\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "void \fBGang::set_clip\fP ()\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "void \fBGang::set_object\fP (SDL_Rect *object)\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+.SS "void \fBGang::show\fP (SDL_Surface *screen)\fC [virtual]\fP"
+.PP
+\fBCharacter\fP(으)로부터 재구현되었습니다\&.
+
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

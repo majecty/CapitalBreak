@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_credit_scene" kind="class" prot="public">
+    <compoundname>CreditScene</compoundname>
+    <basecompoundref refid="class_scene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="_scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_credit_scene_1a4b191906d6fe649b3acb94422e17645c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CreditScene::CreditScene</definition>
+        <argsstring>()</argsstring>
+        <name>CreditScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="110" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="242" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_credit_scene_1a565f227f48dbdb61858b85f362a23d6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CreditScene::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <reimplements refid="class_scene_1abb3b6efc6fdba03cd96436edaf08a967">init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="112" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="246" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_credit_scene_1a51294d71978f451fba4cf1c2e9617d51" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CreditScene::clean_up</definition>
+        <argsstring>()</argsstring>
+        <name>clean_up</name>
+        <reimplements refid="class_scene_1a5f8c03499f5adff28224ccaaf95a8d90">clean_up</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="113" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="259" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_credit_scene_1af465a04b7ec8b7f6cc157d8f86740af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CreditScene::do_event</definition>
+        <argsstring>()</argsstring>
+        <name>do_event</name>
+        <reimplements refid="class_scene_1a280970a0176e70f76d2420c50261d6fa">do_event</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="114" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="263" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_credit_scene_1a9a6f9d39dbdb43510295522679b20b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CreditScene::show</definition>
+        <argsstring>()</argsstring>
+        <name>show</name>
+        <reimplements refid="class_scene_1a6f447a90b1f9009acfb72df711473875">show</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/Scene.h" line="115" bodyfile="D:/repo/newCapitalBreak/Scene.cpp" bodystart="299" bodyend="307"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="24">
+        <label>CreditScene</label>
+        <link refid="class_credit_scene"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Scene</label>
+        <link refid="class_scene"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="26">
+        <label>CreditScene</label>
+        <link refid="class_credit_scene"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Scene</label>
+        <link refid="class_scene"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/repo/newCapitalBreak/Scene.h" line="108" bodyfile="D:/repo/newCapitalBreak/Scene.h" bodystart="107" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_scene_1a718f0a2f6a7a3290c176e3ec451f612d" prot="protected" virt="non-virtual"><scope>CreditScene</scope><name>background</name></member>
+      <member refid="class_credit_scene_1a51294d71978f451fba4cf1c2e9617d51" prot="public" virt="virtual"><scope>CreditScene</scope><name>clean_up</name></member>
+      <member refid="class_credit_scene_1a4b191906d6fe649b3acb94422e17645c" prot="public" virt="non-virtual"><scope>CreditScene</scope><name>CreditScene</name></member>
+      <member refid="class_credit_scene_1af465a04b7ec8b7f6cc157d8f86740af6" prot="public" virt="virtual"><scope>CreditScene</scope><name>do_event</name></member>
+      <member refid="class_credit_scene_1a565f227f48dbdb61858b85f362a23d6a" prot="public" virt="virtual"><scope>CreditScene</scope><name>init</name></member>
+      <member refid="class_credit_scene_1a9a6f9d39dbdb43510295522679b20b1e" prot="public" virt="virtual"><scope>CreditScene</scope><name>show</name></member>
+      <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="virtual"><scope>CreditScene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

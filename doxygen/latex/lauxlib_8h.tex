@@ -1,0 +1,646 @@
+\hypertarget{lauxlib_8h}{\section{lauxlib.\-h 파일 참조}
+\label{lauxlib_8h}\index{lauxlib.\-h@{lauxlib.\-h}}
+}
+{\ttfamily \#include $<$stddef.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include \char`\"{}lua.\-h\char`\"{}}\*
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlua_l___reg}{lua\-L\-\_\-\-Reg}
+\item 
+struct \hyperlink{structlua_l___buffer}{lua\-L\-\_\-\-Buffer}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lauxlib_8h_a0ef5c05520dabbaa65ecbade53e719fa}{lua\-L\-\_\-getn}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, i)~((int)\hyperlink{lua_8h_a07bd1384def434a4a3efdcd48b771ca9}{lua\-\_\-objlen}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, i))
+\item 
+\#define \hyperlink{lauxlib_8h_a6528439647f8e5928dd9151be7c89302}{lua\-L\-\_\-setn}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, i, j)~((void)0)  /$\ast$ no op! $\ast$/
+\item 
+\#define \hyperlink{lauxlib_8h_aba5d150de784924e9111ccf650bea087}{lua\-I\-\_\-openlib}~lua\-L\-\_\-openlib
+\item 
+\#define \hyperlink{lauxlib_8h_ab8d4418d33cd59728435db95ac2caf5a}{\-L\-U\-A\-\_\-\-E\-R\-R\-F\-I\-L\-E}~(\hyperlink{lua_8h_a295ea44b6036e266b06e5de0f8ff24e0}{\-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R}+1)
+\item 
+\#define \hyperlink{lauxlib_8h_afe2e3018d561c14f2622fb32f425c111}{lua\-L\-\_\-argcheck}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, cond, numarg, extramsg)~((void)((cond) $|$$|$ \hyperlink{lauxlib_8h_a526c220d17273c63ce9973bcde4a2c4a}{lua\-L\-\_\-argerror}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (numarg), (extramsg))))
+\item 
+\#define \hyperlink{lauxlib_8h_ad9917d22c79651fdd73d42c146b5056f}{lua\-L\-\_\-checkstring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lauxlib_8h_af4af154dcb41f8990a572e6a00c349fc}{lua\-L\-\_\-checklstring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n), \-N\-U\-L\-L))
+\item 
+\#define \hyperlink{lauxlib_8h_a732bc5882c4a5da46b236649ab6db47b}{lua\-L\-\_\-optstring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n, d)~(\hyperlink{lauxlib_8h_a15b8c426b2e1b0cd1f9ddc32bc94df2f}{lua\-L\-\_\-optlstring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n), (d), \-N\-U\-L\-L))
+\item 
+\#define \hyperlink{lauxlib_8h_adb277a5f654228b51b66f95bcf883601}{lua\-L\-\_\-checkint}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~((int)\hyperlink{lauxlib_8h_ab9c2bb4294fb7a81d3745dad5711cd63}{lua\-L\-\_\-checkinteger}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)))
+\item 
+\#define \hyperlink{lauxlib_8h_ab4d7f693e9405558c725783a756e0aca}{lua\-L\-\_\-optint}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n, d)~((int)\hyperlink{lauxlib_8h_a2b17cdda9e7ed73a1cd152cd386dc7a4}{lua\-L\-\_\-optinteger}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n), (d)))
+\item 
+\#define \hyperlink{lauxlib_8h_a0df2697cbe2d4a33e012ab336af44b9b}{lua\-L\-\_\-checklong}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~((long)\hyperlink{lauxlib_8h_ab9c2bb4294fb7a81d3745dad5711cd63}{lua\-L\-\_\-checkinteger}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n)))
+\item 
+\#define \hyperlink{lauxlib_8h_a58ea6d94dccfa493103d8e112dd276b6}{lua\-L\-\_\-optlong}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n, d)~((long)\hyperlink{lauxlib_8h_a2b17cdda9e7ed73a1cd152cd386dc7a4}{lua\-L\-\_\-optinteger}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, (n), (d)))
+\item 
+\#define \hyperlink{lauxlib_8h_a2bee94954917c5bccb05d6578f3c675b}{lua\-L\-\_\-typename}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, i)~\hyperlink{lua_8h_a963a421b920cd7ce229f82091eab18a9}{lua\-\_\-typename}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_aa988ba5b97ff838ccb92babd63063273}{lua\-\_\-type}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L},(i)))
+\item 
+\#define \hyperlink{lauxlib_8h_aa49a7a47a683d6e7868ede50ceb826be}{lua\-L\-\_\-dofile}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, fn)~(\hyperlink{lauxlib_8h_afa862c5bdbbcfc8f46e0cac9f32a771e}{lua\-L\-\_\-loadfile}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, fn) $|$$|$ \hyperlink{lua_8h_a513752286ffd536ea5ce1988e4ebf884}{lua\-\_\-pcall}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, 0, \hyperlink{lua_8h_ace3545adc11664c2f2b152fbe8b6283c}{\-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}, 0))
+\item 
+\#define \hyperlink{lauxlib_8h_a1a0639bfde6b1e2f6181af45b0137cf5}{lua\-L\-\_\-dostring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, s)~(\hyperlink{lauxlib_8h_ac88130d6214ff6b3e2f1781f327807eb}{lua\-L\-\_\-loadstring}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, s) $|$$|$ \hyperlink{lua_8h_a513752286ffd536ea5ce1988e4ebf884}{lua\-\_\-pcall}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, 0, \hyperlink{lua_8h_ace3545adc11664c2f2b152fbe8b6283c}{\-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}, 0))
+\item 
+\#define \hyperlink{lauxlib_8h_a201407aa41ff74577c67308372a130d9}{lua\-L\-\_\-getmetatable}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, n)~(\hyperlink{lua_8h_ac3112bb28ba217adc46f13da8e9e6585}{lua\-\_\-getfield}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a3524c2bbc8fcf847dc083246b62945dd}{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}, (n)))
+\item 
+\#define \hyperlink{lauxlib_8h_aca033280b0176012ef290131876f706e}{lua\-L\-\_\-opt}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, f, n, d)~(\hyperlink{lua_8h_af51702bb75a31bb4a279953ee386d533}{lua\-\_\-isnoneornil}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L},(n)) ? (d) \-: f(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L},(n)))
+\item 
+\#define \hyperlink{lauxlib_8h_a63935c5b4cf5d45930c875f6cc5e1432}{lua\-L\-\_\-addchar}(\-B, c)
+\item 
+\#define \hyperlink{lauxlib_8h_abbe5398fb8c79198354ba483e334cfdf}{lua\-L\-\_\-putchar}(\-B, c)~\hyperlink{lauxlib_8h_a63935c5b4cf5d45930c875f6cc5e1432}{lua\-L\-\_\-addchar}(\-B,c)
+\item 
+\#define \hyperlink{lauxlib_8h_a2c5063f5c005f0ecd3fd69a9f7509073}{lua\-L\-\_\-addsize}(\-B, n)~((\-B)-\/$>$p += (n))
+\item 
+\#define \hyperlink{lauxlib_8h_a3bfb758f2ac7c9ecb758e1aeaaa82d3d}{\-L\-U\-A\-\_\-\-N\-O\-R\-E\-F}~(-\/2)
+\item 
+\#define \hyperlink{lauxlib_8h_a004a6b76c047f3b94890a08dbdcbbee7}{\-L\-U\-A\-\_\-\-R\-E\-F\-N\-I\-L}~(-\/1)
+\item 
+\#define \hyperlink{lauxlib_8h_ad33a233129d81d873e9b5a65fc7d0c3a}{lua\-\_\-ref}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, lock)
+\item 
+\#define \hyperlink{lauxlib_8h_ac9b78e96e9af92b1f43fa2fa016b263c}{lua\-\_\-unref}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, ref)~\hyperlink{lauxlib_8h_a6200030ecae784852045161274501e0e}{lua\-L\-\_\-unref}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a3524c2bbc8fcf847dc083246b62945dd}{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}, (ref))
+\item 
+\#define \hyperlink{lauxlib_8h_a7bce9002427e63aa572e53f77432a7ee}{lua\-\_\-getref}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, ref)~\hyperlink{lua_8h_a83de0bf688c2a389db2e444aa34e752a}{lua\-\_\-rawgeti}(\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{lua_8h_a3524c2bbc8fcf847dc083246b62945dd}{\-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}, (ref))
+\item 
+\#define \hyperlink{lauxlib_8h_a2015fce24247ce967682fd7458684af2}{lua\-L\-\_\-reg}~\hyperlink{structlua_l___reg}{lua\-L\-\_\-\-Reg}
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structlua_l___reg}{lua\-L\-\_\-\-Reg} \hyperlink{lauxlib_8h_a48bebf7b56d108021c1ae29549c912f9}{lua\-L\-\_\-\-Reg}
+\item 
+typedef struct \hyperlink{structlua_l___buffer}{lua\-L\-\_\-\-Buffer} \hyperlink{lauxlib_8h_a5f2195b3845806aa4bd9117b11b4d91c}{lua\-L\-\_\-\-Buffer}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_ae352d571a7b93c6b311b7aa993f9aaba}{lua\-I\-\_\-openlib} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$libname, const \hyperlink{structlua_l___reg}{lua\-L\-\_\-\-Reg} $\ast$l, int nup)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_a258c0fd40d57aec9cf62ebd74be7666e}{lua\-L\-\_\-register} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$libname, const \hyperlink{structlua_l___reg}{lua\-L\-\_\-\-Reg} $\ast$l)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_aed3f129411ba1ec14f813d650f16384d}{lua\-L\-\_\-getmetafield} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int obj, const char $\ast$e)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_af26aec8cce4a3f4448c60f402d78f17d}{lua\-L\-\_\-callmeta} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int obj, const char $\ast$e)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_a022056a7197e2e2c12f2b65b2993fd53}{lua\-L\-\_\-typerror} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int narg, const char $\ast$tname)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_a526c220d17273c63ce9973bcde4a2c4a}{lua\-L\-\_\-argerror} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int numarg, const char $\ast$extramsg)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} const char $\ast$() \hyperlink{lauxlib_8h_af4af154dcb41f8990a572e6a00c349fc}{lua\-L\-\_\-checklstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int num\-Arg, size\-\_\-t $\ast$l)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} const char $\ast$() \hyperlink{lauxlib_8h_a15b8c426b2e1b0cd1f9ddc32bc94df2f}{lua\-L\-\_\-optlstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int num\-Arg, const char $\ast$def, size\-\_\-t $\ast$l)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} \hyperlink{lua_8h_af0a6ed3b852d680769cfc410a0672172}{lua\-\_\-\-Number}() \hyperlink{lauxlib_8h_a3e39a4d35c3ce1555126e372a8a329c3}{lua\-L\-\_\-checknumber} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int num\-Arg)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} \hyperlink{lua_8h_af0a6ed3b852d680769cfc410a0672172}{lua\-\_\-\-Number}() \hyperlink{lauxlib_8h_a001e2679c64c24eefbaf478fd0c22f97}{lua\-L\-\_\-optnumber} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int n\-Arg, \hyperlink{lua_8h_af0a6ed3b852d680769cfc410a0672172}{lua\-\_\-\-Number} def)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a362144baa0cfb14dc38fd21438053d73}{lua\-\_\-\-Integer}() \hyperlink{lauxlib_8h_ab9c2bb4294fb7a81d3745dad5711cd63}{lua\-L\-\_\-checkinteger} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int num\-Arg)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a362144baa0cfb14dc38fd21438053d73}{lua\-\_\-\-Integer}() \hyperlink{lauxlib_8h_a2b17cdda9e7ed73a1cd152cd386dc7a4}{lua\-L\-\_\-optinteger} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int n\-Arg, \hyperlink{lua_8h_a362144baa0cfb14dc38fd21438053d73}{lua\-\_\-\-Integer} def)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_a724f5a5aeee97c0b40948c8bca91341c}{lua\-L\-\_\-checkstack} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int sz, const char $\ast$msg)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_ae5f465fb757069d016a10b106c69bdd7}{lua\-L\-\_\-checktype} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int narg, int t)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_ad78c85dce421e9cb793e205b9e81c640}{lua\-L\-\_\-checkany} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int narg)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_a0e9e032108e7aedc05836b0c1d72a0fa}{lua\-L\-\_\-newmetatable} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$tname)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void $\ast$() \hyperlink{lauxlib_8h_aed8d8e4f3b95c6bcac246ec9895027b1}{lua\-L\-\_\-checkudata} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int ud, const char $\ast$tname)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_a269122a77674ca63c9193c2a30b4729e}{lua\-L\-\_\-where} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int lvl)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_a994f73d7985c30672469a260d9e86ae6}{lua\-L\-\_\-error} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$fmt,...)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_a638633914d3a19650db8320c1fccf161}{lua\-L\-\_\-checkoption} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int narg, const char $\ast$def, const char $\ast$const lst\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_a2b69e67252d95df410818251f4b2d8e5}{lua\-L\-\_\-ref} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int t)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_a6200030ecae784852045161274501e0e}{lua\-L\-\_\-unref} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int t, int ref)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_afa862c5bdbbcfc8f46e0cac9f32a771e}{lua\-L\-\_\-loadfile} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$filename)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_a74d560ea0256e7b48496a4acb1d7522e}{lua\-L\-\_\-loadbuffer} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$buff, size\-\_\-t sz, const char $\ast$name)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() \hyperlink{lauxlib_8h_ac88130d6214ff6b3e2f1781f327807eb}{lua\-L\-\_\-loadstring} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$s)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} \hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$() \hyperlink{lauxlib_8h_a7d8712fcede90ae93d5a9a7b409c586e}{lua\-L\-\_\-newstate} (void)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} const char $\ast$() \hyperlink{lauxlib_8h_a46672be75da57e1a464c5c6d80f19064}{lua\-L\-\_\-gsub} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, const char $\ast$s, const char $\ast$p, const char $\ast$r)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} const char $\ast$() \hyperlink{lauxlib_8h_a561116e7d323baa7ae514054bc15978f}{lua\-L\-\_\-findtable} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, int idx, const char $\ast$fname, int szhint)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_aab6af54c782855fee2bef84eb41bdc00}{lua\-L\-\_\-buffinit} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$\hyperlink{main_8cpp_a62f94dfc0036bec0c14106c2f15caf3e}{\-L}, \hyperlink{structlua_l___buffer}{lua\-L\-\_\-\-Buffer} $\ast$\-B)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} char $\ast$() \hyperlink{lauxlib_8h_adb0d0b797f1b8cc8ec4cda17a2939f87}{lua\-L\-\_\-prepbuffer} (\hyperlink{structlua_l___buffer}{lua\-L\-\_\-\-Buffer} $\ast$\-B)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_a06fceedb3abb1272566ca22c96e34b95}{lua\-L\-\_\-addlstring} (\hyperlink{structlua_l___buffer}{lua\-L\-\_\-\-Buffer} $\ast$\-B, const char $\ast$s, size\-\_\-t l)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_ad9c038f6e108e216011aca1801f84f44}{lua\-L\-\_\-addstring} (\hyperlink{structlua_l___buffer}{lua\-L\-\_\-\-Buffer} $\ast$\-B, const char $\ast$s)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_aeeb03d69681da0ec0e952b582ce3841c}{lua\-L\-\_\-addvalue} (\hyperlink{structlua_l___buffer}{lua\-L\-\_\-\-Buffer} $\ast$\-B)
+\item 
+\hyperlink{luaconf_8h_a373d5a572c4c65a5f35a6e4ee9293c95}{\-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() \hyperlink{lauxlib_8h_aac5dfab9ba0ced4f5ae3b22aa35faffe}{lua\-L\-\_\-pushresult} (\hyperlink{structlua_l___buffer}{lua\-L\-\_\-\-Buffer} $\ast$\-B)
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\hypertarget{lauxlib_8h_ab8d4418d33cd59728435db95ac2caf5a}{\index{lauxlib.\-h@{lauxlib.\-h}!\-L\-U\-A\-\_\-\-E\-R\-R\-F\-I\-L\-E@{\-L\-U\-A\-\_\-\-E\-R\-R\-F\-I\-L\-E}}
+\index{\-L\-U\-A\-\_\-\-E\-R\-R\-F\-I\-L\-E@{\-L\-U\-A\-\_\-\-E\-R\-R\-F\-I\-L\-E}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-E\-R\-R\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-E\-R\-R\-F\-I\-L\-E}~({\bf \-L\-U\-A\-\_\-\-E\-R\-R\-E\-R\-R}+1)}}\label{lauxlib_8h_ab8d4418d33cd59728435db95ac2caf5a}
+\hypertarget{lauxlib_8h_a7bce9002427e63aa572e53f77432a7ee}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-\_\-getref@{lua\-\_\-getref}}
+\index{lua\-\_\-getref@{lua\-\_\-getref}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-\_\-getref}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-getref}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{ref}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-rawgeti}({\bf \-L}, {\bf \-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}, (ref))}}\label{lauxlib_8h_a7bce9002427e63aa572e53f77432a7ee}
+\hypertarget{lauxlib_8h_a3bfb758f2ac7c9ecb758e1aeaaa82d3d}{\index{lauxlib.\-h@{lauxlib.\-h}!\-L\-U\-A\-\_\-\-N\-O\-R\-E\-F@{\-L\-U\-A\-\_\-\-N\-O\-R\-E\-F}}
+\index{\-L\-U\-A\-\_\-\-N\-O\-R\-E\-F@{\-L\-U\-A\-\_\-\-N\-O\-R\-E\-F}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-N\-O\-R\-E\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-N\-O\-R\-E\-F}~(-\/2)}}\label{lauxlib_8h_a3bfb758f2ac7c9ecb758e1aeaaa82d3d}
+\hypertarget{lauxlib_8h_ad33a233129d81d873e9b5a65fc7d0c3a}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-\_\-ref@{lua\-\_\-ref}}
+\index{lua\-\_\-ref@{lua\-\_\-ref}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-ref}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{lock}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_ad33a233129d81d873e9b5a65fc7d0c3a}
+{\bfseries 값\-:}
+\begin{DoxyCode}
+((lock) ? luaL_ref(L, LUA_REGISTRYINDEX) : \
+      (lua_pushstring(L, "unlocked references are obsolete"), lua_error(L), 0))
+\end{DoxyCode}
+\hypertarget{lauxlib_8h_a004a6b76c047f3b94890a08dbdcbbee7}{\index{lauxlib.\-h@{lauxlib.\-h}!\-L\-U\-A\-\_\-\-R\-E\-F\-N\-I\-L@{\-L\-U\-A\-\_\-\-R\-E\-F\-N\-I\-L}}
+\index{\-L\-U\-A\-\_\-\-R\-E\-F\-N\-I\-L@{\-L\-U\-A\-\_\-\-R\-E\-F\-N\-I\-L}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{\-L\-U\-A\-\_\-\-R\-E\-F\-N\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-U\-A\-\_\-\-R\-E\-F\-N\-I\-L}~(-\/1)}}\label{lauxlib_8h_a004a6b76c047f3b94890a08dbdcbbee7}
+\hypertarget{lauxlib_8h_ac9b78e96e9af92b1f43fa2fa016b263c}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-\_\-unref@{lua\-\_\-unref}}
+\index{lua\-\_\-unref@{lua\-\_\-unref}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-\_\-unref}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{ref}
+\end{DoxyParamCaption}
+)~{\bf lua\-L\-\_\-unref}({\bf \-L}, {\bf \-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}, (ref))}}\label{lauxlib_8h_ac9b78e96e9af92b1f43fa2fa016b263c}
+\hypertarget{lauxlib_8h_aba5d150de784924e9111ccf650bea087}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-I\-\_\-openlib@{lua\-I\-\_\-openlib}}
+\index{lua\-I\-\_\-openlib@{lua\-I\-\_\-openlib}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-I\-\_\-openlib}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-I\-\_\-openlib}~lua\-L\-\_\-openlib}}\label{lauxlib_8h_aba5d150de784924e9111ccf650bea087}
+\hypertarget{lauxlib_8h_a63935c5b4cf5d45930c875f6cc5e1432}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-addchar@{lua\-L\-\_\-addchar}}
+\index{lua\-L\-\_\-addchar@{lua\-L\-\_\-addchar}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-addchar}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-addchar}(
+\begin{DoxyParamCaption}
+\item[{}]{\-B, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a63935c5b4cf5d45930c875f6cc5e1432}
+{\bfseries 값\-:}
+\begin{DoxyCode}
+((void)((B)->p < ((B)->buffer+LUAL_BUFFERSIZE) || luaL_prepbuffer(B)), \
+   (*(B)->p++ = (char)(c)))
+\end{DoxyCode}
+\hypertarget{lauxlib_8h_a2c5063f5c005f0ecd3fd69a9f7509073}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-addsize@{lua\-L\-\_\-addsize}}
+\index{lua\-L\-\_\-addsize@{lua\-L\-\_\-addsize}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-addsize}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-addsize}(
+\begin{DoxyParamCaption}
+\item[{}]{\-B, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((\-B)-\/$>$p += (n))}}\label{lauxlib_8h_a2c5063f5c005f0ecd3fd69a9f7509073}
+\hypertarget{lauxlib_8h_afe2e3018d561c14f2622fb32f425c111}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-argcheck@{lua\-L\-\_\-argcheck}}
+\index{lua\-L\-\_\-argcheck@{lua\-L\-\_\-argcheck}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-argcheck}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-argcheck}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{cond, }
+\item[{}]{numarg, }
+\item[{}]{extramsg}
+\end{DoxyParamCaption}
+)~((void)((cond) $|$$|$ {\bf lua\-L\-\_\-argerror}({\bf \-L}, (numarg), (extramsg))))}}\label{lauxlib_8h_afe2e3018d561c14f2622fb32f425c111}
+\hypertarget{lauxlib_8h_adb277a5f654228b51b66f95bcf883601}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checkint@{lua\-L\-\_\-checkint}}
+\index{lua\-L\-\_\-checkint@{lua\-L\-\_\-checkint}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checkint}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-checkint}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((int){\bf lua\-L\-\_\-checkinteger}({\bf \-L}, (n)))}}\label{lauxlib_8h_adb277a5f654228b51b66f95bcf883601}
+\hypertarget{lauxlib_8h_a0df2697cbe2d4a33e012ab336af44b9b}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checklong@{lua\-L\-\_\-checklong}}
+\index{lua\-L\-\_\-checklong@{lua\-L\-\_\-checklong}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checklong}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-checklong}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((long){\bf lua\-L\-\_\-checkinteger}({\bf \-L}, (n)))}}\label{lauxlib_8h_a0df2697cbe2d4a33e012ab336af44b9b}
+\hypertarget{lauxlib_8h_ad9917d22c79651fdd73d42c146b5056f}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checkstring@{lua\-L\-\_\-checkstring}}
+\index{lua\-L\-\_\-checkstring@{lua\-L\-\_\-checkstring}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checkstring}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-checkstring}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-L\-\_\-checklstring}({\bf \-L}, (n), \-N\-U\-L\-L))}}\label{lauxlib_8h_ad9917d22c79651fdd73d42c146b5056f}
+\hypertarget{lauxlib_8h_aa49a7a47a683d6e7868ede50ceb826be}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-dofile@{lua\-L\-\_\-dofile}}
+\index{lua\-L\-\_\-dofile@{lua\-L\-\_\-dofile}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-dofile}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-dofile}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{fn}
+\end{DoxyParamCaption}
+)~({\bf lua\-L\-\_\-loadfile}({\bf \-L}, fn) $|$$|$ {\bf lua\-\_\-pcall}({\bf \-L}, 0, {\bf \-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}, 0))}}\label{lauxlib_8h_aa49a7a47a683d6e7868ede50ceb826be}
+\hypertarget{lauxlib_8h_a1a0639bfde6b1e2f6181af45b0137cf5}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-dostring@{lua\-L\-\_\-dostring}}
+\index{lua\-L\-\_\-dostring@{lua\-L\-\_\-dostring}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-dostring}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-dostring}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)~({\bf lua\-L\-\_\-loadstring}({\bf \-L}, s) $|$$|$ {\bf lua\-\_\-pcall}({\bf \-L}, 0, {\bf \-L\-U\-A\-\_\-\-M\-U\-L\-T\-R\-E\-T}, 0))}}\label{lauxlib_8h_a1a0639bfde6b1e2f6181af45b0137cf5}
+\hypertarget{lauxlib_8h_a201407aa41ff74577c67308372a130d9}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-getmetatable@{lua\-L\-\_\-getmetatable}}
+\index{lua\-L\-\_\-getmetatable@{lua\-L\-\_\-getmetatable}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-getmetatable}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-getmetatable}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-getfield}({\bf \-L}, {\bf \-L\-U\-A\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y\-I\-N\-D\-E\-X}, (n)))}}\label{lauxlib_8h_a201407aa41ff74577c67308372a130d9}
+\hypertarget{lauxlib_8h_a0ef5c05520dabbaa65ecbade53e719fa}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-getn@{lua\-L\-\_\-getn}}
+\index{lua\-L\-\_\-getn@{lua\-L\-\_\-getn}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-getn}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-getn}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~((int){\bf lua\-\_\-objlen}({\bf \-L}, i))}}\label{lauxlib_8h_a0ef5c05520dabbaa65ecbade53e719fa}
+\hypertarget{lauxlib_8h_aca033280b0176012ef290131876f706e}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-opt@{lua\-L\-\_\-opt}}
+\index{lua\-L\-\_\-opt@{lua\-L\-\_\-opt}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-opt}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-opt}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{f, }
+\item[{}]{n, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~({\bf lua\-\_\-isnoneornil}({\bf \-L},(n)) ? (d) \-: f({\bf \-L},(n)))}}\label{lauxlib_8h_aca033280b0176012ef290131876f706e}
+\hypertarget{lauxlib_8h_ab4d7f693e9405558c725783a756e0aca}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-optint@{lua\-L\-\_\-optint}}
+\index{lua\-L\-\_\-optint@{lua\-L\-\_\-optint}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-optint}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-optint}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~((int){\bf lua\-L\-\_\-optinteger}({\bf \-L}, (n), (d)))}}\label{lauxlib_8h_ab4d7f693e9405558c725783a756e0aca}
+\hypertarget{lauxlib_8h_a58ea6d94dccfa493103d8e112dd276b6}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-optlong@{lua\-L\-\_\-optlong}}
+\index{lua\-L\-\_\-optlong@{lua\-L\-\_\-optlong}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-optlong}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-optlong}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~((long){\bf lua\-L\-\_\-optinteger}({\bf \-L}, (n), (d)))}}\label{lauxlib_8h_a58ea6d94dccfa493103d8e112dd276b6}
+\hypertarget{lauxlib_8h_a732bc5882c4a5da46b236649ab6db47b}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-optstring@{lua\-L\-\_\-optstring}}
+\index{lua\-L\-\_\-optstring@{lua\-L\-\_\-optstring}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-optstring}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-optstring}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{n, }
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~({\bf lua\-L\-\_\-optlstring}({\bf \-L}, (n), (d), \-N\-U\-L\-L))}}\label{lauxlib_8h_a732bc5882c4a5da46b236649ab6db47b}
+\hypertarget{lauxlib_8h_abbe5398fb8c79198354ba483e334cfdf}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-putchar@{lua\-L\-\_\-putchar}}
+\index{lua\-L\-\_\-putchar@{lua\-L\-\_\-putchar}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-putchar}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-putchar}(
+\begin{DoxyParamCaption}
+\item[{}]{\-B, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~{\bf lua\-L\-\_\-addchar}(\-B,c)}}\label{lauxlib_8h_abbe5398fb8c79198354ba483e334cfdf}
+\hypertarget{lauxlib_8h_a2015fce24247ce967682fd7458684af2}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-reg@{lua\-L\-\_\-reg}}
+\index{lua\-L\-\_\-reg@{lua\-L\-\_\-reg}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-reg}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-reg}~{\bf lua\-L\-\_\-\-Reg}}}\label{lauxlib_8h_a2015fce24247ce967682fd7458684af2}
+\hypertarget{lauxlib_8h_a6528439647f8e5928dd9151be7c89302}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-setn@{lua\-L\-\_\-setn}}
+\index{lua\-L\-\_\-setn@{lua\-L\-\_\-setn}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-setn}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-setn}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{i, }
+\item[{}]{j}
+\end{DoxyParamCaption}
+)~((void)0)  /$\ast$ no op! $\ast$/}}\label{lauxlib_8h_a6528439647f8e5928dd9151be7c89302}
+\hypertarget{lauxlib_8h_a2bee94954917c5bccb05d6578f3c675b}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-typename@{lua\-L\-\_\-typename}}
+\index{lua\-L\-\_\-typename@{lua\-L\-\_\-typename}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-typename}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf lua\-L\-\_\-typename}(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf \-L}, }
+\item[{}]{i}
+\end{DoxyParamCaption}
+)~{\bf lua\-\_\-typename}({\bf \-L}, {\bf lua\-\_\-type}({\bf \-L},(i)))}}\label{lauxlib_8h_a2bee94954917c5bccb05d6578f3c675b}
+
+
+\subsection{타입정의 문서화}
+\hypertarget{lauxlib_8h_a5f2195b3845806aa4bd9117b11b4d91c}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-\-Buffer@{lua\-L\-\_\-\-Buffer}}
+\index{lua\-L\-\_\-\-Buffer@{lua\-L\-\_\-\-Buffer}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf lua\-L\-\_\-\-Buffer}  {\bf lua\-L\-\_\-\-Buffer}}}\label{lauxlib_8h_a5f2195b3845806aa4bd9117b11b4d91c}
+\hypertarget{lauxlib_8h_a48bebf7b56d108021c1ae29549c912f9}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-\-Reg@{lua\-L\-\_\-\-Reg}}
+\index{lua\-L\-\_\-\-Reg@{lua\-L\-\_\-\-Reg}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-\-Reg}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf lua\-L\-\_\-\-Reg}  {\bf lua\-L\-\_\-\-Reg}}}\label{lauxlib_8h_a48bebf7b56d108021c1ae29549c912f9}
+
+
+\subsection{함수 문서화}
+\hypertarget{lauxlib_8h_ae352d571a7b93c6b311b7aa993f9aaba}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-I\-\_\-openlib@{lua\-I\-\_\-openlib}}
+\index{lua\-I\-\_\-openlib@{lua\-I\-\_\-openlib}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-I\-\_\-openlib}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-I\-\_\-openlib} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{libname, }
+\item[{const {\bf lua\-L\-\_\-\-Reg} $\ast$}]{l, }
+\item[{int}]{nup}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_ae352d571a7b93c6b311b7aa993f9aaba}
+\hypertarget{lauxlib_8h_a06fceedb3abb1272566ca22c96e34b95}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-addlstring@{lua\-L\-\_\-addlstring}}
+\index{lua\-L\-\_\-addlstring@{lua\-L\-\_\-addlstring}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-addlstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-addlstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-L\-\_\-\-Buffer} $\ast$}]{\-B, }
+\item[{const char $\ast$}]{s, }
+\item[{size\-\_\-t}]{l}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a06fceedb3abb1272566ca22c96e34b95}
+\hypertarget{lauxlib_8h_ad9c038f6e108e216011aca1801f84f44}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-addstring@{lua\-L\-\_\-addstring}}
+\index{lua\-L\-\_\-addstring@{lua\-L\-\_\-addstring}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-addstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-addstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-L\-\_\-\-Buffer} $\ast$}]{\-B, }
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_ad9c038f6e108e216011aca1801f84f44}
+\hypertarget{lauxlib_8h_aeeb03d69681da0ec0e952b582ce3841c}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-addvalue@{lua\-L\-\_\-addvalue}}
+\index{lua\-L\-\_\-addvalue@{lua\-L\-\_\-addvalue}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-addvalue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-addvalue} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-L\-\_\-\-Buffer} $\ast$}]{\-B}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_aeeb03d69681da0ec0e952b582ce3841c}
+\hypertarget{lauxlib_8h_a526c220d17273c63ce9973bcde4a2c4a}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-argerror@{lua\-L\-\_\-argerror}}
+\index{lua\-L\-\_\-argerror@{lua\-L\-\_\-argerror}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-argerror}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-argerror} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{numarg, }
+\item[{const char $\ast$}]{extramsg}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a526c220d17273c63ce9973bcde4a2c4a}
+\hypertarget{lauxlib_8h_aab6af54c782855fee2bef84eb41bdc00}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-buffinit@{lua\-L\-\_\-buffinit}}
+\index{lua\-L\-\_\-buffinit@{lua\-L\-\_\-buffinit}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-buffinit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-buffinit} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{{\bf lua\-L\-\_\-\-Buffer} $\ast$}]{\-B}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_aab6af54c782855fee2bef84eb41bdc00}
+\hypertarget{lauxlib_8h_af26aec8cce4a3f4448c60f402d78f17d}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-callmeta@{lua\-L\-\_\-callmeta}}
+\index{lua\-L\-\_\-callmeta@{lua\-L\-\_\-callmeta}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-callmeta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-callmeta} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{obj, }
+\item[{const char $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_af26aec8cce4a3f4448c60f402d78f17d}
+\hypertarget{lauxlib_8h_ad78c85dce421e9cb793e205b9e81c640}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checkany@{lua\-L\-\_\-checkany}}
+\index{lua\-L\-\_\-checkany@{lua\-L\-\_\-checkany}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checkany}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-checkany} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{narg}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_ad78c85dce421e9cb793e205b9e81c640}
+\hypertarget{lauxlib_8h_ab9c2bb4294fb7a81d3745dad5711cd63}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checkinteger@{lua\-L\-\_\-checkinteger}}
+\index{lua\-L\-\_\-checkinteger@{lua\-L\-\_\-checkinteger}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checkinteger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-Integer}() {\bf lua\-L\-\_\-checkinteger} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{num\-Arg}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_ab9c2bb4294fb7a81d3745dad5711cd63}
+\hypertarget{lauxlib_8h_af4af154dcb41f8990a572e6a00c349fc}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checklstring@{lua\-L\-\_\-checklstring}}
+\index{lua\-L\-\_\-checklstring@{lua\-L\-\_\-checklstring}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checklstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} const char$\ast$() {\bf lua\-L\-\_\-checklstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{num\-Arg, }
+\item[{size\-\_\-t $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_af4af154dcb41f8990a572e6a00c349fc}
+\hypertarget{lauxlib_8h_a3e39a4d35c3ce1555126e372a8a329c3}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checknumber@{lua\-L\-\_\-checknumber}}
+\index{lua\-L\-\_\-checknumber@{lua\-L\-\_\-checknumber}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checknumber}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-Number}() {\bf lua\-L\-\_\-checknumber} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{num\-Arg}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a3e39a4d35c3ce1555126e372a8a329c3}
+\hypertarget{lauxlib_8h_a638633914d3a19650db8320c1fccf161}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checkoption@{lua\-L\-\_\-checkoption}}
+\index{lua\-L\-\_\-checkoption@{lua\-L\-\_\-checkoption}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checkoption}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-checkoption} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{narg, }
+\item[{const char $\ast$}]{def, }
+\item[{const char $\ast$const}]{lst\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a638633914d3a19650db8320c1fccf161}
+\hypertarget{lauxlib_8h_a724f5a5aeee97c0b40948c8bca91341c}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checkstack@{lua\-L\-\_\-checkstack}}
+\index{lua\-L\-\_\-checkstack@{lua\-L\-\_\-checkstack}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checkstack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-checkstack} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{sz, }
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a724f5a5aeee97c0b40948c8bca91341c}
+\hypertarget{lauxlib_8h_ae5f465fb757069d016a10b106c69bdd7}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checktype@{lua\-L\-\_\-checktype}}
+\index{lua\-L\-\_\-checktype@{lua\-L\-\_\-checktype}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checktype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-checktype} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{narg, }
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_ae5f465fb757069d016a10b106c69bdd7}
+\hypertarget{lauxlib_8h_aed8d8e4f3b95c6bcac246ec9895027b1}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-checkudata@{lua\-L\-\_\-checkudata}}
+\index{lua\-L\-\_\-checkudata@{lua\-L\-\_\-checkudata}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-checkudata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void$\ast$() {\bf lua\-L\-\_\-checkudata} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{ud, }
+\item[{const char $\ast$}]{tname}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_aed8d8e4f3b95c6bcac246ec9895027b1}
+\hypertarget{lauxlib_8h_a994f73d7985c30672469a260d9e86ae6}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-error@{lua\-L\-\_\-error}}
+\index{lua\-L\-\_\-error@{lua\-L\-\_\-error}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-error} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a994f73d7985c30672469a260d9e86ae6}
+\hypertarget{lauxlib_8h_a561116e7d323baa7ae514054bc15978f}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-findtable@{lua\-L\-\_\-findtable}}
+\index{lua\-L\-\_\-findtable@{lua\-L\-\_\-findtable}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-findtable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} const char$\ast$() {\bf lua\-L\-\_\-findtable} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{idx, }
+\item[{const char $\ast$}]{fname, }
+\item[{int}]{szhint}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a561116e7d323baa7ae514054bc15978f}
+\hypertarget{lauxlib_8h_aed3f129411ba1ec14f813d650f16384d}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-getmetafield@{lua\-L\-\_\-getmetafield}}
+\index{lua\-L\-\_\-getmetafield@{lua\-L\-\_\-getmetafield}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-getmetafield}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-getmetafield} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{obj, }
+\item[{const char $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_aed3f129411ba1ec14f813d650f16384d}
+\hypertarget{lauxlib_8h_a46672be75da57e1a464c5c6d80f19064}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-gsub@{lua\-L\-\_\-gsub}}
+\index{lua\-L\-\_\-gsub@{lua\-L\-\_\-gsub}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-gsub}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} const char$\ast$() {\bf lua\-L\-\_\-gsub} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{s, }
+\item[{const char $\ast$}]{p, }
+\item[{const char $\ast$}]{r}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a46672be75da57e1a464c5c6d80f19064}
+\hypertarget{lauxlib_8h_a74d560ea0256e7b48496a4acb1d7522e}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-loadbuffer@{lua\-L\-\_\-loadbuffer}}
+\index{lua\-L\-\_\-loadbuffer@{lua\-L\-\_\-loadbuffer}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-loadbuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-loadbuffer} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{buff, }
+\item[{size\-\_\-t}]{sz, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a74d560ea0256e7b48496a4acb1d7522e}
+\hypertarget{lauxlib_8h_afa862c5bdbbcfc8f46e0cac9f32a771e}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-loadfile@{lua\-L\-\_\-loadfile}}
+\index{lua\-L\-\_\-loadfile@{lua\-L\-\_\-loadfile}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-loadfile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-loadfile} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_afa862c5bdbbcfc8f46e0cac9f32a771e}
+\hypertarget{lauxlib_8h_ac88130d6214ff6b3e2f1781f327807eb}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-loadstring@{lua\-L\-\_\-loadstring}}
+\index{lua\-L\-\_\-loadstring@{lua\-L\-\_\-loadstring}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-loadstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-loadstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_ac88130d6214ff6b3e2f1781f327807eb}
+\hypertarget{lauxlib_8h_a0e9e032108e7aedc05836b0c1d72a0fa}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-newmetatable@{lua\-L\-\_\-newmetatable}}
+\index{lua\-L\-\_\-newmetatable@{lua\-L\-\_\-newmetatable}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-newmetatable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-newmetatable} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{tname}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a0e9e032108e7aedc05836b0c1d72a0fa}
+\hypertarget{lauxlib_8h_a7d8712fcede90ae93d5a9a7b409c586e}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-newstate@{lua\-L\-\_\-newstate}}
+\index{lua\-L\-\_\-newstate@{lua\-L\-\_\-newstate}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-newstate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-State}$\ast$() {\bf lua\-L\-\_\-newstate} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a7d8712fcede90ae93d5a9a7b409c586e}
+\hypertarget{lauxlib_8h_a2b17cdda9e7ed73a1cd152cd386dc7a4}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-optinteger@{lua\-L\-\_\-optinteger}}
+\index{lua\-L\-\_\-optinteger@{lua\-L\-\_\-optinteger}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-optinteger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-Integer}() {\bf lua\-L\-\_\-optinteger} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{n\-Arg, }
+\item[{{\bf lua\-\_\-\-Integer}}]{def}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a2b17cdda9e7ed73a1cd152cd386dc7a4}
+\hypertarget{lauxlib_8h_a15b8c426b2e1b0cd1f9ddc32bc94df2f}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-optlstring@{lua\-L\-\_\-optlstring}}
+\index{lua\-L\-\_\-optlstring@{lua\-L\-\_\-optlstring}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-optlstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} const char$\ast$() {\bf lua\-L\-\_\-optlstring} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{num\-Arg, }
+\item[{const char $\ast$}]{def, }
+\item[{size\-\_\-t $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a15b8c426b2e1b0cd1f9ddc32bc94df2f}
+\hypertarget{lauxlib_8h_a001e2679c64c24eefbaf478fd0c22f97}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-optnumber@{lua\-L\-\_\-optnumber}}
+\index{lua\-L\-\_\-optnumber@{lua\-L\-\_\-optnumber}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-optnumber}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} {\bf lua\-\_\-\-Number}() {\bf lua\-L\-\_\-optnumber} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{n\-Arg, }
+\item[{{\bf lua\-\_\-\-Number}}]{def}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a001e2679c64c24eefbaf478fd0c22f97}
+\hypertarget{lauxlib_8h_adb0d0b797f1b8cc8ec4cda17a2939f87}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-prepbuffer@{lua\-L\-\_\-prepbuffer}}
+\index{lua\-L\-\_\-prepbuffer@{lua\-L\-\_\-prepbuffer}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-prepbuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} char$\ast$() {\bf lua\-L\-\_\-prepbuffer} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-L\-\_\-\-Buffer} $\ast$}]{\-B}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_adb0d0b797f1b8cc8ec4cda17a2939f87}
+\hypertarget{lauxlib_8h_aac5dfab9ba0ced4f5ae3b22aa35faffe}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-pushresult@{lua\-L\-\_\-pushresult}}
+\index{lua\-L\-\_\-pushresult@{lua\-L\-\_\-pushresult}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-pushresult}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-pushresult} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-L\-\_\-\-Buffer} $\ast$}]{\-B}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_aac5dfab9ba0ced4f5ae3b22aa35faffe}
+\hypertarget{lauxlib_8h_a2b69e67252d95df410818251f4b2d8e5}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-ref@{lua\-L\-\_\-ref}}
+\index{lua\-L\-\_\-ref@{lua\-L\-\_\-ref}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-ref} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a2b69e67252d95df410818251f4b2d8e5}
+\hypertarget{lauxlib_8h_a258c0fd40d57aec9cf62ebd74be7666e}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-register@{lua\-L\-\_\-register}}
+\index{lua\-L\-\_\-register@{lua\-L\-\_\-register}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-register} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{const char $\ast$}]{libname, }
+\item[{const {\bf lua\-L\-\_\-\-Reg} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a258c0fd40d57aec9cf62ebd74be7666e}
+\hypertarget{lauxlib_8h_a022056a7197e2e2c12f2b65b2993fd53}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-typerror@{lua\-L\-\_\-typerror}}
+\index{lua\-L\-\_\-typerror@{lua\-L\-\_\-typerror}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-typerror}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} int() {\bf lua\-L\-\_\-typerror} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{narg, }
+\item[{const char $\ast$}]{tname}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a022056a7197e2e2c12f2b65b2993fd53}
+\hypertarget{lauxlib_8h_a6200030ecae784852045161274501e0e}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-unref@{lua\-L\-\_\-unref}}
+\index{lua\-L\-\_\-unref@{lua\-L\-\_\-unref}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-unref} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{t, }
+\item[{int}]{ref}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a6200030ecae784852045161274501e0e}
+\hypertarget{lauxlib_8h_a269122a77674ca63c9193c2a30b4729e}{\index{lauxlib.\-h@{lauxlib.\-h}!lua\-L\-\_\-where@{lua\-L\-\_\-where}}
+\index{lua\-L\-\_\-where@{lua\-L\-\_\-where}!lauxlib.h@{lauxlib.\-h}}
+\subsubsection[{lua\-L\-\_\-where}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-L\-U\-A\-L\-I\-B\-\_\-\-A\-P\-I} void() {\bf lua\-L\-\_\-where} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{\-L, }
+\item[{int}]{lvl}
+\end{DoxyParamCaption}
+)}}\label{lauxlib_8h_a269122a77674ca63c9193c2a30b4729e}

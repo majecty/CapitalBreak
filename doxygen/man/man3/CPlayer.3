@@ -1,0 +1,116 @@
+.TH "CPlayer" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CPlayer \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CPlayer\&.h>\fP
+.SS "Public 타입"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< int, \fBCCard\fP > \fBTCardInven\fP"
+.br
+.ti -1c
+.RI "typedef TCardInven::iterator \fBTCardInvenItr\fP"
+.br
+.in -1c
+.SS "Public 멤버 함수"
+
+.in +1c
+.ti -1c
+.RI "\fBCPlayer\fP ()"
+.br
+.ti -1c
+.RI "void \fBReset\fP (void)"
+.br
+.ti -1c
+.RI "void \fBSetName\fP (char *pName)"
+.br
+.ti -1c
+.RI "void \fBSetRank\fP (\fBERank\fP pRank)"
+.br
+.ti -1c
+.RI "void \fBSetGrade\fP (unsigned short pGrade)"
+.br
+.ti -1c
+.RI "void \fBIncreaseGrade\fP (void)"
+.br
+.ti -1c
+.RI "void \fBDecreaseGrade\fP (void)"
+.br
+.ti -1c
+.RI "void \fBAddCreditorCount\fP (int pCount)"
+.br
+.ti -1c
+.RI "bool \fBBuySomething\fP (uint64_t pPrice)"
+.br
+.ti -1c
+.RI "void \fBAddDept\fP (uint64_t pDept)"
+.br
+.ti -1c
+.RI "bool \fBAddCard\fP (\fBECard\fP pCard)"
+.br
+.ti -1c
+.RI "bool \fBSelectCard\fP (\fBECard\fP pCard)"
+.br
+.ti -1c
+.RI "uint64_t \fBCalcDept\fP (void)"
+.br
+.ti -1c
+.RI "const char * \fBGetPlayerName\fP (void) const "
+.br
+.ti -1c
+.RI "uint64_t \fBGetDept\fP (void) const "
+.br
+.ti -1c
+.RI "int \fBGetCreditorCount\fP (void) const "
+.br
+.ti -1c
+.RI "\fBTCardInven\fP * \fBGetCardInven\fP (void)"
+.br
+.ti -1c
+.RI "\fBCCard\fP * \fBGetCurrentCard\fP (void)"
+.br
+.ti -1c
+.RI "\fBERank\fP \fBGetRank\fP (void) const "
+.br
+.ti -1c
+.RI "unsigned short \fBGetGrade\fP (void) const "
+.br
+.in -1c
+.SH "멤버 타입정의 문서화"
+.PP 
+.SS "typedef std::map<int, \fBCCard\fP> \fBCPlayer::TCardInven\fP"
+.SS "typedef TCardInven::iterator \fBCPlayer::TCardInvenItr\fP"
+.SH "생성자 & 소멸자 문서화"
+.PP 
+.SS "\fBCPlayer::CPlayer\fP ()"
+.SH "멤버 함수 문서화"
+.PP 
+.SS "bool \fBCPlayer::AddCard\fP (\fBECard\fPpCard)"
+.SS "void \fBCPlayer::AddCreditorCount\fP (intpCount)"
+.SS "void \fBCPlayer::AddDept\fP (uint64_tpDept)"
+.SS "bool \fBCPlayer::BuySomething\fP (uint64_tpPrice)"
+.SS "uint64_t \fBCPlayer::CalcDept\fP (void)"
+.SS "void \fBCPlayer::DecreaseGrade\fP (void)"
+.SS "\fBCPlayer::TCardInven\fP * \fBCPlayer::GetCardInven\fP (void)"
+.SS "int \fBCPlayer::GetCreditorCount\fP (void) const"
+.SS "\fBCCard\fP * \fBCPlayer::GetCurrentCard\fP (void)"
+.SS "uint64_t \fBCPlayer::GetDept\fP (void) const"
+.SS "unsigned short \fBCPlayer::GetGrade\fP (void) const"
+.SS "const char * \fBCPlayer::GetPlayerName\fP (void) const"
+.SS "\fBERank\fP \fBCPlayer::GetRank\fP (void) const"
+.SS "void \fBCPlayer::IncreaseGrade\fP (void)"
+.SS "void \fBCPlayer::Reset\fP (void)"
+.SS "bool \fBCPlayer::SelectCard\fP (\fBECard\fPpCard)"
+.SS "void \fBCPlayer::SetGrade\fP (unsigned shortpGrade)"
+.SS "void \fBCPlayer::SetName\fP (char *pName)"
+.SS "void \fBCPlayer::SetRank\fP (\fBERank\fPpRank)"
+
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

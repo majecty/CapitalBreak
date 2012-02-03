@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="lua_8hpp" kind="file">
+    <compoundname>lua.hpp</compoundname>
+    <includes refid="lua_8h" local="yes">lua.h</includes>
+    <includes refid="lualib_8h" local="yes">lualib.h</includes>
+    <includes refid="lauxlib_8h" local="yes">lauxlib.h</includes>
+    <incdepgraph>
+      <node id="602">
+        <label>lauxlib.h</label>
+        <link refid="lauxlib_8h"/>
+        <childnode refid="598" relation="include">
+        </childnode>
+        <childnode refid="603" relation="include">
+        </childnode>
+        <childnode refid="596" relation="include">
+        </childnode>
+      </node>
+      <node id="597">
+        <label>stdarg.h</label>
+      </node>
+      <node id="595">
+        <label>lua.hpp</label>
+        <link refid="lua.hpp"/>
+        <childnode refid="596" relation="include">
+        </childnode>
+        <childnode refid="601" relation="include">
+        </childnode>
+        <childnode refid="602" relation="include">
+        </childnode>
+      </node>
+      <node id="599">
+        <label>luaconf.h</label>
+        <link refid="luaconf_8h"/>
+        <childnode refid="600" relation="include">
+        </childnode>
+        <childnode refid="598" relation="include">
+        </childnode>
+      </node>
+      <node id="598">
+        <label>stddef.h</label>
+      </node>
+      <node id="596">
+        <label>lua.h</label>
+        <link refid="lua_8h"/>
+        <childnode refid="597" relation="include">
+        </childnode>
+        <childnode refid="598" relation="include">
+        </childnode>
+        <childnode refid="599" relation="include">
+        </childnode>
+      </node>
+      <node id="600">
+        <label>limits.h</label>
+      </node>
+      <node id="601">
+        <label>lualib.h</label>
+        <link refid="lualib_8h"/>
+        <childnode refid="596" relation="include">
+        </childnode>
+      </node>
+      <node id="603">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>lua.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Lua<sp/>header<sp/>files<sp/>for<sp/>C++</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;&lt;extern<sp/>&quot;C&quot;&gt;&gt;<sp/>not<sp/>supplied<sp/>automatically<sp/>because<sp/>Lua<sp/>also<sp/>compiles<sp/>as<sp/>C++</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lua_8h" kindref="compound">lua.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lualib_8h" kindref="compound">lualib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lauxlib_8h" kindref="compound">lauxlib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/repo/newCapitalBreak/lua.hpp"/>
+  </compounddef>
+</doxygen>

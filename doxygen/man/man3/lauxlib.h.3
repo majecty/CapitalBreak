@@ -1,0 +1,300 @@
+.TH "lauxlib.h" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lauxlib.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'lua\&.h'\fP
+.br
+
+.SS "클래스"
+
+.in +1c
+.ti -1c
+.RI "struct \fBluaL_Reg\fP"
+.br
+.ti -1c
+.RI "struct \fBluaL_Buffer\fP"
+.br
+.in -1c
+.SS "매크로"
+
+.in +1c
+.ti -1c
+.RI "#define \fBluaL_getn\fP(\fBL\fP, i)   ((int)\fBlua_objlen\fP(\fBL\fP, i))"
+.br
+.ti -1c
+.RI "#define \fBluaL_setn\fP(\fBL\fP, i, j)   ((void)0)  /* no op! */"
+.br
+.ti -1c
+.RI "#define \fBluaI_openlib\fP   luaL_openlib"
+.br
+.ti -1c
+.RI "#define \fBLUA_ERRFILE\fP   (\fBLUA_ERRERR\fP+1)"
+.br
+.ti -1c
+.RI "#define \fBluaL_argcheck\fP(\fBL\fP, cond, numarg, extramsg)   ((void)((cond) || \fBluaL_argerror\fP(\fBL\fP, (numarg), (extramsg))))"
+.br
+.ti -1c
+.RI "#define \fBluaL_checkstring\fP(\fBL\fP, n)   (\fBluaL_checklstring\fP(\fBL\fP, (n), NULL))"
+.br
+.ti -1c
+.RI "#define \fBluaL_optstring\fP(\fBL\fP, n, d)   (\fBluaL_optlstring\fP(\fBL\fP, (n), (d), NULL))"
+.br
+.ti -1c
+.RI "#define \fBluaL_checkint\fP(\fBL\fP, n)   ((int)\fBluaL_checkinteger\fP(\fBL\fP, (n)))"
+.br
+.ti -1c
+.RI "#define \fBluaL_optint\fP(\fBL\fP, n, d)   ((int)\fBluaL_optinteger\fP(\fBL\fP, (n), (d)))"
+.br
+.ti -1c
+.RI "#define \fBluaL_checklong\fP(\fBL\fP, n)   ((long)\fBluaL_checkinteger\fP(\fBL\fP, (n)))"
+.br
+.ti -1c
+.RI "#define \fBluaL_optlong\fP(\fBL\fP, n, d)   ((long)\fBluaL_optinteger\fP(\fBL\fP, (n), (d)))"
+.br
+.ti -1c
+.RI "#define \fBluaL_typename\fP(\fBL\fP, i)   \fBlua_typename\fP(\fBL\fP, \fBlua_type\fP(\fBL\fP,(i)))"
+.br
+.ti -1c
+.RI "#define \fBluaL_dofile\fP(\fBL\fP, fn)   (\fBluaL_loadfile\fP(\fBL\fP, fn) || \fBlua_pcall\fP(\fBL\fP, 0, \fBLUA_MULTRET\fP, 0))"
+.br
+.ti -1c
+.RI "#define \fBluaL_dostring\fP(\fBL\fP, s)   (\fBluaL_loadstring\fP(\fBL\fP, s) || \fBlua_pcall\fP(\fBL\fP, 0, \fBLUA_MULTRET\fP, 0))"
+.br
+.ti -1c
+.RI "#define \fBluaL_getmetatable\fP(\fBL\fP, n)   (\fBlua_getfield\fP(\fBL\fP, \fBLUA_REGISTRYINDEX\fP, (n)))"
+.br
+.ti -1c
+.RI "#define \fBluaL_opt\fP(\fBL\fP, f, n, d)   (\fBlua_isnoneornil\fP(\fBL\fP,(n)) ? (d) : f(\fBL\fP,(n)))"
+.br
+.ti -1c
+.RI "#define \fBluaL_addchar\fP(B, c)"
+.br
+.ti -1c
+.RI "#define \fBluaL_putchar\fP(B, c)   \fBluaL_addchar\fP(B,c)"
+.br
+.ti -1c
+.RI "#define \fBluaL_addsize\fP(B, n)   ((B)->p += (n))"
+.br
+.ti -1c
+.RI "#define \fBLUA_NOREF\fP   (-2)"
+.br
+.ti -1c
+.RI "#define \fBLUA_REFNIL\fP   (-1)"
+.br
+.ti -1c
+.RI "#define \fBlua_ref\fP(\fBL\fP, lock)"
+.br
+.ti -1c
+.RI "#define \fBlua_unref\fP(\fBL\fP, ref)   \fBluaL_unref\fP(\fBL\fP, \fBLUA_REGISTRYINDEX\fP, (ref))"
+.br
+.ti -1c
+.RI "#define \fBlua_getref\fP(\fBL\fP, ref)   \fBlua_rawgeti\fP(\fBL\fP, \fBLUA_REGISTRYINDEX\fP, (ref))"
+.br
+.ti -1c
+.RI "#define \fBluaL_reg\fP   \fBluaL_Reg\fP"
+.br
+.in -1c
+.SS "타입정의"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBluaL_Reg\fP \fBluaL_Reg\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBluaL_Buffer\fP \fBluaL_Buffer\fP"
+.br
+.in -1c
+.SS "함수"
+
+.in +1c
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaI_openlib\fP (\fBlua_State\fP *\fBL\fP, const char *libname, const \fBluaL_Reg\fP *l, int nup)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_register\fP (\fBlua_State\fP *\fBL\fP, const char *libname, const \fBluaL_Reg\fP *l)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_getmetafield\fP (\fBlua_State\fP *\fBL\fP, int obj, const char *e)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_callmeta\fP (\fBlua_State\fP *\fBL\fP, int obj, const char *e)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_typerror\fP (\fBlua_State\fP *\fBL\fP, int narg, const char *tname)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_argerror\fP (\fBlua_State\fP *\fBL\fP, int numarg, const char *extramsg)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP const char *() \fBluaL_checklstring\fP (\fBlua_State\fP *\fBL\fP, int numArg, size_t *l)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP const char *() \fBluaL_optlstring\fP (\fBlua_State\fP *\fBL\fP, int numArg, const char *def, size_t *l)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP \fBlua_Number\fP() \fBluaL_checknumber\fP (\fBlua_State\fP *\fBL\fP, int numArg)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP \fBlua_Number\fP() \fBluaL_optnumber\fP (\fBlua_State\fP *\fBL\fP, int nArg, \fBlua_Number\fP def)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP \fBlua_Integer\fP() \fBluaL_checkinteger\fP (\fBlua_State\fP *\fBL\fP, int numArg)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP \fBlua_Integer\fP() \fBluaL_optinteger\fP (\fBlua_State\fP *\fBL\fP, int nArg, \fBlua_Integer\fP def)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_checkstack\fP (\fBlua_State\fP *\fBL\fP, int sz, const char *msg)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_checktype\fP (\fBlua_State\fP *\fBL\fP, int narg, int t)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_checkany\fP (\fBlua_State\fP *\fBL\fP, int narg)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_newmetatable\fP (\fBlua_State\fP *\fBL\fP, const char *tname)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void *() \fBluaL_checkudata\fP (\fBlua_State\fP *\fBL\fP, int ud, const char *tname)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_where\fP (\fBlua_State\fP *\fBL\fP, int lvl)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_error\fP (\fBlua_State\fP *\fBL\fP, const char *fmt,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_checkoption\fP (\fBlua_State\fP *\fBL\fP, int narg, const char *def, const char *const lst[])"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_ref\fP (\fBlua_State\fP *\fBL\fP, int t)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_unref\fP (\fBlua_State\fP *\fBL\fP, int t, int ref)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_loadfile\fP (\fBlua_State\fP *\fBL\fP, const char *filename)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_loadbuffer\fP (\fBlua_State\fP *\fBL\fP, const char *buff, size_t sz, const char *name)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaL_loadstring\fP (\fBlua_State\fP *\fBL\fP, const char *s)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP \fBlua_State\fP *() \fBluaL_newstate\fP (void)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP const char *() \fBluaL_gsub\fP (\fBlua_State\fP *\fBL\fP, const char *s, const char *p, const char *r)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP const char *() \fBluaL_findtable\fP (\fBlua_State\fP *\fBL\fP, int idx, const char *fname, int szhint)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_buffinit\fP (\fBlua_State\fP *\fBL\fP, \fBluaL_Buffer\fP *B)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP char *() \fBluaL_prepbuffer\fP (\fBluaL_Buffer\fP *B)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_addlstring\fP (\fBluaL_Buffer\fP *B, const char *s, size_t l)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_addstring\fP (\fBluaL_Buffer\fP *B, const char *s)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_addvalue\fP (\fBluaL_Buffer\fP *B)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_pushresult\fP (\fBluaL_Buffer\fP *B)"
+.br
+.in -1c
+.SH "매크로 문서화"
+.PP 
+.SS "#define \fBLUA_ERRFILE\fP   (\fBLUA_ERRERR\fP+1)"
+.SS "#define \fBlua_getref\fP(\fBL\fP, ref)   \fBlua_rawgeti\fP(\fBL\fP, \fBLUA_REGISTRYINDEX\fP, (ref))"
+.SS "#define \fBLUA_NOREF\fP   (-2)"
+.SS "#define \fBlua_ref\fP(\fBL\fP, lock)"\fB값:\fP
+.PP
+.nf
+((lock) ? luaL_ref(L, LUA_REGISTRYINDEX) : \
+      (lua_pushstring(L, 'unlocked references are obsolete'), lua_error(L), 0))
+.fi
+.SS "#define \fBLUA_REFNIL\fP   (-1)"
+.SS "#define \fBlua_unref\fP(\fBL\fP, ref)   \fBluaL_unref\fP(\fBL\fP, \fBLUA_REGISTRYINDEX\fP, (ref))"
+.SS "#define \fBluaI_openlib\fP   luaL_openlib"
+.SS "#define \fBluaL_addchar\fP(B, c)"\fB값:\fP
+.PP
+.nf
+((void)((B)->p < ((B)->buffer+LUAL_BUFFERSIZE) || luaL_prepbuffer(B)), \
+   (*(B)->p++ = (char)(c)))
+.fi
+.SS "#define \fBluaL_addsize\fP(B, n)   ((B)->p += (n))"
+.SS "#define \fBluaL_argcheck\fP(\fBL\fP, cond, numarg, extramsg)   ((void)((cond) || \fBluaL_argerror\fP(\fBL\fP, (numarg), (extramsg))))"
+.SS "#define \fBluaL_checkint\fP(\fBL\fP, n)   ((int)\fBluaL_checkinteger\fP(\fBL\fP, (n)))"
+.SS "#define \fBluaL_checklong\fP(\fBL\fP, n)   ((long)\fBluaL_checkinteger\fP(\fBL\fP, (n)))"
+.SS "#define \fBluaL_checkstring\fP(\fBL\fP, n)   (\fBluaL_checklstring\fP(\fBL\fP, (n), NULL))"
+.SS "#define \fBluaL_dofile\fP(\fBL\fP, fn)   (\fBluaL_loadfile\fP(\fBL\fP, fn) || \fBlua_pcall\fP(\fBL\fP, 0, \fBLUA_MULTRET\fP, 0))"
+.SS "#define \fBluaL_dostring\fP(\fBL\fP, s)   (\fBluaL_loadstring\fP(\fBL\fP, s) || \fBlua_pcall\fP(\fBL\fP, 0, \fBLUA_MULTRET\fP, 0))"
+.SS "#define \fBluaL_getmetatable\fP(\fBL\fP, n)   (\fBlua_getfield\fP(\fBL\fP, \fBLUA_REGISTRYINDEX\fP, (n)))"
+.SS "#define \fBluaL_getn\fP(\fBL\fP, i)   ((int)\fBlua_objlen\fP(\fBL\fP, i))"
+.SS "#define \fBluaL_opt\fP(\fBL\fP, f, n, d)   (\fBlua_isnoneornil\fP(\fBL\fP,(n)) ? (d) : f(\fBL\fP,(n)))"
+.SS "#define \fBluaL_optint\fP(\fBL\fP, n, d)   ((int)\fBluaL_optinteger\fP(\fBL\fP, (n), (d)))"
+.SS "#define \fBluaL_optlong\fP(\fBL\fP, n, d)   ((long)\fBluaL_optinteger\fP(\fBL\fP, (n), (d)))"
+.SS "#define \fBluaL_optstring\fP(\fBL\fP, n, d)   (\fBluaL_optlstring\fP(\fBL\fP, (n), (d), NULL))"
+.SS "#define \fBluaL_putchar\fP(B, c)   \fBluaL_addchar\fP(B,c)"
+.SS "#define \fBluaL_reg\fP   \fBluaL_Reg\fP"
+.SS "#define \fBluaL_setn\fP(\fBL\fP, i, j)   ((void)0)  /* no op! */"
+.SS "#define \fBluaL_typename\fP(\fBL\fP, i)   \fBlua_typename\fP(\fBL\fP, \fBlua_type\fP(\fBL\fP,(i)))"
+.SH "타입정의 문서화"
+.PP 
+.SS "typedef struct \fBluaL_Buffer\fP  \fBluaL_Buffer\fP"
+.SS "typedef struct \fBluaL_Reg\fP  \fBluaL_Reg\fP"
+.SH "함수 문서화"
+.PP 
+.SS "\fBLUALIB_API\fP void() \fBluaI_openlib\fP (\fBlua_State\fP *L, const char *libname, const \fBluaL_Reg\fP *l, intnup)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_addlstring\fP (\fBluaL_Buffer\fP *B, const char *s, size_tl)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_addstring\fP (\fBluaL_Buffer\fP *B, const char *s)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_addvalue\fP (\fBluaL_Buffer\fP *B)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_argerror\fP (\fBlua_State\fP *L, intnumarg, const char *extramsg)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_buffinit\fP (\fBlua_State\fP *L, \fBluaL_Buffer\fP *B)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_callmeta\fP (\fBlua_State\fP *L, intobj, const char *e)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_checkany\fP (\fBlua_State\fP *L, intnarg)"
+.SS "\fBLUALIB_API\fP \fBlua_Integer\fP() \fBluaL_checkinteger\fP (\fBlua_State\fP *L, intnumArg)"
+.SS "\fBLUALIB_API\fP const char*() \fBluaL_checklstring\fP (\fBlua_State\fP *L, intnumArg, size_t *l)"
+.SS "\fBLUALIB_API\fP \fBlua_Number\fP() \fBluaL_checknumber\fP (\fBlua_State\fP *L, intnumArg)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_checkoption\fP (\fBlua_State\fP *L, intnarg, const char *def, const char *constlst[])"
+.SS "\fBLUALIB_API\fP void() \fBluaL_checkstack\fP (\fBlua_State\fP *L, intsz, const char *msg)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_checktype\fP (\fBlua_State\fP *L, intnarg, intt)"
+.SS "\fBLUALIB_API\fP void*() \fBluaL_checkudata\fP (\fBlua_State\fP *L, intud, const char *tname)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_error\fP (\fBlua_State\fP *L, const char *fmt, \&.\&.\&.)"
+.SS "\fBLUALIB_API\fP const char*() \fBluaL_findtable\fP (\fBlua_State\fP *L, intidx, const char *fname, intszhint)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_getmetafield\fP (\fBlua_State\fP *L, intobj, const char *e)"
+.SS "\fBLUALIB_API\fP const char*() \fBluaL_gsub\fP (\fBlua_State\fP *L, const char *s, const char *p, const char *r)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_loadbuffer\fP (\fBlua_State\fP *L, const char *buff, size_tsz, const char *name)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_loadfile\fP (\fBlua_State\fP *L, const char *filename)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_loadstring\fP (\fBlua_State\fP *L, const char *s)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_newmetatable\fP (\fBlua_State\fP *L, const char *tname)"
+.SS "\fBLUALIB_API\fP \fBlua_State\fP*() \fBluaL_newstate\fP (void)"
+.SS "\fBLUALIB_API\fP \fBlua_Integer\fP() \fBluaL_optinteger\fP (\fBlua_State\fP *L, intnArg, \fBlua_Integer\fPdef)"
+.SS "\fBLUALIB_API\fP const char*() \fBluaL_optlstring\fP (\fBlua_State\fP *L, intnumArg, const char *def, size_t *l)"
+.SS "\fBLUALIB_API\fP \fBlua_Number\fP() \fBluaL_optnumber\fP (\fBlua_State\fP *L, intnArg, \fBlua_Number\fPdef)"
+.SS "\fBLUALIB_API\fP char*() \fBluaL_prepbuffer\fP (\fBluaL_Buffer\fP *B)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_pushresult\fP (\fBluaL_Buffer\fP *B)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_ref\fP (\fBlua_State\fP *L, intt)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_register\fP (\fBlua_State\fP *L, const char *libname, const \fBluaL_Reg\fP *l)"
+.SS "\fBLUALIB_API\fP int() \fBluaL_typerror\fP (\fBlua_State\fP *L, intnarg, const char *tname)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_unref\fP (\fBlua_State\fP *L, intt, intref)"
+.SS "\fBLUALIB_API\fP void() \fBluaL_where\fP (\fBlua_State\fP *L, intlvl)"
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

@@ -1,0 +1,98 @@
+.TH "lualib.h" 3 "금 2월 3 2012" "Version test" "Capital Break" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lualib.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'lua\&.h'\fP
+.br
+
+.SS "매크로"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLUA_FILEHANDLE\fP   'FILE*'"
+.br
+.ti -1c
+.RI "#define \fBLUA_COLIBNAME\fP   'coroutine'"
+.br
+.ti -1c
+.RI "#define \fBLUA_TABLIBNAME\fP   'table'"
+.br
+.ti -1c
+.RI "#define \fBLUA_IOLIBNAME\fP   'io'"
+.br
+.ti -1c
+.RI "#define \fBLUA_OSLIBNAME\fP   'os'"
+.br
+.ti -1c
+.RI "#define \fBLUA_STRLIBNAME\fP   'string'"
+.br
+.ti -1c
+.RI "#define \fBLUA_MATHLIBNAME\fP   'math'"
+.br
+.ti -1c
+.RI "#define \fBLUA_DBLIBNAME\fP   'debug'"
+.br
+.ti -1c
+.RI "#define \fBLUA_LOADLIBNAME\fP   'package'"
+.br
+.in -1c
+.SS "함수"
+
+.in +1c
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaopen_base\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaopen_table\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaopen_io\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaopen_os\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaopen_string\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaopen_math\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaopen_debug\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP int() \fBluaopen_package\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.ti -1c
+.RI "\fBLUALIB_API\fP void() \fBluaL_openlibs\fP (\fBlua_State\fP *\fBL\fP)"
+.br
+.in -1c
+.SH "매크로 문서화"
+.PP 
+.SS "#define \fBLUA_COLIBNAME\fP   'coroutine'"
+.SS "#define \fBLUA_DBLIBNAME\fP   'debug'"
+.SS "#define \fBLUA_FILEHANDLE\fP   'FILE*'"
+.SS "#define \fBLUA_IOLIBNAME\fP   'io'"
+.SS "#define \fBLUA_LOADLIBNAME\fP   'package'"
+.SS "#define \fBLUA_MATHLIBNAME\fP   'math'"
+.SS "#define \fBLUA_OSLIBNAME\fP   'os'"
+.SS "#define \fBLUA_STRLIBNAME\fP   'string'"
+.SS "#define \fBLUA_TABLIBNAME\fP   'table'"
+.SH "함수 문서화"
+.PP 
+.SS "\fBLUALIB_API\fP void() \fBluaL_openlibs\fP (\fBlua_State\fP *L)"
+.SS "\fBLUALIB_API\fP int() \fBluaopen_base\fP (\fBlua_State\fP *L)"
+.SS "\fBLUALIB_API\fP int() \fBluaopen_debug\fP (\fBlua_State\fP *L)"
+.SS "\fBLUALIB_API\fP int() \fBluaopen_io\fP (\fBlua_State\fP *L)"
+.SS "\fBLUALIB_API\fP int() \fBluaopen_math\fP (\fBlua_State\fP *L)"
+.SS "\fBLUALIB_API\fP int() \fBluaopen_os\fP (\fBlua_State\fP *L)"
+.SS "\fBLUALIB_API\fP int() \fBluaopen_package\fP (\fBlua_State\fP *L)"
+.SS "\fBLUALIB_API\fP int() \fBluaopen_string\fP (\fBlua_State\fP *L)"
+.SS "\fBLUALIB_API\fP int() \fBluaopen_table\fP (\fBlua_State\fP *L)"
+.SH "작성자"
+.PP 
+소스 코드로부터 Capital Break를 위해 Doxygen에 의해 자동으로 생성됨\&.

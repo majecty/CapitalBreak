@@ -112,3 +112,36 @@ const char Scene_Name[5][16] =
     "CREDIT SCENE"
 };
 
+const char Script_Name[32][16] = 
+{
+    "Description",
+    "NoCard",
+    "EnterShop",
+    "Buy",
+    "EndNoInterest",
+    "CardStop",
+    "DownGrade",
+    "UpGrade",
+    "EnterCardShop",
+    "GameOver",
+    "HappyEnd",
+    "GangPlus",
+    "ReceiveCard"
+};
+
+enum EScript
+{
+    eDescription = 0,
+    eNoCard,
+    eEnterShop,
+    eBuy,
+    eEndNoInterest,
+    eCardStop,
+    eGradeDown,
+    eGradeUp,
+    eEnterCardShop,
+    eGameOver,
+    eHappyEnd,
+    eGangPlus,
+    eReceiveCard
+};

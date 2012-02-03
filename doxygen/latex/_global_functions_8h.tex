@@ -1,0 +1,96 @@
+\hypertarget{_global_functions_8h}{\section{\-Global\-Functions.\-h 파일 참조}
+\label{_global_functions_8h}\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}}
+}
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include \char`\"{}common.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}lua/lua.\-h\char`\"{}}\*
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{_global_functions_8h_a164dd509e76178f4608d31678b642648}{\-Get\-Non\-Interest\-Time} (unsigned short p\-Grade, \hyperlink{_constants_8h_a4db5fb2e90acc4ef6c281d6cca4dea4e}{\-E\-Rank} p\-Rank)
+\item 
+double \hyperlink{_global_functions_8h_a3a34aca72104790aea5dddee4c0ad660}{\-Get\-Rate} (unsigned short p\-Grade, \hyperlink{_constants_8h_a4db5fb2e90acc4ef6c281d6cca4dea4e}{\-E\-Rank} p\-Rank)
+\item 
+uint64\-\_\-t \hyperlink{_global_functions_8h_aacad1e8919b32aa41e73476572148c30}{\-Get\-Global\-Limit} (unsigned short p\-Grade, \hyperlink{_constants_8h_a4db5fb2e90acc4ef6c281d6cca4dea4e}{\-E\-Rank} p\-Rank)
+\item 
+void \hyperlink{_global_functions_8h_a49dc7963ba5bb90e73ad53804097cc8d}{apply\-\_\-surface} (int x, int y, \-S\-D\-L\-\_\-\-Surface $\ast$source, \-S\-D\-L\-\_\-\-Surface $\ast$destination, \-S\-D\-L\-\_\-\-Rect $\ast$clip=\-N\-U\-L\-L)
+\item 
+\-S\-D\-L\-\_\-\-Surface $\ast$ \hyperlink{_global_functions_8h_ab78f833db4a62b8ef578da79cd72734f}{load\-\_\-image} (std\-::string filename)
+\item 
+void \hyperlink{_global_functions_8h_a1b55550bef7e0ecfb63d64a293a2737c}{change\-\_\-scene} (int scene\-\_\-num)
+\item 
+void \hyperlink{_global_functions_8h_a3106026d05716bbcad506fe88631929e}{maj\-\_\-lua\-\_\-error} (\hyperlink{lua_8h_a28186297f2e9f2de0652504633de8fb3}{lua\-\_\-\-State} $\ast$, const char $\ast$, const char $\ast$,...)
+\item 
+void \hyperlink{_global_functions_8h_afc909dd5968c7210ff62d8f600bad5a2}{error} (const char $\ast$fmt, const char $\ast$at,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\hypertarget{_global_functions_8h_a49dc7963ba5bb90e73ad53804097cc8d}{\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}!apply\-\_\-surface@{apply\-\_\-surface}}
+\index{apply\-\_\-surface@{apply\-\_\-surface}!GlobalFunctions.h@{\-Global\-Functions.\-h}}
+\subsubsection[{apply\-\_\-surface}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf apply\-\_\-surface} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{\-S\-D\-L\-\_\-\-Surface $\ast$}]{source, }
+\item[{\-S\-D\-L\-\_\-\-Surface $\ast$}]{destination, }
+\item[{\-S\-D\-L\-\_\-\-Rect $\ast$}]{clip = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)}}\label{_global_functions_8h_a49dc7963ba5bb90e73ad53804097cc8d}
+\hypertarget{_global_functions_8h_a1b55550bef7e0ecfb63d64a293a2737c}{\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}!change\-\_\-scene@{change\-\_\-scene}}
+\index{change\-\_\-scene@{change\-\_\-scene}!GlobalFunctions.h@{\-Global\-Functions.\-h}}
+\subsubsection[{change\-\_\-scene}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf change\-\_\-scene} (
+\begin{DoxyParamCaption}
+\item[{int}]{scene\-\_\-num}
+\end{DoxyParamCaption}
+)}}\label{_global_functions_8h_a1b55550bef7e0ecfb63d64a293a2737c}
+\hypertarget{_global_functions_8h_afc909dd5968c7210ff62d8f600bad5a2}{\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}!error@{error}}
+\index{error@{error}!GlobalFunctions.h@{\-Global\-Functions.\-h}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf error} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{const char $\ast$}]{at, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{_global_functions_8h_afc909dd5968c7210ff62d8f600bad5a2}
+\hypertarget{_global_functions_8h_aacad1e8919b32aa41e73476572148c30}{\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}!\-Get\-Global\-Limit@{\-Get\-Global\-Limit}}
+\index{\-Get\-Global\-Limit@{\-Get\-Global\-Limit}!GlobalFunctions.h@{\-Global\-Functions.\-h}}
+\subsubsection[{\-Get\-Global\-Limit}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-Get\-Global\-Limit} (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{p\-Grade, }
+\item[{{\bf \-E\-Rank}}]{p\-Rank}
+\end{DoxyParamCaption}
+)}}\label{_global_functions_8h_aacad1e8919b32aa41e73476572148c30}
+\hypertarget{_global_functions_8h_a164dd509e76178f4608d31678b642648}{\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}!\-Get\-Non\-Interest\-Time@{\-Get\-Non\-Interest\-Time}}
+\index{\-Get\-Non\-Interest\-Time@{\-Get\-Non\-Interest\-Time}!GlobalFunctions.h@{\-Global\-Functions.\-h}}
+\subsubsection[{\-Get\-Non\-Interest\-Time}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Get\-Non\-Interest\-Time} (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{p\-Grade, }
+\item[{{\bf \-E\-Rank}}]{p\-Rank}
+\end{DoxyParamCaption}
+)}}\label{_global_functions_8h_a164dd509e76178f4608d31678b642648}
+\hypertarget{_global_functions_8h_a3a34aca72104790aea5dddee4c0ad660}{\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}!\-Get\-Rate@{\-Get\-Rate}}
+\index{\-Get\-Rate@{\-Get\-Rate}!GlobalFunctions.h@{\-Global\-Functions.\-h}}
+\subsubsection[{\-Get\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Get\-Rate} (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{p\-Grade, }
+\item[{{\bf \-E\-Rank}}]{p\-Rank}
+\end{DoxyParamCaption}
+)}}\label{_global_functions_8h_a3a34aca72104790aea5dddee4c0ad660}
+\hypertarget{_global_functions_8h_ab78f833db4a62b8ef578da79cd72734f}{\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}!load\-\_\-image@{load\-\_\-image}}
+\index{load\-\_\-image@{load\-\_\-image}!GlobalFunctions.h@{\-Global\-Functions.\-h}}
+\subsubsection[{load\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}\-S\-D\-L\-\_\-\-Surface$\ast$ {\bf load\-\_\-image} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{_global_functions_8h_ab78f833db4a62b8ef578da79cd72734f}
+\hypertarget{_global_functions_8h_a3106026d05716bbcad506fe88631929e}{\index{\-Global\-Functions.\-h@{\-Global\-Functions.\-h}!maj\-\_\-lua\-\_\-error@{maj\-\_\-lua\-\_\-error}}
+\index{maj\-\_\-lua\-\_\-error@{maj\-\_\-lua\-\_\-error}!GlobalFunctions.h@{\-Global\-Functions.\-h}}
+\subsubsection[{maj\-\_\-lua\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf maj\-\_\-lua\-\_\-error} (
+\begin{DoxyParamCaption}
+\item[{{\bf lua\-\_\-\-State} $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{_global_functions_8h_a3106026d05716bbcad506fe88631929e}

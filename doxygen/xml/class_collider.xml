@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_collider" kind="class" prot="public">
+    <compoundname>Collider</compoundname>
+    <derivedcompoundref refid="class_building" prot="public" virt="non-virtual">Building</derivedcompoundref>
+    <derivedcompoundref refid="class_door" prot="public" virt="non-virtual">Door</derivedcompoundref>
+    <derivedcompoundref refid="class_gang" prot="public" virt="non-virtual">Gang</derivedcompoundref>
+    <derivedcompoundref refid="class_hero" prot="public" virt="non-virtual">Hero</derivedcompoundref>
+    <includes refid="collider_8h" local="no">collider.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_collider_1aa14301229ec52e3219b41c17ef162925" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Collider::check_collide</definition>
+        <argsstring>(Collider *)=0</argsstring>
+        <name>check_collide</name>
+        <reimplementedby refid="class_door_1a38deff918ee0218bc61a732834591795">check_collide</reimplementedby>
+        <reimplementedby refid="class_building_1a02c1ac48410c20319a30e6ce13433212">check_collide</reimplementedby>
+        <reimplementedby refid="class_hero_1a51de873f46281790cc30814fffe0c62c">check_collide</reimplementedby>
+        <reimplementedby refid="class_gang_1ae97a9f4995e999fde4265663e3a838f7">check_collide</reimplementedby>
+        <param>
+          <type><ref refid="class_collider" kindref="compound">Collider</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/collider.h" line="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_collider_1a1b6c8bc800070a1e880979378b348e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>SDL_Rect *</type>
+        <definition>virtual SDL_Rect* Collider::get_box</definition>
+        <argsstring>()=0</argsstring>
+        <name>get_box</name>
+        <reimplementedby refid="class_door_1a2664d8a7636d1eb1e297c8ffd237c379">get_box</reimplementedby>
+        <reimplementedby refid="class_building_1abb1a4ea20e451db134810c45d530e19f">get_box</reimplementedby>
+        <reimplementedby refid="class_hero_1abc32789cc9f1c1374a1d737da8f1a85c">get_box</reimplementedby>
+        <reimplementedby refid="class_gang_1aebd4bd585e284c70b97782ac9af904ee">get_box</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/repo/newCapitalBreak/collider.h" line="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="18">
+        <label>Door</label>
+        <link refid="class_door"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Collider</label>
+        <link refid="class_collider"/>
+      </node>
+      <node id="17">
+        <label>Building</label>
+        <link refid="class_building"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Gang</label>
+        <link refid="class_gang"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Hero</label>
+        <link refid="class_hero"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/repo/newCapitalBreak/collider.h" line="7" bodyfile="D:/repo/newCapitalBreak/collider.h" bodystart="6" bodyend="11"/>
+    <listofallmembers>
+      <member refid="class_collider_1aa14301229ec52e3219b41c17ef162925" prot="public" virt="pure-virtual"><scope>Collider</scope><name>check_collide</name></member>
+      <member refid="class_collider_1a1b6c8bc800070a1e880979378b348e8d" prot="public" virt="pure-virtual"><scope>Collider</scope><name>get_box</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

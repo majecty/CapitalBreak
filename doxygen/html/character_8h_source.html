@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Capital Break: character.h 소스 파일</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Capital Break
+   &#160;<span id="projectnumber">test</span>
+   </div>
+   <div id="projectbrief">ggg</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- 다음에 의해 생성됨 :  Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li><a href="annotated.html"><span>클래스</span></a></li>
+      <li class="current"><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>파일&#160;목록</span></a></li>
+      <li><a href="globals.html"><span>파일&#160;멤버</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('character_8h.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">character.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="character_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00002"></a>00002 <span class="preprocessor">#ifndef _MAJECTY_CHAR_H__</span>
+<a name="l00003"></a><a class="code" href="character_8h.html#a0f44a1e28bd1be64ec9cec79733ea098">00003</a> <span class="preprocessor"></span><span class="preprocessor">#define _MEJECTY_CHAR_H__</span>
+<a name="l00004"></a>00004 <span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="common_8h.html">common.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="collider_8h.html">collider.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="_c_player_8h.html">CPlayer.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="_constants_8h.html">Constants.h</a>&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a><a class="code" href="character_8h.html#a434e4725f04fa366ed1341f04d38521d">00009</a>                 <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="character_8h.html#a434e4725f04fa366ed1341f04d38521d">DOWN</a> = 0;
+<a name="l00010"></a><a class="code" href="character_8h.html#a08e9e19b88c4004c6d1daa0ed765c569">00010</a>                 <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="character_8h.html#a08e9e19b88c4004c6d1daa0ed765c569">LEFT</a> = 1;
+<a name="l00011"></a><a class="code" href="character_8h.html#a088fe0153a918af361dc8f4e775d020e">00011</a>                 <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="character_8h.html#a088fe0153a918af361dc8f4e775d020e">RIGHT</a> = 2;
+<a name="l00012"></a><a class="code" href="character_8h.html#ac58327b7b857c0d4c71c07aa602ace58">00012</a>                 <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="character_8h.html#ac58327b7b857c0d4c71c07aa602ace58">UP</a> = 3;
+<a name="l00013"></a><a class="code" href="character_8h.html#adfabeb87d2932b78a358704bacae0891">00013</a>                 <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="character_8h.html#adfabeb87d2932b78a358704bacae0891">STOP</a> = 4;
+<a name="l00014"></a><a class="code" href="class_character.html">00014</a> <span class="keyword">class </span><a class="code" href="class_character.html">Character</a> 
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016         <span class="keyword">private</span>:
+<a name="l00017"></a>00017                 <a class="code" href="class_character.html">Character</a>* next_person;
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019         <span class="keyword">protected</span>:
+<a name="l00020"></a><a class="code" href="class_character.html#a3b64a782ef7f82581760ccaf68521be3">00020</a>                 <span class="keywordtype">int</span> <a class="code" href="class_character.html#a03d37d245f17ffb4302f8b37141390bb">x</a>, <a class="code" href="class_character.html#a3b64a782ef7f82581760ccaf68521be3">y</a>, <a class="code" href="class_character.html#ac3c6fdfe5ccb5e984c83e20c28e7e4f2">p_x</a>, <a class="code" href="class_character.html#a9d10eb04b9cb779d432707f34171fb79">p_y</a>;
+<a name="l00021"></a><a class="code" href="class_character.html#adf848d11acd46785ec3408a018b4dabe">00021</a>                 <span class="keywordtype">int</span> <a class="code" href="class_character.html#adf848d11acd46785ec3408a018b4dabe">w</a>, <a class="code" href="class_character.html#a5a455718929221529a9c01781579927b">h</a>;
+<a name="l00022"></a><a class="code" href="class_character.html#aba005243607dd2e77f798e70675af9f5">00022</a>                 <span class="keywordtype">int</span> <a class="code" href="class_character.html#a769c5656e887d69472f08f9de9589eb5">xVel</a>, <a class="code" href="class_character.html#aba005243607dd2e77f798e70675af9f5">yVel</a>;
+<a name="l00023"></a><a class="code" href="class_character.html#a1769b630de33a3da0dd7456e71350a84">00023</a>                 SDL_Surface *<a class="code" href="class_character.html#a1769b630de33a3da0dd7456e71350a84">image</a>;
+<a name="l00024"></a><a class="code" href="class_character.html#a78ea8d15292e89650d12d98878bac42c">00024</a>                 <span class="keywordtype">int</span> <a class="code" href="class_character.html#a78ea8d15292e89650d12d98878bac42c">frame</a>;
+<a name="l00025"></a><a class="code" href="class_character.html#a597a53af58019f1654e70714bacab249">00025</a>                 SDL_Rect <a class="code" href="class_character.html#a597a53af58019f1654e70714bacab249">clip</a>[4][3];<span class="comment">// 8 �� �˳����� ��</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027         <span class="keyword">public</span>:
+<a name="l00028"></a>00028                 <span class="keyword">virtual</span> <a class="code" href="class_character.html#a9e9be564d05ded80962b2045aa70b3fc">~Character</a>();
+<a name="l00029"></a>00029                 <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_character.html#a32f64bd79aac4bcdfa3878b34ffd39da">move</a>(Uint32 deltaTicks);
+<a name="l00030"></a>00030                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_character.html#ae026a3baf7b9a31c270b9b0596c5e181">init</a>();
+<a name="l00031"></a>00031                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_character.html#a2304027ce7b4caf5a1851e371f3071cd">clean_up</a>();
+<a name="l00032"></a>00032                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_character.html#aee8d4cab5de7363e08ebcaf14171a454">show</a>(SDL_Surface*);
+<a name="l00033"></a>00033                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_character.html#ae29d39664b615ddee1fd855569cade90">set_clip</a>();
+<a name="l00034"></a>00034                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_character.html#a074348cfffee21b386e6ed3d950a7f2f">add_person</a>();
+<a name="l00035"></a>00035                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_character.html#a24e66bb11b377efa0079393d6ed99e89">set_object</a>(SDL_Rect *<span class="keywordtype">object</span>);
+<a name="l00036"></a>00036                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_character.html#a33e738893b424f6e890f49d756c7ffe6">move_back</a>();
+<a name="l00037"></a>00037 };
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="class_hero.html">00039</a> <span class="keyword">class </span><a class="code" href="class_hero.html">Hero</a> : <span class="keyword">public</span> <a class="code" href="class_character.html">Character</a> ,<span class="keyword">public</span> <a class="code" href="class_collider.html">Collider</a>
+<a name="l00040"></a>00040 {
+<a name="l00041"></a>00041         <span class="keyword">private</span>:
+<a name="l00042"></a>00042                 <a class="code" href="class_character.html">Character</a>* next_person;
+<a name="l00043"></a>00043                 <span class="keywordtype">bool</span> is_buyable;
+<a name="l00044"></a>00044                 <a class="code" href="class_c_player.html">CPlayer</a>  aPlayer;
+<a name="l00045"></a>00045         <span class="keyword">public</span>:
+<a name="l00046"></a>00046                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_hero.html#ae67cc4b7770083755895b78664d0ea34">init</a>();
+<a name="l00047"></a>00047                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a43836f7e926f00a4a27757a1ff7410a0">clean_up</a>();
+<a name="l00048"></a>00048                 <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_hero.html#a0961b6b66165095e3d764ccc60436846">move</a>(Uint32 deltaTicks);
+<a name="l00049"></a>00049                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a9670c2232f5bf0f66bba60a7c747c53d">show</a>(SDL_Surface*);
+<a name="l00050"></a>00050                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_hero.html#aa5bde5d2f4a3d086b9e8ce2b969e2f3f">set_clip</a>();
+<a name="l00051"></a>00051                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_hero.html#aa8934d60bc26f9eefdc15661d924e5e0">add_person</a>();
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053                 <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_hero.html#a51de873f46281790cc30814fffe0c62c">check_collide</a>(<a class="code" href="class_collider.html">Collider</a>*);
+<a name="l00054"></a>00054                 <span class="keyword">virtual</span> SDL_Rect* <a class="code" href="class_hero.html#abc32789cc9f1c1374a1d737da8f1a85c">get_box</a>();
+<a name="l00055"></a>00055                 <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a61e221d7b3ddfa81363ef1617d288b62">handleInput</a>();
+<a name="l00056"></a>00056                 <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a9871bf08a8a2a4d739b59ccccf23a164">can_buy</a>();
+<a name="l00057"></a>00057                 <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a59e335e5c9169ea1055f49c89a2d965b">cant_buy</a>();
+<a name="l00058"></a>00058                 <span class="keywordtype">bool</span> <a class="code" href="class_hero.html#af42a20265af06855ca1fdca1f82ed3c2">buy</a>();
+<a name="l00059"></a>00059                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a805934d28498398aecb10f8d2de6b63e">move_back</a>();
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061                 uint64_t <a class="code" href="class_hero.html#ad12877233a3a18ae6db1ad758375bb2c">get_depth</a>();
+<a name="l00062"></a>00062                 <span class="keywordtype">int</span> <a class="code" href="class_hero.html#a1c333d4e29923e655229eaf44178b3b9">calc_dept</a>();
+<a name="l00063"></a>00063                 <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a942b64ba1d1e3e5be2be79d0d737a83e">add_card</a>(<a class="code" href="_constants_8h.html#a03f7ec9e12b891db1bbeda07eb4099d7">ECard</a> pCard);
+<a name="l00064"></a>00064                 <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a4b3ac843ddfeaed8d4138d4d6507b13a">select_card</a>(<a class="code" href="_constants_8h.html#a03f7ec9e12b891db1bbeda07eb4099d7">ECard</a> pCard);
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066                 <a class="code" href="_constants_8h.html#a03f7ec9e12b891db1bbeda07eb4099d7">ECard</a> <a class="code" href="class_hero.html#a067b9cf2010d54ea54ce583dcebc0a38">get_current_card</a>();
+<a name="l00067"></a>00067                 uint64_t <a class="code" href="class_hero.html#ab20de0bd528c4de19e7e1a67ee4d4aba">get_limit</a>();
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069                 <span class="keywordtype">bool</span> <a class="code" href="class_hero.html#abcf5ca4897f949e4e8e2bb83fc99bb53">has_card</a>();
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071                 <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="class_hero.html#a41aa0f6885d0bf1e8b2bf5dd2a51818c">get_grade</a>();
+<a name="l00072"></a>00072                 <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a4f3e7b14d65aba9f8660406792972713">decrease_grade</a>();
+<a name="l00073"></a>00073                 <span class="keywordtype">void</span> <a class="code" href="class_hero.html#a18e875ed1fb65a5f0a900b1173658027">increase_grade</a>();
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 };
+<a name="l00076"></a>00076 
+<a name="l00077"></a><a class="code" href="class_gang.html">00077</a> <span class="keyword">class </span><a class="code" href="class_gang.html">Gang</a>: <span class="keyword">public</span> <a class="code" href="class_character.html">Character</a>, <span class="keyword">public</span> <a class="code" href="class_collider.html">Collider</a>
+<a name="l00078"></a>00078 {
+<a name="l00079"></a>00079         <span class="keyword">private</span>:
+<a name="l00080"></a>00080                 <a class="code" href="class_gang.html">Gang</a>* next_person;
+<a name="l00081"></a>00081                 SDL_Rect* object_point;
+<a name="l00082"></a>00082         <span class="keyword">public</span>:
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_gang.html#a3788b8ace6c57cdcdc464a2f96169484">init</a>();
+<a name="l00085"></a>00085                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_gang.html#af472124b9a8c3e4a5950562342ec8162">clean_up</a>();
+<a name="l00086"></a>00086                 <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_gang.html#abccb863ee9ef936fad5031a0d93e1b55">move</a>(Uint32 deltaTicks);
+<a name="l00087"></a>00087                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_gang.html#a29330bf2df1bd60644513b2cb27f29e6">show</a>(SDL_Surface*);
+<a name="l00088"></a>00088                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_gang.html#af4463fb95507a172b1495fae411bfba5">set_clip</a>();
+<a name="l00089"></a>00089                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_gang.html#ad177257ab75d22c409b6b7b89c5d0870">add_person</a>();
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091                 <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_gang.html#ae97a9f4995e999fde4265663e3a838f7">check_collide</a>(<a class="code" href="class_collider.html">Collider</a>*);
+<a name="l00092"></a>00092                 <span class="keyword">virtual</span> SDL_Rect* <a class="code" href="class_gang.html#aebd4bd585e284c70b97782ac9af904ee">get_box</a>();
+<a name="l00093"></a>00093                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_gang.html#a74c369149d11573fbad437d997266c36">set_object</a>(SDL_Rect *<span class="keywordtype">object</span>);
+<a name="l00094"></a>00094                 <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_gang.html#ac3aa2c0e70ecf1e7ce42192f684d1398">move_back</a>();
+<a name="l00095"></a>00095                 <span class="keywordtype">bool</span> <a class="code" href="class_gang.html#a9984bed5cfe0541a97e00e2972666bae">follow</a>();
+<a name="l00096"></a>00096                 <span class="comment">//void handleInput();</span>
+<a name="l00097"></a>00097                 <span class="comment">//void move_back();</span>
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099 };
+<a name="l00100"></a>00100 <span class="preprocessor">#endif</span>
+<a name="l00101"></a>00101 <span class="preprocessor"></span>
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>타입정의</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>열거형 타입</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>매크로</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="character_8h.html">character.h</a>      </li>
+
+    <li class="footer">생성시간 : 금 2월 3 2012 20:06:45, 프로젝트명 : Capital Break, 생성자 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

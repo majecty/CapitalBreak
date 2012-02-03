@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Capital Break: CPlayer.h ì†ŒìŠ¤ íŒŒì¼</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Capital Break
+   &#160;<span id="projectnumber">test</span>
+   </div>
+   <div id="projectbrief">ggg</div>
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- ë‹¤ìŒì— ì˜í•´ ìƒì„±ë¨ :  Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'ê²€ìƒ‰');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>ë©”ì¸&#160;í˜ì´ì§€</span></a></li>
+      <li><a href="annotated.html"><span>í´ë˜ìŠ¤</span></a></li>
+      <li class="current"><a href="files.html"><span>íŒŒì¼ë“¤</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="ê²€ìƒ‰" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>íŒŒì¼&#160;ëª©ë¡</span></a></li>
+      <li><a href="globals.html"><span>íŒŒì¼&#160;ë©¤ë²„</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('_c_player_8h.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">CPlayer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_c_player_8h.html">ì´ íŒŒì¼ì˜ ë¬¸ì„œí™” í˜ì´ì§€ë¡œ ê°€ê¸°</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &quot;<a class="code" href="_constants_8h.html">Constants.h</a>&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="_c_card_8h.html">CCard.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;stdint.h&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="comment">// ÁÖÀÎ°ø ÇÃ·¹ÀÌ¾î Å¬·¡½º</span>
+<a name="l00009"></a><a class="code" href="class_c_player.html">00009</a> <span class="keyword">class </span><a class="code" href="class_c_player.html">CPlayer</a>
+<a name="l00010"></a>00010 {
+<a name="l00011"></a>00011 <span class="keyword">public</span>:
+<a name="l00012"></a><a class="code" href="class_c_player.html#afc2e175de7122626d649da43d3db40a2">00012</a>         <span class="keyword">typedef</span> std::map&lt;int, CCard&gt;            <a class="code" href="class_c_player.html#afc2e175de7122626d649da43d3db40a2">TCardInven</a>;                             <span class="comment">// Ä«µå Áö°©(Ä«µå¹øÈ£ + Ä«µåÅ¬·¡½º)</span>
+<a name="l00013"></a><a class="code" href="class_c_player.html#a956d26e71ea17e57ac43279eab7eaf3b">00013</a>         <span class="keyword">typedef</span> TCardInven::iterator            <a class="code" href="class_c_player.html#a956d26e71ea17e57ac43279eab7eaf3b">TCardInvenItr</a>;
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="keyword">private</span>:
+<a name="l00016"></a>00016         <span class="keywordtype">char</span>                    __mPlayerName[<a class="code" href="_constants_8h.html#a200d0890fcb893a404d39150d9ac8082">MAX_PLAYER_NAME_LEN</a> + 1];         <span class="comment">// ÇÃ·¹ÀÌ¾î ÀÌ¸§</span>
+<a name="l00017"></a>00017         uint64_t                        __mDept;                                                                        <span class="comment">// ÇöÀç ºú</span>
+<a name="l00018"></a>00018         <span class="keywordtype">int</span>                             __mCreditorCount;                                                       <span class="comment">// ºúÀïÀÌ ¼ö</span>
+<a name="l00019"></a>00019         <a class="code" href="class_c_player.html#afc2e175de7122626d649da43d3db40a2">TCardInven</a>              __mCardInven;                                                           <span class="comment">// Ä«µå Áö°©</span>
+<a name="l00020"></a>00020         <span class="keywordtype">int</span>                             __mCurrentCard;                                                         <span class="comment">// ÇöÀç ¼±ÅÃµÈ Ä«µå</span>
+<a name="l00021"></a>00021         <a class="code" href="_constants_8h.html#a4db5fb2e90acc4ef6c281d6cca4dea4e">ERank</a>                   __mCurrentRank;                                                         <span class="comment">// ÇöÀç ±İÀ¶±Ç</span>
+<a name="l00022"></a>00022         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>  __mGrade;                                                                       <span class="comment">// ÇöÀç ½Å¿ëµî±Ş</span>
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="keyword">public</span>:
+<a name="l00025"></a>00025         <a class="code" href="class_c_player.html#a931a59adf2ada5376122e30b33ae2c4c">CPlayer</a>();
+<a name="l00026"></a>00026         <span class="keywordtype">void</span>    <a class="code" href="class_c_player.html#acf628f08c81409913cb0833bb115cdb3">Reset</a>(<span class="keywordtype">void</span>);
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028         <span class="keywordtype">void</span>    <a class="code" href="class_c_player.html#a9913e32cb613756cc092eee3a5b51a2b">SetName</a>(<span class="keywordtype">char</span>* pName);
+<a name="l00029"></a>00029         <span class="keywordtype">void</span>    <a class="code" href="class_c_player.html#a51451db1a48869676883ad6f3f405d14">SetRank</a>(<a class="code" href="_constants_8h.html#a4db5fb2e90acc4ef6c281d6cca4dea4e">ERank</a> pRank);
+<a name="l00030"></a>00030         <span class="keywordtype">void</span>    <a class="code" href="class_c_player.html#ad57bf753f80586ec0f64c60e0c4ea0fb">SetGrade</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> pGrade);
+<a name="l00031"></a>00031         <span class="keywordtype">void</span>    <a class="code" href="class_c_player.html#a57cbfab5dbea898e0f1e6d6ef59a299e">IncreaseGrade</a>(<span class="keywordtype">void</span>);
+<a name="l00032"></a>00032         <span class="keywordtype">void</span>    <a class="code" href="class_c_player.html#a0fc3b3c7cd8023dbbbdc2b882f0bb332">DecreaseGrade</a>(<span class="keywordtype">void</span>);
+<a name="l00033"></a>00033         <span class="keywordtype">void</span>    <a class="code" href="class_c_player.html#a794b0017abea4805822cd7b45ad87a9b">AddCreditorCount</a>(<span class="keywordtype">int</span> pCount);
+<a name="l00034"></a>00034         <span class="keywordtype">bool</span>    <a class="code" href="class_c_player.html#a4649279fe3c5b1f48693f82d96d4f78d">BuySomething</a>(uint64_t pPrice);  <span class="comment">// ¹°°ÇÀ» »ì ¶§ È£ÃâÇØ¾ß ÇÏ´Â ÇÔ¼ö</span>
+<a name="l00035"></a>00035         <span class="keywordtype">void</span>    <a class="code" href="class_c_player.html#a8c6227c3a234b86be05de01cefb5523d">AddDept</a>(uint64_t pDept);                        <span class="comment">// ÀÌÀÚ¸¦ °è»êÇÒ ¶§ ÁÖ·Î ¾²ÀÓ</span>
+<a name="l00036"></a>00036         <span class="keywordtype">bool</span>    <a class="code" href="class_c_player.html#a18b2124b5135497c522d83b42a003d9f">AddCard</a>(<a class="code" href="_constants_8h.html#a03f7ec9e12b891db1bbeda07eb4099d7">ECard</a> pCard);
+<a name="l00037"></a>00037         <span class="keywordtype">bool</span>    <a class="code" href="class_c_player.html#ab5eb413c887a4054e7f596f0d579cd9f">SelectCard</a>(<a class="code" href="_constants_8h.html#a03f7ec9e12b891db1bbeda07eb4099d7">ECard</a> pCard);
+<a name="l00038"></a>00038         uint64_t        <a class="code" href="class_c_player.html#a5ab4c5d7ec31884412907a1bbdadad5c">CalcDept</a>(<span class="keywordtype">void</span>);                                 <span class="comment">// ÇöÀç ±İÀ¶±Ç°ú ½Å¿ëµî±ŞÀ» °í·ÁÇÑ ÀÌÀÚ°è»ê</span>
+<a name="l00039"></a>00039         
+<a name="l00040"></a>00040         <span class="keyword">const</span> <span class="keywordtype">char</span>*             <a class="code" href="class_c_player.html#a5ae1229e6474d6cf7979d60bdcfbf889">GetPlayerName</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00041"></a>00041         uint64_t                        <a class="code" href="class_c_player.html#a5de57603460102d5ca5c0993d5e7355c">GetDept</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00042"></a>00042         <span class="keywordtype">int</span>                             <a class="code" href="class_c_player.html#a73cd6d410fba5f19c498e58a3df02a90">GetCreditorCount</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00043"></a>00043         <a class="code" href="class_c_player.html#afc2e175de7122626d649da43d3db40a2">TCardInven</a>*             <a class="code" href="class_c_player.html#adab4b115cbcac118da7ce6b362de9e0f">GetCardInven</a>(<span class="keywordtype">void</span>);
+<a name="l00044"></a>00044         <a class="code" href="class_c_card.html">CCard</a>*                  <a class="code" href="class_c_player.html#a78464f332f77bee53c7acd94b78c40bb">GetCurrentCard</a>(<span class="keywordtype">void</span>);
+<a name="l00045"></a>00045         <a class="code" href="_constants_8h.html#a4db5fb2e90acc4ef6c281d6cca4dea4e">ERank</a>                   <a class="code" href="class_c_player.html#a3837ca31414dc04f376efcf82413293f">GetRank</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00046"></a>00046         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>  <a class="code" href="class_c_player.html#aaa70c733b82d5b1145d206282b49e4dc">GetGrade</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;
+<a name="l00047"></a>00047 };
+</pre></div></div><!-- contents -->
+</div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>ëª¨ë‘</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>í´ë˜ìŠ¤</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>íŒŒì¼ë“¤</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>í•¨ìˆ˜</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>ë³€ìˆ˜</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>íƒ€ì…ì •ì˜</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>ì—´ê±°í˜• íƒ€ì…</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>ì—´ê±°í˜• ë©¤ë²„</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>ë§¤í¬ë¡œ</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="_c_player_8h.html">CPlayer.h</a>      </li>
+
+    <li class="footer">ìƒì„±ì‹œê°„ : ê¸ˆ 2ì›” 3 2012 20:06:45, í”„ë¡œì íŠ¸ëª… : Capital Break, ìƒì„±ì : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

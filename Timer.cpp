@@ -7,6 +7,8 @@ Timer::Timer()
 	pausedTicks = 0;
 	paused = false;
 	started = false;
+        period = 1000;
+        
 }
 void Timer::start()
 {
@@ -16,6 +18,14 @@ void Timer::start()
 
 	startTicks = SDL_GetTicks();
 }
+
+void Timer::start(int prd)
+{
+    period = prd;
+    start();
+}
+
+
 
 void Timer::stop()
 {
