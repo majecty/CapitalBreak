@@ -27,7 +27,6 @@ void GameScene::init()
 		
 
 
-
 	message_box.x = MESSAGE_BOX_X;
 	message_box.y = MESSAGE_BOX_Y;
 	message_box.w = MESSAGE_BOX_W;

@@ -1,6 +1,5 @@
 
 
-* GameScreen 메시지 보드 만들기
 
  글로벌 파일들
 global.h
@@ -8,3 +7,11 @@ common.h
 configuration.h
 globalfunction.h
 constants.h
+
+음악 파일 재생
+
+이미지 효과 개선
+
+점수 매기기
+
+사람 따라다니기

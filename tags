@@ -1,1 +1,1791 @@
-ZeroMemory	common.h	/^#define ZeroMemory(Destination, length)  \\$/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AT	.\common.h	35
+AddCard	.\CPlayer.cpp	/^bool CPlayer::AddCard(ECard pCard)$/
+AddCard	.\CPlayer.h	/^	bool	AddCard(ECard pCard);$/
+AddCreditorCount	.\CPlayer.cpp	/^void CPlayer::AddCreditorCount(int pCount)$/
+AddCreditorCount	.\CPlayer.h	/^	void	AddCreditorCount(int pCount);$/
+AddDept	.\CCard.cpp	/^bool CCard::AddDept(uint64_t pMoney)$/
+AddDept	.\CCard.h	/^	bool	AddDept(uint64_t pMoney);		\/\/ 돈이 리미트보다 커지면 false 를 리턴$/
+AddDept	.\CPlayer.cpp	/^void CPlayer::AddDept(uint64_t pDept)$/
+AddDept	.\CPlayer.h	/^	void	AddDept(uint64_t pDept);			\/\/ 이자를 계산할 때 주로 쓰임$/
+BAR_HEIGHT	.\Configuration.h	/^const int BAR_HEIGHT = SCREEN_HEIGHT;$/
+BAR_WIDTH	.\Configuration.h	/^const int BAR_WIDTH = 150;$/
+BadEndScene	.\Scene.cpp	/^BadEndScene::BadEndScene()$/
+BadEndScene	.\Scene.h	/^		BadEndScene();$/
+BadEndScene	.\Scene.h	/^class BadEndScene : public Scene$/
+BadEndScene::BadEndScene	.\Scene.cpp	/^BadEndScene::BadEndScene()$/
+BadEndScene::BadEndScene	.\Scene.h	/^		BadEndScene();$/
+BadEndScene::clean_up	.\Scene.cpp	/^void BadEndScene::clean_up()$/
+BadEndScene::clean_up	.\Scene.h	/^		virtual void clean_up();$/
+BadEndScene::do_event	.\Scene.cpp	/^void BadEndScene::do_event()$/
+BadEndScene::do_event	.\Scene.h	/^		virtual void do_event();$/
+BadEndScene::init	.\Scene.cpp	/^void BadEndScene::init()$/
+BadEndScene::init	.\Scene.h	/^		virtual void init();$/
+BadEndScene::show	.\Scene.cpp	/^void BadEndScene::show()$/
+BadEndScene::show	.\Scene.h	/^		virtual void show();$/
+Building	.\building.cpp	/^Building::Building(int _x, int _y, int _w, int _h)$/
+Building	.\building.h	/^		Building(int _x, int _y,int _w, int _h);$/
+Building	.\building.h	/^class Building : public Collider$/
+Building::Building	.\building.cpp	/^Building::Building(int _x, int _y, int _w, int _h)$/
+Building::Building	.\building.h	/^		Building(int _x, int _y,int _w, int _h);$/
+Building::card_id	.\building.h	/^		int card_id;$/
+Building::check_collide	.\building.cpp	/^bool Building::check_collide(Collider* other)$/
+Building::check_collide	.\building.h	/^		virtual bool check_collide(Collider*);$/
+Building::clean_up	.\building.cpp	/^void Building::clean_up()$/
+Building::clean_up	.\building.h	/^		void clean_up();$/
+Building::clip	.\building.h	/^		SDL_Rect clip;$/
+Building::depart_image	.\building.h	/^		SDL_Surface *depart_image;$/
+Building::door	.\building.h	/^		Door *door;$/
+Building::get_box	.\building.cpp	/^SDL_Rect* Building::get_box()$/
+Building::get_box	.\building.h	/^		virtual SDL_Rect* get_box();$/
+Building::get_door	.\building.cpp	/^Door* Building::get_door()$/
+Building::get_door	.\building.h	/^		Door* get_door();$/
+Building::h	.\building.h	/^		int w,h;$/
+Building::init	.\building.cpp	/^void Building::init(ECard pCard)$/
+Building::init	.\building.h	/^		void init(ECard pCard);$/
+Building::show	.\building.cpp	/^void Building::show()$/
+Building::show	.\building.h	/^		void show();$/
+Building::w	.\building.h	/^		int w,h;$/
+Building::x	.\building.h	/^		int x,y;$/
+Building::y	.\building.h	/^		int x,y;$/
+BuySomething	.\CCard.cpp	/^bool CCard::BuySomething(uint64_t pPrice)$/
+BuySomething	.\CCard.h	/^	bool	BuySomething(uint64_t pPrice);	\/\/ 물건 살 때 무조건 이 함수 사용 (성공실패)$/
+BuySomething	.\CPlayer.cpp	/^bool CPlayer::BuySomething(uint64_t pPrice)$/
+BuySomething	.\CPlayer.h	/^	bool	BuySomething(uint64_t pPrice);	\/\/ 물건을 살 때 호출해야 하는 함수$/
+CCard	.\CCard.cpp	/^CCard::CCard()$/
+CCard	.\CCard.h	/^	CCard();$/
+CCard	.\CCard.h	/^class CCard$/
+CCard::AddDept	.\CCard.cpp	/^bool CCard::AddDept(uint64_t pMoney)$/
+CCard::AddDept	.\CCard.h	/^	bool	AddDept(uint64_t pMoney);		\/\/ 돈이 리미트보다 커지면 false 를 리턴$/
+CCard::BuySomething	.\CCard.cpp	/^bool CCard::BuySomething(uint64_t pPrice)$/
+CCard::BuySomething	.\CCard.h	/^	bool	BuySomething(uint64_t pPrice);	\/\/ 물건 살 때 무조건 이 함수 사용 (성공실패)$/
+CCard::CCard	.\CCard.cpp	/^CCard::CCard()$/
+CCard::CCard	.\CCard.h	/^	CCard();$/
+CCard::GetCardNo	.\CCard.cpp	/^int CCard::GetCardNo(void) const$/
+CCard::GetCardNo	.\CCard.h	/^	int		GetCardNo(void) const;$/
+CCard::GetDept	.\CCard.cpp	/^uint64_t CCard::GetDept(void) const$/
+CCard::GetDept	.\CCard.h	/^	uint64_t	GetDept(void) const;$/
+CCard::GetGage	.\CCard.cpp	/^int CCard::GetGage(void) const$/
+CCard::GetGage	.\CCard.h	/^	int		GetGage(void) const;$/
+CCard::GetLimit	.\CCard.cpp	/^uint64_t CCard::GetLimit(void) const$/
+CCard::GetLimit	.\CCard.h	/^	uint64_t	GetLimit(void) const;$/
+CCard::MinusGage	.\CCard.cpp	/^void CCard::MinusGage(int pMinus)$/
+CCard::MinusGage	.\CCard.h	/^	void	MinusGage(int pMinus);$/
+CCard::PlusGage	.\CCard.cpp	/^void CCard::PlusGage(int pAdd)$/
+CCard::PlusGage	.\CCard.h	/^	void	PlusGage(int pAdd);$/
+CCard::Reset	.\CCard.cpp	/^void CCard::Reset(void)$/
+CCard::Reset	.\CCard.h	/^	void Reset();$/
+CCard::SetCard	.\CCard.cpp	/^void CCard::SetCard(int pCardNo)$/
+CCard::SetCard	.\CCard.h	/^	void	SetCard(int pCardNo);$/
+CCard::SetDept	.\CCard.cpp	/^bool CCard::SetDept(uint64_t pDept)$/
+CCard::SetDept	.\CCard.h	/^	bool	SetDept(uint64_t pDept);		\/\/ 돈이 리미트보다 크면 false 를 리턴$/
+CCard::SetGage	.\CCard.cpp	/^void CCard::SetGage(int pGage)$/
+CCard::SetGage	.\CCard.h	/^	void	SetGage(int pGage);$/
+CCard::SetLimit	.\CCard.cpp	/^void CCard::SetLimit(unsigned short pGrade, ERank pRank)$/
+CCard::SetLimit	.\CCard.h	/^	void	SetLimit(unsigned short pGrade, ERank pRank);$/
+CCard::__mCard	.\CCard.h	/^	int			__mCard;	\/\/ 카드번호$/
+CCard::__mGage	.\CCard.h	/^	int			__mGage;	\/\/ 게이지$/
+CCard::__mLimit	.\CCard.h	/^	uint64_t		__mLimit;	\/\/ 카드한도$/
+CCard::__mMoney	.\CCard.h	/^	uint64_t		__mMoney;	\/\/ 빌린돈$/
+CHAR_VELOCITY	.\Configuration.h	/^const int CHAR_VELOCITY = 15;$/
+CPlayer	.\CPlayer.cpp	/^CPlayer::CPlayer()$/
+CPlayer	.\CPlayer.h	/^	CPlayer();$/
+CPlayer	.\CPlayer.h	/^class CPlayer$/
+CPlayer::AddCard	.\CPlayer.cpp	/^bool CPlayer::AddCard(ECard pCard)$/
+CPlayer::AddCard	.\CPlayer.h	/^	bool	AddCard(ECard pCard);$/
+CPlayer::AddCreditorCount	.\CPlayer.cpp	/^void CPlayer::AddCreditorCount(int pCount)$/
+CPlayer::AddCreditorCount	.\CPlayer.h	/^	void	AddCreditorCount(int pCount);$/
+CPlayer::AddDept	.\CPlayer.cpp	/^void CPlayer::AddDept(uint64_t pDept)$/
+CPlayer::AddDept	.\CPlayer.h	/^	void	AddDept(uint64_t pDept);			\/\/ 이자를 계산할 때 주로 쓰임$/
+CPlayer::BuySomething	.\CPlayer.cpp	/^bool CPlayer::BuySomething(uint64_t pPrice)$/
+CPlayer::BuySomething	.\CPlayer.h	/^	bool	BuySomething(uint64_t pPrice);	\/\/ 물건을 살 때 호출해야 하는 함수$/
+CPlayer::CPlayer	.\CPlayer.cpp	/^CPlayer::CPlayer()$/
+CPlayer::CPlayer	.\CPlayer.h	/^	CPlayer();$/
+CPlayer::CalcDept	.\CPlayer.cpp	/^uint64_t CPlayer::CalcDept(void)$/
+CPlayer::CalcDept	.\CPlayer.h	/^	uint64_t	CalcDept(void);					\/\/ 현재 금융권과 신용등급을 고려한 이자계산$/
+CPlayer::DecreaseGrade	.\CPlayer.cpp	/^void CPlayer::DecreaseGrade(void)$/
+CPlayer::DecreaseGrade	.\CPlayer.h	/^	void	DecreaseGrade(void);$/
+CPlayer::GetCardInven	.\CPlayer.cpp	/^CPlayer::TCardInven* CPlayer::GetCardInven(void)$/
+CPlayer::GetCardInven	.\CPlayer.h	/^	TCardInven*		GetCardInven(void);$/
+CPlayer::GetCreditorCount	.\CPlayer.cpp	/^int CPlayer::GetCreditorCount(void) const$/
+CPlayer::GetCreditorCount	.\CPlayer.h	/^	int				GetCreditorCount(void) const;$/
+CPlayer::GetCurrentCard	.\CPlayer.cpp	/^CCard* CPlayer::GetCurrentCard(void)$/
+CPlayer::GetCurrentCard	.\CPlayer.h	/^	CCard*			GetCurrentCard(void);$/
+CPlayer::GetDept	.\CPlayer.cpp	/^uint64_t CPlayer::GetDept(void) const$/
+CPlayer::GetDept	.\CPlayer.h	/^	uint64_t			GetDept(void) const;$/
+CPlayer::GetGrade	.\CPlayer.cpp	/^unsigned short CPlayer::GetGrade(void) const$/
+CPlayer::GetGrade	.\CPlayer.h	/^	unsigned short	GetGrade(void) const;$/
+CPlayer::GetPlayerName	.\CPlayer.cpp	/^const char* CPlayer::GetPlayerName(void) const$/
+CPlayer::GetPlayerName	.\CPlayer.h	/^	const char*		GetPlayerName(void) const;$/
+CPlayer::GetRank	.\CPlayer.cpp	/^ERank CPlayer::GetRank(void) const$/
+CPlayer::GetRank	.\CPlayer.h	/^	ERank			GetRank(void) const;$/
+CPlayer::IncreaseGrade	.\CPlayer.cpp	/^void CPlayer::IncreaseGrade(void)$/
+CPlayer::IncreaseGrade	.\CPlayer.h	/^	void	IncreaseGrade(void);$/
+CPlayer::Reset	.\CPlayer.cpp	/^void CPlayer::Reset()$/
+CPlayer::Reset	.\CPlayer.h	/^	void	Reset(void);$/
+CPlayer::SelectCard	.\CPlayer.cpp	/^bool CPlayer::SelectCard(ECard pCard)$/
+CPlayer::SelectCard	.\CPlayer.h	/^	bool	SelectCard(ECard pCard);$/
+CPlayer::SetGrade	.\CPlayer.cpp	/^void CPlayer::SetGrade(unsigned short pGrade)$/
+CPlayer::SetGrade	.\CPlayer.h	/^	void	SetGrade(unsigned short pGrade);$/
+CPlayer::SetName	.\CPlayer.cpp	/^void CPlayer::SetName(char* pName)$/
+CPlayer::SetName	.\CPlayer.h	/^	void	SetName(char* pName);$/
+CPlayer::SetRank	.\CPlayer.cpp	/^void CPlayer::SetRank(ERank pRank)$/
+CPlayer::SetRank	.\CPlayer.h	/^	void	SetRank(ERank pRank);$/
+CPlayer::TCardInven	.\CPlayer.h	/^	typedef std::map<int, CCard>		TCardInven;				\/\/ 카드 지갑(카드번호 + 카드클래스)$/
+CPlayer::TCardInvenItr	.\CPlayer.h	/^	typedef TCardInven::iterator		TCardInvenItr;$/
+CPlayer::__mCardInven	.\CPlayer.h	/^	TCardInven		__mCardInven;								\/\/ 카드 지갑$/
+CPlayer::__mCreditorCount	.\CPlayer.h	/^	int				__mCreditorCount;							\/\/ 빚쟁이 수$/
+CPlayer::__mCurrentCard	.\CPlayer.h	/^	int				__mCurrentCard;								\/\/ 현재 선택된 카드$/
+CPlayer::__mCurrentRank	.\CPlayer.h	/^	ERank			__mCurrentRank;								\/\/ 현재 금융권$/
+CPlayer::__mDept	.\CPlayer.h	/^	uint64_t			__mDept;									\/\/ 현재 빚$/
+CPlayer::__mGrade	.\CPlayer.h	/^	unsigned short	__mGrade;									\/\/ 현재 신용등급$/
+CPlayer::__mPlayerName	.\CPlayer.h	/^	char			__mPlayerName[MAX_PLAYER_NAME_LEN + 1];		\/\/ 플레이어 이름$/
+CalcDept	.\CPlayer.cpp	/^uint64_t CPlayer::CalcDept(void)$/
+CalcDept	.\CPlayer.h	/^	uint64_t	CalcDept(void);					\/\/ 현재 금융권과 신용등급을 고려한 이자계산$/
+Character	.\character.h	/^class Character $/
+Character::add_person	.\character.cpp	/^void Character::add_person(){$/
+Character::add_person	.\character.h	/^		virtual void add_person();$/
+Character::clean_up	.\character.cpp	/^void Character::clean_up(){;}$/
+Character::clean_up	.\character.h	/^		virtual void clean_up();$/
+Character::clip	.\character.h	/^		SDL_Rect clip[4][3];\/\/ 8 은 넉넉잡은 숫$/
+Character::frame	.\character.h	/^		int frame;$/
+Character::h	.\character.h	/^		int w, h;$/
+Character::image	.\character.h	/^		SDL_Surface *image;$/
+Character::init	.\character.cpp	/^void Character::init() {;}$/
+Character::init	.\character.h	/^		virtual void init();$/
+Character::move	.\character.cpp	/^bool Character::move(Uint32 deltaTicks) {return true ;}$/
+Character::move	.\character.h	/^		virtual bool move(Uint32 deltaTicks);$/
+Character::move_back	.\character.cpp	/^void Character::move_back()$/
+Character::move_back	.\character.h	/^		virtual void move_back();$/
+Character::next_person	.\character.h	/^		Character* next_person;$/
+Character::p_x	.\character.h	/^		int x, y, p_x, p_y;$/
+Character::p_y	.\character.h	/^		int x, y, p_x, p_y;$/
+Character::set_clip	.\character.cpp	/^void Character::set_clip(){;}$/
+Character::set_clip	.\character.h	/^		virtual void set_clip();$/
+Character::set_object	.\character.cpp	/^void Character::set_object(SDL_Rect *object){;}$/
+Character::set_object	.\character.h	/^		virtual void set_object(SDL_Rect *object);$/
+Character::show	.\character.cpp	/^void Character::show(SDL_Surface*){;}$/
+Character::show	.\character.h	/^		virtual void show(SDL_Surface*);$/
+Character::w	.\character.h	/^		int w, h;$/
+Character::x	.\character.h	/^		int x, y, p_x, p_y;$/
+Character::xVel	.\character.h	/^		int xVel, yVel;$/
+Character::y	.\character.h	/^		int x, y, p_x, p_y;$/
+Character::yVel	.\character.h	/^		int xVel, yVel;$/
+Character::~Character	.\character.cpp	/^Character::~Character()$/
+Character::~Character	.\character.h	/^                virtual ~Character();$/
+Collider	.\collider.h	/^class Collider$/
+Collider::check_collide	.\collider.h	/^		virtual bool check_collide(Collider*)=0;$/
+Collider::get_box	.\collider.h	/^		virtual SDL_Rect* get_box()=0;$/
+ConsoleGlue	.\lua_glue.cpp	/^static luaL_Reg ConsoleGlue[] = $/
+CreditScene	.\Scene.cpp	/^CreditScene::CreditScene()$/
+CreditScene	.\Scene.h	/^		CreditScene();$/
+CreditScene	.\Scene.h	/^class CreditScene: public Scene$/
+CreditScene::CreditScene	.\Scene.cpp	/^CreditScene::CreditScene()$/
+CreditScene::CreditScene	.\Scene.h	/^		CreditScene();$/
+CreditScene::clean_up	.\Scene.cpp	/^void CreditScene::clean_up()$/
+CreditScene::clean_up	.\Scene.h	/^		virtual void clean_up();$/
+CreditScene::do_event	.\Scene.cpp	/^void CreditScene::do_event()$/
+CreditScene::do_event	.\Scene.h	/^		virtual void do_event();$/
+CreditScene::init	.\Scene.cpp	/^void CreditScene::init()$/
+CreditScene::init	.\Scene.h	/^		virtual void init();$/
+CreditScene::show	.\Scene.cpp	/^void CreditScene::show()$/
+CreditScene::show	.\Scene.h	/^		virtual void show();$/
+DEBUG_ON	.\global.h	/^const bool DEBUG_ON = true;$/
+DEFAULT_FRAME_RATE	.\main.cpp	/^int DEFAULT_FRAME_RATE;$/
+DEFAULT_LIMIT	.\main.cpp	/^int DEFAULT_LIMIT;$/
+DEFAULT_RATE	.\main.cpp	/^double DEFAULT_RATE;$/
+DOOR_H	.\global.h	/^const int DOOR_H = 16;$/
+DOOR_W	.\global.h	/^const int DOOR_W = 50;$/
+DOOR_X	.\global.h	/^const int DOOR_X = 40;$/
+DOOR_Y	.\global.h	/^const int DOOR_Y = 60;$/
+DOWN	.\character.h	/^		const int DOWN = 0;$/
+DecreaseGrade	.\CPlayer.cpp	/^void CPlayer::DecreaseGrade(void)$/
+DecreaseGrade	.\CPlayer.h	/^	void	DecreaseGrade(void);$/
+Door	.\building.cpp	/^Door::Door(int building_x,int building_y, int _x , int _y, int _w, int _h)$/
+Door	.\building.h	/^		Door(int building_x, int building_y, int _x = DOOR_X, int _y = DOOR_Y, int _w= DOOR_W, int _h = DOOR_H);$/
+Door	.\building.h	/^class Door : public Collider$/
+Door::Door	.\building.cpp	/^Door::Door(int building_x,int building_y, int _x , int _y, int _w, int _h)$/
+Door::Door	.\building.h	/^		Door(int building_x, int building_y, int _x = DOOR_X, int _y = DOOR_Y, int _w= DOOR_W, int _h = DOOR_H);$/
+Door::check_collide	.\building.cpp	/^bool Door::check_collide(Collider* other)$/
+Door::check_collide	.\building.h	/^		virtual bool check_collide(Collider*);$/
+Door::get_box	.\building.cpp	/^SDL_Rect* Door::get_box()$/
+Door::get_box	.\building.h	/^		virtual SDL_Rect* get_box();$/
+Door::h	.\building.h	/^		int w,h;$/
+Door::w	.\building.h	/^		int w,h;$/
+Door::x	.\building.h	/^		int x,y;$/
+Door::y	.\building.h	/^		int x,y;$/
+ECard	.\Constants.h	/^enum ECard$/
+ENonBanking	.\Constants.h	/^enum ENonBanking$/
+EPrivateLoan	.\Constants.h	/^enum EPrivateLoan$/
+ERank	.\Constants.h	/^enum ERank$/
+EScript	.\Constants.h	/^enum EScript$/
+FIRSTBUILDING_NUM	.\map.h	/^const int FIRSTBUILDING_NUM  = 6;$/
+GameScene	.\GameScene.cpp	/^GameScene::GameScene()$/
+GameScene	.\Scene.h	/^		GameScene();$/
+GameScene	.\Scene.h	/^class GameScene : public Scene$/
+GameScene::GameScene	.\GameScene.cpp	/^GameScene::GameScene()$/
+GameScene::GameScene	.\Scene.h	/^		GameScene();$/
+GameScene::check_collide	.\GameScene.cpp	/^void GameScene::check_collide()$/
+GameScene::check_collide	.\Scene.h	/^		void check_collide();$/
+GameScene::clean_up	.\GameScene.cpp	/^void GameScene::clean_up()$/
+GameScene::clean_up	.\Scene.h	/^		virtual void clean_up();$/
+GameScene::delta	.\Scene.h	/^		Timer delta;$/
+GameScene::do_event	.\GameScene.cpp	/^void GameScene::do_event()$/
+GameScene::do_event	.\Scene.h	/^		virtual void do_event();$/
+GameScene::gang	.\Scene.h	/^		Character* gang;$/
+GameScene::happy_ending_flag	.\Scene.h	/^		bool happy_ending_flag;$/
+GameScene::hero	.\Scene.h	/^		Hero *hero;$/
+GameScene::init	.\GameScene.cpp	/^void GameScene::init()$/
+GameScene::init	.\Scene.h	/^		virtual void init();$/
+GameScene::interest_count	.\Scene.h	/^		int interest_count;$/
+GameScene::interest_timer	.\Scene.h	/^		Timer interest_timer;$/
+GameScene::map	.\Scene.h	/^		Map* map;$/
+GameScene::message	.\Scene.h	/^		std::string message;$/
+GameScene::message2	.\Scene.h	/^		std::string message2;$/
+GameScene::message_box	.\Scene.h	/^		SDL_Rect message_box;$/
+GameScene::message_box_clip	.\Scene.h	/^		SDL_Rect message_box_clip;$/
+GameScene::message_timer	.\Scene.h	/^		Timer message_timer;$/
+GameScene::message_timer2	.\Scene.h	/^		Timer message_timer2;$/
+GameScene::print_message_1	.\GameScene.cpp	/^void GameScene::print_message_1(std::string msg, int duration)$/
+GameScene::print_message_1	.\Scene.h	/^                void print_message_1(std::string msg, int duration);$/
+GameScene::print_message_2	.\GameScene.cpp	/^void GameScene::print_message_2(std::string msg, int duration) $/
+GameScene::print_message_2	.\Scene.h	/^                void print_message_2(std::string msg, int duration);$/
+GameScene::purchase_count	.\Scene.h	/^		int purchase_count;$/
+GameScene::show	.\GameScene.cpp	/^void GameScene::show()$/
+GameScene::show	.\Scene.h	/^		virtual void show();$/
+GameScene::show_message_box	.\GameScene.cpp	/^void GameScene::show_message_box(){$/
+GameScene::show_message_box	.\Scene.h	/^		void show_message_box();$/
+GameScene::top	.\Scene.h	/^		Top* top;$/
+GameScene::wallet	.\Scene.h	/^		WalletBar* wallet;$/
+Gang	.\character.h	/^class Gang: public Character, public Collider$/
+Gang::add_person	.\character.h	/^		virtual void add_person();$/
+Gang::add_person	.\gang.cpp	/^void Gang::add_person( ){$/
+Gang::check_collide	.\character.h	/^		virtual bool check_collide(Collider*);$/
+Gang::check_collide	.\gang.cpp	/^bool Gang::check_collide(Collider* other)$/
+Gang::clean_up	.\character.h	/^		virtual void clean_up();$/
+Gang::clean_up	.\gang.cpp	/^void Gang::clean_up()$/
+Gang::follow	.\character.h	/^		bool follow();$/
+Gang::follow	.\gang.cpp	/^bool Gang::follow()$/
+Gang::get_box	.\character.h	/^		virtual SDL_Rect* get_box();$/
+Gang::get_box	.\gang.cpp	/^SDL_Rect* Gang::get_box()$/
+Gang::init	.\character.h	/^		virtual void init();$/
+Gang::init	.\gang.cpp	/^void Gang::init()$/
+Gang::move	.\character.h	/^		virtual bool move(Uint32 deltaTicks);$/
+Gang::move	.\gang.cpp	/^bool Gang::move(Uint32 deltaTicks)$/
+Gang::move_back	.\character.h	/^		virtual void move_back();$/
+Gang::move_back	.\gang.cpp	/^void Gang::move_back()$/
+Gang::next_person	.\character.h	/^		Gang* next_person;$/
+Gang::object_point	.\character.h	/^		SDL_Rect* object_point;$/
+Gang::set_clip	.\character.h	/^		virtual void set_clip();$/
+Gang::set_clip	.\gang.cpp	/^void Gang::set_clip()$/
+Gang::set_object	.\character.h	/^		virtual void set_object(SDL_Rect *object);$/
+Gang::set_object	.\gang.cpp	/^void Gang::set_object(SDL_Rect* object)$/
+Gang::show	.\character.h	/^		virtual void show(SDL_Surface*);$/
+Gang::show	.\gang.cpp	/^void Gang::show(SDL_Surface* screen)$/
+GetCardInven	.\CPlayer.cpp	/^CPlayer::TCardInven* CPlayer::GetCardInven(void)$/
+GetCardInven	.\CPlayer.h	/^	TCardInven*		GetCardInven(void);$/
+GetCardNo	.\CCard.cpp	/^int CCard::GetCardNo(void) const$/
+GetCardNo	.\CCard.h	/^	int		GetCardNo(void) const;$/
+GetCreditorCount	.\CPlayer.cpp	/^int CPlayer::GetCreditorCount(void) const$/
+GetCreditorCount	.\CPlayer.h	/^	int				GetCreditorCount(void) const;$/
+GetCurrentCard	.\CPlayer.cpp	/^CCard* CPlayer::GetCurrentCard(void)$/
+GetCurrentCard	.\CPlayer.h	/^	CCard*			GetCurrentCard(void);$/
+GetDept	.\CCard.cpp	/^uint64_t CCard::GetDept(void) const$/
+GetDept	.\CCard.h	/^	uint64_t	GetDept(void) const;$/
+GetDept	.\CPlayer.cpp	/^uint64_t CPlayer::GetDept(void) const$/
+GetDept	.\CPlayer.h	/^	uint64_t			GetDept(void) const;$/
+GetGage	.\CCard.cpp	/^int CCard::GetGage(void) const$/
+GetGage	.\CCard.h	/^	int		GetGage(void) const;$/
+GetGlobalLimit	.\GlobalFunctions.cpp	/^uint64_t GetGlobalLimit(unsigned short pGrade, ERank pRank)$/
+GetGlobalLimit	.\GlobalFunctions.h	/^uint64_t GetGlobalLimit(unsigned short pGrade, ERank pRank);$/
+GetGrade	.\CPlayer.cpp	/^unsigned short CPlayer::GetGrade(void) const$/
+GetGrade	.\CPlayer.h	/^	unsigned short	GetGrade(void) const;$/
+GetLimit	.\CCard.cpp	/^uint64_t CCard::GetLimit(void) const$/
+GetLimit	.\CCard.h	/^	uint64_t	GetLimit(void) const;$/
+GetNonInterestTime	.\GlobalFunctions.cpp	/^double GetNonInterestTime(unsigned short pGrade, ERank pRank)$/
+GetNonInterestTime	.\GlobalFunctions.h	/^double GetNonInterestTime(unsigned short pGrade, ERank pRank);$/
+GetPlayerName	.\CPlayer.cpp	/^const char* CPlayer::GetPlayerName(void) const$/
+GetPlayerName	.\CPlayer.h	/^	const char*		GetPlayerName(void) const;$/
+GetRank	.\CPlayer.cpp	/^ERank CPlayer::GetRank(void) const$/
+GetRank	.\CPlayer.h	/^	ERank			GetRank(void) const;$/
+GetRate	.\GlobalFunctions.cpp	/^double GetRate(unsigned short pGrade, ERank pRank)$/
+GetRate	.\GlobalFunctions.h	/^double GetRate(unsigned short pGrade, ERank pRank);$/
+GoodEndScene	.\Scene.cpp	/^GoodEndScene::GoodEndScene()$/
+GoodEndScene	.\Scene.h	/^		GoodEndScene();$/
+GoodEndScene	.\Scene.h	/^class GoodEndScene: public Scene$/
+GoodEndScene::GoodEndScene	.\Scene.cpp	/^GoodEndScene::GoodEndScene()$/
+GoodEndScene::GoodEndScene	.\Scene.h	/^		GoodEndScene();$/
+GoodEndScene::clean_up	.\Scene.cpp	/^void GoodEndScene::clean_up()$/
+GoodEndScene::clean_up	.\Scene.h	/^		virtual void clean_up();$/
+GoodEndScene::do_event	.\Scene.cpp	/^void GoodEndScene::do_event()$/
+GoodEndScene::do_event	.\Scene.h	/^		virtual void do_event();$/
+GoodEndScene::init	.\Scene.cpp	/^void GoodEndScene::init()$/
+GoodEndScene::init	.\Scene.h	/^		virtual void init();$/
+GoodEndScene::show	.\Scene.cpp	/^void GoodEndScene::show()$/
+GoodEndScene::show	.\Scene.h	/^		virtual void show();$/
+Hero	.\character.h	/^class Hero : public Character ,public Collider$/
+Hero::aPlayer	.\character.h	/^		CPlayer  aPlayer;$/
+Hero::add_card	.\character.cpp	/^void Hero::add_card(ECard pCard )$/
+Hero::add_card	.\character.h	/^		void add_card(ECard pCard);$/
+Hero::add_person	.\character.cpp	/^void Hero::add_person( ){$/
+Hero::add_person	.\character.h	/^		virtual void add_person();$/
+Hero::buy	.\character.cpp	/^bool Hero::buy()$/
+Hero::buy	.\character.h	/^		bool buy();$/
+Hero::calc_dept	.\character.cpp	/^int Hero::calc_dept()$/
+Hero::calc_dept	.\character.h	/^		int calc_dept();$/
+Hero::can_buy	.\character.cpp	/^void Hero::can_buy()$/
+Hero::can_buy	.\character.h	/^		void can_buy();$/
+Hero::cant_buy	.\character.cpp	/^void Hero::cant_buy()$/
+Hero::cant_buy	.\character.h	/^		void cant_buy();$/
+Hero::check_collide	.\character.cpp	/^bool Hero::check_collide(Collider* other)$/
+Hero::check_collide	.\character.h	/^		virtual bool check_collide(Collider*);$/
+Hero::clean_up	.\character.cpp	/^void Hero::clean_up()$/
+Hero::clean_up	.\character.h	/^		virtual void clean_up();$/
+Hero::decrease_grade	.\character.cpp	/^void Hero::decrease_grade()$/
+Hero::decrease_grade	.\character.h	/^		void decrease_grade();$/
+Hero::enter_building	.\character.cpp	/^void Hero::enter_building()$/
+Hero::enter_building	.\character.h	/^                void enter_building();$/
+Hero::exit_building	.\character.cpp	/^void Hero::exit_building()$/
+Hero::exit_building	.\character.h	/^                void exit_building();$/
+Hero::get_box	.\character.cpp	/^SDL_Rect* Hero::get_box()$/
+Hero::get_box	.\character.h	/^		virtual SDL_Rect* get_box();$/
+Hero::get_current_card	.\character.cpp	/^ECard Hero::get_current_card()$/
+Hero::get_current_card	.\character.h	/^		ECard get_current_card();$/
+Hero::get_depth	.\character.cpp	/^uint64_t Hero::get_depth()$/
+Hero::get_depth	.\character.h	/^		uint64_t get_depth();$/
+Hero::get_grade	.\character.cpp	/^unsigned short Hero::get_grade()$/
+Hero::get_grade	.\character.h	/^		unsigned short get_grade();$/
+Hero::get_limit	.\character.cpp	/^uint64_t Hero::get_limit()$/
+Hero::get_limit	.\character.h	/^		uint64_t get_limit();$/
+Hero::handleInput	.\character.cpp	/^void Hero::handleInput()$/
+Hero::handleInput	.\character.h	/^		void handleInput();$/
+Hero::has_card	.\character.cpp	/^bool Hero::has_card()$/
+Hero::has_card	.\character.h	/^		bool has_card();$/
+Hero::increase_grade	.\character.cpp	/^void Hero::increase_grade()$/
+Hero::increase_grade	.\character.h	/^		void increase_grade();$/
+Hero::indoor	.\character.h	/^                bool indoor;$/
+Hero::init	.\character.cpp	/^void Hero::init()$/
+Hero::init	.\character.h	/^		virtual void init();$/
+Hero::is_buyable	.\character.h	/^		bool is_buyable;$/
+Hero::is_indoor	.\character.cpp	/^bool Hero::is_indoor()$/
+Hero::is_indoor	.\character.h	/^                bool is_indoor();$/
+Hero::move	.\character.cpp	/^bool Hero::move(Uint32 deltaTicks)$/
+Hero::move	.\character.h	/^		virtual bool move(Uint32 deltaTicks);$/
+Hero::move_back	.\character.cpp	/^void Hero::move_back()$/
+Hero::move_back	.\character.h	/^		virtual void move_back();$/
+Hero::next_person	.\character.h	/^		Character* next_person;$/
+Hero::select_card	.\character.cpp	/^void Hero::select_card(ECard pCard )$/
+Hero::select_card	.\character.h	/^		void select_card(ECard pCard);$/
+Hero::set_clip	.\character.cpp	/^void Hero::set_clip()$/
+Hero::set_clip	.\character.h	/^		virtual void set_clip();$/
+Hero::show	.\character.cpp	/^void Hero::show(SDL_Surface* screen)$/
+Hero::show	.\character.h	/^		virtual void show(SDL_Surface*);$/
+IS_FULL_SCREEN	.\main.cpp	/^bool IS_FULL_SCREEN;$/
+IncreaseGrade	.\CPlayer.cpp	/^void CPlayer::IncreaseGrade(void)$/
+IncreaseGrade	.\CPlayer.h	/^	void	IncreaseGrade(void);$/
+L	.\lauxlib.h	/^  lua_State *L;$/
+L	.\lua\lauxlib.h	/^  lua_State *L;$/
+L	.\main.cpp	/^lua_State* L;$/
+LEFT	.\character.h	/^		const int LEFT = 1;$/
+LIMIT_RATE	.\main.cpp	/^int LIMIT_RATE;$/
+LUAI_BITSINT	.\lua\luaconf.h	314
+LUAI_BITSINT	.\lua\luaconf.h	317
+LUAI_BITSINT	.\luaconf.h	392
+LUAI_BITSINT	.\luaconf.h	395
+LUAI_DATA	.\luaconf.h	183
+LUAI_DATA	.\luaconf.h	188
+LUAI_DATA	.\luaconf.h	192
+LUAI_DDEC	.\lua\luaconf.h	182
+LUAI_DDEC	.\lua\luaconf.h	187
+LUAI_DDEF	.\lua\luaconf.h	183
+LUAI_DDEF	.\lua\luaconf.h	188
+LUAI_EXTRASPACE	.\luaconf.h	715
+LUAI_FIRSTPSEUDOIDX	.\lua\luaconf.h	358
+LUAI_FUNC	.\lua\luaconf.h	181
+LUAI_FUNC	.\lua\luaconf.h	186
+LUAI_FUNC	.\luaconf.h	182
+LUAI_FUNC	.\luaconf.h	187
+LUAI_FUNC	.\luaconf.h	191
+LUAI_GCMUL	.\luaconf.h	313
+LUAI_GCPAUSE	.\luaconf.h	302
+LUAI_INT32	.\luaconf.h	415
+LUAI_INT32	.\luaconf.h	422
+LUAI_MAXCALLS	.\luaconf.h	435
+LUAI_MAXCCALLS	.\luaconf.h	468
+LUAI_MAXCSTACK	.\luaconf.h	446
+LUAI_MAXINT32	.\luaconf.h	416
+LUAI_MAXINT32	.\luaconf.h	423
+LUAI_MAXNUMBER2STR	.\lua\luaconf.h	400
+LUAI_MAXNUMBER2STR	.\luaconf.h	524
+LUAI_MAXSTACK	.\lua\luaconf.h	352
+LUAI_MAXSTACK	.\lua\luaconf.h	354
+LUAI_MAXUPVALUES	.\luaconf.h	482
+LUAI_MAXVARS	.\luaconf.h	475
+LUAI_MEM	.\lua\luaconf.h	336
+LUAI_MEM	.\lua\luaconf.h	341
+LUAI_MEM	.\luaconf.h	418
+LUAI_MEM	.\luaconf.h	425
+LUAI_THROW	.\luaconf.h	608
+LUAI_THROW	.\luaconf.h	615
+LUAI_THROW	.\luaconf.h	621
+LUAI_TRY	.\luaconf.h	609
+LUAI_TRY	.\luaconf.h	616
+LUAI_TRY	.\luaconf.h	622
+LUAI_UACNUMBER	.\lua\luaconf.h	388
+LUAI_UACNUMBER	.\luaconf.h	511
+LUAI_UINT32	.\luaconf.h	414
+LUAI_UINT32	.\luaconf.h	421
+LUAI_UMEM	.\lua\luaconf.h	335
+LUAI_UMEM	.\lua\luaconf.h	340
+LUAI_UMEM	.\luaconf.h	417
+LUAI_UMEM	.\luaconf.h	424
+LUAI_USER_ALIGNMENT_T	.\luaconf.h	595
+LUALIB_API	.\lua\luaconf.h	161
+LUALIB_API	.\luaconf.h	169
+LUAL_BUFFERSIZE	.\lua\luaconf.h	367
+LUAL_BUFFERSIZE	.\luaconf.h	488
+LUAMOD_API	.\lua\luaconf.h	162
+LUA_ANSI	.\lua\luaconf.h	28
+LUA_ANSI	.\luaconf.h	28
+LUA_API	.\lua\luaconf.h	148
+LUA_API	.\lua\luaconf.h	150
+LUA_API	.\lua\luaconf.h	155
+LUA_API	.\luaconf.h	157
+LUA_API	.\luaconf.h	159
+LUA_API	.\luaconf.h	164
+LUA_AUTHORS	.\lua.h	23
+LUA_AUTHORS	.\lua\lua.h	27
+LUA_BITLIBNAME	.\lua\lualib.h	32
+LUA_CDIR	.\lua\luaconf.h	106
+LUA_CDIR	.\lua\luaconf.h	93
+LUA_CDIR	.\luaconf.h	89
+LUA_CDIR	.\luaconf.h	99
+LUA_COLIBNAME	.\lua\lualib.h	17
+LUA_COLIBNAME	.\lualib.h	18
+LUA_COMPAT_GETN	.\luaconf.h	322
+LUA_COMPAT_GFIND	.\luaconf.h	358
+LUA_COMPAT_LOADERS	.\lua\luaconf.h	254
+LUA_COMPAT_LOADLIB	.\luaconf.h	329
+LUA_COMPAT_LOADSTRING	.\lua\luaconf.h	276
+LUA_COMPAT_LOG10	.\lua\luaconf.h	270
+LUA_COMPAT_LSTR	.\luaconf.h	351
+LUA_COMPAT_MAXN	.\lua\luaconf.h	281
+LUA_COMPAT_MOD	.\luaconf.h	343
+LUA_COMPAT_MODULE	.\lua\luaconf.h	299
+LUA_COMPAT_OPENLIB	.\luaconf.h	366
+LUA_COMPAT_UNPACK	.\lua\luaconf.h	248
+LUA_COMPAT_VARARG	.\luaconf.h	336
+LUA_COPYRIGHT	.\lua.h	22
+LUA_COPYRIGHT	.\lua\lua.h	26
+LUA_CPATH	.\luaconf.h	70
+LUA_CPATH_DEFAULT	.\lua\luaconf.h	110
+LUA_CPATH_DEFAULT	.\lua\luaconf.h	97
+LUA_CPATH_DEFAULT	.\luaconf.h	103
+LUA_CPATH_DEFAULT	.\luaconf.h	93
+LUA_DBLIBNAME	.\lua\lualib.h	38
+LUA_DBLIBNAME	.\lualib.h	36
+LUA_DIRSEP	.\lua\luaconf.h	122
+LUA_DIRSEP	.\lua\luaconf.h	124
+LUA_DIRSEP	.\luaconf.h	114
+LUA_DIRSEP	.\luaconf.h	116
+LUA_DL_DLL	.\lua\luaconf.h	37
+LUA_DL_DLL	.\luaconf.h	705
+LUA_DL_DLOPEN	.\luaconf.h	701
+LUA_DL_DYLD	.\luaconf.h	44
+LUA_ENV	.\lua\luaconf.h	133
+LUA_ENVIRONINDEX	.\lua.h	37
+LUA_ERRERR	.\lua.h	47
+LUA_ERRERR	.\lua\lua.h	51
+LUA_ERRFILE	.\lauxlib.h	32
+LUA_ERRFILE	.\lua\lauxlib.h	20
+LUA_ERRGCMM	.\lua\lua.h	50
+LUA_ERRMEM	.\lua.h	46
+LUA_ERRMEM	.\lua\lua.h	49
+LUA_ERRRUN	.\lua.h	44
+LUA_ERRRUN	.\lua\lua.h	47
+LUA_ERRSYNTAX	.\lua.h	45
+LUA_ERRSYNTAX	.\lua\lua.h	48
+LUA_EXECDIR	.\luaconf.h	134
+LUA_FILEHANDLE	.\lua\lauxlib.h	185
+LUA_FILEHANDLE	.\lualib.h	15
+LUA_GCCOLLECT	.\lua.h	223
+LUA_GCCOLLECT	.\lua\lua.h	278
+LUA_GCCOUNT	.\lua.h	224
+LUA_GCCOUNT	.\lua\lua.h	279
+LUA_GCCOUNTB	.\lua.h	225
+LUA_GCCOUNTB	.\lua\lua.h	280
+LUA_GCGEN	.\lua\lua.h	286
+LUA_GCINC	.\lua\lua.h	287
+LUA_GCISRUNNING	.\lua\lua.h	285
+LUA_GCRESTART	.\lua.h	222
+LUA_GCRESTART	.\lua\lua.h	277
+LUA_GCSETMAJORINC	.\lua\lua.h	284
+LUA_GCSETPAUSE	.\lua.h	227
+LUA_GCSETPAUSE	.\lua\lua.h	282
+LUA_GCSETSTEPMUL	.\lua.h	228
+LUA_GCSETSTEPMUL	.\lua\lua.h	283
+LUA_GCSTEP	.\lua.h	226
+LUA_GCSTEP	.\lua\lua.h	281
+LUA_GCSTOP	.\lua.h	221
+LUA_GCSTOP	.\lua\lua.h	276
+LUA_GLOBALSINDEX	.\lua.h	38
+LUA_HOOKCALL	.\lua.h	311
+LUA_HOOKCALL	.\lua\lua.h	355
+LUA_HOOKCOUNT	.\lua.h	314
+LUA_HOOKCOUNT	.\lua\lua.h	358
+LUA_HOOKLINE	.\lua.h	313
+LUA_HOOKLINE	.\lua\lua.h	357
+LUA_HOOKRET	.\lua.h	312
+LUA_HOOKRET	.\lua\lua.h	356
+LUA_HOOKTAILCALL	.\lua\lua.h	359
+LUA_HOOKTAILRET	.\lua.h	315
+LUA_IDSIZE	.\lua\luaconf.h	206
+LUA_IDSIZE	.\luaconf.h	210
+LUA_IEEE754TRICK	.\lua\luaconf.h	472
+LUA_IEEEENDIAN	.\lua\luaconf.h	482
+LUA_IEEEENDIAN	.\lua\luaconf.h	484
+LUA_IGMARK	.\luaconf.h	135
+LUA_INIT	.\luaconf.h	71
+LUA_INT32	.\lua\luaconf.h	334
+LUA_INT32	.\lua\luaconf.h	339
+LUA_INTEGER	.\lua\luaconf.h	449
+LUA_INTEGER	.\luaconf.h	143
+LUA_INTFRMLEN	.\luaconf.h	741
+LUA_INTFRMLEN	.\luaconf.h	746
+LUA_INTFRM_T	.\luaconf.h	742
+LUA_INTFRM_T	.\luaconf.h	747
+LUA_IOLIBNAME	.\lua\lualib.h	23
+LUA_IOLIBNAME	.\lualib.h	24
+LUA_LDIR	.\lua\luaconf.h	105
+LUA_LDIR	.\lua\luaconf.h	92
+LUA_LDIR	.\luaconf.h	88
+LUA_LDIR	.\luaconf.h	98
+LUA_LOADLIBNAME	.\lua\lualib.h	41
+LUA_LOADLIBNAME	.\lualib.h	39
+LUA_MASKCALL	.\lua.h	321
+LUA_MASKCALL	.\lua\lua.h	365
+LUA_MASKCOUNT	.\lua.h	324
+LUA_MASKCOUNT	.\lua\lua.h	368
+LUA_MASKLINE	.\lua.h	323
+LUA_MASKLINE	.\lua\lua.h	367
+LUA_MASKRET	.\lua.h	322
+LUA_MASKRET	.\lua\lua.h	366
+LUA_MATHLIBNAME	.\lua\lualib.h	35
+LUA_MATHLIBNAME	.\lualib.h	33
+LUA_MAXCAPTURES	.\luaconf.h	633
+LUA_MAXINPUT	.\luaconf.h	262
+LUA_MINSTACK	.\lua.h	87
+LUA_MINSTACK	.\lua\lua.h	93
+LUA_MULTRET	.\lua.h	30
+LUA_MULTRET	.\lua\lua.h	34
+LUA_NANTRICK_LE	.\lua\luaconf.h	512
+LUA_NOREF	.\lauxlib.h	159
+LUA_NOREF	.\lua\lauxlib.h	69
+LUA_NUMBER	.\lua\luaconf.h	382
+LUA_NUMBER	.\luaconf.h	505
+LUA_NUMBER_DOUBLE	.\lua\luaconf.h	381
+LUA_NUMBER_DOUBLE	.\luaconf.h	504
+LUA_NUMBER_FMT	.\lua\luaconf.h	398
+LUA_NUMBER_FMT	.\luaconf.h	522
+LUA_NUMBER_SCAN	.\lua\luaconf.h	397
+LUA_NUMBER_SCAN	.\luaconf.h	521
+LUA_NUMTAGS	.\lua\lua.h	88
+LUA_OK	.\lua\lua.h	45
+LUA_OPADD	.\lua\lua.h	179
+LUA_OPDIV	.\lua\lua.h	182
+LUA_OPEQ	.\lua\lua.h	189
+LUA_OPLE	.\lua\lua.h	191
+LUA_OPLT	.\lua\lua.h	190
+LUA_OPMOD	.\lua\lua.h	183
+LUA_OPMUL	.\lua\lua.h	181
+LUA_OPPOW	.\lua\lua.h	184
+LUA_OPSUB	.\lua\lua.h	180
+LUA_OPUNM	.\lua\lua.h	185
+LUA_OSLIBNAME	.\lua\lualib.h	26
+LUA_OSLIBNAME	.\lualib.h	27
+LUA_PATH	.\luaconf.h	69
+LUA_PATHSEP	.\luaconf.h	132
+LUA_PATH_DEFAULT	.\lua\luaconf.h	107
+LUA_PATH_DEFAULT	.\lua\luaconf.h	94
+LUA_PATH_DEFAULT	.\luaconf.h	100
+LUA_PATH_DEFAULT	.\luaconf.h	90
+LUA_PATH_MARK	.\luaconf.h	133
+LUA_PROGNAME	.\luaconf.h	254
+LUA_PROMPT	.\luaconf.h	245
+LUA_PROMPT2	.\luaconf.h	246
+LUA_QL	.\lua\luaconf.h	197
+LUA_QL	.\luaconf.h	201
+LUA_QS	.\lua\luaconf.h	198
+LUA_QS	.\luaconf.h	202
+LUA_REFNIL	.\lauxlib.h	160
+LUA_REFNIL	.\lua\lauxlib.h	70
+LUA_REGISTRYINDEX	.\lua.h	36
+LUA_REGISTRYINDEX	.\lua\lua.h	40
+LUA_RELEASE	.\lua.h	20
+LUA_RELEASE	.\lua\lua.h	25
+LUA_RIDX_GLOBALS	.\lua\lua.h	98
+LUA_RIDX_LAST	.\lua\lua.h	99
+LUA_RIDX_MAINTHREAD	.\lua\lua.h	97
+LUA_ROOT	.\lua\luaconf.h	104
+LUA_ROOT	.\luaconf.h	97
+LUA_SIGNATURE	.\lua.h	27
+LUA_SIGNATURE	.\lua\lua.h	31
+LUA_STRLIBNAME	.\lua\lualib.h	29
+LUA_STRLIBNAME	.\lualib.h	30
+LUA_TABLIBNAME	.\lua\lualib.h	20
+LUA_TABLIBNAME	.\lualib.h	21
+LUA_TBOOLEAN	.\lua.h	75
+LUA_TBOOLEAN	.\lua\lua.h	79
+LUA_TFUNCTION	.\lua.h	80
+LUA_TFUNCTION	.\lua\lua.h	84
+LUA_TLIGHTUSERDATA	.\lua.h	76
+LUA_TLIGHTUSERDATA	.\lua\lua.h	80
+LUA_TMPNAMBUFSIZE	.\luaconf.h	648
+LUA_TMPNAMBUFSIZE	.\luaconf.h	656
+LUA_TNIL	.\lua.h	74
+LUA_TNIL	.\lua\lua.h	78
+LUA_TNONE	.\lua.h	72
+LUA_TNONE	.\lua\lua.h	76
+LUA_TNUMBER	.\lua.h	77
+LUA_TNUMBER	.\lua\lua.h	81
+LUA_TSTRING	.\lua.h	78
+LUA_TSTRING	.\lua\lua.h	82
+LUA_TTABLE	.\lua.h	79
+LUA_TTABLE	.\lua\lua.h	83
+LUA_TTHREAD	.\lua.h	82
+LUA_TTHREAD	.\lua\lua.h	86
+LUA_TUSERDATA	.\lua.h	81
+LUA_TUSERDATA	.\lua\lua.h	85
+LUA_UNSIGNED	.\lua\luaconf.h	455
+LUA_USE_AFORMAT	.\lua\luaconf.h	38
+LUA_USE_AFORMAT	.\lua\luaconf.h	48
+LUA_USE_AFORMAT	.\lua\luaconf.h	57
+LUA_USE_DLOPEN	.\lua\luaconf.h	45
+LUA_USE_DLOPEN	.\lua\luaconf.h	54
+LUA_USE_DLOPEN	.\luaconf.h	38
+LUA_USE_GMTIME_R	.\lua\luaconf.h	73
+LUA_USE_ISATTY	.\lua\luaconf.h	70
+LUA_USE_ISATTY	.\luaconf.h	56
+LUA_USE_LONGLONG	.\lua\luaconf.h	49
+LUA_USE_LONGLONG	.\lua\luaconf.h	58
+LUA_USE_MKSTEMP	.\lua\luaconf.h	69
+LUA_USE_MKSTEMP	.\luaconf.h	55
+LUA_USE_POPEN	.\lua\luaconf.h	71
+LUA_USE_POPEN	.\luaconf.h	57
+LUA_USE_POSIX	.\lua\luaconf.h	44
+LUA_USE_POSIX	.\lua\luaconf.h	53
+LUA_USE_POSIX	.\luaconf.h	37
+LUA_USE_POSIX	.\luaconf.h	43
+LUA_USE_READLINE	.\lua\luaconf.h	46
+LUA_USE_READLINE	.\lua\luaconf.h	55
+LUA_USE_READLINE	.\luaconf.h	39
+LUA_USE_STRTODHEX	.\lua\luaconf.h	47
+LUA_USE_STRTODHEX	.\lua\luaconf.h	56
+LUA_USE_ULONGJMP	.\lua\luaconf.h	72
+LUA_USE_ULONGJMP	.\luaconf.h	58
+LUA_VDIR	.\lua\luaconf.h	103
+LUA_VERSION	.\lua.h	19
+LUA_VERSION	.\lua\lua.h	24
+LUA_VERSION_MAJOR	.\lua\lua.h	19
+LUA_VERSION_MINOR	.\lua\lua.h	20
+LUA_VERSION_NUM	.\lua.h	21
+LUA_VERSION_NUM	.\lua\lua.h	21
+LUA_VERSION_RELEASE	.\lua\lua.h	22
+LUA_WIN	.\lua\luaconf.h	33
+LUA_WIN	.\luaconf.h	33
+LUA_YIELD	.\lua.h	43
+LUA_YIELD	.\lua\lua.h	46
+LuaGlue	.\lua_glue.cpp	9
+MACROTOSTRING	.\common.h	34
+MAP_H	.\global.h	/^const int MAP_H = 340;$/
+MAP_HEIGHT	.\Configuration.h	/^const int MAP_HEIGHT = SCREEN_HEIGHT;$/
+MAP_W	.\global.h	/^const int MAP_W = 500;$/
+MAP_WIDTH	.\Configuration.h	/^const int MAP_WIDTH = 490;$/
+MAP_X	.\global.h	/^const int MAP_X = 140;$/
+MAP_Y	.\global.h	/^const int MAP_Y = 30;$/
+MAX_CARD_NAME	.\Constants.h	2
+MAX_PLAYER_NAME_LEN	.\Constants.h	3
+MESSAGE_BOX_1_EVENT	.\global.h	/^const int MESSAGE_BOX_1_EVENT = 110;$/
+MESSAGE_BOX_2_EVENT	.\global.h	/^const int MESSAGE_BOX_2_EVENT = 111;$/
+MESSAGE_BOX_H	.\global.h	/^const int MESSAGE_BOX_H = 100;$/
+MESSAGE_BOX_W	.\global.h	/^const int MESSAGE_BOX_W = 500;$/
+MESSAGE_BOX_X	.\global.h	/^const int MESSAGE_BOX_X = 140+10;$/
+MESSAGE_BOX_Y	.\global.h	/^const int MESSAGE_BOX_Y = 389;$/
+MS_ASMTRICK	.\lua\luaconf.h	466
+Map	.\map.h	/^class Map$/
+Map::background	.\map.h	/^		SDL_Surface* background;$/
+Map::boxes	.\map.h	/^		vector<SDL_Rect*> boxes;$/
+Map::buildings	.\map.h	/^		vector<Building*> buildings;$/
+Map::clean_up	.\map.cpp	/^void Map::clean_up()$/
+Map::clean_up	.\map.h	/^		void clean_up();$/
+Map::clip	.\map.h	/^		SDL_Rect clip;$/
+Map::get_boxes	.\map.cpp	/^vector<SDL_Rect*> Map::get_boxes()$/
+Map::get_boxes	.\map.h	/^		vector<SDL_Rect*> get_boxes(); \/\/ for collide$/
+Map::get_buildings	.\map.cpp	/^vector<Building*> Map::get_buildings()$/
+Map::get_buildings	.\map.h	/^		vector<Building*> get_buildings();$/
+Map::h	.\map.h	/^		int w,h;$/
+Map::init	.\map.cpp	/^void Map::init(SDL_Surface* back)$/
+Map::init	.\map.h	/^		void init(SDL_Surface* back);$/
+Map::show	.\map.cpp	/^void Map::show()$/
+Map::show	.\map.h	/^		void show();$/
+Map::w	.\map.h	/^		int w,h;$/
+Map::x	.\map.h	/^		int x,y;$/
+Map::y	.\map.h	/^		int x,y;$/
+MinusGage	.\CCard.cpp	/^void CCard::MinusGage(int pMinus)$/
+MinusGage	.\CCard.h	/^	void	MinusGage(int pMinus);$/
+OPEN_DOOR_EVENT	.\global.h	/^const int OPEN_DOOR_EVENT = 100;$/
+PlusGage	.\CCard.cpp	/^void CCard::PlusGage(int pAdd)$/
+PlusGage	.\CCard.h	/^	void	PlusGage(int pAdd);$/
+RANK_MAX_COUNT	.\Constants.h	4
+RATE_RATE	.\main.cpp	/^double RATE_RATE;$/
+RIGHT	.\character.h	/^		const int RIGHT = 2;$/
+Reset	.\CCard.cpp	/^void CCard::Reset(void)$/
+Reset	.\CCard.h	/^	void Reset();$/
+Reset	.\CPlayer.cpp	/^void CPlayer::Reset()$/
+Reset	.\CPlayer.h	/^	void	Reset(void);$/
+SCENE_BADEND	.\global.h	/^const int SCENE_BADEND = 2;$/
+SCENE_CREDIT	.\global.h	/^const int SCENE_CREDIT = 4;$/
+SCENE_GAME	.\global.h	/^const int SCENE_GAME = 1;$/
+SCENE_GOODEND	.\global.h	/^const int SCENE_GOODEND = 3;$/
+SCENE_NUM	.\global.h	/^const int SCENE_NUM = 5;$/
+SCENE_START	.\global.h	/^const int SCENE_START = 0;$/
+SCREEN_BPP	.\Configuration.h	/^const int SCREEN_BPP = 32;$/
+SCREEN_HEIGHT	.\Configuration.h	/^const int SCREEN_HEIGHT = 480;$/
+SCREEN_WIDTH	.\Configuration.h	/^const int SCREEN_WIDTH = 640;$/
+SECONDBUILDING_NUM	.\map.h	/^const int SECONDBUILDING_NUM  = 4;$/
+START_GRADE	.\main.cpp	/^int START_GRADE;$/
+STOP	.\character.h	/^		const int STOP = 4;$/
+STRINGIFY	.\common.h	33
+Scene	.\Scene.h	/^class Scene {$/
+Scene::background	.\Scene.h	/^		SDL_Surface *background;$/
+Scene::clean_up	.\Scene.cpp	/^void Scene::clean_up(){;}$/
+Scene::clean_up	.\Scene.h	/^		virtual void clean_up();$/
+Scene::do_event	.\Scene.cpp	/^void Scene::do_event(){;}$/
+Scene::do_event	.\Scene.h	/^		virtual void do_event();$/
+Scene::init	.\Scene.cpp	/^void Scene::init() { ;$/
+Scene::init	.\Scene.h	/^		virtual void init();$/
+Scene::show	.\Scene.cpp	/^void Scene::show(){;}$/
+Scene::show	.\Scene.h	/^		virtual void show();$/
+Scene::~Scene	.\Scene.cpp	/^Scene::~Scene() { ; $/
+Scene::~Scene	.\Scene.h	/^                virtual ~Scene();$/
+Scene_Name	.\Constants.h	/^const char Scene_Name[5][16] = $/
+Script_Name	.\Constants.h	/^const char Script_Name[32][16] = $/
+SelectCard	.\CPlayer.cpp	/^bool CPlayer::SelectCard(ECard pCard)$/
+SelectCard	.\CPlayer.h	/^	bool	SelectCard(ECard pCard);$/
+SetCard	.\CCard.cpp	/^void CCard::SetCard(int pCardNo)$/
+SetCard	.\CCard.h	/^	void	SetCard(int pCardNo);$/
+SetDept	.\CCard.cpp	/^bool CCard::SetDept(uint64_t pDept)$/
+SetDept	.\CCard.h	/^	bool	SetDept(uint64_t pDept);		\/\/ 돈이 리미트보다 크면 false 를 리턴$/
+SetGage	.\CCard.cpp	/^void CCard::SetGage(int pGage)$/
+SetGage	.\CCard.h	/^	void	SetGage(int pGage);$/
+SetGrade	.\CPlayer.cpp	/^void CPlayer::SetGrade(unsigned short pGrade)$/
+SetGrade	.\CPlayer.h	/^	void	SetGrade(unsigned short pGrade);$/
+SetLimit	.\CCard.cpp	/^void CCard::SetLimit(unsigned short pGrade, ERank pRank)$/
+SetLimit	.\CCard.h	/^	void	SetLimit(unsigned short pGrade, ERank pRank);$/
+SetName	.\CPlayer.cpp	/^void CPlayer::SetName(char* pName)$/
+SetName	.\CPlayer.h	/^	void	SetName(char* pName);$/
+SetRank	.\CPlayer.cpp	/^void CPlayer::SetRank(ERank pRank)$/
+SetRank	.\CPlayer.h	/^	void	SetRank(ERank pRank);$/
+Sprite	.\sprite.h	/^class Sprite$/
+Sprite::frame	.\sprite.h	/^		int frame;$/
+Sprite::sprite	.\sprite.h	/^		void sprite();$/
+StartScene	.\Scene.cpp	/^StartScene::StartScene()$/
+StartScene	.\Scene.h	/^		StartScene();$/
+StartScene	.\Scene.h	/^class StartScene : public Scene$/
+StartScene::StartScene	.\Scene.cpp	/^StartScene::StartScene()$/
+StartScene::StartScene	.\Scene.h	/^		StartScene();$/
+StartScene::clean_up	.\Scene.cpp	/^void StartScene::clean_up()$/
+StartScene::clean_up	.\Scene.h	/^		virtual void clean_up();$/
+StartScene::do_event	.\Scene.cpp	/^void StartScene::do_event()$/
+StartScene::do_event	.\Scene.h	/^		virtual void do_event();$/
+StartScene::init	.\Scene.cpp	/^void StartScene::init()$/
+StartScene::init	.\Scene.h	/^		virtual void init();$/
+StartScene::main_bg	.\Scene.h	/^		SDL_Surface* main_bg;$/
+StartScene::main_menu1	.\Scene.h	/^		SDL_Surface* main_menu1;$/
+StartScene::main_menu1_over	.\Scene.h	/^		SDL_Surface* main_menu1_over;$/
+StartScene::main_menu2	.\Scene.h	/^		SDL_Surface* main_menu2;$/
+StartScene::main_menu2_over	.\Scene.h	/^		SDL_Surface* main_menu2_over;$/
+StartScene::menu	.\Scene.h	/^		int menu;$/
+StartScene::show	.\Scene.cpp	/^void StartScene::show()$/
+StartScene::show	.\Scene.h	/^		virtual void show();$/
+TCardInven	.\CPlayer.h	/^	typedef std::map<int, CCard>		TCardInven;				\/\/ 카드 지갑(카드번호 + 카드클래스)$/
+TCardInvenItr	.\CPlayer.h	/^	typedef TCardInven::iterator		TCardInvenItr;$/
+THIRDBUILDING_NUM	.\map.h	/^const int THIRDBUILDING_NUM  = 3;$/
+Timer	.\Timer.cpp	/^Timer::Timer()$/
+Timer	.\timer.h	/^		Timer();$/
+Timer	.\timer.h	/^class Timer$/
+Timer::Timer	.\Timer.cpp	/^Timer::Timer()$/
+Timer::Timer	.\timer.h	/^		Timer();$/
+Timer::get_ticks	.\Timer.cpp	/^int Timer::get_ticks()$/
+Timer::get_ticks	.\timer.h	/^		int get_ticks();$/
+Timer::is_paused	.\Timer.cpp	/^bool Timer::is_paused()$/
+Timer::is_paused	.\timer.h	/^		bool is_paused();$/
+Timer::is_started	.\Timer.cpp	/^bool Timer::is_started()$/
+Timer::is_started	.\timer.h	/^		bool is_started();$/
+Timer::pause	.\Timer.cpp	/^void Timer::pause()$/
+Timer::pause	.\timer.h	/^		void pause();$/
+Timer::paused	.\timer.h	/^		bool paused;$/
+Timer::pausedTicks	.\timer.h	/^		int pausedTicks;$/
+Timer::period	.\timer.h	/^                int period;$/
+Timer::start	.\Timer.cpp	/^void Timer::start()$/
+Timer::start	.\Timer.cpp	/^void Timer::start(int prd)$/
+Timer::start	.\timer.h	/^		void start();$/
+Timer::start	.\timer.h	/^                void start(int);$/
+Timer::startTicks	.\timer.h	/^		int startTicks;$/
+Timer::started	.\timer.h	/^		bool started;$/
+Timer::stop	.\Timer.cpp	/^void Timer::stop()$/
+Timer::stop	.\timer.h	/^		void stop();$/
+Timer::unpause	.\Timer.cpp	/^void Timer::unpause()$/
+Timer::unpause	.\timer.h	/^		void unpause();$/
+Top	.\GameScene_GUI.cpp	/^Top::Top(int x, int y, int w, int h)$/
+Top	.\Scene.h	/^		Top(int x, int y, int w, int h);$/
+Top	.\Scene.h	/^class Top$/
+Top::Top	.\GameScene_GUI.cpp	/^Top::Top(int x, int y, int w, int h)$/
+Top::Top	.\Scene.h	/^		Top(int x, int y, int w, int h);$/
+Top::credit_str	.\Scene.h	/^		std::string credit_str;$/
+Top::offset	.\Scene.h	/^		SDL_Rect offset;$/
+Top::set_credit_score	.\GameScene_GUI.cpp	/^void Top::set_credit_score(int credit)$/
+Top::set_credit_score	.\Scene.h	/^		void set_credit_score(int credit);$/
+Top::set_total_dept	.\GameScene_GUI.cpp	/^void Top::set_total_dept(int total)$/
+Top::set_total_dept	.\Scene.h	/^		void set_total_dept(int total);$/
+Top::show	.\GameScene_GUI.cpp	/^void Top::show(SDL_Surface* background)$/
+Top::show	.\Scene.h	/^		void show(SDL_Surface*);$/
+Top::total_str	.\Scene.h	/^		std::string total_str;$/
+UNIT_HEIGHT	.\global.h	/^const int UNIT_HEIGHT = 30;$/
+UNIT_WIDTH	.\global.h	/^const int UNIT_WIDTH = 30;$/
+UP	.\character.h	/^		const int UP = 3;$/
+WalletBar	.\Scene.h	/^class WalletBar$/
+WalletBar::card_gage	.\Scene.h	/^		SDL_Rect card_gage[6];$/
+WalletBar::cards	.\Scene.h	/^		SDL_Rect cards[6];$/
+WalletBar::cards_clip	.\Scene.h	/^		SDL_Rect cards_clip[6];$/
+WalletBar::cards_image	.\Scene.h	/^		SDL_Surface* cards_image;$/
+WalletBar::cards_limits_box	.\Scene.h	/^		SDL_Rect cards_limits_box[6];$/
+WalletBar::cards_limits_clip	.\Scene.h	/^		SDL_Rect cards_limits_clip[6];$/
+WalletBar::clean_up	.\GameScene_GUI.cpp	/^void WalletBar::clean_up()$/
+WalletBar::clean_up	.\Scene.h	/^		void clean_up();$/
+WalletBar::face_clip	.\Scene.h	/^		SDL_Rect face_clip[6];$/
+WalletBar::faces_image	.\Scene.h	/^		SDL_Surface* faces_image;$/
+WalletBar::frame	.\Scene.h	/^		int frame;$/
+WalletBar::init	.\GameScene_GUI.cpp	/^void WalletBar::init(int x, int y, int w, int h)$/
+WalletBar::init	.\Scene.h	/^		void init(int x, int y, int w, int h);$/
+WalletBar::offset	.\Scene.h	/^		SDL_Rect offset;$/
+WalletBar::print_limit	.\GameScene_GUI.cpp	/^void WalletBar::print_limit(ECard i, uint64_t money)$/
+WalletBar::print_limit	.\Scene.h	/^		void print_limit(ECard, uint64_t);$/
+WalletBar::show	.\GameScene_GUI.cpp	/^void WalletBar::show( )$/
+WalletBar::show	.\Scene.h	/^		void show();$/
+WalletBar::show_gage	.\GameScene_GUI.cpp	/^void WalletBar::show_gage(ECard i, float ratio)$/
+WalletBar::show_gage	.\Scene.h	/^		void show_gage(ECard, float);$/
+ZeroMemory	.\common.h	29
+_APS_NEXT_COMMAND_VALUE	.\resource.h	10
+_APS_NEXT_CONTROL_VALUE	.\resource.h	11
+_APS_NEXT_RESOURCE_VALUE	.\resource.h	9
+_APS_NEXT_SYMED_VALUE	.\resource.h	12
+_MAJECTY_GLOBAL_H__	.\global.h	4
+_MAJECTY_VALANCE_H__	.\Configuration.h	3
+_MEJECTY_CHAR_H__	.\character.h	3
+_WIN32_WINNT	.\targetver.h	11
+__MAJECTY_BUILDING_H_	.\building.h	3
+__MAJECTY_COLLIDER_H__	.\collider.h	3
+__MAJECTY_MAP_H_	.\map.h	3
+__MAJECTY_SPRIT_H__	.\sprite.h	4
+__MAJECTY_TIMER_H_	.\timer.h	3
+__SCENE_H__	.\Scene.h	3
+__mCard	.\CCard.h	/^	int			__mCard;	\/\/ 카드번호$/
+__mCardInven	.\CPlayer.h	/^	TCardInven		__mCardInven;								\/\/ 카드 지갑$/
+__mCreditorCount	.\CPlayer.h	/^	int				__mCreditorCount;							\/\/ 빚쟁이 수$/
+__mCurrentCard	.\CPlayer.h	/^	int				__mCurrentCard;								\/\/ 현재 선택된 카드$/
+__mCurrentRank	.\CPlayer.h	/^	ERank			__mCurrentRank;								\/\/ 현재 금융권$/
+__mDept	.\CPlayer.h	/^	uint64_t			__mDept;									\/\/ 현재 빚$/
+__mGage	.\CCard.h	/^	int			__mGage;	\/\/ 게이지$/
+__mGrade	.\CPlayer.h	/^	unsigned short	__mGrade;									\/\/ 현재 신용등급$/
+__mLimit	.\CCard.h	/^	uint64_t		__mLimit;	\/\/ 카드한도$/
+__mMoney	.\CCard.h	/^	uint64_t		__mMoney;	\/\/ 빌린돈$/
+__mPlayerName	.\CPlayer.h	/^	char			__mPlayerName[MAX_PLAYER_NAME_LEN + 1];		\/\/ 플레이어 이름$/
+aPlayer	.\character.h	/^		CPlayer  aPlayer;$/
+add_card	.\character.cpp	/^void Hero::add_card(ECard pCard )$/
+add_card	.\character.h	/^		void add_card(ECard pCard);$/
+add_person	.\character.cpp	/^void Character::add_person(){$/
+add_person	.\character.cpp	/^void Hero::add_person( ){$/
+add_person	.\character.h	/^		virtual void add_person();$/
+add_person	.\gang.cpp	/^void Gang::add_person( ){$/
+apply_surface	.\GlobalFunctions.cpp	/^void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination,$/
+apply_surface	.\GlobalFunctions.h	/^void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface*$/
+b	.\lua\lauxlib.h	/^  char *b;  \/* buffer address *\/$/
+background	.\Scene.h	/^		SDL_Surface *background;$/
+background	.\map.h	/^		SDL_Surface* background;$/
+blackColor	.\main.cpp	/^SDL_Color blackColor= {0,0,0};$/
+boxes	.\map.h	/^		vector<SDL_Rect*> boxes;$/
+buffer	.\lauxlib.h	/^  char buffer[LUAL_BUFFERSIZE];$/
+buildings	.\map.h	/^		vector<Building*> buildings;$/
+buildings_image	.\main.cpp	/^SDL_Surface *buildings_image;$/
+buy	.\character.cpp	/^bool Hero::buy()$/
+buy	.\character.h	/^		bool buy();$/
+calc_dept	.\character.cpp	/^int Hero::calc_dept()$/
+calc_dept	.\character.h	/^		int calc_dept();$/
+can_buy	.\character.cpp	/^void Hero::can_buy()$/
+can_buy	.\character.h	/^		void can_buy();$/
+cant_buy	.\character.cpp	/^void Hero::cant_buy()$/
+cant_buy	.\character.h	/^		void cant_buy();$/
+card_gage	.\Scene.h	/^		SDL_Rect card_gage[6];$/
+card_id	.\building.h	/^		int card_id;$/
+cards	.\Scene.h	/^		SDL_Rect cards[6];$/
+cards_clip	.\Scene.h	/^		SDL_Rect cards_clip[6];$/
+cards_image	.\Scene.h	/^		SDL_Surface* cards_image;$/
+cards_limits_box	.\Scene.h	/^		SDL_Rect cards_limits_box[6];$/
+cards_limits_clip	.\Scene.h	/^		SDL_Rect cards_limits_clip[6];$/
+change_scene	.\GlobalFunctions.h	/^void change_scene(int scene_num);$/
+change_scene	.\main.cpp	/^void change_scene(int scene_num)$/
+check_collide	.\GameScene.cpp	/^void GameScene::check_collide()$/
+check_collide	.\Scene.h	/^		void check_collide();$/
+check_collide	.\building.cpp	/^bool Building::check_collide(Collider* other)$/
+check_collide	.\building.cpp	/^bool Door::check_collide(Collider* other)$/
+check_collide	.\building.h	/^		virtual bool check_collide(Collider*);$/
+check_collide	.\character.cpp	/^bool Hero::check_collide(Collider* other)$/
+check_collide	.\character.h	/^		virtual bool check_collide(Collider*);$/
+check_collide	.\collider.h	/^		virtual bool check_collide(Collider*)=0;$/
+check_collide	.\gang.cpp	/^bool Gang::check_collide(Collider* other)$/
+check_collider	.\collider.cpp	/^bool check_collider(Collider* other){return true;}$/
+clean_up	.\GameScene.cpp	/^void GameScene::clean_up()$/
+clean_up	.\GameScene_GUI.cpp	/^void WalletBar::clean_up()$/
+clean_up	.\Scene.cpp	/^void BadEndScene::clean_up()$/
+clean_up	.\Scene.cpp	/^void CreditScene::clean_up()$/
+clean_up	.\Scene.cpp	/^void GoodEndScene::clean_up()$/
+clean_up	.\Scene.cpp	/^void Scene::clean_up(){;}$/
+clean_up	.\Scene.cpp	/^void StartScene::clean_up()$/
+clean_up	.\Scene.h	/^		virtual void clean_up();$/
+clean_up	.\Scene.h	/^		void clean_up();$/
+clean_up	.\building.cpp	/^void Building::clean_up()$/
+clean_up	.\building.h	/^		void clean_up();$/
+clean_up	.\character.cpp	/^void Character::clean_up(){;}$/
+clean_up	.\character.cpp	/^void Hero::clean_up()$/
+clean_up	.\character.h	/^		virtual void clean_up();$/
+clean_up	.\gang.cpp	/^void Gang::clean_up()$/
+clean_up	.\main.cpp	/^void clean_up()$/
+clean_up	.\map.cpp	/^void Map::clean_up()$/
+clean_up	.\map.h	/^		void clean_up();$/
+clip	.\building.h	/^		SDL_Rect clip;$/
+clip	.\character.h	/^		SDL_Rect clip[4][3];\/\/ 8 은 넉넉잡은 숫$/
+clip	.\map.h	/^		SDL_Rect clip;$/
+closef	.\lua\lauxlib.h	/^  lua_CFunction closef;  \/* to close stream (NULL for closed streams) *\/$/
+credit_str	.\Scene.h	/^		std::string credit_str;$/
+currentline	.\lua.h	/^  int currentline;	\/* (l) *\/$/
+currentline	.\lua\lua.h	/^  int currentline;	\/* (l) *\/$/
+decrease_grade	.\character.cpp	/^void Hero::decrease_grade()$/
+decrease_grade	.\character.h	/^		void decrease_grade();$/
+delta	.\Scene.h	/^		Timer delta;$/
+depart_image	.\building.h	/^		SDL_Surface *depart_image;$/
+do_event	.\GameScene.cpp	/^void GameScene::do_event()$/
+do_event	.\Scene.cpp	/^void BadEndScene::do_event()$/
+do_event	.\Scene.cpp	/^void CreditScene::do_event()$/
+do_event	.\Scene.cpp	/^void GoodEndScene::do_event()$/
+do_event	.\Scene.cpp	/^void Scene::do_event(){;}$/
+do_event	.\Scene.cpp	/^void StartScene::do_event()$/
+do_event	.\Scene.h	/^		virtual void do_event();$/
+door	.\building.h	/^		Door *door;$/
+eBuy	.\Constants.h	/^    eBuy,$/
+eCardAmerican	.\Constants.h	/^	eCardAmerican,$/
+eCardDC	.\Constants.h	/^	eCardDC,$/
+eCardJHT	.\Constants.h	/^	eCardJHT,$/
+eCardMax	.\Constants.h	/^	eCardMax$/
+eCardMister	.\Constants.h	/^	eCardMister,$/
+eCardNon	.\Constants.h	/^	eCardNon = 0,$/
+eCardStop	.\Constants.h	/^    eCardStop,$/
+eCardUnion	.\Constants.h	/^	eCardUnion,$/
+eCardVissa	.\Constants.h	/^	eCardVissa,$/
+eDescription	.\Constants.h	/^    eDescription = 0,$/
+eEndNoInterest	.\Constants.h	/^    eEndNoInterest,$/
+eEnterCardShop	.\Constants.h	/^    eEnterCardShop,$/
+eEnterShop	.\Constants.h	/^    eEnterShop,$/
+eFirstRank	.\Constants.h	/^	eFirstRank = 0,	\/\/ 제 1 금융권$/
+eGameOver	.\Constants.h	/^    eGameOver,$/
+eGangPlus	.\Constants.h	/^    eGangPlus,$/
+eGradeDown	.\Constants.h	/^    eGradeDown,$/
+eGradeUp	.\Constants.h	/^    eGradeUp,$/
+eHappyEnd	.\Constants.h	/^    eHappyEnd,$/
+eMaxRank	.\Constants.h	/^	eMaxRank$/
+eNoBanking	.\Constants.h	/^	eNoBanking = 0,$/
+eNoCard	.\Constants.h	/^    eNoCard,$/
+eNonCashRush	.\Constants.h	/^	eNonCashRush,$/
+eNonCowCow	.\Constants.h	/^	eNonCowCow,$/
+eNonMax	.\Constants.h	/^	eNonMax$/
+eNonOneCash	.\Constants.h	/^	eNonOneCash,$/
+eNonSaWa	.\Constants.h	/^	eNonSaWa,$/
+ePrivateGang	.\Constants.h	/^	ePrivateGang,$/
+ePrivateMafia	.\Constants.h	/^	ePrivateMafia,$/
+ePrivateMax	.\Constants.h	/^	ePrivateMax$/
+ePrivateNon	.\Constants.h	/^	ePrivateNon=0,$/
+ePrivateYakuza	.\Constants.h	/^	ePrivateYakuza,$/
+eReceiveCard	.\Constants.h	/^    eReceiveCard$/
+eSecondRank	.\Constants.h	/^	eSecondRank,$/
+eThirdRank	.\Constants.h	/^	eThirdRank,$/
+enter_building	.\character.cpp	/^void Hero::enter_building()$/
+enter_building	.\character.h	/^                void enter_building();$/
+error	.\GlobalFunctions.cpp	/^void error(const char *fmt, const char *at,  ...) {$/
+error	.\GlobalFunctions.h	/^void error(const char *fmt, const char *at, ...) ;$/
+event	.\lua.h	/^  int event;$/
+event	.\lua\lua.h	/^  int event;$/
+event	.\main.cpp	/^SDL_Event  event;$/
+exit_building	.\character.cpp	/^void Hero::exit_building()$/
+exit_building	.\character.h	/^                void exit_building();$/
+f	.\lua\lauxlib.h	/^  FILE *f;  \/* stream (NULL for incompletely created streams) *\/$/
+face_clip	.\Scene.h	/^		SDL_Rect face_clip[6];$/
+faces_image	.\Scene.h	/^		SDL_Surface* faces_image;$/
+fire_lua_event	.\lua_glue.cpp	/^void fire_lua_event(int event_id)$/
+fire_lua_event	.\lua_glue.h	/^void fire_lua_event(int);$/
+fire_message_event	.\lua_glue.cpp	/^void fire_message_event(int message_id)$/
+fire_message_event	.\lua_glue.h	/^void fire_message_event(int message_id);$/
+follow	.\character.h	/^		bool follow();$/
+follow	.\gang.cpp	/^bool Gang::follow()$/
+font	.\main.cpp	/^TTF_Font *font = NULL;$/
+frame	.\Scene.h	/^		int frame;$/
+frame	.\character.h	/^		int frame;$/
+frame	.\sprite.h	/^		int frame;$/
+func	.\lauxlib.h	/^  lua_CFunction func;$/
+func	.\lua\lauxlib.h	/^  lua_CFunction func;$/
+gCardName	.\Constants.h	/^const char gCardName[eCardMax][MAX_CARD_NAME] =$/
+gGradeName	.\Constants.h	/^const char gGradeName[13][2+1] =$/
+gNonBankingName	.\Constants.h	/^const char gNonBankingName[eNonMax][MAX_CARD_NAME] =$/
+gPrivateLoanName	.\Constants.h	/^const char gPrivateLoanName[ePrivateMax][MAX_CARD_NAME] =$/
+gRankName	.\Constants.h	/^const char gRankName[eMaxRank][MAX_CARD_NAME] =$/
+g_messageEventHalder	.\lua_glue.cpp	/^static char* g_messageEventHalder = "message_handler";$/
+g_strEventHandler	.\lua_glue.cpp	/^static char* g_strEventHandler = "lua_event_handler";$/
+gang	.\Scene.h	/^		Character* gang;$/
+get_box	.\building.cpp	/^SDL_Rect* Building::get_box()$/
+get_box	.\building.cpp	/^SDL_Rect* Door::get_box()$/
+get_box	.\building.h	/^		virtual SDL_Rect* get_box();$/
+get_box	.\character.cpp	/^SDL_Rect* Hero::get_box()$/
+get_box	.\character.h	/^		virtual SDL_Rect* get_box();$/
+get_box	.\collider.cpp	/^SDL_Rect* get_box(){return NULL;}$/
+get_box	.\collider.h	/^		virtual SDL_Rect* get_box()=0;$/
+get_box	.\gang.cpp	/^SDL_Rect* Gang::get_box()$/
+get_boxes	.\map.cpp	/^vector<SDL_Rect*> Map::get_boxes()$/
+get_boxes	.\map.h	/^		vector<SDL_Rect*> get_boxes(); \/\/ for collide$/
+get_buildings	.\map.cpp	/^vector<Building*> Map::get_buildings()$/
+get_buildings	.\map.h	/^		vector<Building*> get_buildings();$/
+get_current_card	.\character.cpp	/^ECard Hero::get_current_card()$/
+get_current_card	.\character.h	/^		ECard get_current_card();$/
+get_depth	.\character.cpp	/^uint64_t Hero::get_depth()$/
+get_depth	.\character.h	/^		uint64_t get_depth();$/
+get_door	.\building.cpp	/^Door* Building::get_door()$/
+get_door	.\building.h	/^		Door* get_door();$/
+get_grade	.\character.cpp	/^unsigned short Hero::get_grade()$/
+get_grade	.\character.h	/^		unsigned short get_grade();$/
+get_limit	.\character.cpp	/^uint64_t Hero::get_limit()$/
+get_limit	.\character.h	/^		uint64_t get_limit();$/
+get_ticks	.\Timer.cpp	/^int Timer::get_ticks()$/
+get_ticks	.\timer.h	/^		int get_ticks();$/
+h	.\building.h	/^		int w,h;$/
+h	.\character.h	/^		int w, h;$/
+h	.\map.h	/^		int w,h;$/
+handleInput	.\character.cpp	/^void Hero::handleInput()$/
+handleInput	.\character.h	/^		void handleInput();$/
+happy_ending_flag	.\Scene.h	/^		bool happy_ending_flag;$/
+has_card	.\character.cpp	/^bool Hero::has_card()$/
+has_card	.\character.h	/^		bool has_card();$/
+hero	.\Scene.h	/^		Hero *hero;$/
+i_ci	.\lua.h	/^  int i_ci;  \/* active function *\/$/
+i_ci	.\lua\lua.h	/^  struct CallInfo *i_ci;  \/* active function *\/$/
+image	.\character.h	/^		SDL_Surface *image;$/
+increase_grade	.\character.cpp	/^void Hero::increase_grade()$/
+increase_grade	.\character.h	/^		void increase_grade();$/
+indoor	.\character.h	/^                bool indoor;$/
+init	.\GameScene.cpp	/^void GameScene::init()$/
+init	.\GameScene_GUI.cpp	/^void WalletBar::init(int x, int y, int w, int h)$/
+init	.\Scene.cpp	/^void BadEndScene::init()$/
+init	.\Scene.cpp	/^void CreditScene::init()$/
+init	.\Scene.cpp	/^void GoodEndScene::init()$/
+init	.\Scene.cpp	/^void Scene::init() { ;$/
+init	.\Scene.cpp	/^void StartScene::init()$/
+init	.\Scene.h	/^		virtual void init();$/
+init	.\Scene.h	/^		void init(int x, int y, int w, int h);$/
+init	.\building.cpp	/^void Building::init(ECard pCard)$/
+init	.\building.h	/^		void init(ECard pCard);$/
+init	.\character.cpp	/^void Character::init() {;}$/
+init	.\character.cpp	/^void Hero::init()$/
+init	.\character.h	/^		virtual void init();$/
+init	.\gang.cpp	/^void Gang::init()$/
+init	.\main.cpp	/^bool init()$/
+init	.\map.cpp	/^void Map::init(SDL_Surface* back)$/
+init	.\map.h	/^		void init(SDL_Surface* back);$/
+init_glue	.\lua_glue.cpp	/^void init_glue()$/
+init_glue	.\lua_glue.h	/^void init_glue();$/
+initb	.\lua\lauxlib.h	/^  char initb[LUAL_BUFFERSIZE];  \/* initial buffer *\/$/
+interest_count	.\Scene.h	/^		int interest_count;$/
+interest_timer	.\Scene.h	/^		Timer interest_timer;$/
+is_buyable	.\character.h	/^		bool is_buyable;$/
+is_indoor	.\character.cpp	/^bool Hero::is_indoor()$/
+is_indoor	.\character.h	/^                bool is_indoor();$/
+is_paused	.\Timer.cpp	/^bool Timer::is_paused()$/
+is_paused	.\timer.h	/^		bool is_paused();$/
+is_started	.\Timer.cpp	/^bool Timer::is_started()$/
+is_started	.\timer.h	/^		bool is_started();$/
+istailcall	.\lua\lua.h	/^  char istailcall;	\/* (t) *\/$/
+isvararg	.\lua\lua.h	/^  char isvararg;        \/* (u) *\/$/
+l_d	.\luaconf.h	/^union luai_Cast { double l_d; long l_l; };$/
+l_l	.\luaconf.h	/^union luai_Cast { double l_d; long l_l; };$/
+lastlinedefined	.\lua.h	/^  int lastlinedefined;	\/* (S) *\/$/
+lastlinedefined	.\lua\lua.h	/^  int lastlinedefined;	\/* (S) *\/$/
+lauxlib_h	.\lauxlib.h	9
+lauxlib_h	.\lua\lauxlib.h	9
+lconfig_h	.\lua\luaconf.h	9
+lconfig_h	.\luaconf.h	9
+linedefined	.\lua.h	/^  int linedefined;	\/* (S) *\/$/
+linedefined	.\lua\lua.h	/^  int linedefined;	\/* (S) *\/$/
+load_files	.\main.cpp	/^bool load_files()$/
+load_image	.\GlobalFunctions.cpp	/^SDL_Surface *load_image( std::string filename) $/
+load_image	.\GlobalFunctions.h	/^SDL_Surface *load_image( std::string filename);$/
+luaI_openlib	.\lauxlib.h	/^LUALIB_API void (luaI_openlib) (lua_State *L, const char *libname,$/
+luaI_openlib	.\lauxlib.h	27
+luaL_Buffer	.\lauxlib.h	/^typedef struct luaL_Buffer {$/
+luaL_Buffer	.\lauxlib.h	/^} luaL_Buffer;$/
+luaL_Buffer	.\lua\lauxlib.h	/^typedef struct luaL_Buffer {$/
+luaL_Buffer	.\lua\lauxlib.h	/^} luaL_Buffer;$/
+luaL_Buffer::L	.\lauxlib.h	/^  lua_State *L;$/
+luaL_Buffer::L	.\lua\lauxlib.h	/^  lua_State *L;$/
+luaL_Buffer::b	.\lua\lauxlib.h	/^  char *b;  \/* buffer address *\/$/
+luaL_Buffer::buffer	.\lauxlib.h	/^  char buffer[LUAL_BUFFERSIZE];$/
+luaL_Buffer::initb	.\lua\lauxlib.h	/^  char initb[LUAL_BUFFERSIZE];  \/* initial buffer *\/$/
+luaL_Buffer::lvl	.\lauxlib.h	/^  int lvl;  \/* number of strings in the stack (level) *\/$/
+luaL_Buffer::n	.\lua\lauxlib.h	/^  size_t n;  \/* number of characters in buffer *\/$/
+luaL_Buffer::p	.\lauxlib.h	/^  char *p;			\/* current position in buffer *\/$/
+luaL_Buffer::size	.\lua\lauxlib.h	/^  size_t size;  \/* buffer size *\/$/
+luaL_Reg	.\lauxlib.h	/^typedef struct luaL_Reg {$/
+luaL_Reg	.\lauxlib.h	/^} luaL_Reg;$/
+luaL_Reg	.\lua\lauxlib.h	/^typedef struct luaL_Reg {$/
+luaL_Reg	.\lua\lauxlib.h	/^} luaL_Reg;$/
+luaL_Reg::func	.\lauxlib.h	/^  lua_CFunction func;$/
+luaL_Reg::func	.\lua\lauxlib.h	/^  lua_CFunction func;$/
+luaL_Reg::name	.\lauxlib.h	/^  const char *name;$/
+luaL_Reg::name	.\lua\lauxlib.h	/^  const char *name;$/
+luaL_Stream	.\lua\lauxlib.h	/^typedef struct luaL_Stream {$/
+luaL_Stream	.\lua\lauxlib.h	/^} luaL_Stream;$/
+luaL_Stream::closef	.\lua\lauxlib.h	/^  lua_CFunction closef;  \/* to close stream (NULL for closed streams) *\/$/
+luaL_Stream::f	.\lua\lauxlib.h	/^  FILE *f;  \/* stream (NULL for incompletely created streams) *\/$/
+luaL_addchar	.\lauxlib.h	136
+luaL_addchar	.\lua\lauxlib.h	152
+luaL_addlstring	.\lauxlib.h	/^LUALIB_API void (luaL_addlstring) (luaL_Buffer *B, const char *s, size_t l);$/
+luaL_addlstring	.\lua\lauxlib.h	/^LUALIB_API void (luaL_addlstring) (luaL_Buffer *B, const char *s, size_t l);$/
+luaL_addsize	.\lauxlib.h	143
+luaL_addsize	.\lua\lauxlib.h	156
+luaL_addstring	.\lauxlib.h	/^LUALIB_API void (luaL_addstring) (luaL_Buffer *B, const char *s);$/
+luaL_addstring	.\lua\lauxlib.h	/^LUALIB_API void (luaL_addstring) (luaL_Buffer *B, const char *s);$/
+luaL_addvalue	.\lauxlib.h	/^LUALIB_API void (luaL_addvalue) (luaL_Buffer *B);$/
+luaL_addvalue	.\lua\lauxlib.h	/^LUALIB_API void (luaL_addvalue) (luaL_Buffer *B);$/
+luaL_argcheck	.\lauxlib.h	100
+luaL_argcheck	.\lua\lauxlib.h	113
+luaL_argerror	.\lauxlib.h	/^LUALIB_API int (luaL_argerror) (lua_State *L, int numarg, const char *extramsg);$/
+luaL_argerror	.\lua\lauxlib.h	/^LUALIB_API int (luaL_argerror) (lua_State *L, int numarg, const char *extramsg);$/
+luaL_buffinit	.\lauxlib.h	/^LUALIB_API void (luaL_buffinit) (lua_State *L, luaL_Buffer *B);$/
+luaL_buffinit	.\lua\lauxlib.h	/^LUALIB_API void (luaL_buffinit) (lua_State *L, luaL_Buffer *B);$/
+luaL_buffinitsize	.\lua\lauxlib.h	/^LUALIB_API char *(luaL_buffinitsize) (lua_State *L, luaL_Buffer *B, size_t sz);$/
+luaL_callmeta	.\lauxlib.h	/^LUALIB_API int (luaL_callmeta) (lua_State *L, int obj, const char *e);$/
+luaL_callmeta	.\lua\lauxlib.h	/^LUALIB_API int (luaL_callmeta) (lua_State *L, int obj, const char *e);$/
+luaL_checkany	.\lauxlib.h	/^LUALIB_API void (luaL_checkany) (lua_State *L, int narg);$/
+luaL_checkany	.\lua\lauxlib.h	/^LUALIB_API void (luaL_checkany) (lua_State *L, int narg);$/
+luaL_checkint	.\lauxlib.h	104
+luaL_checkint	.\lua\lauxlib.h	117
+luaL_checkinteger	.\lauxlib.h	/^LUALIB_API lua_Integer (luaL_checkinteger) (lua_State *L, int numArg);$/
+luaL_checkinteger	.\lua\lauxlib.h	/^LUALIB_API lua_Integer (luaL_checkinteger) (lua_State *L, int numArg);$/
+luaL_checklong	.\lauxlib.h	106
+luaL_checklong	.\lua\lauxlib.h	119
+luaL_checklstring	.\lauxlib.h	/^LUALIB_API const char *(luaL_checklstring) (lua_State *L, int numArg,$/
+luaL_checklstring	.\lua\lauxlib.h	/^LUALIB_API const char *(luaL_checklstring) (lua_State *L, int numArg,$/
+luaL_checknumber	.\lauxlib.h	/^LUALIB_API lua_Number (luaL_checknumber) (lua_State *L, int numArg);$/
+luaL_checknumber	.\lua\lauxlib.h	/^LUALIB_API lua_Number (luaL_checknumber) (lua_State *L, int numArg);$/
+luaL_checkoption	.\lauxlib.h	/^LUALIB_API int (luaL_checkoption) (lua_State *L, int narg, const char *def,$/
+luaL_checkoption	.\lua\lauxlib.h	/^LUALIB_API int (luaL_checkoption) (lua_State *L, int narg, const char *def,$/
+luaL_checkstack	.\lauxlib.h	/^LUALIB_API void (luaL_checkstack) (lua_State *L, int sz, const char *msg);$/
+luaL_checkstack	.\lua\lauxlib.h	/^LUALIB_API void (luaL_checkstack) (lua_State *L, int sz, const char *msg);$/
+luaL_checkstring	.\lauxlib.h	102
+luaL_checkstring	.\lua\lauxlib.h	115
+luaL_checktype	.\lauxlib.h	/^LUALIB_API void (luaL_checktype) (lua_State *L, int narg, int t);$/
+luaL_checktype	.\lua\lauxlib.h	/^LUALIB_API void (luaL_checktype) (lua_State *L, int narg, int t);$/
+luaL_checkudata	.\lauxlib.h	/^LUALIB_API void *(luaL_checkudata) (lua_State *L, int ud, const char *tname);$/
+luaL_checkudata	.\lua\lauxlib.h	/^LUALIB_API void *(luaL_checkudata) (lua_State *L, int ud, const char *tname);$/
+luaL_checkunsigned	.\lua\lauxlib.h	/^LUALIB_API lua_Unsigned (luaL_checkunsigned) (lua_State *L, int numArg);$/
+luaL_checkversion	.\lua\lauxlib.h	30
+luaL_checkversion_	.\lua\lauxlib.h	/^LUALIB_API void (luaL_checkversion_) (lua_State *L, lua_Number ver);$/
+luaL_dofile	.\lauxlib.h	111
+luaL_dofile	.\lua\lauxlib.h	124
+luaL_dostring	.\lauxlib.h	114
+luaL_dostring	.\lua\lauxlib.h	127
+luaL_error	.\lauxlib.h	/^LUALIB_API int (luaL_error) (lua_State *L, const char *fmt, ...);$/
+luaL_error	.\lua\lauxlib.h	/^LUALIB_API int (luaL_error) (lua_State *L, const char *fmt, ...);$/
+luaL_execresult	.\lua\lauxlib.h	/^LUALIB_API int (luaL_execresult) (lua_State *L, int stat);$/
+luaL_fileresult	.\lua\lauxlib.h	/^LUALIB_API int (luaL_fileresult) (lua_State *L, int stat, const char *fname);$/
+luaL_findtable	.\lauxlib.h	/^LUALIB_API const char *(luaL_findtable) (lua_State *L, int idx,$/
+luaL_getmetafield	.\lauxlib.h	/^LUALIB_API int (luaL_getmetafield) (lua_State *L, int obj, const char *e);$/
+luaL_getmetafield	.\lua\lauxlib.h	/^LUALIB_API int (luaL_getmetafield) (lua_State *L, int obj, const char *e);$/
+luaL_getmetatable	.\lauxlib.h	117
+luaL_getmetatable	.\lua\lauxlib.h	130
+luaL_getn	.\lauxlib.h	/^LUALIB_API int (luaL_getn) (lua_State *L, int t);$/
+luaL_getn	.\lauxlib.h	22
+luaL_getsubtable	.\lua\lauxlib.h	/^LUALIB_API int (luaL_getsubtable) (lua_State *L, int idx, const char *fname);$/
+luaL_gsub	.\lauxlib.h	/^LUALIB_API const char *(luaL_gsub) (lua_State *L, const char *s, const char *p,$/
+luaL_gsub	.\lua\lauxlib.h	/^LUALIB_API const char *(luaL_gsub) (lua_State *L, const char *s, const char *p,$/
+luaL_len	.\lua\lauxlib.h	/^LUALIB_API int (luaL_len) (lua_State *L, int idx);$/
+luaL_loadbuffer	.\lauxlib.h	/^LUALIB_API int (luaL_loadbuffer) (lua_State *L, const char *buff, size_t sz,$/
+luaL_loadbuffer	.\lua\lauxlib.h	134
+luaL_loadbufferx	.\lua\lauxlib.h	/^LUALIB_API int (luaL_loadbufferx) (lua_State *L, const char *buff, size_t sz,$/
+luaL_loadfile	.\lauxlib.h	/^LUALIB_API int (luaL_loadfile) (lua_State *L, const char *filename);$/
+luaL_loadfile	.\lua\lauxlib.h	78
+luaL_loadfilex	.\lua\lauxlib.h	/^LUALIB_API int (luaL_loadfilex) (lua_State *L, const char *filename,$/
+luaL_loadstring	.\lauxlib.h	/^LUALIB_API int (luaL_loadstring) (lua_State *L, const char *s);$/
+luaL_loadstring	.\lua\lauxlib.h	/^LUALIB_API int (luaL_loadstring) (lua_State *L, const char *s);$/
+luaL_newlib	.\lua\lauxlib.h	111
+luaL_newlibtable	.\lua\lauxlib.h	108
+luaL_newmetatable	.\lauxlib.h	/^LUALIB_API int   (luaL_newmetatable) (lua_State *L, const char *tname);$/
+luaL_newmetatable	.\lua\lauxlib.h	/^LUALIB_API int   (luaL_newmetatable) (lua_State *L, const char *tname);$/
+luaL_newstate	.\lauxlib.h	/^LUALIB_API lua_State *(luaL_newstate) (void);$/
+luaL_newstate	.\lua\lauxlib.h	/^LUALIB_API lua_State *(luaL_newstate) (void);$/
+luaL_openlib	.\lua\lauxlib.h	/^LUALIB_API void (luaL_openlib) (lua_State *L, const char *libname,$/
+luaL_openlibs	.\lua\lualib.h	/^LUALIB_API void (luaL_openlibs) (lua_State *L);$/
+luaL_openlibs	.\lualib.h	/^LUALIB_API void (luaL_openlibs) (lua_State *L); $/
+luaL_opt	.\lauxlib.h	119
+luaL_opt	.\lua\lauxlib.h	132
+luaL_optint	.\lauxlib.h	105
+luaL_optint	.\lua\lauxlib.h	118
+luaL_optinteger	.\lauxlib.h	/^LUALIB_API lua_Integer (luaL_optinteger) (lua_State *L, int nArg,$/
+luaL_optinteger	.\lua\lauxlib.h	/^LUALIB_API lua_Integer (luaL_optinteger) (lua_State *L, int nArg,$/
+luaL_optlong	.\lauxlib.h	107
+luaL_optlong	.\lua\lauxlib.h	120
+luaL_optlstring	.\lauxlib.h	/^LUALIB_API const char *(luaL_optlstring) (lua_State *L, int numArg,$/
+luaL_optlstring	.\lua\lauxlib.h	/^LUALIB_API const char *(luaL_optlstring) (lua_State *L, int numArg,$/
+luaL_optnumber	.\lauxlib.h	/^LUALIB_API lua_Number (luaL_optnumber) (lua_State *L, int nArg, lua_Number def);$/
+luaL_optnumber	.\lua\lauxlib.h	/^LUALIB_API lua_Number (luaL_optnumber) (lua_State *L, int nArg, lua_Number def);$/
+luaL_optstring	.\lauxlib.h	103
+luaL_optstring	.\lua\lauxlib.h	116
+luaL_optunsigned	.\lua\lauxlib.h	/^LUALIB_API lua_Unsigned (luaL_optunsigned) (lua_State *L, int numArg,$/
+luaL_prepbuffer	.\lauxlib.h	/^LUALIB_API char *(luaL_prepbuffer) (luaL_Buffer *B);$/
+luaL_prepbuffer	.\lua\lauxlib.h	167
+luaL_prepbuffsize	.\lua\lauxlib.h	/^LUALIB_API char *(luaL_prepbuffsize) (luaL_Buffer *B, size_t sz);$/
+luaL_pushmodule	.\lua\lauxlib.h	/^LUALIB_API void (luaL_pushmodule) (lua_State *L, const char *modname,$/
+luaL_pushresult	.\lauxlib.h	/^LUALIB_API void (luaL_pushresult) (luaL_Buffer *B);$/
+luaL_pushresult	.\lua\lauxlib.h	/^LUALIB_API void (luaL_pushresult) (luaL_Buffer *B);$/
+luaL_pushresultsize	.\lua\lauxlib.h	/^LUALIB_API void (luaL_pushresultsize) (luaL_Buffer *B, size_t sz);$/
+luaL_putchar	.\lauxlib.h	141
+luaL_ref	.\lauxlib.h	/^LUALIB_API int (luaL_ref) (lua_State *L, int t);$/
+luaL_ref	.\lua\lauxlib.h	/^LUALIB_API int (luaL_ref) (lua_State *L, int t);$/
+luaL_reg	.\lauxlib.h	170
+luaL_register	.\lauxlib.h	/^LUALIB_API void (luaL_register) (lua_State *L, const char *libname,$/
+luaL_register	.\lua\lauxlib.h	205
+luaL_requiref	.\lua\lauxlib.h	/^LUALIB_API void (luaL_requiref) (lua_State *L, const char *modname,$/
+luaL_setfuncs	.\lua\lauxlib.h	/^LUALIB_API void (luaL_setfuncs) (lua_State *L, const luaL_Reg *l, int nup);$/
+luaL_setmetatable	.\lua\lauxlib.h	/^LUALIB_API void  (luaL_setmetatable) (lua_State *L, const char *tname);$/
+luaL_setn	.\lauxlib.h	/^LUALIB_API void (luaL_setn) (lua_State *L, int t, int n);$/
+luaL_setn	.\lauxlib.h	23
+luaL_testudata	.\lua\lauxlib.h	/^LUALIB_API void *(luaL_testudata) (lua_State *L, int ud, const char *tname);$/
+luaL_tolstring	.\lua\lauxlib.h	/^LUALIB_API const char *(luaL_tolstring) (lua_State *L, int idx, size_t *len);$/
+luaL_traceback	.\lua\lauxlib.h	/^LUALIB_API void (luaL_traceback) (lua_State *L, lua_State *L1,$/
+luaL_typename	.\lauxlib.h	109
+luaL_typename	.\lua\lauxlib.h	122
+luaL_typerror	.\lauxlib.h	/^LUALIB_API int (luaL_typerror) (lua_State *L, int narg, const char *tname);$/
+luaL_unref	.\lauxlib.h	/^LUALIB_API void (luaL_unref) (lua_State *L, int t, int ref);$/
+luaL_unref	.\lua\lauxlib.h	/^LUALIB_API void (luaL_unref) (lua_State *L, int t, int ref);$/
+luaL_where	.\lauxlib.h	/^LUALIB_API void (luaL_where) (lua_State *L, int lvl);$/
+luaL_where	.\lua\lauxlib.h	/^LUALIB_API void (luaL_where) (lua_State *L, int lvl);$/
+lua_Alloc	.\lua.h	/^typedef void * (*lua_Alloc) (void *ud, void *ptr, size_t osize, size_t nsize);$/
+lua_Alloc	.\lua\lua.h	/^typedef void * (*lua_Alloc) (void *ud, void *ptr, size_t osize, size_t nsize);$/
+lua_CFunction	.\lua.h	/^typedef int (*lua_CFunction) (lua_State *L);$/
+lua_CFunction	.\lua\lua.h	/^typedef int (*lua_CFunction) (lua_State *L);$/
+lua_Chunkreader	.\lua.h	293
+lua_Chunkwriter	.\lua.h	294
+lua_Debug	.\lua.h	/^struct lua_Debug {$/
+lua_Debug	.\lua.h	/^typedef struct lua_Debug lua_Debug;  \/* activation record *\/$/
+lua_Debug	.\lua\lua.h	/^struct lua_Debug {$/
+lua_Debug	.\lua\lua.h	/^typedef struct lua_Debug lua_Debug;  \/* activation record *\/$/
+lua_Debug::currentline	.\lua.h	/^  int currentline;	\/* (l) *\/$/
+lua_Debug::currentline	.\lua\lua.h	/^  int currentline;	\/* (l) *\/$/
+lua_Debug::event	.\lua.h	/^  int event;$/
+lua_Debug::event	.\lua\lua.h	/^  int event;$/
+lua_Debug::i_ci	.\lua.h	/^  int i_ci;  \/* active function *\/$/
+lua_Debug::i_ci	.\lua\lua.h	/^  struct CallInfo *i_ci;  \/* active function *\/$/
+lua_Debug::istailcall	.\lua\lua.h	/^  char istailcall;	\/* (t) *\/$/
+lua_Debug::isvararg	.\lua\lua.h	/^  char isvararg;        \/* (u) *\/$/
+lua_Debug::lastlinedefined	.\lua.h	/^  int lastlinedefined;	\/* (S) *\/$/
+lua_Debug::lastlinedefined	.\lua\lua.h	/^  int lastlinedefined;	\/* (S) *\/$/
+lua_Debug::linedefined	.\lua.h	/^  int linedefined;	\/* (S) *\/$/
+lua_Debug::linedefined	.\lua\lua.h	/^  int linedefined;	\/* (S) *\/$/
+lua_Debug::name	.\lua.h	/^  const char *name;	\/* (n) *\/$/
+lua_Debug::name	.\lua\lua.h	/^  const char *name;	\/* (n) *\/$/
+lua_Debug::namewhat	.\lua.h	/^  const char *namewhat;	\/* (n) `global', `local', `field', `method' *\/$/
+lua_Debug::namewhat	.\lua\lua.h	/^  const char *namewhat;	\/* (n) 'global', 'local', 'field', 'method' *\/$/
+lua_Debug::nparams	.\lua\lua.h	/^  unsigned char nparams;\/* (u) number of parameters *\/$/
+lua_Debug::nups	.\lua.h	/^  int nups;		\/* (u) number of upvalues *\/$/
+lua_Debug::nups	.\lua\lua.h	/^  unsigned char nups;	\/* (u) number of upvalues *\/$/
+lua_Debug::short_src	.\lua.h	/^  char short_src[LUA_IDSIZE]; \/* (S) *\/$/
+lua_Debug::short_src	.\lua\lua.h	/^  char short_src[LUA_IDSIZE]; \/* (S) *\/$/
+lua_Debug::source	.\lua.h	/^  const char *source;	\/* (S) *\/$/
+lua_Debug::source	.\lua\lua.h	/^  const char *source;	\/* (S) *\/$/
+lua_Debug::what	.\lua.h	/^  const char *what;	\/* (S) `Lua', `C', `main', `tail' *\/$/
+lua_Debug::what	.\lua\lua.h	/^  const char *what;	\/* (S) 'Lua', 'C', 'main', 'tail' *\/$/
+lua_Hook	.\lua.h	/^typedef void (*lua_Hook) (lua_State *L, lua_Debug *ar);$/
+lua_Hook	.\lua\lua.h	/^typedef void (*lua_Hook) (lua_State *L, lua_Debug *ar);$/
+lua_Integer	.\lua.h	/^typedef LUA_INTEGER lua_Integer;$/
+lua_Integer	.\lua\lua.h	/^typedef LUA_INTEGER lua_Integer;$/
+lua_Number	.\lua.h	/^typedef LUA_NUMBER lua_Number;$/
+lua_Number	.\lua\lua.h	/^typedef LUA_NUMBER lua_Number;$/
+lua_Reader	.\lua.h	/^typedef const char * (*lua_Reader) (lua_State *L, void *ud, size_t *sz);$/
+lua_Reader	.\lua\lua.h	/^typedef const char * (*lua_Reader) (lua_State *L, void *ud, size_t *sz);$/
+lua_State	.\lua.h	/^typedef struct lua_State lua_State;$/
+lua_State	.\lua\lua.h	/^typedef struct lua_State lua_State;$/
+lua_Unsigned	.\lua\lua.h	/^typedef LUA_UNSIGNED lua_Unsigned;$/
+lua_Writer	.\lua.h	/^typedef int (*lua_Writer) (lua_State *L, const void* p, size_t sz, void* ud);$/
+lua_Writer	.\lua\lua.h	/^typedef int (*lua_Writer) (lua_State *L, const void* p, size_t sz, void* ud);$/
+lua_absindex	.\lua\lua.h	/^LUA_API int   (lua_absindex) (lua_State *L, int idx);$/
+lua_arith	.\lua\lua.h	/^LUA_API void  (lua_arith) (lua_State *L, int op);$/
+lua_assert	.\lua\lualib.h	51
+lua_assert	.\lualib.h	49
+lua_atpanic	.\lua.h	/^LUA_API lua_CFunction (lua_atpanic) (lua_State *L, lua_CFunction panicf);$/
+lua_atpanic	.\lua\lua.h	/^LUA_API lua_CFunction (lua_atpanic) (lua_State *L, lua_CFunction panicf);$/
+lua_call	.\lua.h	/^LUA_API void  (lua_call) (lua_State *L, int nargs, int nresults);$/
+lua_call	.\lua\lua.h	248
+lua_callk	.\lua\lua.h	/^LUA_API void  (lua_callk) (lua_State *L, int nargs, int nresults, int ctx,$/
+lua_checkstack	.\lua.h	/^LUA_API int   (lua_checkstack) (lua_State *L, int sz);$/
+lua_checkstack	.\lua\lua.h	/^LUA_API int   (lua_checkstack) (lua_State *L, int sz);$/
+lua_close	.\lua.h	/^LUA_API void       (lua_close) (lua_State *L);$/
+lua_close	.\lua\lua.h	/^LUA_API void       (lua_close) (lua_State *L);$/
+lua_compare	.\lua\lua.h	/^LUA_API int   (lua_compare) (lua_State *L, int idx1, int idx2, int op);$/
+lua_concat	.\lua.h	/^LUA_API void  (lua_concat) (lua_State *L, int n);$/
+lua_concat	.\lua\lua.h	/^LUA_API void  (lua_concat) (lua_State *L, int n);$/
+lua_copy	.\lua\lua.h	/^LUA_API void  (lua_copy) (lua_State *L, int fromidx, int toidx);$/
+lua_cpcall	.\lua.h	/^LUA_API int   (lua_cpcall) (lua_State *L, lua_CFunction func, void *ud);$/
+lua_cpcall	.\lua\luaconf.h	260
+lua_createtable	.\lua.h	/^LUA_API void  (lua_createtable) (lua_State *L, int narr, int nrec);$/
+lua_createtable	.\lua\lua.h	/^LUA_API void  (lua_createtable) (lua_State *L, int narr, int nrec);$/
+lua_dump	.\lua.h	/^LUA_API int (lua_dump) (lua_State *L, lua_Writer writer, void *data);$/
+lua_dump	.\lua\lua.h	/^LUA_API int (lua_dump) (lua_State *L, lua_Writer writer, void *data);$/
+lua_equal	.\lua.h	/^LUA_API int            (lua_equal) (lua_State *L, int idx1, int idx2);$/
+lua_equal	.\lua\luaconf.h	292
+lua_error	.\lua.h	/^LUA_API int   (lua_error) (lua_State *L);$/
+lua_error	.\lua\lua.h	/^LUA_API int   (lua_error) (lua_State *L);$/
+lua_event_handler	.\Configuration.lua	/^function lua_event_handler(event_id)$/
+lua_freeline	.\luaconf.h	281
+lua_freeline	.\luaconf.h	287
+lua_gc	.\lua.h	/^LUA_API int (lua_gc) (lua_State *L, int what, int data);$/
+lua_gc	.\lua\lua.h	/^LUA_API int (lua_gc) (lua_State *L, int what, int data);$/
+lua_getallocf	.\lua.h	/^LUA_API lua_Alloc (lua_getallocf) (lua_State *L, void **ud);$/
+lua_getallocf	.\lua\lua.h	/^LUA_API lua_Alloc (lua_getallocf) (lua_State *L, void **ud);$/
+lua_getctx	.\lua\lua.h	/^LUA_API int   (lua_getctx) (lua_State *L, int *ctx);$/
+lua_getfenv	.\lua.h	/^LUA_API void  (lua_getfenv) (lua_State *L, int idx);$/
+lua_getfield	.\lua.h	/^LUA_API void  (lua_getfield) (lua_State *L, int idx, const char *k);$/
+lua_getfield	.\lua\lua.h	/^LUA_API void  (lua_getfield) (lua_State *L, int idx, const char *k);$/
+lua_getgccount	.\lua.h	291
+lua_getglobal	.\lua.h	277
+lua_getglobal	.\lua\lua.h	/^LUA_API void  (lua_getglobal) (lua_State *L, const char *var);$/
+lua_gethook	.\lua.h	/^LUA_API lua_Hook lua_gethook (lua_State *L);$/
+lua_gethook	.\lua\lua.h	/^LUA_API lua_Hook (lua_gethook) (lua_State *L);$/
+lua_gethookcount	.\lua.h	/^LUA_API int lua_gethookcount (lua_State *L);$/
+lua_gethookcount	.\lua\lua.h	/^LUA_API int (lua_gethookcount) (lua_State *L);$/
+lua_gethookmask	.\lua.h	/^LUA_API int lua_gethookmask (lua_State *L);$/
+lua_gethookmask	.\lua\lua.h	/^LUA_API int (lua_gethookmask) (lua_State *L);$/
+lua_getinfo	.\lua.h	/^LUA_API int lua_getinfo (lua_State *L, const char *what, lua_Debug *ar);$/
+lua_getinfo	.\lua\lua.h	/^LUA_API int (lua_getinfo) (lua_State *L, const char *what, lua_Debug *ar);$/
+lua_getlocal	.\lua.h	/^LUA_API const char *lua_getlocal (lua_State *L, const lua_Debug *ar, int n);$/
+lua_getlocal	.\lua\lua.h	/^LUA_API const char *(lua_getlocal) (lua_State *L, const lua_Debug *ar, int n);$/
+lua_getmetatable	.\lua.h	/^LUA_API int   (lua_getmetatable) (lua_State *L, int objindex);$/
+lua_getmetatable	.\lua\lua.h	/^LUA_API int   (lua_getmetatable) (lua_State *L, int objindex);$/
+lua_getref	.\lauxlib.h	167
+lua_getregistry	.\lua.h	289
+lua_getstack	.\lua.h	/^LUA_API int lua_getstack (lua_State *L, int level, lua_Debug *ar);$/
+lua_getstack	.\lua\lua.h	/^LUA_API int (lua_getstack) (lua_State *L, int level, lua_Debug *ar);$/
+lua_gettable	.\lua.h	/^LUA_API void  (lua_gettable) (lua_State *L, int idx);$/
+lua_gettable	.\lua\lua.h	/^LUA_API void  (lua_gettable) (lua_State *L, int idx);$/
+lua_gettop	.\lua.h	/^LUA_API int   (lua_gettop) (lua_State *L);$/
+lua_gettop	.\lua\lua.h	/^LUA_API int   (lua_gettop) (lua_State *L);$/
+lua_getupvalue	.\lua.h	/^LUA_API const char *lua_getupvalue (lua_State *L, int funcindex, int n);$/
+lua_getupvalue	.\lua\lua.h	/^LUA_API const char *(lua_getupvalue) (lua_State *L, int funcindex, int n);$/
+lua_getuservalue	.\lua\lua.h	/^LUA_API void  (lua_getuservalue) (lua_State *L, int idx);$/
+lua_h	.\lua.h	10
+lua_h	.\lua\lua.h	10
+lua_init	.\main.cpp	/^void lua_init()$/
+lua_insert	.\lua.h	/^LUA_API void  (lua_insert) (lua_State *L, int idx);$/
+lua_insert	.\lua\lua.h	/^LUA_API void  (lua_insert) (lua_State *L, int idx);$/
+lua_isboolean	.\lua.h	268
+lua_isboolean	.\lua\lua.h	330
+lua_iscfunction	.\lua.h	/^LUA_API int             (lua_iscfunction) (lua_State *L, int idx);$/
+lua_iscfunction	.\lua\lua.h	/^LUA_API int             (lua_iscfunction) (lua_State *L, int idx);$/
+lua_isfunction	.\lua.h	264
+lua_isfunction	.\lua\lua.h	326
+lua_islightuserdata	.\lua.h	266
+lua_islightuserdata	.\lua\lua.h	328
+lua_isnil	.\lua.h	267
+lua_isnil	.\lua\lua.h	329
+lua_isnone	.\lua.h	270
+lua_isnone	.\lua\lua.h	332
+lua_isnoneornil	.\lua.h	271
+lua_isnoneornil	.\lua\lua.h	333
+lua_isnumber	.\lua.h	/^LUA_API int             (lua_isnumber) (lua_State *L, int idx);$/
+lua_isnumber	.\lua\lua.h	/^LUA_API int             (lua_isnumber) (lua_State *L, int idx);$/
+lua_isstring	.\lua.h	/^LUA_API int             (lua_isstring) (lua_State *L, int idx);$/
+lua_isstring	.\lua\lua.h	/^LUA_API int             (lua_isstring) (lua_State *L, int idx);$/
+lua_istable	.\lua.h	265
+lua_istable	.\lua\lua.h	327
+lua_isthread	.\lua.h	269
+lua_isthread	.\lua\lua.h	331
+lua_isuserdata	.\lua.h	/^LUA_API int             (lua_isuserdata) (lua_State *L, int idx);$/
+lua_isuserdata	.\lua\lua.h	/^LUA_API int             (lua_isuserdata) (lua_State *L, int idx);$/
+lua_len	.\lua\lua.h	/^LUA_API void  (lua_len)    (lua_State *L, int idx);$/
+lua_lessthan	.\lua.h	/^LUA_API int            (lua_lessthan) (lua_State *L, int idx1, int idx2);$/
+lua_lessthan	.\lua\luaconf.h	293
+lua_load	.\lua.h	/^LUA_API int   (lua_load) (lua_State *L, lua_Reader reader, void *dt,$/
+lua_load	.\lua\lua.h	/^LUA_API int   (lua_load) (lua_State *L, lua_Reader reader, void *dt,$/
+lua_newstate	.\lua.h	/^LUA_API lua_State *(lua_newstate) (lua_Alloc f, void *ud);$/
+lua_newstate	.\lua\lua.h	/^LUA_API lua_State *(lua_newstate) (lua_Alloc f, void *ud);$/
+lua_newtable	.\lua.h	256
+lua_newtable	.\lua\lua.h	320
+lua_newthread	.\lua.h	/^LUA_API lua_State *(lua_newthread) (lua_State *L);$/
+lua_newthread	.\lua\lua.h	/^LUA_API lua_State *(lua_newthread) (lua_State *L);$/
+lua_newuserdata	.\lua.h	/^LUA_API void *(lua_newuserdata) (lua_State *L, size_t sz);$/
+lua_newuserdata	.\lua\lua.h	/^LUA_API void *(lua_newuserdata) (lua_State *L, size_t sz);$/
+lua_next	.\lua.h	/^LUA_API int   (lua_next) (lua_State *L, int idx);$/
+lua_next	.\lua\lua.h	/^LUA_API int   (lua_next) (lua_State *L, int idx);$/
+lua_number2int	.\luaconf.h	563
+lua_number2int	.\luaconf.h	571
+lua_number2int	.\luaconf.h	580
+lua_number2integer	.\luaconf.h	564
+lua_number2integer	.\luaconf.h	573
+lua_number2integer	.\luaconf.h	581
+lua_number2str	.\lua\luaconf.h	399
+lua_number2str	.\luaconf.h	523
+lua_objlen	.\lua.h	/^LUA_API size_t          (lua_objlen) (lua_State *L, int idx);$/
+lua_objlen	.\lua\luaconf.h	290
+lua_open	.\lua.h	287
+lua_p_msg_1	.\lua_glue.cpp	/^    LuaGlue lua_p_msg_1(lua_State*);$/
+lua_p_msg_1	.\lua_glue.cpp	/^LuaGlue lua_p_msg_1(lua_State *L) $/
+lua_p_msg_2	.\lua_glue.cpp	/^    LuaGlue lua_p_msg_2(lua_State*);$/
+lua_p_msg_2	.\lua_glue.cpp	/^LuaGlue lua_p_msg_2(lua_State *L) $/
+lua_pcall	.\lua.h	/^LUA_API int   (lua_pcall) (lua_State *L, int nargs, int nresults, int errfunc);$/
+lua_pcall	.\lua\lua.h	254
+lua_pcallk	.\lua\lua.h	/^LUA_API int   (lua_pcallk) (lua_State *L, int nargs, int nresults, int errfunc,$/
+lua_pclose	.\luaconf.h	671
+lua_pclose	.\luaconf.h	676
+lua_pclose	.\luaconf.h	682
+lua_pop	.\lua.h	254
+lua_pop	.\lua\lua.h	318
+lua_popen	.\luaconf.h	670
+lua_popen	.\luaconf.h	675
+lua_popen	.\luaconf.h	680
+lua_pushboolean	.\lua.h	/^LUA_API void  (lua_pushboolean) (lua_State *L, int b);$/
+lua_pushboolean	.\lua\lua.h	/^LUA_API void  (lua_pushboolean) (lua_State *L, int b);$/
+lua_pushcclosure	.\lua.h	/^LUA_API void  (lua_pushcclosure) (lua_State *L, lua_CFunction fn, int n);$/
+lua_pushcclosure	.\lua\lua.h	/^LUA_API void  (lua_pushcclosure) (lua_State *L, lua_CFunction fn, int n);$/
+lua_pushcfunction	.\lua.h	260
+lua_pushcfunction	.\lua\lua.h	324
+lua_pushfstring	.\lua.h	/^LUA_API const char *(lua_pushfstring) (lua_State *L, const char *fmt, ...);$/
+lua_pushfstring	.\lua\lua.h	/^LUA_API const char *(lua_pushfstring) (lua_State *L, const char *fmt, ...);$/
+lua_pushglobaltable	.\lua\lua.h	338
+lua_pushinteger	.\lua.h	/^LUA_API void  (lua_pushinteger) (lua_State *L, lua_Integer n);$/
+lua_pushinteger	.\lua\lua.h	/^LUA_API void        (lua_pushinteger) (lua_State *L, lua_Integer n);$/
+lua_pushlightuserdata	.\lua.h	/^LUA_API void  (lua_pushlightuserdata) (lua_State *L, void *p);$/
+lua_pushlightuserdata	.\lua\lua.h	/^LUA_API void  (lua_pushlightuserdata) (lua_State *L, void *p);$/
+lua_pushliteral	.\lua.h	273
+lua_pushliteral	.\lua\lua.h	335
+lua_pushlstring	.\lua.h	/^LUA_API void  (lua_pushlstring) (lua_State *L, const char *s, size_t l);$/
+lua_pushlstring	.\lua\lua.h	/^LUA_API const char *(lua_pushlstring) (lua_State *L, const char *s, size_t l);$/
+lua_pushnil	.\lua.h	/^LUA_API void  (lua_pushnil) (lua_State *L);$/
+lua_pushnil	.\lua\lua.h	/^LUA_API void        (lua_pushnil) (lua_State *L);$/
+lua_pushnumber	.\lua.h	/^LUA_API void  (lua_pushnumber) (lua_State *L, lua_Number n);$/
+lua_pushnumber	.\lua\lua.h	/^LUA_API void        (lua_pushnumber) (lua_State *L, lua_Number n);$/
+lua_pushstring	.\lua.h	/^LUA_API void  (lua_pushstring) (lua_State *L, const char *s);$/
+lua_pushstring	.\lua\lua.h	/^LUA_API const char *(lua_pushstring) (lua_State *L, const char *s);$/
+lua_pushthread	.\lua.h	/^LUA_API int   (lua_pushthread) (lua_State *L);$/
+lua_pushthread	.\lua\lua.h	/^LUA_API int   (lua_pushthread) (lua_State *L);$/
+lua_pushunsigned	.\lua\lua.h	/^LUA_API void        (lua_pushunsigned) (lua_State *L, lua_Unsigned n);$/
+lua_pushvalue	.\lua.h	/^LUA_API void  (lua_pushvalue) (lua_State *L, int idx);$/
+lua_pushvalue	.\lua\lua.h	/^LUA_API void  (lua_pushvalue) (lua_State *L, int idx);$/
+lua_pushvfstring	.\lua.h	/^LUA_API const char *(lua_pushvfstring) (lua_State *L, const char *fmt,$/
+lua_pushvfstring	.\lua\lua.h	/^LUA_API const char *(lua_pushvfstring) (lua_State *L, const char *fmt,$/
+lua_rawequal	.\lua.h	/^LUA_API int            (lua_rawequal) (lua_State *L, int idx1, int idx2);$/
+lua_rawequal	.\lua\lua.h	/^LUA_API int   (lua_rawequal) (lua_State *L, int idx1, int idx2);$/
+lua_rawget	.\lua.h	/^LUA_API void  (lua_rawget) (lua_State *L, int idx);$/
+lua_rawget	.\lua\lua.h	/^LUA_API void  (lua_rawget) (lua_State *L, int idx);$/
+lua_rawgeti	.\lua.h	/^LUA_API void  (lua_rawgeti) (lua_State *L, int idx, int n);$/
+lua_rawgeti	.\lua\lua.h	/^LUA_API void  (lua_rawgeti) (lua_State *L, int idx, int n);$/
+lua_rawgetp	.\lua\lua.h	/^LUA_API void  (lua_rawgetp) (lua_State *L, int idx, const void *p);$/
+lua_rawlen	.\lua\lua.h	/^LUA_API size_t          (lua_rawlen) (lua_State *L, int idx);$/
+lua_rawset	.\lua.h	/^LUA_API void  (lua_rawset) (lua_State *L, int idx);$/
+lua_rawset	.\lua\lua.h	/^LUA_API void  (lua_rawset) (lua_State *L, int idx);$/
+lua_rawseti	.\lua.h	/^LUA_API void  (lua_rawseti) (lua_State *L, int idx, int n);$/
+lua_rawseti	.\lua\lua.h	/^LUA_API void  (lua_rawseti) (lua_State *L, int idx, int n);$/
+lua_rawsetp	.\lua\lua.h	/^LUA_API void  (lua_rawsetp) (lua_State *L, int idx, const void *p);$/
+lua_readline	.\luaconf.h	277
+lua_readline	.\luaconf.h	283
+lua_ref	.\lauxlib.h	162
+lua_register	.\lua.h	258
+lua_register	.\lua\lua.h	322
+lua_remove	.\lua.h	/^LUA_API void  (lua_remove) (lua_State *L, int idx);$/
+lua_remove	.\lua\lua.h	/^LUA_API void  (lua_remove) (lua_State *L, int idx);$/
+lua_replace	.\lua.h	/^LUA_API void  (lua_replace) (lua_State *L, int idx);$/
+lua_replace	.\lua\lua.h	/^LUA_API void  (lua_replace) (lua_State *L, int idx);$/
+lua_resume	.\lua.h	/^LUA_API int  (lua_resume) (lua_State *L, int narg);$/
+lua_resume	.\lua\lua.h	/^LUA_API int  (lua_resume) (lua_State *L, lua_State *from, int narg);$/
+lua_saveline	.\luaconf.h	278
+lua_saveline	.\luaconf.h	286
+lua_setallocf	.\lua.h	/^LUA_API void lua_setallocf (lua_State *L, lua_Alloc f, void *ud);$/
+lua_setallocf	.\lua\lua.h	/^LUA_API void      (lua_setallocf) (lua_State *L, lua_Alloc f, void *ud);$/
+lua_setfenv	.\lua.h	/^LUA_API int   (lua_setfenv) (lua_State *L, int idx);$/
+lua_setfield	.\lua.h	/^LUA_API void  (lua_setfield) (lua_State *L, int idx, const char *k);$/
+lua_setfield	.\lua\lua.h	/^LUA_API void  (lua_setfield) (lua_State *L, int idx, const char *k);$/
+lua_setglobal	.\lua.h	276
+lua_setglobal	.\lua\lua.h	/^LUA_API void  (lua_setglobal) (lua_State *L, const char *var);$/
+lua_sethook	.\lua.h	/^LUA_API int lua_sethook (lua_State *L, lua_Hook func, int mask, int count);$/
+lua_sethook	.\lua\lua.h	/^LUA_API int (lua_sethook) (lua_State *L, lua_Hook func, int mask, int count);$/
+lua_setlevel	.\lua.h	/^LUA_API void lua_setlevel	(lua_State *from, lua_State *to);$/
+lua_setlocal	.\lua.h	/^LUA_API const char *lua_setlocal (lua_State *L, const lua_Debug *ar, int n);$/
+lua_setlocal	.\lua\lua.h	/^LUA_API const char *(lua_setlocal) (lua_State *L, const lua_Debug *ar, int n);$/
+lua_setmetatable	.\lua.h	/^LUA_API int   (lua_setmetatable) (lua_State *L, int objindex);$/
+lua_setmetatable	.\lua\lua.h	/^LUA_API int   (lua_setmetatable) (lua_State *L, int objindex);$/
+lua_settable	.\lua.h	/^LUA_API void  (lua_settable) (lua_State *L, int idx);$/
+lua_settable	.\lua\lua.h	/^LUA_API void  (lua_settable) (lua_State *L, int idx);$/
+lua_settop	.\lua.h	/^LUA_API void  (lua_settop) (lua_State *L, int idx);$/
+lua_settop	.\lua\lua.h	/^LUA_API void  (lua_settop) (lua_State *L, int idx);$/
+lua_setupvalue	.\lua.h	/^LUA_API const char *lua_setupvalue (lua_State *L, int funcindex, int n);$/
+lua_setupvalue	.\lua\lua.h	/^LUA_API const char *(lua_setupvalue) (lua_State *L, int funcindex, int n);$/
+lua_setuservalue	.\lua\lua.h	/^LUA_API void  (lua_setuservalue) (lua_State *L, int idx);$/
+lua_status	.\lua.h	/^LUA_API int  (lua_status) (lua_State *L);$/
+lua_status	.\lua\lua.h	/^LUA_API int  (lua_status) (lua_State *L);$/
+lua_stdin_is_tty	.\luaconf.h	229
+lua_stdin_is_tty	.\luaconf.h	233
+lua_stdin_is_tty	.\luaconf.h	235
+lua_str2number	.\lua\luaconf.h	411
+lua_str2number	.\luaconf.h	525
+lua_strlen	.\lua.h	262
+lua_strlen	.\lua\luaconf.h	288
+lua_strx2number	.\lua\luaconf.h	414
+lua_tmpnam	.\luaconf.h	649
+lua_tmpnam	.\luaconf.h	657
+lua_toboolean	.\lua.h	/^LUA_API int             (lua_toboolean) (lua_State *L, int idx);$/
+lua_toboolean	.\lua\lua.h	/^LUA_API int             (lua_toboolean) (lua_State *L, int idx);$/
+lua_tocfunction	.\lua.h	/^LUA_API lua_CFunction   (lua_tocfunction) (lua_State *L, int idx);$/
+lua_tocfunction	.\lua\lua.h	/^LUA_API lua_CFunction   (lua_tocfunction) (lua_State *L, int idx);$/
+lua_tointeger	.\lua.h	/^LUA_API lua_Integer     (lua_tointeger) (lua_State *L, int idx);$/
+lua_tointeger	.\lua\lua.h	315
+lua_tointegerx	.\lua\lua.h	/^LUA_API lua_Integer     (lua_tointegerx) (lua_State *L, int idx, int *isnum);$/
+lua_tolstring	.\lua.h	/^LUA_API const char     *(lua_tolstring) (lua_State *L, int idx, size_t *len);$/
+lua_tolstring	.\lua\lua.h	/^LUA_API const char     *(lua_tolstring) (lua_State *L, int idx, size_t *len);$/
+lua_tonumber	.\lua.h	/^LUA_API lua_Number      (lua_tonumber) (lua_State *L, int idx);$/
+lua_tonumber	.\lua\lua.h	314
+lua_tonumberx	.\lua\lua.h	/^LUA_API lua_Number      (lua_tonumberx) (lua_State *L, int idx, int *isnum);$/
+lua_topointer	.\lua.h	/^LUA_API const void     *(lua_topointer) (lua_State *L, int idx);$/
+lua_topointer	.\lua\lua.h	/^LUA_API const void     *(lua_topointer) (lua_State *L, int idx);$/
+lua_tostring	.\lua.h	279
+lua_tostring	.\lua\lua.h	341
+lua_tothread	.\lua.h	/^LUA_API lua_State      *(lua_tothread) (lua_State *L, int idx);$/
+lua_tothread	.\lua\lua.h	/^LUA_API lua_State      *(lua_tothread) (lua_State *L, int idx);$/
+lua_tounsigned	.\lua\lua.h	316
+lua_tounsignedx	.\lua\lua.h	/^LUA_API lua_Unsigned    (lua_tounsignedx) (lua_State *L, int idx, int *isnum);$/
+lua_touserdata	.\lua.h	/^LUA_API void	       *(lua_touserdata) (lua_State *L, int idx);$/
+lua_touserdata	.\lua\lua.h	/^LUA_API void	       *(lua_touserdata) (lua_State *L, int idx);$/
+lua_type	.\lua.h	/^LUA_API int             (lua_type) (lua_State *L, int idx);$/
+lua_type	.\lua\lua.h	/^LUA_API int             (lua_type) (lua_State *L, int idx);$/
+lua_typename	.\lua.h	/^LUA_API const char     *(lua_typename) (lua_State *L, int tp);$/
+lua_typename	.\lua\lua.h	/^LUA_API const char     *(lua_typename) (lua_State *L, int tp);$/
+lua_unref	.\lauxlib.h	165
+lua_upvalueid	.\lua\lua.h	/^LUA_API void *(lua_upvalueid) (lua_State *L, int fidx, int n);$/
+lua_upvalueindex	.\lua.h	39
+lua_upvalueindex	.\lua\lua.h	41
+lua_upvaluejoin	.\lua\lua.h	/^LUA_API void  (lua_upvaluejoin) (lua_State *L, int fidx1, int n1,$/
+lua_version	.\lua\lua.h	/^LUA_API const lua_Number *(lua_version) (lua_State *L);$/
+lua_xmove	.\lua.h	/^LUA_API void  (lua_xmove) (lua_State *from, lua_State *to, int n);$/
+lua_xmove	.\lua\lua.h	/^LUA_API void  (lua_xmove) (lua_State *from, lua_State *to, int n);$/
+lua_yield	.\lua.h	/^LUA_API int  (lua_yield) (lua_State *L, int nresults);$/
+lua_yield	.\lua\lua.h	268
+lua_yieldk	.\lua\lua.h	/^LUA_API int  (lua_yieldk) (lua_State *L, int nresults, int ctx,$/
+luai_Cast	.\luaconf.h	/^union luai_Cast { double l_d; long l_l; };$/
+luai_Cast::l_d	.\luaconf.h	/^union luai_Cast { double l_d; long l_l; };$/
+luai_Cast::l_l	.\luaconf.h	/^union luai_Cast { double l_d; long l_l; };$/
+luai_apicheck	.\luaconf.h	379
+luai_apicheck	.\luaconf.h	381
+luai_jmpbuf	.\luaconf.h	611
+luai_jmpbuf	.\luaconf.h	617
+luai_jmpbuf	.\luaconf.h	623
+luai_numadd	.\lua\luaconf.h	431
+luai_numadd	.\luaconf.h	533
+luai_numdiv	.\lua\luaconf.h	434
+luai_numdiv	.\luaconf.h	536
+luai_numeq	.\lua\luaconf.h	436
+luai_numeq	.\luaconf.h	540
+luai_numisnan	.\lua\luaconf.h	439
+luai_numisnan	.\luaconf.h	543
+luai_numle	.\lua\luaconf.h	438
+luai_numle	.\luaconf.h	542
+luai_numlt	.\lua\luaconf.h	437
+luai_numlt	.\luaconf.h	541
+luai_nummod	.\lua\luaconf.h	425
+luai_nummod	.\luaconf.h	537
+luai_nummul	.\lua\luaconf.h	433
+luai_nummul	.\luaconf.h	535
+luai_numpow	.\lua\luaconf.h	426
+luai_numpow	.\luaconf.h	538
+luai_numsub	.\lua\luaconf.h	432
+luai_numsub	.\luaconf.h	534
+luai_numunm	.\lua\luaconf.h	435
+luai_numunm	.\luaconf.h	539
+luai_userstateclose	.\luaconf.h	724
+luai_userstatefree	.\luaconf.h	726
+luai_userstateopen	.\luaconf.h	723
+luai_userstateresume	.\luaconf.h	727
+luai_userstatethread	.\luaconf.h	725
+luai_userstateyield	.\luaconf.h	728
+luai_writeline	.\lua\luaconf.h	217
+luai_writestring	.\lua\luaconf.h	216
+luai_writestringerror	.\lua\luaconf.h	224
+lualib_h	.\lua\lualib.h	9
+lualib_h	.\lualib.h	9
+luaopen_base	.\lua\lualib.h	/^LUAMOD_API int (luaopen_base) (lua_State *L);$/
+luaopen_base	.\lualib.h	/^LUALIB_API int (luaopen_base) (lua_State *L);$/
+luaopen_bit32	.\lua\lualib.h	/^LUAMOD_API int (luaopen_bit32) (lua_State *L);$/
+luaopen_coroutine	.\lua\lualib.h	/^LUAMOD_API int (luaopen_coroutine) (lua_State *L);$/
+luaopen_debug	.\lua\lualib.h	/^LUAMOD_API int (luaopen_debug) (lua_State *L);$/
+luaopen_debug	.\lualib.h	/^LUALIB_API int (luaopen_debug) (lua_State *L);$/
+luaopen_io	.\lua\lualib.h	/^LUAMOD_API int (luaopen_io) (lua_State *L);$/
+luaopen_io	.\lualib.h	/^LUALIB_API int (luaopen_io) (lua_State *L);$/
+luaopen_math	.\lua\lualib.h	/^LUAMOD_API int (luaopen_math) (lua_State *L);$/
+luaopen_math	.\lualib.h	/^LUALIB_API int (luaopen_math) (lua_State *L);$/
+luaopen_os	.\lua\lualib.h	/^LUAMOD_API int (luaopen_os) (lua_State *L);$/
+luaopen_os	.\lualib.h	/^LUALIB_API int (luaopen_os) (lua_State *L);$/
+luaopen_package	.\lua\lualib.h	/^LUAMOD_API int (luaopen_package) (lua_State *L);$/
+luaopen_package	.\lualib.h	/^LUALIB_API int (luaopen_package) (lua_State *L);$/
+luaopen_string	.\lua\lualib.h	/^LUAMOD_API int (luaopen_string) (lua_State *L);$/
+luaopen_string	.\lualib.h	/^LUALIB_API int (luaopen_string) (lua_State *L);$/
+luaopen_table	.\lua\lualib.h	/^LUAMOD_API int (luaopen_table) (lua_State *L);$/
+luaopen_table	.\lualib.h	/^LUALIB_API int (luaopen_table) (lua_State *L);$/
+lvl	.\lauxlib.h	/^  int lvl;  \/* number of strings in the stack (level) *\/$/
+main	.\main.cpp	/^int main(int argc, char* args[] )$/
+main_bg	.\Scene.h	/^		SDL_Surface* main_bg;$/
+main_menu1	.\Scene.h	/^		SDL_Surface* main_menu1;$/
+main_menu1_over	.\Scene.h	/^		SDL_Surface* main_menu1_over;$/
+main_menu2	.\Scene.h	/^		SDL_Surface* main_menu2;$/
+main_menu2_over	.\Scene.h	/^		SDL_Surface* main_menu2_over;$/
+maj_lua_error	.\GlobalFunctions.cpp	/^void maj_lua_error(lua_State *L, const char *fmt, const char *at ,...) {$/
+maj_lua_error	.\GlobalFunctions.h	/^void maj_lua_error(lua_State*, const char*, const char*, ...);$/
+map	.\Scene.h	/^		Map* map;$/
+menu	.\Scene.h	/^		int menu;$/
+message	.\Scene.h	/^		std::string message;$/
+message2	.\Scene.h	/^		std::string message2;$/
+message_box	.\Scene.h	/^		SDL_Rect message_box;$/
+message_box_clip	.\Scene.h	/^		SDL_Rect message_box_clip;$/
+message_handler	.\Configuration.lua	/^function message_handler(message_id)$/
+message_timer	.\Scene.h	/^		Timer message_timer;$/
+message_timer2	.\Scene.h	/^		Timer message_timer2;$/
+move	.\character.cpp	/^bool Character::move(Uint32 deltaTicks) {return true ;}$/
+move	.\character.cpp	/^bool Hero::move(Uint32 deltaTicks)$/
+move	.\character.h	/^		virtual bool move(Uint32 deltaTicks);$/
+move	.\gang.cpp	/^bool Gang::move(Uint32 deltaTicks)$/
+move_back	.\character.cpp	/^void Character::move_back()$/
+move_back	.\character.cpp	/^void Hero::move_back()$/
+move_back	.\character.h	/^		virtual void move_back();$/
+move_back	.\gang.cpp	/^void Gang::move_back()$/
+n	.\lua\lauxlib.h	/^  size_t n;  \/* number of characters in buffer *\/$/
+name	.\lauxlib.h	/^  const char *name;$/
+name	.\lua.h	/^  const char *name;	\/* (n) *\/$/
+name	.\lua\lauxlib.h	/^  const char *name;$/
+name	.\lua\lua.h	/^  const char *name;	\/* (n) *\/$/
+namewhat	.\lua.h	/^  const char *namewhat;	\/* (n) `global', `local', `field', `method' *\/$/
+namewhat	.\lua\lua.h	/^  const char *namewhat;	\/* (n) 'global', 'local', 'field', 'method' *\/$/
+next_person	.\character.h	/^		Character* next_person;$/
+next_person	.\character.h	/^		Gang* next_person;$/
+nparams	.\lua\lua.h	/^  unsigned char nparams;\/* (u) number of parameters *\/$/
+nups	.\lua.h	/^  int nups;		\/* (u) number of upvalues *\/$/
+nups	.\lua\lua.h	/^  unsigned char nups;	\/* (u) number of upvalues *\/$/
+object_point	.\character.h	/^		SDL_Rect* object_point;$/
+offset	.\Scene.h	/^		SDL_Rect offset;$/
+p	.\lauxlib.h	/^  char *p;			\/* current position in buffer *\/$/
+p_x	.\character.h	/^		int x, y, p_x, p_y;$/
+p_y	.\character.h	/^		int x, y, p_x, p_y;$/
+pause	.\Timer.cpp	/^void Timer::pause()$/
+pause	.\timer.h	/^		void pause();$/
+paused	.\timer.h	/^		bool paused;$/
+pausedTicks	.\timer.h	/^		int pausedTicks;$/
+period	.\timer.h	/^                int period;$/
+print_limit	.\GameScene_GUI.cpp	/^void WalletBar::print_limit(ECard i, uint64_t money)$/
+print_limit	.\Scene.h	/^		void print_limit(ECard, uint64_t);$/
+print_message_1	.\GameScene.cpp	/^void GameScene::print_message_1(std::string msg, int duration)$/
+print_message_1	.\Scene.h	/^                void print_message_1(std::string msg, int duration);$/
+print_message_2	.\GameScene.cpp	/^void GameScene::print_message_2(std::string msg, int duration) $/
+print_message_2	.\Scene.h	/^                void print_message_2(std::string msg, int duration);$/
+purchase_count	.\Scene.h	/^		int purchase_count;$/
+quit	.\main.cpp	/^bool quit = false;$/
+scene	.\main.cpp	/^Scene* scene = NULL;$/
+scenes	.\main.cpp	/^Scene* scenes[SCENE_NUM];$/
+screen	.\main.cpp	/^SDL_Surface *screen = NULL;$/
+select_card	.\character.cpp	/^void Hero::select_card(ECard pCard )$/
+select_card	.\character.h	/^		void select_card(ECard pCard);$/
+set_clip	.\character.cpp	/^void Character::set_clip(){;}$/
+set_clip	.\character.cpp	/^void Hero::set_clip()$/
+set_clip	.\character.h	/^		virtual void set_clip();$/
+set_clip	.\gang.cpp	/^void Gang::set_clip()$/
+set_credit_score	.\GameScene_GUI.cpp	/^void Top::set_credit_score(int credit)$/
+set_credit_score	.\Scene.h	/^		void set_credit_score(int credit);$/
+set_object	.\character.cpp	/^void Character::set_object(SDL_Rect *object){;}$/
+set_object	.\character.h	/^		virtual void set_object(SDL_Rect *object);$/
+set_object	.\gang.cpp	/^void Gang::set_object(SDL_Rect* object)$/
+set_total_dept	.\GameScene_GUI.cpp	/^void Top::set_total_dept(int total)$/
+set_total_dept	.\Scene.h	/^		void set_total_dept(int total);$/
+short_src	.\lua.h	/^  char short_src[LUA_IDSIZE]; \/* (S) *\/$/
+short_src	.\lua\lua.h	/^  char short_src[LUA_IDSIZE]; \/* (S) *\/$/
+show	.\GameScene.cpp	/^void GameScene::show()$/
+show	.\GameScene_GUI.cpp	/^void Top::show(SDL_Surface* background)$/
+show	.\GameScene_GUI.cpp	/^void WalletBar::show( )$/
+show	.\Scene.cpp	/^void BadEndScene::show()$/
+show	.\Scene.cpp	/^void CreditScene::show()$/
+show	.\Scene.cpp	/^void GoodEndScene::show()$/
+show	.\Scene.cpp	/^void Scene::show(){;}$/
+show	.\Scene.cpp	/^void StartScene::show()$/
+show	.\Scene.h	/^		virtual void show();$/
+show	.\Scene.h	/^		void show();$/
+show	.\Scene.h	/^		void show(SDL_Surface*);$/
+show	.\building.cpp	/^void Building::show()$/
+show	.\building.h	/^		void show();$/
+show	.\character.cpp	/^void Character::show(SDL_Surface*){;}$/
+show	.\character.cpp	/^void Hero::show(SDL_Surface* screen)$/
+show	.\character.h	/^		virtual void show(SDL_Surface*);$/
+show	.\gang.cpp	/^void Gang::show(SDL_Surface* screen)$/
+show	.\map.cpp	/^void Map::show()$/
+show	.\map.h	/^		void show();$/
+show_gage	.\GameScene_GUI.cpp	/^void WalletBar::show_gage(ECard i, float ratio)$/
+show_gage	.\Scene.h	/^		void show_gage(ECard, float);$/
+show_message_box	.\GameScene.cpp	/^void GameScene::show_message_box(){$/
+show_message_box	.\Scene.h	/^		void show_message_box();$/
+size	.\lua\lauxlib.h	/^  size_t size;  \/* buffer size *\/$/
+source	.\lua.h	/^  const char *source;	\/* (S) *\/$/
+source	.\lua\lua.h	/^  const char *source;	\/* (S) *\/$/
+sprite	.\sprite.h	/^		void sprite();$/
+start	.\Timer.cpp	/^void Timer::start()$/
+start	.\Timer.cpp	/^void Timer::start(int prd)$/
+start	.\timer.h	/^		void start();$/
+start	.\timer.h	/^                void start(int);$/
+startTicks	.\timer.h	/^		int startTicks;$/
+started	.\timer.h	/^		bool started;$/
+stop	.\Timer.cpp	/^void Timer::stop()$/
+stop	.\timer.h	/^		void stop();$/
+textColor	.\main.cpp	/^SDL_Color textColor = {0,0,0};$/
+top	.\Scene.h	/^		Top* top;$/
+total_str	.\Scene.h	/^		std::string total_str;$/
+unpause	.\Timer.cpp	/^void Timer::unpause()$/
+unpause	.\timer.h	/^		void unpause();$/
+w	.\building.h	/^		int w,h;$/
+w	.\character.h	/^		int w, h;$/
+w	.\map.h	/^		int w,h;$/
+wallet	.\Scene.h	/^		WalletBar* wallet;$/
+what	.\lua.h	/^  const char *what;	\/* (S) `Lua', `C', `main', `tail' *\/$/
+what	.\lua\lua.h	/^  const char *what;	\/* (S) 'Lua', 'C', 'main', 'tail' *\/$/
+whiteColor	.\main.cpp	/^SDL_Color whiteColor= {0xff,0xff,0xff};$/
+x	.\building.h	/^		int x,y;$/
+x	.\character.h	/^		int x, y, p_x, p_y;$/
+x	.\map.h	/^		int x,y;$/
+xVel	.\character.h	/^		int xVel, yVel;$/
+y	.\building.h	/^		int x,y;$/
+y	.\character.h	/^		int x, y, p_x, p_y;$/
+y	.\map.h	/^		int x,y;$/
+yVel	.\character.h	/^		int xVel, yVel;$/
+~Character	.\character.cpp	/^Character::~Character()$/
+~Character	.\character.h	/^                virtual ~Character();$/
+~Scene	.\Scene.cpp	/^Scene::~Scene() { ; $/
+~Scene	.\Scene.h	/^                virtual ~Scene();$/

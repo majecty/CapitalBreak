@@ -38,40 +38,7 @@ SDL_Event  event;
 lua_State* L;
 
 
-void lua_init()
-{
-    L = luaL_newstate();
-    luaL_openlibs(L);
-    fprintf(stderr, "in lua_init function start %s\n",AT );
 
-    if ( luaL_loadfile(L, "Configuration.lua") || lua_pcall(L,0,0,0))
-    //if ( luaL_loadfile(L, "luac.out") || lua_pcall(L,0,0,0))
-        maj_lua_error(L, "cannot run config. file: %s\n", lua_tostring(L,-1));
-    fprintf(stderr, "in after lua_loadfile");
-
-    lua_getglobal(L, "default_frame_rate");
-    lua_getglobal(L, "default_rate");
-    lua_getglobal(L, "rate_rate");
-    lua_getglobal(L, "default_limit");
-    lua_getglobal(L, "limit_rate");
-    lua_getglobal(L, "start_grade");
-
-    lua_getglobal(L, "is_full_screen");
-
-    DEFAULT_FRAME_RATE = lua_tointeger(L,1);
-    DEFAULT_RATE = lua_tonumber(L,2);
-    RATE_RATE = lua_tonumber(L,3);
-    DEFAULT_LIMIT = lua_tointeger(L,4);
-    LIMIT_RATE = lua_tointeger(L,5);
-    START_GRADE = lua_tointeger(L,6);
-    IS_FULL_SCREEN = lua_toboolean(L,7);
-
-    fprintf(stderr, "default frame rate is %d\n", LIMIT_RATE);
-    fprintf(stderr, "LIMIT_RATE is %d\n", LIMIT_RATE);
-
-
-    init_glue();
-}
 
 
 bool init()
