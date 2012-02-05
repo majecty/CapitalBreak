@@ -42,45 +42,45 @@ lua_State* L = NULL;
 
 
 
+static void scenes_initialize();
+
 bool init()
 {
-	quit = false;
 
-	scenes[SCENE_START] = new StartScene();
-	scenes[SCENE_GAME] = new GameScene();
-	scenes[SCENE_BADEND] = new BadEndScene();
-	scenes[SCENE_GOODEND] = new GoodEndScene();
-	scenes[SCENE_CREDIT] = new CreditScene();
+    scenes_initialize();
+
+    quit = false;
 
 
-	if( SDL_Init(SDL_INIT_EVERYTHING) == -1)
-	{
-            fprintf(stderr, "Initialize ERROR AT : %s\n",AT);
-		return false;
-	}
+
+    if( SDL_Init(SDL_INIT_EVERYTHING) == -1)
+    {
+        fprintf(stderr, "Initialize ERROR AT : %s\n",AT);
+        return false;
+    }
 
 
-        if (IS_FULL_SCREEN)
-            screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE | SDL_FULLSCREEN);
-        else
-            screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
+    if (IS_FULL_SCREEN)
+        screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE | SDL_FULLSCREEN);
+    else
+        screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
 
-	if (screen == NULL)
-	{
-            fprintf(stderr, "SetVideoMode Error At : %s\n",AT);
-		return false;
-	}
+    if (screen == NULL)
+    {
+        fprintf(stderr, "SetVideoMode Error At : %s\n",AT);
+        return false;
+    }
 
-	if( TTF_Init() == -1 )
-	{
-            fprintf(stderr, "Font Module Load Error At : %s\n",AT);
-		return false;
-	}
+    if( TTF_Init() == -1 )
+    {
+        fprintf(stderr, "Font Module Load Error At : %s\n",AT);
+        return false;
+    }
 
-	SDL_WM_SetCaption("Capital Break", NULL);
+    SDL_WM_SetCaption("Capital Break", NULL);
 
 
-	return true;
+    return true;
 }
 
 bool load_files()
@@ -199,5 +199,15 @@ void change_scene(int scene_num)
 	scene->clean_up();
 	scene = scenes[scene_num];
 	scene->init();
+
+}
+
+static void scenes_initialize()
+{
+    scenes[SCENE_START] = new StartScene();
+    scenes[SCENE_GAME] = new GameScene();
+    scenes[SCENE_BADEND] = new BadEndScene();
+    scenes[SCENE_GOODEND] = new GoodEndScene();
+    scenes[SCENE_CREDIT] = new CreditScene();
 
 }
