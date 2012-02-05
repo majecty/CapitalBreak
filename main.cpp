@@ -43,6 +43,7 @@ lua_State* L = NULL;
 
 
 static void scenes_initialize();
+static void SDL_Initialize();
 
 bool init()
 {
@@ -51,13 +52,7 @@ bool init()
 
     quit = false;
 
-
-
-    if( SDL_Init(SDL_INIT_EVERYTHING) == -1)
-    {
-        fprintf(stderr, "Initialize ERROR AT : %s\n",AT);
-        return false;
-    }
+    SDL_Initialize();
 
 
     if (IS_FULL_SCREEN)
@@ -210,4 +205,12 @@ static void scenes_initialize()
     scenes[SCENE_GOODEND] = new GoodEndScene();
     scenes[SCENE_CREDIT] = new CreditScene();
 
+}
+
+static void SDL_Initialize()
+{
+    if( SDL_Init(SDL_INIT_EVERYTHING) == -1)
+    {
+        error( "SDL CORE Initialize ERROR ",AT);
+    }
 }
