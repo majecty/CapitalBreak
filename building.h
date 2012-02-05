@@ -25,11 +25,12 @@ class Building : public Collider
 		int x,y;
 		int w,h;
 		SDL_Surface *depart_image;
+                SDL_Surface *buildings_image;
 		Door *door;
 		SDL_Rect clip;
 	public:
 		int card_id;
-		Building(int _x, int _y,int _w, int _h);
+		Building(int _x, int _y,int _w, int _h, SDL_Surface* bs_image);
 		//void init(int id);
 		void init(ECard pCard);
 		virtual bool check_collide(Collider*);

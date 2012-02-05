@@ -4,12 +4,13 @@
 #include "global.h"
 #include "Configuration.h"
 
-Building::Building(int _x, int _y, int _w, int _h)
+Building::Building(int _x, int _y, int _w, int _h, SDL_Surface* bs_image)
 {
 	x = _x;
 	y = _y;
 	w = _w;
 	h = _h;
+        buildings_image = bs_image;
 }
 void Building::init(ECard pCard)
 {

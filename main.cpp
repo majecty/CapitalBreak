@@ -7,47 +7,15 @@
 #include "lua_glue.h"
 
 
-
-//#include "SDL/SDL_thread.h"
-
-
-int DEFAULT_FRAME_RATE;
-double DEFAULT_RATE;
-double RATE_RATE;
-int DEFAULT_LIMIT;
-int LIMIT_RATE;
-int START_GRADE;
-bool IS_FULL_SCREEN;
-int CHAR_VELOCITY;
-int SHOP_COUNT_FOR_UPGRADE;
-
-Scene* scene = NULL;
 Scene* scenes[SCENE_NUM];
-
-TTF_Font *font = NULL;
-SDL_Color textColor = {0,0,0};
-SDL_Color whiteColor= {0xff,0xff,0xff};
-SDL_Color blackColor= {0,0,0};
-
-SDL_Surface *buildings_image;
-
-
 bool quit = false;
-
-SDL_Surface *screen = NULL;
-SDL_Event  event;
-
-lua_State* L = NULL;
-
-
-
+Scene* scene = NULL;
 
 static void scenes_initialize();
 static void SDL_Initialize();
 static void default_video_initialize();
 static void font_module_initialize();
 static void load_font();
-static void load_default_background();
 static void delete_scenes();
 
 void init()
@@ -72,7 +40,7 @@ void init()
 
 void load_files()
 {
-    load_default_background();
+//    load_default_background();
 
     load_font();
 
@@ -84,7 +52,7 @@ void clean_up()
 
     scene->clean_up();
 
-    SDL_FreeSurface(buildings_image);
+//    SDL_FreeSurface(buildings_image);
 
     delete_scenes();
 
@@ -228,15 +196,6 @@ static void load_font()
         error("Font Load Error \n",AT);
     }
 
-}
-
-static void load_default_background()
-{
-    buildings_image = load_image("game_1s_building.png");
-    if(buildings_image == NULL)
-    {
-        error("ERROR: When load default building image",AT);
-    }
 }
 
 static void delete_scenes()

@@ -15,8 +15,10 @@ const int THIRDBUILDING_NUM  = 3;
 class Map
 {
 	protected:
+
 		int x,y;
 		int w,h;
+                SDL_Surface* buildings_image;
 		SDL_Surface* background;
 		vector<Building*> buildings;
 		vector<SDL_Rect*> boxes;

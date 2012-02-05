@@ -45,9 +45,9 @@ extern SDL_Color whiteColor ;
 extern SDL_Color blackColor ;
 extern lua_State *L;
 
-extern bool quit ;
+//extern bool quit ;
 
-extern SDL_Surface *buildings_image;
+//extern SDL_Surface *buildings_image;
 
 
 #endif
