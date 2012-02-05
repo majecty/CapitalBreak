@@ -19,6 +19,7 @@ int LIMIT_RATE;
 int START_GRADE;
 bool IS_FULL_SCREEN;
 int CHAR_VELOCITY;
+int SHOP_COUNT_FOR_UPGRADE;
 
 Scene* scene = NULL;
 Scene* scenes[SCENE_NUM];

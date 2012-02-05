@@ -23,7 +23,7 @@ LuaGlue lua_p_msg_1(lua_State *L)
     event.user.code = MESSAGE_BOX_1_EVENT;
 
     std::string* msg = new std::string(lua_tolstring(L,1,NULL));
-    int duration = lua_tointeger(L,2);
+    int *duration = new int(lua_tointeger(L,2));
 
     event.user.data1 = (void*)msg;
     event.user.data2 = (void*)duration;
@@ -38,7 +38,7 @@ LuaGlue lua_p_msg_2(lua_State *L)
     event.type = SDL_USEREVENT;
     event.user.code = MESSAGE_BOX_2_EVENT;
     std::string* msg = new std::string(lua_tolstring(L,1,NULL));
-    int duration = lua_tointeger(L,2);
+    int *duration = new int(lua_tointeger(L,2));
 
     event.user.data1 = (void*)msg;
     event.user.data2 = (void*)duration;
@@ -109,6 +109,8 @@ void lua_init()
 
     lua_getglobal(L, "is_full_screen");
     lua_getglobal(L, "char_velocity");
+    lua_getglobal(L, "shop_count_for_upgrade");
+
 
     DEFAULT_FRAME_RATE = lua_tointeger(L,1);
     DEFAULT_RATE = lua_tonumber(L,2);
@@ -118,6 +120,7 @@ void lua_init()
     START_GRADE = lua_tointeger(L,6);
     IS_FULL_SCREEN = lua_toboolean(L,7);
     CHAR_VELOCITY = lua_tointeger(L,8);
+    SHOP_COUNT_FOR_UPGRADE = lua_tointeger(L,9);
 
     fprintf(stderr, "default frame rate is %d\n", LIMIT_RATE);
     fprintf(stderr, "LIMIT_RATE is %d\n", LIMIT_RATE);

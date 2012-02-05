@@ -8,6 +8,8 @@ const int BAR_WIDTH = 150;
 const int BAR_HEIGHT = SCREEN_HEIGHT;
 const int MAP_WIDTH = 490;
 const int MAP_HEIGHT = SCREEN_HEIGHT;
+//const int SHOP_COUNT_FOR_UPGRADE = 10;
+
 //const int CHAR_VELOCITY = 15;
 //const int FRAMES_PER_SECOND = 60;
 
@@ -21,6 +23,7 @@ extern double RATE_RATE;
 extern int DEFAULT_LIMIT;
 extern int LIMIT_RATE;
 extern int START_GRADE;
+extern int SHOP_COUNT_FOR_UPGRADE;
 //
 //const double DEFAULT_RATE = 0.06;
 //const double RATE_RATE = 0.0006364;

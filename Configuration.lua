@@ -14,9 +14,11 @@ start_grade = 9 -- 9 is B+
 
 char_velocity = 5--15
 
+shop_count_for_upgrade = 10 -- 신용등급이 오르기 위해서 몇번 물건을 사야 하는가.
+
 function lua_event_handler(event_id)
     io.stderr:write("here is lua file \n")
-    print_message_1("hahahahaha", 3)
+    --print_message_1("hahahahaha", 3)
     --print_message_2("hahahahaha")
     if event_id == "Description" then
         print_message_1("Welcome to the Break Capitalism", 2000)
@@ -25,10 +27,10 @@ end
 
 function message_handler(message_id)
 
-    io.stderr:write("haha\n")
+    --io.stderr:write("haha\n")
 
     --io.stderr:write("ERROR: Received message_id is " + message_id + "\n")
-    io.stderr:write("/haha\n")
+    --io.stderr:write("/haha\n")
     if message_id == "Description" then
         print_message_1( "Welcome to the Break Capitalism", 1000)
     elseif message_id == "NoCard" then

@@ -94,7 +94,7 @@ void GameScene::show()
 
 
 //	if ( purchase_count > 30 )
-	if ( purchase_count > )
+	if ( purchase_count > SHOP_COUNT_FOR_UPGRADE)
 	{
 		hero->increase_grade();
 		purchase_count = 0;
@@ -255,6 +255,7 @@ void GameScene::handleUserEvent()
 {
     std::string *msg = NULL;
     Building* building = NULL;
+    int* duration = NULL;
 
     if(event.type == SDL_USEREVENT)
     {
@@ -277,14 +278,20 @@ void GameScene::handleUserEvent()
                 break;
             case MESSAGE_BOX_1_EVENT:
                 msg = (std::string*)event.user.data1;
-                print_message_1(*msg, (int)event.user.data2);
-                fprintf(stderr, "duration is : %d",(int)event.user.data2);
+                duration = (int*)event.user.data2;
+                //print_message_1(*msg, (int)event.user.data2);
+                print_message_1(*msg, *duration);
+                //fprintf(stderr, "duration is : %d",(int)event.user.data2);
                 delete(msg);
+                delete(duration);
                 break;
             case MESSAGE_BOX_2_EVENT:
                 msg = (std::string*)event.user.data1;
-                print_message_2(*msg, (int)event.user.data2);
+                duration = (int*)event.user.data2;
+                print_message_2(*msg,*duration);
+                //print_message_2(*msg, (int)event.user.data2);
                 delete(msg);
+                delete(duration);
                 break;
             default:
                 break;
