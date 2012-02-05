@@ -7,49 +7,61 @@ GameScene::GameScene()
 {
 	;
 }
+
+void GameScene::init_variables()
+{
+
+    happy_ending_flag = false;
+    interest_count = 0;
+    purchase_count= 0;
+    message = "";
+    message2 = "";
+
+}
+
+void GameScene::load_background_image()
+{
+    background = load_image("game_bg.png");
+
+    if(background == NULL)
+    {
+        error("Failt to load GameScene's background\n",AT);
+    }
+}
+
 void GameScene::init()
 {
-	happy_ending_flag = false;
-	interest_count = 0;
-	purchase_count= 0;
+    init_variables();
 
-	background = load_image("game_bg.png");
-	hero = new Hero();
-	hero->init();
-	message = "";
-	message2 = "";
+    load_background_image();
 
-	map = new Map();
-	wallet = new WalletBar();
-	top = new Top(0,0, 640,30);
+    hero = new Hero();
+    hero->init();
+    map = new Map();
+    wallet = new WalletBar();
+    top = new Top(0,0, 640,30);
+    message_box_ = new MessageBox(background);
 
-
-	message_box.x = MESSAGE_BOX_X;
-	message_box.y = MESSAGE_BOX_Y;
-	message_box.w = MESSAGE_BOX_W;
-	message_box.h = MESSAGE_BOX_H;
-	message_box_clip = message_box;
+    message_box.x = MESSAGE_BOX_X;
+    message_box.y = MESSAGE_BOX_Y;
+    message_box.w = MESSAGE_BOX_W;
+    message_box.h = MESSAGE_BOX_H;
+    message_box_clip = message_box;
 
 
 
+    apply_surface(0,0,background,screen);
+    map->init(background);
+    wallet->init(0,30,140,450);
 
-	if(background == NULL)
-	{
-            fprintf(stderr,"Fail to load game_bg.png At :%s ", AT);
-	}
-
-	apply_surface(0,0,background,screen);
-	map->init(background);
-	wallet->init(0,30,140,450);
-
-	show_message_box();
-	interest_timer.start();
+    show_message_box();
+    interest_timer.start();
 
 
-        fire_message_event(eDescription);
-	delta.start();
+    fire_message_event(eDescription);
+    delta.start();
 
-        
+
 }
 void GameScene::clean_up()
 {
@@ -93,7 +105,6 @@ void GameScene::show()
 	
 
 
-//	if ( purchase_count > 30 )
 	if ( purchase_count > SHOP_COUNT_FOR_UPGRADE)
 	{
 		hero->increase_grade();
@@ -180,6 +191,23 @@ void GameScene::show_message_box(){
 	apply_surface(message_box.x, message_box.y+50,message_surface,screen);
 
 }
+
+void GameScene::print_message_1(std::string msg, int duration)
+{
+    message = msg;//"please press space bar to purchase";
+    show_message_box();
+    message_timer.start(duration);
+}
+
+void GameScene::print_message_2(std::string msg, int duration) 
+{
+
+    message2 = msg;//"You Purchase Clock";
+    show_message_box();
+    message_timer2.start(duration);
+
+}
+
 void GameScene::check_collide()
 {
 	SDL_Event event;
@@ -210,23 +238,6 @@ void GameScene::check_collide()
         hero->cant_buy();
 
 }
-
-void GameScene::print_message_1(std::string msg, int duration)
-{
-    message = msg;//"please press space bar to purchase";
-    show_message_box();
-    message_timer.start(duration);
-}
-
-void GameScene::print_message_2(std::string msg, int duration) 
-{
-
-    message2 = msg;//"You Purchase Clock";
-    show_message_box();
-    message_timer2.start(duration);
-
-}
-
 void GameScene::handleInput()
 {
     

@@ -28,11 +28,12 @@ BadEndScene::init	Scene.cpp	/^void BadEndScene::init()$/;"	f	class:BadEndScene	s
 BadEndScene::init	Scene.h	/^		virtual void init();$/;"	p	class:BadEndScene	access:public	signature:()
 BadEndScene::show	Scene.cpp	/^void BadEndScene::show()$/;"	f	class:BadEndScene	signature:()
 BadEndScene::show	Scene.h	/^		virtual void show();$/;"	p	class:BadEndScene	access:public	signature:()
-Building	building.cpp	/^Building::Building(int _x, int _y, int _w, int _h)$/;"	f	class:Building	signature:(int _x, int _y, int _w, int _h)
-Building	building.h	/^		Building(int _x, int _y,int _w, int _h);$/;"	p	class:Building	access:public	signature:(int _x, int _y,int _w, int _h)
+Building	building.cpp	/^Building::Building(int _x, int _y, int _w, int _h, SDL_Surface* bs_image)$/;"	f	class:Building	signature:(int _x, int _y, int _w, int _h, SDL_Surface* bs_image)
+Building	building.h	/^		Building(int _x, int _y,int _w, int _h, SDL_Surface* bs_image);$/;"	p	class:Building	access:public	signature:(int _x, int _y,int _w, int _h, SDL_Surface* bs_image)
 Building	building.h	/^class Building : public Collider$/;"	c	inherits:Collider
-Building::Building	building.cpp	/^Building::Building(int _x, int _y, int _w, int _h)$/;"	f	class:Building	signature:(int _x, int _y, int _w, int _h)
-Building::Building	building.h	/^		Building(int _x, int _y,int _w, int _h);$/;"	p	class:Building	access:public	signature:(int _x, int _y,int _w, int _h)
+Building::Building	building.cpp	/^Building::Building(int _x, int _y, int _w, int _h, SDL_Surface* bs_image)$/;"	f	class:Building	signature:(int _x, int _y, int _w, int _h, SDL_Surface* bs_image)
+Building::Building	building.h	/^		Building(int _x, int _y,int _w, int _h, SDL_Surface* bs_image);$/;"	p	class:Building	access:public	signature:(int _x, int _y,int _w, int _h, SDL_Surface* bs_image)
+Building::buildings_image	building.h	/^                SDL_Surface *buildings_image;$/;"	m	class:Building	access:private
 Building::card_id	building.h	/^		int card_id;$/;"	m	class:Building	access:public
 Building::check_collide	building.cpp	/^bool Building::check_collide(Collider* other)$/;"	f	class:Building	signature:(Collider* other)
 Building::check_collide	building.h	/^		virtual bool check_collide(Collider*);$/;"	p	class:Building	access:public	signature:(Collider*)
@@ -93,7 +94,7 @@ CCard::__mCard	CCard.h	/^	int			__mCard;	\/\/ 카드번호$/;"	m	class:CCard	access:
 CCard::__mGage	CCard.h	/^	int			__mGage;	\/\/ 게이지$/;"	m	class:CCard	access:private
 CCard::__mLimit	CCard.h	/^	uint64_t		__mLimit;	\/\/ 카드한도$/;"	m	class:CCard	access:private
 CCard::__mMoney	CCard.h	/^	uint64_t		__mMoney;	\/\/ 빌린돈$/;"	m	class:CCard	access:private
-CHAR_VELOCITY	main.cpp	/^int CHAR_VELOCITY;$/;"	v
+CHAR_VELOCITY	global.cpp	/^int CHAR_VELOCITY;$/;"	v
 CPlayer	CPlayer.cpp	/^CPlayer::CPlayer()$/;"	f	class:CPlayer	signature:()
 CPlayer	CPlayer.h	/^	CPlayer();$/;"	p	class:CPlayer	access:public	signature:()
 CPlayer	CPlayer.h	/^class CPlayer$/;"	c
@@ -199,9 +200,9 @@ CreditScene::init	Scene.h	/^		virtual void init();$/;"	p	class:CreditScene	acces
 CreditScene::show	Scene.cpp	/^void CreditScene::show()$/;"	f	class:CreditScene	signature:()
 CreditScene::show	Scene.h	/^		virtual void show();$/;"	p	class:CreditScene	access:public	signature:()
 DEBUG_ON	global.h	/^const bool DEBUG_ON = true;$/;"	v
-DEFAULT_FRAME_RATE	main.cpp	/^int DEFAULT_FRAME_RATE;$/;"	v
-DEFAULT_LIMIT	main.cpp	/^int DEFAULT_LIMIT;$/;"	v
-DEFAULT_RATE	main.cpp	/^double DEFAULT_RATE;$/;"	v
+DEFAULT_FRAME_RATE	global.cpp	/^int DEFAULT_FRAME_RATE;$/;"	v
+DEFAULT_LIMIT	global.cpp	/^int DEFAULT_LIMIT;$/;"	v
+DEFAULT_RATE	global.cpp	/^double DEFAULT_RATE;$/;"	v
 DOOR_H	global.h	/^const int DOOR_H = 16;$/;"	v
 DOOR_W	global.h	/^const int DOOR_W = 50;$/;"	v
 DOOR_X	global.h	/^const int DOOR_X = 40;$/;"	v
@@ -249,8 +250,12 @@ GameScene::happy_ending_flag	Scene.h	/^		bool happy_ending_flag;$/;"	m	class:Gam
 GameScene::hero	Scene.h	/^		Hero *hero;$/;"	m	class:GameScene	access:private
 GameScene::init	GameScene.cpp	/^void GameScene::init()$/;"	f	class:GameScene	signature:()
 GameScene::init	Scene.h	/^		virtual void init();$/;"	p	class:GameScene	access:public	signature:()
+GameScene::init_variables	GameScene.cpp	/^void GameScene::init_variables()$/;"	f	class:GameScene	signature:()
+GameScene::init_variables	Scene.h	/^                void init_variables();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::interest_count	Scene.h	/^		int interest_count;$/;"	m	class:GameScene	access:private
 GameScene::interest_timer	Scene.h	/^		Timer interest_timer;$/;"	m	class:GameScene	access:private
+GameScene::load_background_image	GameScene.cpp	/^void GameScene::load_background_image()$/;"	f	class:GameScene	signature:()
+GameScene::load_background_image	Scene.h	/^                void load_background_image();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::map	Scene.h	/^		Map* map;$/;"	m	class:GameScene	access:private
 GameScene::message	Scene.h	/^		std::string message;$/;"	m	class:GameScene	access:private
 GameScene::message2	Scene.h	/^		std::string message2;$/;"	m	class:GameScene	access:private
@@ -393,16 +398,16 @@ Hero::set_clip	character.h	/^		virtual void set_clip();$/;"	p	class:Hero	access:
 Hero::show	character.cpp	/^void Hero::show(SDL_Surface* screen)$/;"	f	class:Hero	signature:(SDL_Surface* screen)
 Hero::show	character.h	/^		virtual void show(SDL_Surface*);$/;"	p	class:Hero	access:public	signature:(SDL_Surface*)
 INC	makefile	/^INC = -Ilua\/$/;"	m
-IS_FULL_SCREEN	main.cpp	/^bool IS_FULL_SCREEN;$/;"	v
+IS_FULL_SCREEN	global.cpp	/^bool IS_FULL_SCREEN;$/;"	v
 IncreaseGrade	CPlayer.cpp	/^void CPlayer::IncreaseGrade(void)$/;"	f	class:CPlayer	signature:(void)
 IncreaseGrade	CPlayer.h	/^	void	IncreaseGrade(void);$/;"	p	class:CPlayer	access:public	signature:(void)
+L	global.cpp	/^lua_State* L = NULL;$/;"	v
 L	lauxlib.h	/^  lua_State *L;$/;"	m	struct:luaL_Buffer	access:public
 L	lua/lauxlib.h	/^  lua_State *L;$/;"	m	struct:luaL_Buffer	access:public
-L	main.cpp	/^lua_State* L = NULL;$/;"	v
 LEFT	character.h	/^		const int LEFT = 1;$/;"	v
 LIBDIRS	makefile	/^LIBDIRS = -Llua\/$/;"	m
 LIBS	makefile	/^LIBS =  -lSDLmain -lSDL -lSDL_image -lSDL_ttf -llua52$/;"	m
-LIMIT_RATE	main.cpp	/^int LIMIT_RATE;$/;"	v
+LIMIT_RATE	global.cpp	/^int LIMIT_RATE;$/;"	v
 LUAI_BITSINT	lua/luaconf.h	314;"	d
 LUAI_BITSINT	lua/luaconf.h	317;"	d
 LUAI_BITSINT	luaconf.h	392;"	d
@@ -731,6 +736,7 @@ Map	map.h	/^class Map$/;"	c
 Map::background	map.h	/^		SDL_Surface* background;$/;"	m	class:Map	access:protected
 Map::boxes	map.h	/^		vector<SDL_Rect*> boxes;$/;"	m	class:Map	access:protected
 Map::buildings	map.h	/^		vector<Building*> buildings;$/;"	m	class:Map	access:protected
+Map::buildings_image	map.h	/^                SDL_Surface* buildings_image;$/;"	m	class:Map	access:protected
 Map::clean_up	map.cpp	/^void Map::clean_up()$/;"	f	class:Map	signature:()
 Map::clean_up	map.h	/^		void clean_up();$/;"	p	class:Map	access:public	signature:()
 Map::clip	map.h	/^		SDL_Rect clip;$/;"	m	class:Map	access:protected
@@ -748,12 +754,12 @@ Map::x	map.h	/^		int x,y;$/;"	m	class:Map	access:protected
 Map::y	map.h	/^		int x,y;$/;"	m	class:Map	access:protected
 MinusGage	CCard.cpp	/^void CCard::MinusGage(int pMinus)$/;"	f	class:CCard	signature:(int pMinus)
 MinusGage	CCard.h	/^	void	MinusGage(int pMinus);$/;"	p	class:CCard	access:public	signature:(int pMinus)
-OBJECTS	makefile	/^OBJECTS = main.o  Scene.o GameScene.o character.o  collider.o building.o map.o gang.o CCard.o CPlayer.o  GlobalFunctions.o timer.o GameScene_GUI.o lua_glue.o$/;"	m
+OBJECTS	makefile	/^OBJECTS = global.o main.o  Scene.o GameScene.o character.o  collider.o building.o map.o gang.o CCard.o CPlayer.o  GlobalFunctions.o timer.o GameScene_GUI.o lua_glue.o$/;"	m
 OPEN_DOOR_EVENT	global.h	/^const int OPEN_DOOR_EVENT = 100;$/;"	v
 PlusGage	CCard.cpp	/^void CCard::PlusGage(int pAdd)$/;"	f	class:CCard	signature:(int pAdd)
 PlusGage	CCard.h	/^	void	PlusGage(int pAdd);$/;"	p	class:CCard	access:public	signature:(int pAdd)
 RANK_MAX_COUNT	Constants.h	4;"	d
-RATE_RATE	main.cpp	/^double RATE_RATE;$/;"	v
+RATE_RATE	global.cpp	/^double RATE_RATE;$/;"	v
 RIGHT	character.h	/^		const int RIGHT = 2;$/;"	v
 Reset	CCard.cpp	/^void CCard::Reset(void)$/;"	f	class:CCard	signature:(void)
 Reset	CCard.h	/^	void Reset();$/;"	p	class:CCard	access:public	signature:()
@@ -771,9 +777,9 @@ SCREEN_WIDTH	Configuration.h	/^const int SCREEN_WIDTH = 640;$/;"	v
 SDL_Initialize	main.cpp	/^static void SDL_Initialize()$/;"	f	file:	signature:()
 SDL_Initialize	main.cpp	/^static void SDL_Initialize();$/;"	p	file:	signature:()
 SECONDBUILDING_NUM	map.h	/^const int SECONDBUILDING_NUM  = 4;$/;"	v
-SHOP_COUNT_FOR_UPGRADE	main.cpp	/^int SHOP_COUNT_FOR_UPGRADE;$/;"	v
-SRCS	makefile	/^SRCS = main.cpp debug.cpp Scene.cpp GameScene.cpp character.cpp collider.cpp building.cpp map.cpp gang.cpp CCard.cpp CPlayer.cpp GlobalFunctions.cpp timer.cpp GameScene_GUI.cpp lua_glue.cpp$/;"	m
-START_GRADE	main.cpp	/^int START_GRADE;$/;"	v
+SHOP_COUNT_FOR_UPGRADE	global.cpp	/^int SHOP_COUNT_FOR_UPGRADE;$/;"	v
+SRCS	makefile	/^SRCS = global.cpp main.cpp debug.cpp Scene.cpp GameScene.cpp character.cpp collider.cpp building.cpp map.cpp gang.cpp CCard.cpp CPlayer.cpp GlobalFunctions.cpp timer.cpp GameScene_GUI.cpp lua_glue.cpp$/;"	m
+START_GRADE	global.cpp	/^int START_GRADE;$/;"	v
 STOP	character.h	/^		const int STOP = 4;$/;"	v
 STRINGIFY	common.h	33;"	d
 Scene	Scene.h	/^class Scene {$/;"	c
@@ -946,11 +952,12 @@ apply_surface	GlobalFunctions.h	/^void apply_surface( int x, int y, SDL_Surface*
 b	lua/lauxlib.h	/^  char *b;  \/* buffer address *\/$/;"	m	struct:luaL_Buffer	access:public
 background	Scene.h	/^		SDL_Surface *background;$/;"	m	class:Scene	access:protected
 background	map.h	/^		SDL_Surface* background;$/;"	m	class:Map	access:protected
-blackColor	main.cpp	/^SDL_Color blackColor= {0,0,0};$/;"	v
+blackColor	global.cpp	/^SDL_Color blackColor= {0,0,0};$/;"	v
 boxes	map.h	/^		vector<SDL_Rect*> boxes;$/;"	m	class:Map	access:protected
 buffer	lauxlib.h	/^  char buffer[LUAL_BUFFERSIZE];$/;"	m	struct:luaL_Buffer	access:public
 buildings	map.h	/^		vector<Building*> buildings;$/;"	m	class:Map	access:protected
-buildings_image	main.cpp	/^SDL_Surface *buildings_image;$/;"	v
+buildings_image	building.h	/^                SDL_Surface *buildings_image;$/;"	m	class:Building	access:private
+buildings_image	map.h	/^                SDL_Surface* buildings_image;$/;"	m	class:Map	access:protected
 buy	character.cpp	/^bool Hero::buy()$/;"	f	class:Hero	signature:()
 buy	character.h	/^		bool buy();$/;"	p	class:Hero	access:public	signature:()
 calc_dept	character.cpp	/^int Hero::calc_dept()$/;"	f	class:Hero	signature:()
@@ -1073,9 +1080,10 @@ enter_building	character.cpp	/^void Hero::enter_building()$/;"	f	class:Hero	sign
 enter_building	character.h	/^                void enter_building();$/;"	p	class:Hero	access:public	signature:()
 error	GlobalFunctions.cpp	/^void error(const char *fmt, const char *at,  ...) {$/;"	f	signature:(const char *fmt, const char *at, ...)
 error	GlobalFunctions.h	/^void error(const char *fmt, const char *at, ...) ;$/;"	p	signature:(const char *fmt, const char *at, ...)
+event	global.cpp	/^SDL_Event  event;$/;"	v
 event	lua.h	/^  int event;$/;"	m	struct:lua_Debug	access:public
 event	lua/lua.h	/^  int event;$/;"	m	struct:lua_Debug	access:public
-event	main.cpp	/^SDL_Event  event;$/;"	v
+event_loop	main.cpp	/^static void event_loop()$/;"	f	file:	signature:()
 exit_building	character.cpp	/^void Hero::exit_building()$/;"	f	class:Hero	signature:()
 exit_building	character.h	/^                void exit_building();$/;"	p	class:Hero	access:public	signature:()
 f	lua/lauxlib.h	/^  FILE *f;  \/* stream (NULL for incompletely created streams) *\/$/;"	m	struct:luaL_Stream	access:public
@@ -1087,7 +1095,7 @@ fire_message_event	lua_glue.cpp	/^void fire_message_event(int message_id)$/;"	f	
 fire_message_event	lua_glue.h	/^void fire_message_event(int message_id);$/;"	p	signature:(int message_id)
 follow	character.h	/^		bool follow();$/;"	p	class:Gang	access:public	signature:()
 follow	gang.cpp	/^bool Gang::follow()$/;"	f	class:Gang	signature:()
-font	main.cpp	/^TTF_Font *font = NULL;$/;"	v
+font	global.cpp	/^TTF_Font *font = NULL;$/;"	v
 font_module_initialize	main.cpp	/^static void font_module_initialize()$/;"	f	file:	signature:()
 font_module_initialize	main.cpp	/^static void font_module_initialize();$/;"	p	file:	signature:()
 frame	Scene.h	/^		int frame;$/;"	m	class:WalletBar	access:private
@@ -1172,11 +1180,13 @@ init	character.h	/^		virtual void init();$/;"	p	class:Character	access:public	si
 init	character.h	/^		virtual void init();$/;"	p	class:Gang	access:public	signature:()
 init	character.h	/^		virtual void init();$/;"	p	class:Hero	access:public	signature:()
 init	gang.cpp	/^void Gang::init()$/;"	f	class:Gang	signature:()
-init	main.cpp	/^bool init()$/;"	f	signature:()
+init	main.cpp	/^void init()$/;"	f	signature:()
 init	map.cpp	/^void Map::init(SDL_Surface* back)$/;"	f	class:Map	signature:(SDL_Surface* back)
 init	map.h	/^		void init(SDL_Surface* back);$/;"	p	class:Map	access:public	signature:(SDL_Surface* back)
 init_glue	lua_glue.cpp	/^void init_glue()$/;"	f	signature:()
 init_glue	lua_glue.h	/^void init_glue();$/;"	p	signature:()
+init_variables	GameScene.cpp	/^void GameScene::init_variables()$/;"	f	class:GameScene	signature:()
+init_variables	Scene.h	/^                void init_variables();$/;"	p	class:GameScene	access:private	signature:()
 initb	lua/lauxlib.h	/^  char initb[LUAL_BUFFERSIZE];  \/* initial buffer *\/$/;"	m	struct:luaL_Buffer	access:public
 interest_count	Scene.h	/^		int interest_count;$/;"	m	class:GameScene	access:private
 interest_timer	Scene.h	/^		Timer interest_timer;$/;"	m	class:GameScene	access:private
@@ -1201,9 +1211,9 @@ lconfig_h	lua/luaconf.h	9;"	d
 lconfig_h	luaconf.h	9;"	d
 linedefined	lua.h	/^  int linedefined;	\/* (S) *\/$/;"	m	struct:lua_Debug	access:public
 linedefined	lua/lua.h	/^  int linedefined;	\/* (S) *\/$/;"	m	struct:lua_Debug	access:public
-load_default_background	main.cpp	/^static void load_default_background()$/;"	f	file:	signature:()
-load_default_background	main.cpp	/^static void load_default_background();$/;"	p	file:	signature:()
-load_files	main.cpp	/^bool load_files()$/;"	f	signature:()
+load_background_image	GameScene.cpp	/^void GameScene::load_background_image()$/;"	f	class:GameScene	signature:()
+load_background_image	Scene.h	/^                void load_background_image();$/;"	p	class:GameScene	access:private	signature:()
+load_files	main.cpp	/^void load_files()$/;"	f	signature:()
 load_font	main.cpp	/^static void load_font()$/;"	f	file:	signature:()
 load_font	main.cpp	/^static void load_font();$/;"	p	file:	signature:()
 load_image	GlobalFunctions.cpp	/^SDL_Surface *load_image( std::string filename) $/;"	f	signature:( std::string filename)
@@ -1793,7 +1803,7 @@ scene	main.cpp	/^Scene* scene = NULL;$/;"	v
 scenes	main.cpp	/^Scene* scenes[SCENE_NUM];$/;"	v
 scenes_initialize	main.cpp	/^static void scenes_initialize()$/;"	f	file:	signature:()
 scenes_initialize	main.cpp	/^static void scenes_initialize();$/;"	p	file:	signature:()
-screen	main.cpp	/^SDL_Surface *screen = NULL;$/;"	v
+screen	global.cpp	/^SDL_Surface *screen = NULL;$/;"	v
 select_card	character.cpp	/^void Hero::select_card(ECard pCard )$/;"	f	class:Hero	signature:(ECard pCard )
 select_card	character.h	/^		void select_card(ECard pCard);$/;"	p	class:Hero	access:public	signature:(ECard pCard)
 set_clip	character.cpp	/^void Character::set_clip(){;}$/;"	f	class:Character	signature:()
@@ -1857,7 +1867,7 @@ started	timer.h	/^		bool started;$/;"	m	class:Timer	access:private
 stop	Timer.cpp	/^void Timer::stop()$/;"	f	class:Timer	signature:()
 stop	timer.cpp	/^void Timer::stop()$/;"	f	class:Timer	signature:()
 stop	timer.h	/^		void stop();$/;"	p	class:Timer	access:public	signature:()
-textColor	main.cpp	/^SDL_Color textColor = {0,0,0};$/;"	v
+textColor	global.cpp	/^SDL_Color textColor = {0,0,0};$/;"	v
 top	Scene.h	/^		Top* top;$/;"	m	class:GameScene	access:private
 total_str	Scene.h	/^		std::string total_str;$/;"	m	class:Top	access:private
 unpause	Timer.cpp	/^void Timer::unpause()$/;"	f	class:Timer	signature:()
@@ -1870,7 +1880,7 @@ w	map.h	/^		int w,h;$/;"	m	class:Map	access:protected
 wallet	Scene.h	/^		WalletBar* wallet;$/;"	m	class:GameScene	access:private
 what	lua.h	/^  const char *what;	\/* (S) `Lua', `C', `main', `tail' *\/$/;"	m	struct:lua_Debug	access:public
 what	lua/lua.h	/^  const char *what;	\/* (S) 'Lua', 'C', 'main', 'tail' *\/$/;"	m	struct:lua_Debug	access:public
-whiteColor	main.cpp	/^SDL_Color whiteColor= {0xff,0xff,0xff};$/;"	v
+whiteColor	global.cpp	/^SDL_Color whiteColor= {0xff,0xff,0xff};$/;"	v
 x	building.h	/^		int x,y;$/;"	m	class:Building	access:private
 x	building.h	/^		int x,y;$/;"	m	class:Door	access:private
 x	character.h	/^		int x, y, p_x, p_y;$/;"	m	class:Character	access:protected

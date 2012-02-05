@@ -125,4 +125,33 @@ void WalletBar::print_limit(ECard i, uint64_t money)
 	
 }
 
+MessageBox::MessageBox(SDL_Surface* bg)
+{
+    rect.x = MESSAGE_BOX_X;
+    rect.y = MESSAGE_BOX_Y;
+    rect.w = MESSAGE_BOX_W;
+    rect.h = MESSAGE_BOX_H;
+    background = bg;
+}
 
+void MessageBox::show()
+{
+//    std::string message, message2;
+
+    SDL_Surface* message_surface = NULL; 
+    apply_surface(rect.x, rect.y,background,screen,&rect);
+
+    message_surface = TTF_RenderText_Solid( font, message.c_str(), textColor);
+    apply_surface(rect.x, rect.y+1,message_surface,screen);
+
+    message_surface = TTF_RenderText_Solid( font, message.c_str(), whiteColor);
+    apply_surface(rect.x, rect.y,message_surface,screen);
+
+    message_surface = TTF_RenderText_Solid( font, message2.c_str(), textColor);
+    apply_surface(rect.x, rect.y+50+1,message_surface,screen);
+
+    message_surface = TTF_RenderText_Solid( font, message2.c_str(), whiteColor);
+    apply_surface(rect.x, rect.y+50,message_surface,screen);
+
+
+}

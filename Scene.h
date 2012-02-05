@@ -27,6 +27,18 @@ class Scene {
 
 };
 
+class MessageBox
+{
+    private:
+        SDL_Rect rect;
+        SDL_Surface* background;
+        std::string message;
+        std::string message2;
+    public:
+        MessageBox(SDL_Surface* bg);
+        void show();
+
+};
 
 class WalletBar
 {
@@ -131,12 +143,15 @@ class GameScene : public Scene
 		Map* map;
 		Top* top;
 		WalletBar* wallet;
+                MessageBox* message_box_;
 
 		int interest_count;
 		int purchase_count;
 
                 void handleInput();
                 void handleUserEvent();
+                void init_variables();
+                void load_background_image();
 
 
 	public:
