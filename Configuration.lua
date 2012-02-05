@@ -2,7 +2,7 @@ is_full_screen = false--true--true -- full screen
 
 default_frame_rate =  45
 
-default_rate = 0.006 -- 시작할 때의 이자.
+default_rate = 0.6 -- 시작할 때의 이자.
 
 rate_rate = 0.634 -- 이자가 오르는 속도
 
@@ -12,7 +12,7 @@ limit_rate = 100000 --  한도가 오르는 속도
 
 start_grade = 9 -- 9 is B+
 
-
+char_velocity = 5--15
 
 function lua_event_handler(event_id)
     io.stderr:write("here is lua file \n")

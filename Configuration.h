@@ -8,11 +8,12 @@ const int BAR_WIDTH = 150;
 const int BAR_HEIGHT = SCREEN_HEIGHT;
 const int MAP_WIDTH = 490;
 const int MAP_HEIGHT = SCREEN_HEIGHT;
-const int CHAR_VELOCITY = 15;
+//const int CHAR_VELOCITY = 15;
 //const int FRAMES_PER_SECOND = 60;
 
 //const int START_GRADE =  9;
 //
+extern int CHAR_VELOCITY;
 extern bool IS_FULL_SCREEN;
 extern int DEFAULT_FRAME_RATE;
 extern double DEFAULT_RATE;

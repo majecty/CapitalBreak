@@ -108,6 +108,7 @@ void lua_init()
     lua_getglobal(L, "start_grade");
 
     lua_getglobal(L, "is_full_screen");
+    lua_getglobal(L, "char_velocity");
 
     DEFAULT_FRAME_RATE = lua_tointeger(L,1);
     DEFAULT_RATE = lua_tonumber(L,2);
@@ -116,6 +117,7 @@ void lua_init()
     LIMIT_RATE = lua_tointeger(L,5);
     START_GRADE = lua_tointeger(L,6);
     IS_FULL_SCREEN = lua_toboolean(L,7);
+    CHAR_VELOCITY = lua_tointeger(L,8);
 
     fprintf(stderr, "default frame rate is %d\n", LIMIT_RATE);
     fprintf(stderr, "LIMIT_RATE is %d\n", LIMIT_RATE);

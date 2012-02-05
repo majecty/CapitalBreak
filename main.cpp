@@ -18,6 +18,7 @@ int DEFAULT_LIMIT;
 int LIMIT_RATE;
 int START_GRADE;
 bool IS_FULL_SCREEN;
+int CHAR_VELOCITY;
 
 Scene* scene = NULL;
 Scene* scenes[SCENE_NUM];
@@ -35,8 +36,7 @@ bool quit = false;
 SDL_Surface *screen = NULL;
 SDL_Event  event;
 
-lua_State* L;
-
+lua_State* L = NULL;
 
 
 
@@ -54,8 +54,10 @@ bool init()
 
 	if( SDL_Init(SDL_INIT_EVERYTHING) == -1)
 	{
+            fprintf(stderr, "Initialize ERROR AT : %s\n",AT);
 		return false;
 	}
+
 
         if (IS_FULL_SCREEN)
             screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE | SDL_FULLSCREEN);
@@ -64,11 +66,13 @@ bool init()
 
 	if (screen == NULL)
 	{
+            fprintf(stderr, "SetVideoMode Error At : %s\n",AT);
 		return false;
 	}
 
 	if( TTF_Init() == -1 )
 	{
+            fprintf(stderr, "Font Module Load Error At : %s\n",AT);
 		return false;
 	}
 
@@ -86,6 +90,7 @@ bool load_files()
 
 	if(font == NULL)
 	{
+            fprintf(stderr,"Font Load Error At : %s\n",AT);
 		return false;
 	}
 	return true;
@@ -119,21 +124,19 @@ int main(int argc, char* args[] )
 
     if( init() == false )
     {
-        fprintf(stderr, "main initialize fail\n");
+        fprintf(stderr, "main initialize fail at : %s\n",AT);
         return 1;
     }
 
     if( load_files() == false)
     {
-        fprintf(stderr, "main loadfiles fail\n");
+        fprintf(stderr, "main loadfiles fail at : %s\n",AT);
         return 1;
     }
 
     scene = scenes[SCENE_START];
 
     scene->init();
-
-
     Timer fps;
     Timer fpsMeter;
     // Timer used to update the caption
@@ -189,6 +192,7 @@ int main(int argc, char* args[] )
 
     return 0;
 }
+
 void change_scene(int scene_num)
 {
 	scene->clean_up();

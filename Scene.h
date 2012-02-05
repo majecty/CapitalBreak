@@ -135,6 +135,8 @@ class GameScene : public Scene
 		int interest_count;
 		int purchase_count;
 
+                void handleInput();
+                void handleUserEvent();
 
 
 	public:

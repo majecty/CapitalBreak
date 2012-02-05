@@ -1,7 +1,6 @@
 #include "common.h"
 #include "Scene.h"
 #include "lua_glue.h"
-//#include "character.h"
 
 
 GameScene::GameScene()
@@ -19,12 +18,10 @@ void GameScene::init()
 	hero->init();
 	message = "";
 	message2 = "";
-	map = new Map();
-	map->init(background);
-	wallet = new WalletBar();
 
+	map = new Map();
+	wallet = new WalletBar();
 	top = new Top(0,0, 640,30);
-		
 
 
 	message_box.x = MESSAGE_BOX_X;
@@ -38,18 +35,20 @@ void GameScene::init()
 
 	if(background == NULL)
 	{
-		;
+            fprintf(stderr,"Fail to load game_bg.png At :%s ", AT);
 	}
+
 	apply_surface(0,0,background,screen);
+	map->init(background);
+	wallet->init(0,30,140,450);
 
 	show_message_box();
 	interest_timer.start();
-	wallet->init(0,30,140,450);
 
-
-	delta.start();
 
         fire_message_event(eDescription);
+	delta.start();
+
         
 }
 void GameScene::clean_up()
@@ -66,87 +65,27 @@ void GameScene::clean_up()
 }
 void GameScene::do_event()
 {
-    Building* building;
-    std::ostringstream result;
-    std::string *msg = NULL;
-
     hero->handleInput();
 
-    if( event.type == SDL_KEYDOWN)
-    {
-        switch(event.key.keysym.sym)
-        {
-            case SDLK_ESCAPE:
-                change_scene(SCENE_GOODEND);
-                break;
-            case SDLK_RETURN: 
-                break;
-            case SDLK_SPACE:
-                if( hero->buy()) {
-                    purchase_count++;
-                    
-                    //print_message_2("You Purchased Clock", 1000);
-                    fire_message_event(eBuy);
-//                    message2 = "You Purchase Clock";
-//                    show_message_box();
-//                    message_timer2.start();
-                }
-                break;
-            default: break;
-        }
-    }
-    else if(event.type == SDL_USEREVENT)
-    {
-        switch(event.user.code)
-        {
-            case OPEN_DOOR_EVENT:
-                building = (Building*)event.user.data1;
+    this->handleInput();
 
-
-                if( building->card_id == 0)
-                {
-                    //print_message_1("please press space bar to purchae", 1000);
-                    fire_message_event(eEnterShop);
-                    hero->can_buy();
-                } else {
-                    fire_message_event(eEnterCardShop);
-                    //print_message_1("You Get the Card");
-                    hero->add_card((ECard)building->card_id);
-                    hero->select_card((ECard)building->card_id);
-                }
-
-                break;
-            case MESSAGE_BOX_1_EVENT:
-                //fprintf(stderr,"At %s : hereis messageevent",AT);
-                msg = (std::string*)event.user.data1;
-                print_message_1(*msg, (int)event.user.data2);
-                fprintf(stderr, "duration is : %d",(int)event.user.data2);
-                delete(msg);
-                break;
-            case MESSAGE_BOX_2_EVENT:
-                //fprintf(stderr,"At %s : hereis messageevent",AT);
-                msg = (std::string*)event.user.data1;
-                print_message_2(*msg, (int)event.user.data2);
-                delete(msg);
-                break;
-            default:
-                break;
-        }
-    }
+    this->handleUserEvent();
 
 }
 void GameScene::show()
 {
+	check_collide();
 
-	map->show();
 
 	hero->move(delta.get_ticks());
 
-	check_collide();
 
 	top->set_credit_score(hero->get_grade());
 
 	top->set_total_dept(hero->get_depth());
+
+
+	map->show();
 
 	top->show(background);
 
@@ -154,7 +93,8 @@ void GameScene::show()
 	
 
 
-	if ( purchase_count > 30 )
+//	if ( purchase_count > 30 )
+	if ( purchase_count > )
 	{
 		hero->increase_grade();
 		purchase_count = 0;
@@ -166,7 +106,6 @@ void GameScene::show()
 		uint64_t limit = hero->get_limit();
 		uint64_t dept = hero->get_depth();
 
-		//wallet->print_limit(hero->get_current_card(),limit );
 
 		wallet->show_gage(hero->get_current_card(),dept/(float)limit);
 
@@ -188,25 +127,15 @@ void GameScene::show()
 	if( happy_ending_flag) {
             fire_message_event(eHappyEnd);
 			
-            //print_message_1("Hurry up, Press End Key", 1000);
-            //print_message_2("Go to the Abroad!", 1000);
-//		message = "Hurry up, Press End Key";
-//		message2 = "Go to the Abroad!";
-//		show_message_box();
-
 	} else {
 		if( message_timer.get_ticks()> message_timer.period  )
 		{
-//			message = "";
-//			show_message_box();
                         print_message_1("",1000);
 			message_timer.stop();
 
 		}
 		if( message_timer2.get_ticks() > message_timer2.period  )
 		{
-//			message2 = "";
-//			show_message_box();
                         print_message_2("",1000);
 			message_timer2.stop();
 		}
@@ -295,7 +224,72 @@ void GameScene::print_message_2(std::string msg, int duration)
     message2 = msg;//"You Purchase Clock";
     show_message_box();
     message_timer2.start(duration);
+
 }
 
+void GameScene::handleInput()
+{
+    
+    if( event.type == SDL_KEYDOWN)
+    {
+        switch(event.key.keysym.sym)
+        {
+            case SDLK_ESCAPE:
+                change_scene(SCENE_GOODEND);
+                break;
+            case SDLK_RETURN: 
+                break;
+            case SDLK_SPACE:
+                if( hero->buy()) {
+                    purchase_count++;
+                    
+                    fire_message_event(eBuy);
+                }
+                break;
+            default: break;
+        }
+    }
+}
 
+void GameScene::handleUserEvent()
+{
+    std::string *msg = NULL;
+    Building* building = NULL;
+
+    if(event.type == SDL_USEREVENT)
+    {
+        switch(event.user.code)
+        {
+            case OPEN_DOOR_EVENT:
+                building = (Building*)event.user.data1;
+
+
+                if( building->card_id == 0)
+                {
+                    fire_message_event(eEnterShop);
+                    hero->can_buy();
+                } else {
+                    fire_message_event(eEnterCardShop);
+                    hero->add_card((ECard)building->card_id);
+                    hero->select_card((ECard)building->card_id);
+                }
+
+                break;
+            case MESSAGE_BOX_1_EVENT:
+                msg = (std::string*)event.user.data1;
+                print_message_1(*msg, (int)event.user.data2);
+                fprintf(stderr, "duration is : %d",(int)event.user.data2);
+                delete(msg);
+                break;
+            case MESSAGE_BOX_2_EVENT:
+                msg = (std::string*)event.user.data1;
+                print_message_2(*msg, (int)event.user.data2);
+                delete(msg);
+                break;
+            default:
+                break;
+        }
+    }
+
+}
 
