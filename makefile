@@ -7,9 +7,9 @@ CC = gcc
 CXX = g++
 CXXFLAGS = -g -c -Wall
 TARGET = capitalBreak.exe
-#LIBS =  -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf -llua52
-LIBS =  -lSDLmain -lSDL -lSDL_image -lSDL_ttf -llua52
-LIBS += -ldl
+LIBS =  -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf -llua52
+#LIBS =  -lSDLmain -lSDL -lSDL_image -lSDL_ttf -llua52
+#LIBS += -ldl
 LIBDIRS = -Llua/
 INC = -Ilua/
 

@@ -1,6 +1,3 @@
 in lua_init function start lua_glue.cpp:96
 in after lua_loadfiledefault frame rate is 100000
 LIMIT_RATE is 100000
-haha
-/haha
-duration is : 1000
