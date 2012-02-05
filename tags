@@ -768,8 +768,10 @@ SCENE_START	global.h	/^const int SCENE_START = 0;$/;"	v
 SCREEN_BPP	Configuration.h	/^const int SCREEN_BPP = 32;$/;"	v
 SCREEN_HEIGHT	Configuration.h	/^const int SCREEN_HEIGHT = 480;$/;"	v
 SCREEN_WIDTH	Configuration.h	/^const int SCREEN_WIDTH = 640;$/;"	v
+SDL_Initialize	main.cpp	/^static void SDL_Initialize()$/;"	f	file:	signature:()
+SDL_Initialize	main.cpp	/^static void SDL_Initialize();$/;"	p	file:	signature:()
 SECONDBUILDING_NUM	map.h	/^const int SECONDBUILDING_NUM  = 4;$/;"	v
-SHOP_COUNT_FOR_UPGRADE	Configuration.h	/^const int SHOP_COUNT_FOR_UPGRADE = 10;$/;"	v
+SHOP_COUNT_FOR_UPGRADE	main.cpp	/^int SHOP_COUNT_FOR_UPGRADE;$/;"	v
 SRCS	makefile	/^SRCS = main.cpp debug.cpp Scene.cpp GameScene.cpp character.cpp collider.cpp building.cpp map.cpp gang.cpp CCard.cpp CPlayer.cpp GlobalFunctions.cpp timer.cpp GameScene_GUI.cpp lua_glue.cpp$/;"	m
 START_GRADE	main.cpp	/^int START_GRADE;$/;"	v
 STOP	character.h	/^		const int STOP = 4;$/;"	v
@@ -1012,6 +1014,10 @@ currentline	lua.h	/^  int currentline;	\/* (l) *\/$/;"	m	struct:lua_Debug	access
 currentline	lua/lua.h	/^  int currentline;	\/* (l) *\/$/;"	m	struct:lua_Debug	access:public
 decrease_grade	character.cpp	/^void Hero::decrease_grade()$/;"	f	class:Hero	signature:()
 decrease_grade	character.h	/^		void decrease_grade();$/;"	p	class:Hero	access:public	signature:()
+default_video_initialize	main.cpp	/^static void default_video_initialize()$/;"	f	file:	signature:()
+default_video_initialize	main.cpp	/^static void default_video_initialize();$/;"	p	file:	signature:()
+delete_scenes	main.cpp	/^static void delete_scenes()$/;"	f	file:	signature:()
+delete_scenes	main.cpp	/^static void delete_scenes();$/;"	p	file:	signature:()
 delta	Scene.h	/^		Timer delta;$/;"	m	class:GameScene	access:private
 depart_image	building.h	/^		SDL_Surface *depart_image;$/;"	m	class:Building	access:private
 do_event	GameScene.cpp	/^void GameScene::do_event()$/;"	f	class:GameScene	signature:()
@@ -1082,6 +1088,8 @@ fire_message_event	lua_glue.h	/^void fire_message_event(int message_id);$/;"	p	s
 follow	character.h	/^		bool follow();$/;"	p	class:Gang	access:public	signature:()
 follow	gang.cpp	/^bool Gang::follow()$/;"	f	class:Gang	signature:()
 font	main.cpp	/^TTF_Font *font = NULL;$/;"	v
+font_module_initialize	main.cpp	/^static void font_module_initialize()$/;"	f	file:	signature:()
+font_module_initialize	main.cpp	/^static void font_module_initialize();$/;"	p	file:	signature:()
 frame	Scene.h	/^		int frame;$/;"	m	class:WalletBar	access:private
 frame	character.h	/^		int frame;$/;"	m	class:Character	access:protected
 frame	sprite.h	/^		int frame;$/;"	m	class:Sprite	access:protected
@@ -1193,7 +1201,11 @@ lconfig_h	lua/luaconf.h	9;"	d
 lconfig_h	luaconf.h	9;"	d
 linedefined	lua.h	/^  int linedefined;	\/* (S) *\/$/;"	m	struct:lua_Debug	access:public
 linedefined	lua/lua.h	/^  int linedefined;	\/* (S) *\/$/;"	m	struct:lua_Debug	access:public
+load_default_background	main.cpp	/^static void load_default_background()$/;"	f	file:	signature:()
+load_default_background	main.cpp	/^static void load_default_background();$/;"	p	file:	signature:()
 load_files	main.cpp	/^bool load_files()$/;"	f	signature:()
+load_font	main.cpp	/^static void load_font()$/;"	f	file:	signature:()
+load_font	main.cpp	/^static void load_font();$/;"	p	file:	signature:()
 load_image	GlobalFunctions.cpp	/^SDL_Surface *load_image( std::string filename) $/;"	f	signature:( std::string filename)
 load_image	GlobalFunctions.h	/^SDL_Surface *load_image( std::string filename);$/;"	p	signature:( std::string filename)
 luaI_openlib	lauxlib.h	/^LUALIB_API void (luaI_openlib) (lua_State *L, const char *libname,$/;"	p	signature:(lua_State *L, const char *libname, const luaL_Reg *l, int nup)
@@ -1779,6 +1791,8 @@ purchase_count	Scene.h	/^		int purchase_count;$/;"	m	class:GameScene	access:priv
 quit	main.cpp	/^bool quit = false;$/;"	v
 scene	main.cpp	/^Scene* scene = NULL;$/;"	v
 scenes	main.cpp	/^Scene* scenes[SCENE_NUM];$/;"	v
+scenes_initialize	main.cpp	/^static void scenes_initialize()$/;"	f	file:	signature:()
+scenes_initialize	main.cpp	/^static void scenes_initialize();$/;"	p	file:	signature:()
 screen	main.cpp	/^SDL_Surface *screen = NULL;$/;"	v
 select_card	character.cpp	/^void Hero::select_card(ECard pCard )$/;"	f	class:Hero	signature:(ECard pCard )
 select_card	character.h	/^		void select_card(ECard pCard);$/;"	p	class:Hero	access:public	signature:(ECard pCard)

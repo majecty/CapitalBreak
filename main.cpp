@@ -44,95 +44,94 @@ lua_State* L = NULL;
 
 static void scenes_initialize();
 static void SDL_Initialize();
+static void default_video_initialize();
+static void font_module_initialize();
+static void load_font();
+static void load_default_background();
+static void delete_scenes();
 
-bool init()
+void init()
 {
+    quit = false;
+
+    lua_init();
 
     scenes_initialize();
 
-    quit = false;
 
     SDL_Initialize();
 
+    default_video_initialize();
 
-    if (IS_FULL_SCREEN)
-        screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE | SDL_FULLSCREEN);
-    else
-        screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
+    font_module_initialize();
 
-    if (screen == NULL)
-    {
-        fprintf(stderr, "SetVideoMode Error At : %s\n",AT);
-        return false;
-    }
-
-    if( TTF_Init() == -1 )
-    {
-        fprintf(stderr, "Font Module Load Error At : %s\n",AT);
-        return false;
-    }
 
     SDL_WM_SetCaption("Capital Break", NULL);
 
-
-    return true;
 }
 
-bool load_files()
+void load_files()
 {
+    load_default_background();
 
-	font = TTF_OpenFont("SangSangTitleM.ttf", 25);
-	buildings_image = load_image("game_1s_building.png");
+    load_font();
 
-	if(font == NULL)
-	{
-            fprintf(stderr,"Font Load Error At : %s\n",AT);
-		return false;
-	}
-	return true;
 }
 
 void clean_up()
 {
     lua_close(L);
 
-	scene->clean_up();
-	SDL_FreeSurface(buildings_image);
+    scene->clean_up();
 
-	delete (scenes[SCENE_START]);
-	delete (scenes[SCENE_GAME] );
-	delete (scenes[SCENE_BADEND]);
-	delete( scenes[SCENE_GOODEND]);
-	delete( scenes[SCENE_CREDIT]);
+    SDL_FreeSurface(buildings_image);
 
-	TTF_CloseFont( font);
+    delete_scenes();
 
-	TTF_Quit();
+    TTF_CloseFont( font);
 
-	SDL_Quit();
+    TTF_Quit();
+
+    SDL_Quit();
+}
+
+static void event_loop()
+{
+
+    while(SDL_PollEvent ( &event))
+    {
+        scene->do_event();
+
+        if ( event.type == SDL_QUIT)
+        {
+            quit = true;
+        }
+        else if (event.type == SDL_KEYDOWN)
+        {
+            switch(event.key.keysym.sym)
+            {
+                case SDLK_q:
+                    quit = true;
+                    break;
+                default: break;
+            }
+
+        }
+    }
 }
 
 int main(int argc, char* args[] )
 {
-    lua_init();
 
     int frame = 0;
 
-    if( init() == false )
-    {
-        fprintf(stderr, "main initialize fail at : %s\n",AT);
-        return 1;
-    }
+    init();
 
-    if( load_files() == false)
-    {
-        fprintf(stderr, "main loadfiles fail at : %s\n",AT);
-        return 1;
-    }
+    load_files();
 
     scene = scenes[SCENE_START];
-
     scene->init();
+
     Timer fps;
     Timer fpsMeter;
     // Timer used to update the caption
@@ -143,33 +142,14 @@ int main(int argc, char* args[] )
 
     while (quit == false)
     {
+        frame++;
+
         fps.start(); 
 
         scene->show();
 
+        event_loop();
 
-        while(SDL_PollEvent ( &event))
-        {
-            scene->do_event();
-
-            if ( event.type == SDL_QUIT)
-            {
-                quit = true;
-            }
-            else if (event.type == SDL_KEYDOWN)
-            {
-                switch(event.key.keysym.sym)
-                {
-                    case SDLK_q:
-                        quit = true;
-                        break;
-                    default: break;
-                }
-
-            }
-        }
-
-        frame++;
 
         if( fps.get_ticks() < 1000 / DEFAULT_FRAME_RATE)
         {
@@ -184,6 +164,7 @@ int main(int argc, char* args[] )
 
         }
     }
+
     clean_up();
 
     return 0;
@@ -196,6 +177,7 @@ void change_scene(int scene_num)
 	scene->init();
 
 }
+
 
 static void scenes_initialize()
 {
@@ -213,4 +195,55 @@ static void SDL_Initialize()
     {
         error( "SDL CORE Initialize ERROR ",AT);
     }
+}
+
+static void default_video_initialize()
+{
+
+    if (IS_FULL_SCREEN)
+        screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE | SDL_FULLSCREEN);
+    else
+        screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
+
+    if (screen == NULL)
+    {
+        error("Set Video Mode ERROR\n",AT);
+    }
+}
+
+static void font_module_initialize()
+{
+
+    if( TTF_Init() == -1 )
+    {
+        error( "Font Module Load Error \n",AT);
+    }
+}
+
+static void load_font()
+{
+    font = TTF_OpenFont("SangSangTitleM.ttf", 25);
+    if(font == NULL)
+    {
+        error("Font Load Error \n",AT);
+    }
+
+}
+
+static void load_default_background()
+{
+    buildings_image = load_image("game_1s_building.png");
+    if(buildings_image == NULL)
+    {
+        error("ERROR: When load default building image",AT);
+    }
+}
+
+static void delete_scenes()
+{
+    delete (scenes[SCENE_START]);
+    delete (scenes[SCENE_GAME] );
+    delete (scenes[SCENE_BADEND]);
+    delete (scenes[SCENE_GOODEND]);
+    delete (scenes[SCENE_CREDIT]);
 }
