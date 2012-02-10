@@ -154,6 +154,11 @@ class GameScene : public Scene
 		void check_collide();
                 void init_GUI_objects();
                 void do_logic();
+                void increase_grade();
+                void show_gage();
+                void print_happy_end_message();
+                void check_game_end();
+                void update_interest();
 
 
 	public:

@@ -56,42 +56,17 @@ void GameScene::do_logic()
 
     hero->move(delta_time.get_ticks());
 
-    if ( purchase_count > SHOP_COUNT_FOR_UPGRADE)
-    {
-        hero->increase_grade();
-        purchase_count = 0;
-    }
+    increase_grade();
 
-    if( hero->has_card()) {
+    show_gage();
 
-        uint64_t limit = hero->get_limit();
-        uint64_t dept = hero->get_depth();
+    print_happy_end_message();
 
+    update_interest();
+}
 
-        wallet->show_gage(hero->get_current_card(),dept/(float)limit);
-
-        if ( hero-> get_depth() > limit)
-            change_scene(SCENE_BADEND);
-
-
-    }
-
-    if( hero -> get_grade() < 3)
-    {
-        happy_ending_flag = true;
-        if( hero-> get_grade() < 1)
-        {
-            change_scene(SCENE_BADEND);
-        }
-
-    }
-
-    if( happy_ending_flag) {
-        fire_message_event(eHappyEnd);
-
-    } else {
-
-    }
+void GameScene::update_interest()
+{
     if( interest_timer.get_ticks()/1000.0f > 1)
     {
         wallet->show();
@@ -133,7 +108,10 @@ void GameScene::show()
     }
 
     delta_time.start();
+
+    check_game_end();
 }
+
 
 void GameScene::check_collide()
 {
@@ -266,4 +244,52 @@ void GameScene::init_GUI_objects()
     hero->init();
     map->init(background);
     wallet->init(0,30,140,450);
+}
+
+void GameScene::increase_grade()
+{
+
+    if ( purchase_count > SHOP_COUNT_FOR_UPGRADE)
+    {
+        hero->increase_grade();
+        purchase_count = 0;
+    }
+}
+
+void GameScene::show_gage()
+{
+    if( hero->has_card()) {
+
+        uint64_t limit = hero->get_limit();
+        uint64_t dept = hero->get_depth();
+
+
+        wallet->show_gage(hero->get_current_card(),dept/(float)limit);
+
+
+    }
+}
+void GameScene::check_game_end()
+{
+    if( hero->has_card()) {
+        uint64_t limit = hero->get_limit();
+        if ( hero-> get_depth() > limit)
+            change_scene(SCENE_BADEND);
+    }
+    if( hero-> get_grade() < 1)
+    {
+        change_scene(SCENE_BADEND);
+    }
+}
+
+void GameScene::print_happy_end_message()
+{
+    if( hero -> get_grade() < 3)
+    {
+        happy_ending_flag = true;
+
+        fire_message_event(eHappyEnd);
+    }
+
+
 }
