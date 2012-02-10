@@ -8,51 +8,24 @@ GameScene::GameScene()
 	;
 }
 
-void GameScene::init_variables()
-{
-
-    happy_ending_flag = false;
-    interest_count = 0;
-    purchase_count= 0;
-
-}
-
-void GameScene::load_background_image()
-{
-    background = load_image("game_bg.png");
-
-    if(background == NULL)
-    {
-        error("Failt to load GameScene's background\n",AT);
-    }
-}
-
 void GameScene::init()
 {
     init_variables();
 
     load_background_image();
 
-    hero = new Hero();
-    hero->init();
-    map = new Map();
-    wallet = new WalletBar();
-    top = new Top(0,0, 640,30);
-    message_box_ = new MessageBox(background);
-
-
     apply_surface(0,0,background,screen);
-    map->init(background);
-    wallet->init(0,30,140,450);
+
+    init_GUI_objects();
 
     interest_timer.start();
 
-
     fire_message_event(eDescription);
-    delta.start();
 
+    delta_time.start();
 
 }
+
 void GameScene::clean_up()
 {
 	hero->clean_up();
@@ -65,6 +38,7 @@ void GameScene::clean_up()
 	delete(map);
 	delete(top);
 }
+
 void GameScene::do_event()
 {
     hero->handleInput();
@@ -74,86 +48,91 @@ void GameScene::do_event()
     this->handleUserEvent();
 
 }
+
+void GameScene::do_logic()
+{
+
+    check_collide();
+
+    hero->move(delta_time.get_ticks());
+
+    if ( purchase_count > SHOP_COUNT_FOR_UPGRADE)
+    {
+        hero->increase_grade();
+        purchase_count = 0;
+    }
+
+    if( hero->has_card()) {
+
+        uint64_t limit = hero->get_limit();
+        uint64_t dept = hero->get_depth();
+
+
+        wallet->show_gage(hero->get_current_card(),dept/(float)limit);
+
+        if ( hero-> get_depth() > limit)
+            change_scene(SCENE_BADEND);
+
+
+    }
+
+    if( hero -> get_grade() < 3)
+    {
+        happy_ending_flag = true;
+        if( hero-> get_grade() < 1)
+        {
+            change_scene(SCENE_BADEND);
+        }
+
+    }
+
+    if( happy_ending_flag) {
+        fire_message_event(eHappyEnd);
+
+    } else {
+
+    }
+    if( interest_timer.get_ticks()/1000.0f > 1)
+    {
+        wallet->show();
+        hero->calc_dept();
+        interest_timer.start();
+        interest_count++;
+        if (interest_count > 12)
+        {
+            interest_count =0;
+            hero->decrease_grade();
+        }
+    }
+}
 void GameScene::show()
 {
-	check_collide();
+
+    do_logic();
+
+    top->set_credit_score(hero->get_grade());
+
+    top->set_total_dept(hero->get_depth());
 
 
-	hero->move(delta.get_ticks());
+    map->show();
+
+    top->show(background);
+
+    hero->show(screen);
+
+    message_box_->show();
 
 
-	top->set_credit_score(hero->get_grade());
 
-	top->set_total_dept(hero->get_depth());
+    if( SDL_Flip(screen) == -1)
+    {
+        ;
+        fprintf(stderr,"screen refresh error");
+        //	return 1;
+    }
 
-
-	map->show();
-
-	top->show(background);
-
-	hero->show(screen);
-
-        message_box_->show();
-	
-
-
-	if ( purchase_count > SHOP_COUNT_FOR_UPGRADE)
-	{
-		hero->increase_grade();
-		purchase_count = 0;
-	}
-
-
-	if( hero->has_card()) {
-
-		uint64_t limit = hero->get_limit();
-		uint64_t dept = hero->get_depth();
-
-
-		wallet->show_gage(hero->get_current_card(),dept/(float)limit);
-
-		if ( hero-> get_depth() > limit)
-			change_scene(SCENE_BADEND);
-
-
-	}
-
-	if( hero -> get_grade() < 3)
-	{
-		happy_ending_flag = true;
-		if( hero-> get_grade() < 1)
-		{
-			change_scene(SCENE_BADEND);
-		}
-
-	}
-	if( happy_ending_flag) {
-            fire_message_event(eHappyEnd);
-			
-	} else {
-
-	}
-	if( interest_timer.get_ticks()/1000.0f > 1)
-	{
-		wallet->show();
-		hero->calc_dept();
-		interest_timer.start();
-		interest_count++;
-		if (interest_count > 12)
-		{
-			interest_count =0;
-			hero->decrease_grade();
-		}
-	}
-
-	if( SDL_Flip(screen) == -1)
-	{
-		;
-
-                fprintf(stderr,"screen refresh error");
-	//	return 1;
-	}
-	delta.start();
+    delta_time.start();
 }
 
 void GameScene::check_collide()
@@ -256,3 +235,35 @@ void GameScene::handleUserEvent()
 
 }
 
+void GameScene::init_variables()
+{
+
+    happy_ending_flag = false;
+    interest_count = 0;
+    purchase_count= 0;
+
+}
+
+void GameScene::load_background_image()
+{
+    background = load_image("game_bg.png");
+
+    if(background == NULL)
+    {
+        error("Failt to load GameScene's background\n",AT);
+    }
+}
+
+void GameScene::init_GUI_objects()
+{
+
+    hero = new Hero();
+    map = new Map();
+    wallet = new WalletBar();
+    top = new Top(0,0, 640,30);
+    message_box_ = new MessageBox(background);
+
+    hero->init();
+    map->init(background);
+    wallet->init(0,30,140,450);
+}

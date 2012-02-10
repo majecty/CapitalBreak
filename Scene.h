@@ -137,7 +137,7 @@ class GameScene : public Scene
 		bool happy_ending_flag;
 		Hero *hero;
 		Character* gang;
-		Timer delta;
+		Timer delta_time;
 		Timer interest_timer;
 		Map* map;
 		Top* top;
@@ -151,6 +151,9 @@ class GameScene : public Scene
                 void handleUserEvent();
                 void init_variables();
                 void load_background_image();
+		void check_collide();
+                void init_GUI_objects();
+                void do_logic();
 
 
 	public:
@@ -159,7 +162,6 @@ class GameScene : public Scene
 		virtual void clean_up();
 		virtual void do_event();
 		virtual void show();
-		void check_collide();
 };
 
 #endif
