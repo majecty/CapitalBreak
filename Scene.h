@@ -169,6 +169,8 @@ class GameScene : public Scene
 		void check_collide();
                 void print_message_1(std::string msg, int duration);
                 void print_message_2(std::string msg, int duration);
+                void print_message_1_(std::string msg, int duration);
+                void print_message_2_(std::string msg, int duration);
 };
 
 #endif

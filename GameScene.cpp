@@ -41,12 +41,13 @@ void GameScene::init()
     wallet = new WalletBar();
     top = new Top(0,0, 640,30);
     message_box_ = new MessageBox(background);
+    //message_box_->init();
 
-    message_box.x = MESSAGE_BOX_X;
-    message_box.y = MESSAGE_BOX_Y;
-    message_box.w = MESSAGE_BOX_W;
-    message_box.h = MESSAGE_BOX_H;
-    message_box_clip = message_box;
+    //message_box.x = MESSAGE_BOX_X;
+    //message_box.y = MESSAGE_BOX_Y;
+    //message_box.w = MESSAGE_BOX_W;
+    //message_box.h = MESSAGE_BOX_H;
+    //message_box_clip = message_box;
 
 
 
@@ -102,6 +103,8 @@ void GameScene::show()
 	top->show(background);
 
 	hero->show(screen);
+
+        message_box_->show();
 	
 
 
@@ -139,17 +142,17 @@ void GameScene::show()
             fire_message_event(eHappyEnd);
 			
 	} else {
-		if( message_timer.get_ticks()> message_timer.period  )
-		{
-                        print_message_1("",1000);
-			message_timer.stop();
+		//if( message_timer.get_ticks()> message_timer.period  )
+		//{
+                //        print_message_1("",1000);
+		//	message_timer.stop();
 
-		}
-		if( message_timer2.get_ticks() > message_timer2.period  )
-		{
-                        print_message_2("",1000);
-			message_timer2.stop();
-		}
+		//}
+		//if( message_timer2.get_ticks() > message_timer2.period  )
+		//{
+                //        print_message_2("",1000);
+		//	message_timer2.stop();
+		//}
 	}
 	if( interest_timer.get_ticks()/1000.0f > 1)
 	{
@@ -175,31 +178,40 @@ void GameScene::show()
 }
 void GameScene::show_message_box(){
 
-	SDL_Surface* message_surface = NULL; 
-	apply_surface(message_box.x, message_box.y,background,screen,&message_box_clip);
-
-	message_surface = TTF_RenderText_Solid( font, message.c_str(), textColor);
-	apply_surface(message_box.x, message_box.y+1,message_surface,screen);
-
-	message_surface = TTF_RenderText_Solid( font, message.c_str(), whiteColor);
-	apply_surface(message_box.x, message_box.y,message_surface,screen);
-
-	message_surface = TTF_RenderText_Solid( font, message2.c_str(), textColor);
-	apply_surface(message_box.x, message_box.y+50+1,message_surface,screen);
-
-	message_surface = TTF_RenderText_Solid( font, message2.c_str(), whiteColor);
-	apply_surface(message_box.x, message_box.y+50,message_surface,screen);
+//	SDL_Surface* message_surface = NULL; 
+//	apply_surface(message_box.x, message_box.y,background,screen,&message_box_clip);
+//
+//	message_surface = TTF_RenderText_Solid( font, message.c_str(), textColor);
+//	apply_surface(message_box.x, message_box.y+1,message_surface,screen);
+//
+//	message_surface = TTF_RenderText_Solid( font, message.c_str(), whiteColor);
+//	apply_surface(message_box.x, message_box.y,message_surface,screen);
+//
+//	message_surface = TTF_RenderText_Solid( font, message2.c_str(), textColor);
+//	apply_surface(message_box.x, message_box.y+50+1,message_surface,screen);
+//
+//	message_surface = TTF_RenderText_Solid( font, message2.c_str(), whiteColor);
+//	apply_surface(message_box.x, message_box.y+50,message_surface,screen);
 
 }
 
-void GameScene::print_message_1(std::string msg, int duration)
+void GameScene::print_message_1_(std::string msg, int duration)
 {
     message = msg;//"please press space bar to purchase";
     show_message_box();
     message_timer.start(duration);
 }
+void GameScene::print_message_1(std::string msg, int duration)
+{
+    message_box_->print_message_1(msg,duration);
+}
 
 void GameScene::print_message_2(std::string msg, int duration) 
+{
+    message_box_->print_message_2(msg,duration);
+
+}
+void GameScene::print_message_2_(std::string msg, int duration) 
 {
 
     message2 = msg;//"You Purchase Clock";
