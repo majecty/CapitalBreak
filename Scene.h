@@ -34,9 +34,14 @@ class MessageBox
         SDL_Surface* background;
         std::string message;
         std::string message2;
+        Timer message_timer;
+        Timer message_timer2;
     public:
         MessageBox(SDL_Surface* bg);
         void show();
+        void show_message_box();
+        void print_message_1(std::string msg, int duration);
+        void print_message_2(std::string msg, int duration);
 
 };
 

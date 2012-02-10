@@ -136,6 +136,22 @@ MessageBox::MessageBox(SDL_Surface* bg)
 
 void MessageBox::show()
 {
+    if( message_timer.get_ticks()> message_timer.period  )
+    {
+        print_message_1("",1000);
+        message_timer.stop();
+
+    }
+    if( message_timer2.get_ticks() > message_timer2.period  )
+    {
+        print_message_2("",1000);
+        message_timer2.stop();
+    }
+}
+
+void MessageBox::show_message_box()
+{
+
 //    std::string message, message2;
 
     SDL_Surface* message_surface = NULL; 
@@ -155,3 +171,19 @@ void MessageBox::show()
 
 
 }
+
+void MessageBox::print_message_1(std::string msg, int duration)
+{
+    message = msg;//"please press space bar to purchase";
+    show_message_box();
+    message_timer.start(duration);
+}
+
+void MessageBox::print_message_2(std::string msg, int duration) 
+{
+
+    message2 = msg;//"You Purchase Clock";
+    show_message_box();
+    message_timer2.start(duration);
+}
+

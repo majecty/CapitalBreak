@@ -12,7 +12,7 @@ limit_rate = 100000 --  한도가 오르는 속도
 
 start_grade = 9 -- 9 is B+
 
-char_velocity = 5--15
+char_velocity = 10--15
 
 shop_count_for_upgrade = 10 -- 신용등급이 오르기 위해서 몇번 물건을 사야 하는가.
 
