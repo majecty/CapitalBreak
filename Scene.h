@@ -137,13 +137,7 @@ class GameScene : public Scene
 		bool happy_ending_flag;
 		Hero *hero;
 		Character* gang;
-		SDL_Rect message_box;
 		Timer delta;
-		std::string message;
-		std::string message2;
-		SDL_Rect message_box_clip;
-		Timer message_timer;
-		Timer message_timer2;
 		Timer interest_timer;
 		Map* map;
 		Top* top;
@@ -165,12 +159,7 @@ class GameScene : public Scene
 		virtual void clean_up();
 		virtual void do_event();
 		virtual void show();
-		void show_message_box();
 		void check_collide();
-                void print_message_1(std::string msg, int duration);
-                void print_message_2(std::string msg, int duration);
-                void print_message_1_(std::string msg, int duration);
-                void print_message_2_(std::string msg, int duration);
 };
 
 #endif

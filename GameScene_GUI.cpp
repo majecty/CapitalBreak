@@ -152,7 +152,6 @@ void MessageBox::show()
 void MessageBox::show_message_box()
 {
 
-//    std::string message, message2;
 
     SDL_Surface* message_surface = NULL; 
     apply_surface(rect.x, rect.y,background,screen,&rect);
