@@ -136,7 +136,9 @@ class GameScene : public Scene
 	private:
 		bool happy_ending_flag;
 		Hero *hero;
-		Character* gang;
+		Gang* gang;
+                vector<Gang*> gangs;
+
 		Timer delta_time;
 		Timer interest_timer;
 		Map* map;

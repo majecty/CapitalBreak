@@ -59,10 +59,10 @@ bool Hero::move(Uint32 deltaTicks)
 {
 	p_x = x;
 	p_y = y;
-	x += xVel* ((int32_t)deltaTicks / 10.f);
+	x += xVel* ((int32_t)deltaTicks / 10);
 	if ( x < MAP_X) x = MAP_X;
 	if ( x + w > MAP_X + MAP_W) x = MAP_X + MAP_W - w;
-	y += yVel* ((int32_t)deltaTicks / 10.f);
+	y += yVel* ((int32_t)deltaTicks / 10);
 	if ( y < MAP_Y) y = MAP_Y;
 	if ( y  +  h> MAP_Y + MAP_H) y = MAP_Y + MAP_H -h;
 

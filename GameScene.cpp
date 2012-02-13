@@ -10,6 +10,7 @@ GameScene::GameScene()
 
 void GameScene::init()
 {
+
     init_variables();
 
     load_background_image();
@@ -17,6 +18,14 @@ void GameScene::init()
     apply_surface(0,0,background,screen);
 
     init_GUI_objects();
+    gangs.push_back(new Gang());
+    gangs.push_back(new Gang());
+    gangs.push_back(new Gang());
+    gangs.push_back(new Gang());
+    gangs.push_back(new Gang());
+
+    for(int i=0; i<gangs.size(); i++)
+        gangs[i]->init();
 
     interest_timer.start();
 
@@ -31,6 +40,12 @@ void GameScene::clean_up()
 	hero->clean_up();
 	map->clean_up();
         gang->clean_up();
+
+        
+    for(int i=0; i<gangs.size();i++) {
+        gangs[i]->clean_up();
+        delete(gangs[i]);
+    }
 
 	SDL_FreeSurface(background);
 
@@ -54,6 +69,17 @@ void GameScene::do_logic()
 {
 
     check_collide();
+
+    gang->update();
+
+    for(int i=0; i<gangs.size(); i++) {
+        //fprintf(stderr,"i is %d at :%s\n",i,AT);
+        gangs[i]->update();
+        //gangs[i]->move(10);
+        gangs[i]->move(delta_time.get_ticks());
+    }
+
+    gang->move(delta_time.get_ticks());
 
     hero->move(delta_time.get_ticks());
 
@@ -98,6 +124,9 @@ void GameScene::show()
     hero->show(screen);
 
     gang->show(screen);
+
+    for(int i=0; i<gangs.size(); i++)
+        gangs[i]->show(screen);
 
     message_box_->show();
 
