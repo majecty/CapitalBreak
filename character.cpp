@@ -49,14 +49,6 @@ void Hero::init()
 	set_clip();
 
 	aPlayer.SetRank(eFirstRank);
-	//aPlayer.SetGrade(8);
-	//aPlayer.AddCard(eCardAmerican);
-	//aPlayer.SelectCard(eCardAmerican);
-	
-	
-	//cout << "Card Dept: " << aPlayer.GetCurrentCard()->GetDept() << " Total Dept: " << aPlayer.GetDept() << endl;
-	//aPlayer.CalcDept();
-	//cout << "Card Dept: " << aPlayer.GetCurrentCard()->GetDept() << " Total Dept: " << aPlayer.GetDept() << endl;
 }
 
 void Hero::clean_up()
@@ -73,28 +65,7 @@ bool Hero::move(Uint32 deltaTicks)
 	y += yVel* ((int32_t)deltaTicks / 10.f);
 	if ( y < MAP_Y) y = MAP_Y;
 	if ( y  +  h> MAP_Y + MAP_H) y = MAP_Y + MAP_H -h;
-	//x = SCREEN_WIDTH/2;
-	//p_x = x;
-	//y = SCREEN_HEIGHT/2;
-/*
-	if( next_person != NULL) {
-		if( check_collide((Collider*)next_person) ) {
-			return true;
-		}
 
-		if( next_person == NULL) {
-		}
-	//	next_person->init();
-
-		if ((next_person)->move(deltaTicks) == false) {
-			SDL_Rect* object = new SDL_Rect();
-			object->x = x;
-			object->y = y;
-			next_person->set_object(object);
-			next_person->move(deltaTicks);
-		}
-	}
-	*/
 	return true;
 }
 void Hero::show(SDL_Surface* screen)
@@ -134,6 +105,65 @@ void Hero::show(SDL_Surface* screen)
 
 }
 
+
+void Hero::handleInput()
+{
+	int div = CHAR_VELOCITY;
+	//int div = 1/CHAR_VELOCITY;
+
+	if( event.type == SDL_KEYDOWN)
+	{
+		switch(event.key.keysym.sym)
+		{
+			case SDLK_UP: yVel -= UNIT_HEIGHT/div;
+				//y-=UNIT_HEIGHT/div;
+				break;
+			case SDLK_DOWN: yVel += UNIT_HEIGHT/div; break;
+			case SDLK_LEFT: xVel -= UNIT_WIDTH/div; 
+				//x-=UNIT_HEIGHT/div;
+				break;
+			case SDLK_RIGHT: xVel += UNIT_WIDTH/div; break;
+			default: break;
+		}
+	}
+	else if (event.type == SDL_KEYUP)
+	{
+		switch(event.key.keysym.sym)
+		{
+			case SDLK_UP: yVel += UNIT_HEIGHT/div; break;
+			case SDLK_DOWN: yVel -= UNIT_HEIGHT/div; break;
+			case SDLK_LEFT: xVel += UNIT_WIDTH/div; break;
+			case SDLK_RIGHT: xVel -= UNIT_WIDTH/div; break;
+			default: break;
+		}
+	}
+}
+
+bool Hero::check_collide(Collider* other)
+{
+	SDL_Rect* other_box;
+	SDL_Rect offset;
+	other_box = other->get_box();
+
+	
+
+	if( x + w > other_box->x +5 &&
+			other_box->x + other_box->w - 5> x)
+	{
+		if( y + h > other_box->y + 5&&
+				other_box->y + other_box->h - 5 > y)
+		{
+			
+			//x = other_box->x + other_box->w;
+			//y = other_box->y + other_box->h;
+			return true;
+		}
+	}
+
+	delete(other_box);
+
+	return false;
+}
 void Hero::set_clip()
 {
 	clip[DOWN][0].x = 0;
@@ -195,65 +225,6 @@ void Hero::set_clip()
 	clip[UP][2].y = UNIT_HEIGHT * 3;
 	clip[UP][2].w = UNIT_WIDTH;
 	clip[UP][2].h = UNIT_HEIGHT;
-}
-
-void Hero::handleInput()
-{
-	int div = CHAR_VELOCITY;
-	//int div = 1/CHAR_VELOCITY;
-
-	if( event.type == SDL_KEYDOWN)
-	{
-		switch(event.key.keysym.sym)
-		{
-			case SDLK_UP: yVel -= UNIT_HEIGHT/div;
-				//y-=UNIT_HEIGHT/div;
-				break;
-			case SDLK_DOWN: yVel += UNIT_HEIGHT/div; break;
-			case SDLK_LEFT: xVel -= UNIT_WIDTH/div; 
-				//x-=UNIT_HEIGHT/div;
-				break;
-			case SDLK_RIGHT: xVel += UNIT_WIDTH/div; break;
-			default: break;
-		}
-	}
-	else if (event.type == SDL_KEYUP)
-	{
-		switch(event.key.keysym.sym)
-		{
-			case SDLK_UP: yVel += UNIT_HEIGHT/div; break;
-			case SDLK_DOWN: yVel -= UNIT_HEIGHT/div; break;
-			case SDLK_LEFT: xVel += UNIT_WIDTH/div; break;
-			case SDLK_RIGHT: xVel -= UNIT_WIDTH/div; break;
-			default: break;
-		}
-	}
-}
-
-bool Hero::check_collide(Collider* other)
-{
-	SDL_Rect* other_box;
-	SDL_Rect offset;
-	other_box = other->get_box();
-
-	
-
-	if( x + w > other_box->x +5 &&
-			other_box->x + other_box->w - 5> x)
-	{
-		if( y + h > other_box->y + 5&&
-				other_box->y + other_box->h - 5 > y)
-		{
-			
-			//x = other_box->x + other_box->w;
-			//y = other_box->y + other_box->h;
-			return true;
-		}
-	}
-
-	delete(other_box);
-
-	return false;
 }
 
 

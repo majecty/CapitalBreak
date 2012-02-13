@@ -204,7 +204,7 @@ DOOR_H	.\global.h	/^const int DOOR_H = 16;$/;"	v
 DOOR_W	.\global.h	/^const int DOOR_W = 50;$/;"	v
 DOOR_X	.\global.h	/^const int DOOR_X = 40;$/;"	v
 DOOR_Y	.\global.h	/^const int DOOR_Y = 60;$/;"	v
-DOWN	.\character.h	/^		const int DOWN = 0;$/;"	v
+DOWN	.\character.h	/^const int DOWN = 0;$/;"	v
 DecreaseGrade	.\CPlayer.cpp	/^void CPlayer::DecreaseGrade(void)$/;"	f	class:CPlayer	signature:(void)
 DecreaseGrade	.\CPlayer.h	/^	void	DecreaseGrade(void);$/;"	p	class:CPlayer	access:public	signature:(void)
 Door	.\building.cpp	/^Door::Door(int building_x,int building_y, int _x , int _y, int _w, int _h)$/;"	f	class:Door	signature:(int building_x,int building_y, int _x , int _y, int _w, int _h)
@@ -232,12 +232,16 @@ GameScene	.\Scene.h	/^class GameScene : public Scene$/;"	c	inherits:Scene
 GameScene::GameScene	.\GameScene.cpp	/^GameScene::GameScene()$/;"	f	class:GameScene	signature:()
 GameScene::GameScene	.\Scene.h	/^		GameScene();$/;"	p	class:GameScene	access:public	signature:()
 GameScene::check_collide	.\GameScene.cpp	/^void GameScene::check_collide()$/;"	f	class:GameScene	signature:()
-GameScene::check_collide	.\Scene.h	/^		void check_collide();$/;"	p	class:GameScene	access:public	signature:()
+GameScene::check_collide	.\Scene.h	/^		void check_collide();$/;"	p	class:GameScene	access:private	signature:()
+GameScene::check_game_end	.\GameScene.cpp	/^void GameScene::check_game_end()$/;"	f	class:GameScene	signature:()
+GameScene::check_game_end	.\Scene.h	/^                void check_game_end();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::clean_up	.\GameScene.cpp	/^void GameScene::clean_up()$/;"	f	class:GameScene	signature:()
 GameScene::clean_up	.\Scene.h	/^		virtual void clean_up();$/;"	p	class:GameScene	access:public	signature:()
-GameScene::delta	.\Scene.h	/^		Timer delta;$/;"	m	class:GameScene	access:private
+GameScene::delta_time	.\Scene.h	/^		Timer delta_time;$/;"	m	class:GameScene	access:private
 GameScene::do_event	.\GameScene.cpp	/^void GameScene::do_event()$/;"	f	class:GameScene	signature:()
 GameScene::do_event	.\Scene.h	/^		virtual void do_event();$/;"	p	class:GameScene	access:public	signature:()
+GameScene::do_logic	.\GameScene.cpp	/^void GameScene::do_logic()$/;"	f	class:GameScene	signature:()
+GameScene::do_logic	.\Scene.h	/^                void do_logic();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::gang	.\Scene.h	/^		Character* gang;$/;"	m	class:GameScene	access:private
 GameScene::handleInput	.\GameScene.cpp	/^void GameScene::handleInput()$/;"	f	class:GameScene	signature:()
 GameScene::handleInput	.\Scene.h	/^                void handleInput();$/;"	p	class:GameScene	access:private	signature:()
@@ -245,8 +249,12 @@ GameScene::handleUserEvent	.\GameScene.cpp	/^void GameScene::handleUserEvent()$/
 GameScene::handleUserEvent	.\Scene.h	/^                void handleUserEvent();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::happy_ending_flag	.\Scene.h	/^		bool happy_ending_flag;$/;"	m	class:GameScene	access:private
 GameScene::hero	.\Scene.h	/^		Hero *hero;$/;"	m	class:GameScene	access:private
+GameScene::increase_grade	.\GameScene.cpp	/^void GameScene::increase_grade()$/;"	f	class:GameScene	signature:()
+GameScene::increase_grade	.\Scene.h	/^                void increase_grade();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::init	.\GameScene.cpp	/^void GameScene::init()$/;"	f	class:GameScene	signature:()
 GameScene::init	.\Scene.h	/^		virtual void init();$/;"	p	class:GameScene	access:public	signature:()
+GameScene::init_GUI_objects	.\GameScene.cpp	/^void GameScene::init_GUI_objects()$/;"	f	class:GameScene	signature:()
+GameScene::init_GUI_objects	.\Scene.h	/^                void init_GUI_objects();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::init_variables	.\GameScene.cpp	/^void GameScene::init_variables()$/;"	f	class:GameScene	signature:()
 GameScene::init_variables	.\Scene.h	/^                void init_variables();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::interest_count	.\Scene.h	/^		int interest_count;$/;"	m	class:GameScene	access:private
@@ -254,23 +262,17 @@ GameScene::interest_timer	.\Scene.h	/^		Timer interest_timer;$/;"	m	class:GameSc
 GameScene::load_background_image	.\GameScene.cpp	/^void GameScene::load_background_image()$/;"	f	class:GameScene	signature:()
 GameScene::load_background_image	.\Scene.h	/^                void load_background_image();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::map	.\Scene.h	/^		Map* map;$/;"	m	class:GameScene	access:private
-GameScene::message	.\Scene.h	/^		std::string message;$/;"	m	class:GameScene	access:private
-GameScene::message2	.\Scene.h	/^		std::string message2;$/;"	m	class:GameScene	access:private
-GameScene::message_box	.\Scene.h	/^		SDL_Rect message_box;$/;"	m	class:GameScene	access:private
 GameScene::message_box_	.\Scene.h	/^                MessageBox* message_box_;$/;"	m	class:GameScene	access:private
-GameScene::message_box_clip	.\Scene.h	/^		SDL_Rect message_box_clip;$/;"	m	class:GameScene	access:private
-GameScene::message_timer	.\Scene.h	/^		Timer message_timer;$/;"	m	class:GameScene	access:private
-GameScene::message_timer2	.\Scene.h	/^		Timer message_timer2;$/;"	m	class:GameScene	access:private
-GameScene::print_message_1	.\GameScene.cpp	/^void GameScene::print_message_1(std::string msg, int duration)$/;"	f	class:GameScene	signature:(std::string msg, int duration)
-GameScene::print_message_1	.\Scene.h	/^                void print_message_1(std::string msg, int duration);$/;"	p	class:GameScene	access:public	signature:(std::string msg, int duration)
-GameScene::print_message_2	.\GameScene.cpp	/^void GameScene::print_message_2(std::string msg, int duration) $/;"	f	class:GameScene	signature:(std::string msg, int duration)
-GameScene::print_message_2	.\Scene.h	/^                void print_message_2(std::string msg, int duration);$/;"	p	class:GameScene	access:public	signature:(std::string msg, int duration)
+GameScene::print_happy_end_message	.\GameScene.cpp	/^void GameScene::print_happy_end_message()$/;"	f	class:GameScene	signature:()
+GameScene::print_happy_end_message	.\Scene.h	/^                void print_happy_end_message();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::purchase_count	.\Scene.h	/^		int purchase_count;$/;"	m	class:GameScene	access:private
 GameScene::show	.\GameScene.cpp	/^void GameScene::show()$/;"	f	class:GameScene	signature:()
 GameScene::show	.\Scene.h	/^		virtual void show();$/;"	p	class:GameScene	access:public	signature:()
-GameScene::show_message_box	.\GameScene.cpp	/^void GameScene::show_message_box(){$/;"	f	class:GameScene	signature:()
-GameScene::show_message_box	.\Scene.h	/^		void show_message_box();$/;"	p	class:GameScene	access:public	signature:()
+GameScene::show_gage	.\GameScene.cpp	/^void GameScene::show_gage()$/;"	f	class:GameScene	signature:()
+GameScene::show_gage	.\Scene.h	/^                void show_gage();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::top	.\Scene.h	/^		Top* top;$/;"	m	class:GameScene	access:private
+GameScene::update_interest	.\GameScene.cpp	/^void GameScene::update_interest()$/;"	f	class:GameScene	signature:()
+GameScene::update_interest	.\Scene.h	/^                void update_interest();$/;"	p	class:GameScene	access:private	signature:()
 GameScene::wallet	.\Scene.h	/^		WalletBar* wallet;$/;"	m	class:GameScene	access:private
 Gang	.\character.h	/^class Gang: public Character, public Collider$/;"	c	inherits:Character,Collider
 Gang::add_person	.\character.h	/^		virtual void add_person();$/;"	p	class:Gang	access:public	signature:()
@@ -401,7 +403,7 @@ IncreaseGrade	.\CPlayer.h	/^	void	IncreaseGrade(void);$/;"	p	class:CPlayer	acces
 L	.\global.cpp	/^lua_State* L = NULL;$/;"	v
 L	.\lauxlib.h	/^  lua_State *L;$/;"	m	struct:luaL_Buffer	access:public
 L	.\lua\lauxlib.h	/^  lua_State *L;$/;"	m	struct:luaL_Buffer	access:public
-LEFT	.\character.h	/^		const int LEFT = 1;$/;"	v
+LEFT	.\character.h	/^const int LEFT = 1;$/;"	v
 LIMIT_RATE	.\global.cpp	/^int LIMIT_RATE;$/;"	v
 LUAI_BITSINT	.\lua\luaconf.h	314;"	d
 LUAI_BITSINT	.\lua\luaconf.h	317;"	d
@@ -773,7 +775,7 @@ PlusGage	.\CCard.cpp	/^void CCard::PlusGage(int pAdd)$/;"	f	class:CCard	signatur
 PlusGage	.\CCard.h	/^	void	PlusGage(int pAdd);$/;"	p	class:CCard	access:public	signature:(int pAdd)
 RANK_MAX_COUNT	.\Constants.h	4;"	d
 RATE_RATE	.\global.cpp	/^double RATE_RATE;$/;"	v
-RIGHT	.\character.h	/^		const int RIGHT = 2;$/;"	v
+RIGHT	.\character.h	/^const int RIGHT = 2;$/;"	v
 Reset	.\CCard.cpp	/^void CCard::Reset(void)$/;"	f	class:CCard	signature:(void)
 Reset	.\CCard.h	/^	void Reset();$/;"	p	class:CCard	access:public	signature:()
 Reset	.\CPlayer.cpp	/^void CPlayer::Reset()$/;"	f	class:CPlayer	signature:()
@@ -792,7 +794,7 @@ SDL_Initialize	.\main.cpp	/^static void SDL_Initialize();$/;"	p	file:	signature:
 SECONDBUILDING_NUM	.\map.h	/^const int SECONDBUILDING_NUM  = 4;$/;"	v
 SHOP_COUNT_FOR_UPGRADE	.\global.cpp	/^int SHOP_COUNT_FOR_UPGRADE;$/;"	v
 START_GRADE	.\global.cpp	/^int START_GRADE;$/;"	v
-STOP	.\character.h	/^		const int STOP = 4;$/;"	v
+STOP	.\character.h	/^const int STOP = 4;$/;"	v
 STRINGIFY	.\common.h	33;"	d
 Scene	.\Scene.h	/^class Scene {$/;"	c
 Scene::background	.\Scene.h	/^		SDL_Surface *background;$/;"	m	class:Scene	access:protected
@@ -891,7 +893,7 @@ Top::show	.\Scene.h	/^		void show(SDL_Surface*);$/;"	p	class:Top	access:public	s
 Top::total_str	.\Scene.h	/^		std::string total_str;$/;"	m	class:Top	access:private
 UNIT_HEIGHT	.\global.h	/^const int UNIT_HEIGHT = 30;$/;"	v
 UNIT_WIDTH	.\global.h	/^const int UNIT_WIDTH = 30;$/;"	v
-UP	.\character.h	/^		const int UP = 3;$/;"	v
+UP	.\character.h	/^const int UP = 3;$/;"	v
 WalletBar	.\Scene.h	/^class WalletBar$/;"	c
 WalletBar::card_gage	.\Scene.h	/^		SDL_Rect card_gage[6];$/;"	m	class:WalletBar	access:private
 WalletBar::cards	.\Scene.h	/^		SDL_Rect cards[6];$/;"	m	class:WalletBar	access:private
@@ -978,7 +980,7 @@ cards_limits_clip	.\Scene.h	/^		SDL_Rect cards_limits_clip[6];$/;"	m	class:Walle
 change_scene	.\GlobalFunctions.h	/^void change_scene(int scene_num);$/;"	p	signature:(int scene_num)
 change_scene	.\main.cpp	/^void change_scene(int scene_num)$/;"	f	signature:(int scene_num)
 check_collide	.\GameScene.cpp	/^void GameScene::check_collide()$/;"	f	class:GameScene	signature:()
-check_collide	.\Scene.h	/^		void check_collide();$/;"	p	class:GameScene	access:public	signature:()
+check_collide	.\Scene.h	/^		void check_collide();$/;"	p	class:GameScene	access:private	signature:()
 check_collide	.\building.cpp	/^bool Building::check_collide(Collider* other)$/;"	f	class:Building	signature:(Collider* other)
 check_collide	.\building.cpp	/^bool Door::check_collide(Collider* other)$/;"	f	class:Door	signature:(Collider* other)
 check_collide	.\building.h	/^		virtual bool check_collide(Collider*);$/;"	p	class:Building	access:public	signature:(Collider*)
@@ -989,6 +991,8 @@ check_collide	.\character.h	/^		virtual bool check_collide(Collider*);$/;"	p	cla
 check_collide	.\collider.h	/^		virtual bool check_collide(Collider*)=0;$/;"	p	class:Collider	access:public	signature:(Collider*)
 check_collide	.\gang.cpp	/^bool Gang::check_collide(Collider* other)$/;"	f	class:Gang	signature:(Collider* other)
 check_collider	.\collider.cpp	/^bool check_collider(Collider* other){return true;}$/;"	f	signature:(Collider* other)
+check_game_end	.\GameScene.cpp	/^void GameScene::check_game_end()$/;"	f	class:GameScene	signature:()
+check_game_end	.\Scene.h	/^                void check_game_end();$/;"	p	class:GameScene	access:private	signature:()
 clean_up	.\GameScene.cpp	/^void GameScene::clean_up()$/;"	f	class:GameScene	signature:()
 clean_up	.\GameScene_GUI.cpp	/^void WalletBar::clean_up()$/;"	f	class:WalletBar	signature:()
 clean_up	.\Scene.cpp	/^void BadEndScene::clean_up()$/;"	f	class:BadEndScene	signature:()
@@ -1027,7 +1031,7 @@ default_video_initialize	.\main.cpp	/^static void default_video_initialize()$/;"
 default_video_initialize	.\main.cpp	/^static void default_video_initialize();$/;"	p	file:	signature:()
 delete_scenes	.\main.cpp	/^static void delete_scenes()$/;"	f	file:	signature:()
 delete_scenes	.\main.cpp	/^static void delete_scenes();$/;"	p	file:	signature:()
-delta	.\Scene.h	/^		Timer delta;$/;"	m	class:GameScene	access:private
+delta_time	.\Scene.h	/^		Timer delta_time;$/;"	m	class:GameScene	access:private
 depart_image	.\building.h	/^		SDL_Surface *depart_image;$/;"	m	class:Building	access:private
 do_event	.\GameScene.cpp	/^void GameScene::do_event()$/;"	f	class:GameScene	signature:()
 do_event	.\Scene.cpp	/^void BadEndScene::do_event()$/;"	f	class:BadEndScene	signature:()
@@ -1041,6 +1045,8 @@ do_event	.\Scene.h	/^		virtual void do_event();$/;"	p	class:GameScene	access:pub
 do_event	.\Scene.h	/^		virtual void do_event();$/;"	p	class:GoodEndScene	access:public	signature:()
 do_event	.\Scene.h	/^		virtual void do_event();$/;"	p	class:Scene	access:public	signature:()
 do_event	.\Scene.h	/^		virtual void do_event();$/;"	p	class:StartScene	access:public	signature:()
+do_logic	.\GameScene.cpp	/^void GameScene::do_logic()$/;"	f	class:GameScene	signature:()
+do_logic	.\Scene.h	/^                void do_logic();$/;"	p	class:GameScene	access:private	signature:()
 door	.\building.h	/^		Door *door;$/;"	m	class:Building	access:private
 eBuy	.\Constants.h	/^    eBuy,$/;"	e	enum:EScript
 eCardAmerican	.\Constants.h	/^	eCardAmerican,$/;"	e	enum:ECard
@@ -1156,6 +1162,8 @@ hero	.\Scene.h	/^		Hero *hero;$/;"	m	class:GameScene	access:private
 i_ci	.\lua.h	/^  int i_ci;  \/* active function *\/$/;"	m	struct:lua_Debug	access:public
 i_ci	.\lua\lua.h	/^  struct CallInfo *i_ci;  \/* active function *\/$/;"	m	struct:lua_Debug	typeref:struct:lua_Debug::CallInfo	access:public
 image	.\character.h	/^		SDL_Surface *image;$/;"	m	class:Character	access:protected
+increase_grade	.\GameScene.cpp	/^void GameScene::increase_grade()$/;"	f	class:GameScene	signature:()
+increase_grade	.\Scene.h	/^                void increase_grade();$/;"	p	class:GameScene	access:private	signature:()
 increase_grade	.\character.cpp	/^void Hero::increase_grade()$/;"	f	class:Hero	signature:()
 increase_grade	.\character.h	/^		void increase_grade();$/;"	p	class:Hero	access:public	signature:()
 indoor	.\character.h	/^                bool indoor;$/;"	m	class:Hero	access:private
@@ -1184,6 +1192,8 @@ init	.\gang.cpp	/^void Gang::init()$/;"	f	class:Gang	signature:()
 init	.\main.cpp	/^void init()$/;"	f	signature:()
 init	.\map.cpp	/^void Map::init(SDL_Surface* back)$/;"	f	class:Map	signature:(SDL_Surface* back)
 init	.\map.h	/^		void init(SDL_Surface* back);$/;"	p	class:Map	access:public	signature:(SDL_Surface* back)
+init_GUI_objects	.\GameScene.cpp	/^void GameScene::init_GUI_objects()$/;"	f	class:GameScene	signature:()
+init_GUI_objects	.\Scene.h	/^                void init_GUI_objects();$/;"	p	class:GameScene	access:private	signature:()
 init_glue	.\lua_glue.cpp	/^void init_glue()$/;"	f	signature:()
 init_glue	.\lua_glue.h	/^void init_glue();$/;"	p	signature:()
 init_variables	.\GameScene.cpp	/^void GameScene::init_variables()$/;"	f	class:GameScene	signature:()
@@ -1746,17 +1756,11 @@ maj_lua_error	.\GlobalFunctions.cpp	/^void maj_lua_error(lua_State *L, const cha
 maj_lua_error	.\GlobalFunctions.h	/^void maj_lua_error(lua_State*, const char*, const char*, ...);$/;"	p	signature:(lua_State*, const char*, const char*, ...)
 map	.\Scene.h	/^		Map* map;$/;"	m	class:GameScene	access:private
 menu	.\Scene.h	/^		int menu;$/;"	m	class:StartScene	access:private
-message	.\Scene.h	/^		std::string message;$/;"	m	class:GameScene	access:private
 message	.\Scene.h	/^        std::string message;$/;"	m	class:MessageBox	access:private
-message2	.\Scene.h	/^		std::string message2;$/;"	m	class:GameScene	access:private
 message2	.\Scene.h	/^        std::string message2;$/;"	m	class:MessageBox	access:private
-message_box	.\Scene.h	/^		SDL_Rect message_box;$/;"	m	class:GameScene	access:private
 message_box_	.\Scene.h	/^                MessageBox* message_box_;$/;"	m	class:GameScene	access:private
-message_box_clip	.\Scene.h	/^		SDL_Rect message_box_clip;$/;"	m	class:GameScene	access:private
 message_handler	.\Configuration.lua	/^function message_handler(message_id)$/;"	f
-message_timer	.\Scene.h	/^		Timer message_timer;$/;"	m	class:GameScene	access:private
 message_timer	.\Scene.h	/^        Timer message_timer;$/;"	m	class:MessageBox	access:private
-message_timer2	.\Scene.h	/^		Timer message_timer2;$/;"	m	class:GameScene	access:private
 message_timer2	.\Scene.h	/^        Timer message_timer2;$/;"	m	class:MessageBox	access:private
 move	.\character.cpp	/^bool Character::move(Uint32 deltaTicks) {return true ;}$/;"	f	class:Character	signature:(Uint32 deltaTicks)
 move	.\character.cpp	/^bool Hero::move(Uint32 deltaTicks)$/;"	f	class:Hero	signature:(Uint32 deltaTicks)
@@ -1794,15 +1798,13 @@ pause	.\timer.h	/^		void pause();$/;"	p	class:Timer	access:public	signature:()
 paused	.\timer.h	/^		bool paused;$/;"	m	class:Timer	access:private
 pausedTicks	.\timer.h	/^		int pausedTicks;$/;"	m	class:Timer	access:private
 period	.\timer.h	/^                int period;$/;"	m	class:Timer	access:public
+print_happy_end_message	.\GameScene.cpp	/^void GameScene::print_happy_end_message()$/;"	f	class:GameScene	signature:()
+print_happy_end_message	.\Scene.h	/^                void print_happy_end_message();$/;"	p	class:GameScene	access:private	signature:()
 print_limit	.\GameScene_GUI.cpp	/^void WalletBar::print_limit(ECard i, uint64_t money)$/;"	f	class:WalletBar	signature:(ECard i, uint64_t money)
 print_limit	.\Scene.h	/^		void print_limit(ECard, uint64_t);$/;"	p	class:WalletBar	access:public	signature:(ECard, uint64_t)
-print_message_1	.\GameScene.cpp	/^void GameScene::print_message_1(std::string msg, int duration)$/;"	f	class:GameScene	signature:(std::string msg, int duration)
 print_message_1	.\GameScene_GUI.cpp	/^void MessageBox::print_message_1(std::string msg, int duration)$/;"	f	class:MessageBox	signature:(std::string msg, int duration)
-print_message_1	.\Scene.h	/^                void print_message_1(std::string msg, int duration);$/;"	p	class:GameScene	access:public	signature:(std::string msg, int duration)
 print_message_1	.\Scene.h	/^        void print_message_1(std::string msg, int duration);$/;"	p	class:MessageBox	access:public	signature:(std::string msg, int duration)
-print_message_2	.\GameScene.cpp	/^void GameScene::print_message_2(std::string msg, int duration) $/;"	f	class:GameScene	signature:(std::string msg, int duration)
 print_message_2	.\GameScene_GUI.cpp	/^void MessageBox::print_message_2(std::string msg, int duration) $/;"	f	class:MessageBox	signature:(std::string msg, int duration)
-print_message_2	.\Scene.h	/^                void print_message_2(std::string msg, int duration);$/;"	p	class:GameScene	access:public	signature:(std::string msg, int duration)
 print_message_2	.\Scene.h	/^        void print_message_2(std::string msg, int duration);$/;"	p	class:MessageBox	access:public	signature:(std::string msg, int duration)
 purchase_count	.\Scene.h	/^		int purchase_count;$/;"	m	class:GameScene	access:private
 quit	.\main.cpp	/^bool quit = false;$/;"	v
@@ -1858,11 +1860,11 @@ show	.\character.h	/^		virtual void show(SDL_Surface*);$/;"	p	class:Hero	access:
 show	.\gang.cpp	/^void Gang::show(SDL_Surface* screen)$/;"	f	class:Gang	signature:(SDL_Surface* screen)
 show	.\map.cpp	/^void Map::show()$/;"	f	class:Map	signature:()
 show	.\map.h	/^		void show();$/;"	p	class:Map	access:public	signature:()
+show_gage	.\GameScene.cpp	/^void GameScene::show_gage()$/;"	f	class:GameScene	signature:()
 show_gage	.\GameScene_GUI.cpp	/^void WalletBar::show_gage(ECard i, float ratio)$/;"	f	class:WalletBar	signature:(ECard i, float ratio)
 show_gage	.\Scene.h	/^		void show_gage(ECard, float);$/;"	p	class:WalletBar	access:public	signature:(ECard, float)
-show_message_box	.\GameScene.cpp	/^void GameScene::show_message_box(){$/;"	f	class:GameScene	signature:()
+show_gage	.\Scene.h	/^                void show_gage();$/;"	p	class:GameScene	access:private	signature:()
 show_message_box	.\GameScene_GUI.cpp	/^void MessageBox::show_message_box()$/;"	f	class:MessageBox	signature:()
-show_message_box	.\Scene.h	/^		void show_message_box();$/;"	p	class:GameScene	access:public	signature:()
 show_message_box	.\Scene.h	/^        void show_message_box();$/;"	p	class:MessageBox	access:public	signature:()
 size	.\lua\lauxlib.h	/^  size_t size;  \/* buffer size *\/$/;"	m	struct:luaL_Buffer	access:public
 source	.\lua.h	/^  const char *source;	\/* (S) *\/$/;"	m	struct:lua_Debug	access:public
@@ -1881,6 +1883,8 @@ top	.\Scene.h	/^		Top* top;$/;"	m	class:GameScene	access:private
 total_str	.\Scene.h	/^		std::string total_str;$/;"	m	class:Top	access:private
 unpause	.\timer.cpp	/^void Timer::unpause()$/;"	f	class:Timer	signature:()
 unpause	.\timer.h	/^		void unpause();$/;"	p	class:Timer	access:public	signature:()
+update_interest	.\GameScene.cpp	/^void GameScene::update_interest()$/;"	f	class:GameScene	signature:()
+update_interest	.\Scene.h	/^                void update_interest();$/;"	p	class:GameScene	access:private	signature:()
 w	.\building.h	/^		int w,h;$/;"	m	class:Building	access:private
 w	.\building.h	/^		int w,h;$/;"	m	class:Door	access:private
 w	.\character.h	/^		int w, h;$/;"	m	class:Character	access:protected

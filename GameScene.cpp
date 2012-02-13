@@ -30,6 +30,7 @@ void GameScene::clean_up()
 {
 	hero->clean_up();
 	map->clean_up();
+        gang->clean_up();
 
 	SDL_FreeSurface(background);
 
@@ -95,6 +96,8 @@ void GameScene::show()
     top->show(background);
 
     hero->show(screen);
+
+    gang->show(screen);
 
     message_box_->show();
 
@@ -235,6 +238,7 @@ void GameScene::load_background_image()
 void GameScene::init_GUI_objects()
 {
 
+    gang = new Gang();
     hero = new Hero();
     map = new Map();
     wallet = new WalletBar();
@@ -242,6 +246,7 @@ void GameScene::init_GUI_objects()
     message_box_ = new MessageBox(background);
 
     hero->init();
+    gang->init();
     map->init(background);
     wallet->init(0,30,140,450);
 }

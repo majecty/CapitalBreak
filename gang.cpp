@@ -13,6 +13,7 @@ void Gang::init()
 	p_y = y;
 	w = 20;
 	h = 30;
+        xVel=0, yVel=0;
 	image = load_image("character_gang.png");;
 	set_clip();
 }

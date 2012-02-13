@@ -6,11 +6,12 @@
 #include "CPlayer.h"
 #include "Constants.h"
 
-		const int DOWN = 0;
-		const int LEFT = 1;
-		const int RIGHT = 2;
-		const int UP = 3;
-		const int STOP = 4;
+const int DOWN = 0;
+const int LEFT = 1;
+const int RIGHT = 2;
+const int UP = 3;
+const int STOP = 4;
+
 class Character 
 {
 	private:
@@ -52,6 +53,7 @@ class Hero : public Character ,public Collider
 		virtual void add_person();
 
 		virtual bool check_collide(Collider*);
+
 		virtual SDL_Rect* get_box();
 		void handleInput();
 		void can_buy();
