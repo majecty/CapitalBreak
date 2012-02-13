@@ -5,6 +5,7 @@
 #include "collider.h"
 #include "CPlayer.h"
 #include "Constants.h"
+#include "timer.h"
 
 const int DOWN = 0;
 const int LEFT = 1;
@@ -86,6 +87,7 @@ class Gang: public Character, public Collider
 	private:
 		Gang* next_person;
 		SDL_Rect* object_point;
+                Timer update_timer;
 
 	public:
 
@@ -100,6 +102,7 @@ class Gang: public Character, public Collider
 		virtual SDL_Rect* get_box();
 		virtual void set_object(SDL_Rect *object);
 		virtual void move_back();
+                void update();
 		bool follow();
                     
 		//void handleInput();

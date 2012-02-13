@@ -17,7 +17,7 @@ Top::Top(int x, int y, int w, int h)
 void Top::set_credit_score(int credit)
 {
 
-        fprintf(stderr,"credit is %d At : %s\n", credit,AT);
+        //fprintf(stderr,"credit is %d At : %s\n", credit,AT);
 	credit_str = gGradeName[credit];
 
 

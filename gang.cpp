@@ -3,9 +3,12 @@
 #include "common.h"
 #include "character.h"
 #include <stdint.h>
+#include <time.h>
+#include "timer.h"
 
 void Gang::init()
 {
+    srand(time(0));
 	frame = 0;
 	x = SCREEN_WIDTH/2 ;
 	p_x = x;
@@ -14,32 +17,49 @@ void Gang::init()
 	w = 20;
 	h = 30;
         xVel=0, yVel=0;
-	image = load_image("character_gang.png");;
+        if( image != NULL)
+            image = load_image("character_gang.png");;
 	set_clip();
 }
 void Gang::clean_up()
 {
-	if( object_point != NULL)
-		delete(object_point);
-	SDL_FreeSurface(image);
+	//if( object_point != NULL)
+	//	delete(object_point);
+        if( image != NULL)
+            SDL_FreeSurface(image);
+}
+void Gang::update()
+{
+
+    if( update_timer.is_started()) {
+        if ( update_timer.get_ticks() > 500 ) {
+            xVel = (rand() % 5-2);
+            yVel = (rand() % 5-2);
+            update_timer.start();
+        }
+    } else {
+        update_timer.start();
+    }
+
 }
 bool Gang::move(Uint32 deltaTicks)
 {
-	if( follow() == false)
-		return false;
+	//if( follow() == false)
+	//	return false;
 
 	p_x = x;
 	p_y = y;
-	x += xVel * ((int32_t)deltaTicks / 10.f);
+	x += xVel * ((int32_t)deltaTicks / 10);
 	if ( x < MAP_X) x = MAP_X;
 	if ( x + w> MAP_X + MAP_W) x = MAP_X + MAP_W -w;
-	y += yVel * ((int32_t)deltaTicks / 10.f);
+	y += yVel * ((int32_t)deltaTicks / 10);
 	if ( y < MAP_Y) y = MAP_Y;
 	if ( y  + h> MAP_Y + MAP_H) y = MAP_Y + MAP_H -h;
 
-	if( x == object_point->x && y == object_point->y) {
-		object_point = NULL;
-	}
+
+	//if( x == object_point->x && y == object_point->y) {
+	//	object_point = NULL;
+	//}
 
 	return true;
 	
