@@ -89,6 +89,8 @@ class Gang: public Character, public Collider
 		SDL_Rect* object_point;
                 Timer update_timer;
 
+                void put_bomb();
+
 	public:
 
 		virtual void init();

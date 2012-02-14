@@ -105,6 +105,12 @@ void Hero::show(SDL_Surface* screen)
 
 }
 
+// ------ Hero's private method 
+//
+void Hero::put_bomb()
+{
+    
+}
 
 void Hero::handleInput()
 {
