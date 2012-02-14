@@ -5,6 +5,10 @@
 #include <stdint.h>
 #include <time.h>
 #include "timer.h"
+<<<<<<< HEAD
+=======
+#include "object.h"
+>>>>>>> big_reafactor
 
 void Gang::init()
 {
@@ -17,16 +21,28 @@ void Gang::init()
 	w = 20;
 	h = 30;
         xVel=0, yVel=0;
+<<<<<<< HEAD
         if( image != NULL)
             image = load_image("character_gang.png");;
+=======
+
+        ImageManager* im = ImageManager::get_instance();
+        image = im->get_image( ImageList::eGang);
+        //image = load_image("character_gang.png");;
+>>>>>>> big_reafactor
 	set_clip();
 }
 void Gang::clean_up()
 {
 	//if( object_point != NULL)
 	//	delete(object_point);
+<<<<<<< HEAD
         if( image != NULL)
             SDL_FreeSurface(image);
+=======
+//        if( image != NULL)
+//            SDL_FreeSurface(image);
+>>>>>>> big_reafactor
 }
 void Gang::update()
 {
@@ -167,7 +183,7 @@ void Gang::set_clip()
 bool Gang::check_collide(Collider* other)
 {
 	SDL_Rect* other_box;
-	SDL_Rect offset;
+	//SDL_Rect offset;
 	other_box = other->get_box();
 
 	if( x + w > other_box->x &&

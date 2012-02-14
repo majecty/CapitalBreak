@@ -1,5 +1,6 @@
 #include "Scene.h"
 #include "global.h"
+#include "Object.h"
 
 void Scene::init() { ;
     fprintf(stderr, "Scene's init function");
@@ -18,11 +19,13 @@ StartScene::StartScene()
 
 void StartScene::init()
 {
-	background = load_image("main_bg.png");
-	main_menu1= load_image("main_menu1.png");
-	main_menu1_over= load_image("main_menu1_un.png");
-	main_menu2= load_image("main_menu2.png");
-	main_menu2_over= load_image("main_menu2_un.png");
+    ImageManager* im = ImageManager::get_instance();
+    background = im->get_image( ImageList::eMainBG);
+    main_menu1 = im->get_image( ImageList::eMainMenu1);
+    main_menu1_over = im->get_image( ImageList::eMainMenu1Un);
+    main_menu2 = im->get_image( ImageList::eMainMenu2);
+    main_menu2_over = im->get_image( ImageList::eMainMenu2Un);
+
 
         menu = 0;
 
@@ -34,11 +37,6 @@ void StartScene::init()
 }
 void StartScene::clean_up()
 {
-	SDL_FreeSurface(background);
-	SDL_FreeSurface(main_menu1);
-	SDL_FreeSurface(main_menu1_over);
-	SDL_FreeSurface(main_menu2);
-	SDL_FreeSurface(main_menu2_over);
 }
 void StartScene::do_event()
 {
@@ -63,36 +61,7 @@ void StartScene::do_event()
         }
     }
 }
-/*void StartScene::do_event_p()
-{
-	while( SDL_PollEvent( &event))
-	{
-		if( event.type == SDL_QUIT)
-		{
-			quit = true;
-		}
-		else if( event.type == SDL_KEYDOWN)
-		{
-			switch(event.key.keysym.sym)
-			{
-				case SDLK_RETURN: 
-					if( menu == 0)
-						change_scene(SCENE_GAME );
-                                        else
-						change_scene(SCENE_CREDIT);
-					break;
-				case SDLK_DOWN:
-				case SDLK_UP:
-					if( menu == 0)
-						menu = 1;
-					else
-						menu = 0;
-					break;
-				default: break;
-			}
-		}
-	}
-} */
+
 void StartScene::show()
 {
 	apply_surface(0,0,background,screen);
@@ -117,7 +86,9 @@ BadEndScene::BadEndScene()
 }
 void BadEndScene::init()
 {
-	background = load_image("game_ending_bad.png");
+    ImageManager* im = ImageManager::get_instance();
+    background = im->get_image( ImageList::eBadEnding);
+	//background = load_image("game_ending_bad.png");
 
 
 	if(background == NULL)
@@ -127,7 +98,6 @@ void BadEndScene::init()
 }
 void BadEndScene::clean_up()
 {
-	SDL_FreeSurface(background);
 }
 void BadEndScene::do_event()
 {
@@ -143,26 +113,7 @@ void BadEndScene::do_event()
     }
 
 }
-/*void BadEndScene::do_event_p()
-{
-	while( SDL_PollEvent( &event))
-	{
-		if( event.type == SDL_QUIT)
-		{
-			quit = true;
-		}
-		else if( event.type == SDL_KEYDOWN)
-		{
-			switch(event.key.keysym.sym)
-			{
-				case SDLK_RETURN: 
-					change_scene(SCENE_START);
-					break;
-				default: break;
-			}
-		}
-	}
-} */
+
 void BadEndScene::show()
 {
 	apply_surface(0,0,background,screen);
@@ -182,7 +133,9 @@ GoodEndScene::GoodEndScene()
 }
 void GoodEndScene::init()
 {
-	background = load_image("game_ending_happy.png");
+    ImageManager* im = ImageManager::get_instance();
+    background = im->get_image( ImageList::eHappyEnding);
+//	background = load_image("game_ending_happy.png");
 
 
 	if(background == NULL)
@@ -192,7 +145,6 @@ void GoodEndScene::init()
 }
 void GoodEndScene::clean_up()
 {
-	SDL_FreeSurface(background);
 }
 void GoodEndScene::do_event()
 {
@@ -207,26 +159,6 @@ void GoodEndScene::do_event()
         }
     }
 }
-/*void GoodEndScene::do_event_p()
-{
-	while( SDL_PollEvent( &event))
-	{
-		if( event.type == SDL_QUIT)
-		{
-			quit = true;
-		}
-		else if( event.type == SDL_KEYDOWN)
-		{
-			switch(event.key.keysym.sym)
-			{
-				case SDLK_RETURN: 
-					change_scene(SCENE_CREDIT);
-					break;
-				default: break;
-			}
-		}
-	}
-} */
 void GoodEndScene::show()
 {
 	apply_surface(0,0,background,screen);
@@ -245,20 +177,19 @@ CreditScene::CreditScene()
 }
 void CreditScene::init()
 {
-            fprintf(stderr, "before load credint.png (%s)\n",SDL_GetError());
-	background = load_image("credit.png");
+    fprintf(stderr, "before load credint.png (%s)\n",SDL_GetError());
+    ImageManager* im = ImageManager::get_instance();
+    background = im->get_image( ImageList::eCredit);
 
-
-            fprintf(stderr, "before cannot load credint.png (%s)\n",SDL_GetError());
-	if(background == NULL)
-	{
-            fprintf(stderr, "cannot load credint.png (%s)\n",SDL_GetError());
-		;
-	}
+    fprintf(stderr, "before cannot load credint.png (%s)\n",SDL_GetError());
+    if(background == NULL)
+    {
+        fprintf(stderr, "cannot load credint.png (%s)\n",SDL_GetError());
+        ;
+    }
 }
 void CreditScene::clean_up()
 {
-	SDL_FreeSurface(background);
 }
 void CreditScene::do_event()
 {
@@ -275,27 +206,7 @@ void CreditScene::do_event()
     }
 
 }
-/* void CreditScene::do_event_p()
-{
-	while( SDL_PollEvent( &event))
-	{
-		if( event.type == SDL_QUIT)
-		{
-			quit = true;
-		}
-		else if( event.type == SDL_KEYDOWN)
-		{
-			switch(event.key.keysym.sym)
-			{
-				case SDLK_RETURN: 
-					change_scene(SCENE_START);
-					//change_scene(SCENE_GOODEND);
-					break;
-				default: break;
-			}
-		}
-	}
-} */
+
 void CreditScene::show()
 {
 	apply_surface(0,0,background,screen);

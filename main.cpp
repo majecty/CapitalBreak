@@ -5,6 +5,7 @@
 #include "Scene.h"
 #include "timer.h"
 #include "lua_glue.h"
+#include "Object.h"
 
 
 Scene* scenes[SCENE_NUM];
@@ -26,8 +27,8 @@ void init()
 
     scenes_initialize();
 
-
     SDL_Initialize();
+
 
     default_video_initialize();
 
@@ -93,7 +94,19 @@ int main(int argc, char* args[] )
 
     int frame = 0;
 
+
+    //test
+    //
+    //
+
+
+    ////test
+
     init();
+    //ImageManager* im;
+    //im = ImageManager::get_instance();
+    //im->init();
+    //im->clean_up();
 
     load_files();
 

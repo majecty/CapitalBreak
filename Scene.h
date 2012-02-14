@@ -12,6 +12,7 @@
 #include <string>
 #include "CPlayer.h"
 #include "GlobalFunctions.h"
+#include "bomb.h"
 
 using namespace std;
 
@@ -134,6 +135,7 @@ class CreditScene: public Scene
 class GameScene : public Scene
 {
 	private:
+            BombManager bm;
 		bool happy_ending_flag;
 		Hero *hero;
 		Gang* gang;

@@ -145,3 +145,50 @@ enum EScript
     eGangPlus,
     eReceiveCard
 };
+
+namespace ImageList
+{
+    enum Enum 
+    {
+        eMainBG = 0,
+        eMainMenu1,
+        eMainMenu1Un,
+        eMainMenu2,
+        eMainMenu2Un,
+        eCredit,
+        eGameBG,
+        eBuilding,
+        eCard,
+        eHeroFace,
+        eDepartmentStore,
+        eGang,
+        eHero,
+        eBadEnding,
+        eHappyEnding,
+        eBomb,
+        ImageFirst = eMainBG, ImageLast = eBomb
+
+    };
+}
+
+const char Image_Name[][32] = 
+{
+    "main_bg.png",
+    "main_menu1.png",
+    "main_menu1_un.png",
+    "main_menu2.png",
+    "main_menu2_un.png",
+    "credit.png",
+    "game_bg.png",
+    "game_1s_building.png",
+    "game_1s_card.png",
+    "game_face.png",
+    "game_dept.png",
+    "character_gang.png",
+    "character_hero.png",
+    "game_ending_bad.png",
+    "game_ending_happy.png",
+    "bomb.png"
+};
+
+

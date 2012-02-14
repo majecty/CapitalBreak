@@ -3,6 +3,7 @@
 #include "building.h"
 #include "global.h"
 #include "Configuration.h"
+#include "object.h"
 
 Building::Building(int _x, int _y, int _w, int _h, SDL_Surface* bs_image)
 {
@@ -15,8 +16,11 @@ Building::Building(int _x, int _y, int _w, int _h, SDL_Surface* bs_image)
 void Building::init(ECard pCard)
 {
 	card_id = (int)pCard;
+        ImageManager* im = ImageManager::get_instance();
+
 	if( card_id ==  0) {
-		depart_image = load_image("game_dept.png");
+            depart_image = im->get_image( ImageList::eDepartmentStore);
+		//depart_image = load_image("game_dept.png");
 		door = new Door(x,y, 35, 55, 110,15);
 	} else {
 		depart_image = NULL;
@@ -51,8 +55,8 @@ void Building::show()
 }
 void Building::clean_up()
 {
-	if (depart_image != NULL)
-		SDL_FreeSurface(depart_image);
+//	if (depart_image != NULL)
+//		SDL_FreeSurface(depart_image);
 }
 
 bool Building::check_collide(Collider* other)

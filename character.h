@@ -19,7 +19,6 @@ class Character
 		Character* next_person;
 
 	protected:
-		int x, y, p_x, p_y;
 		int w, h;
 		int xVel, yVel;
 		SDL_Surface *image;
@@ -27,6 +26,7 @@ class Character
 		SDL_Rect clip[4][3];// 8 ¿∫ ≥À≥À¿‚¿∫ º˝
 
 	public:
+		int x, y, p_x, p_y;
                 virtual ~Character();
 		virtual bool move(Uint32 deltaTicks);
 		virtual void init();
@@ -80,6 +80,8 @@ class Hero : public Character ,public Collider
                 void enter_building();
                 void exit_building();
 
+                void put_bomb();
+
 };
 
 class Gang: public Character, public Collider
@@ -88,6 +90,11 @@ class Gang: public Character, public Collider
 		Gang* next_person;
 		SDL_Rect* object_point;
                 Timer update_timer;
+<<<<<<< HEAD
+=======
+
+                void put_bomb();
+>>>>>>> big_reafactor
 
 	public:
 

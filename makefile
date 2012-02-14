@@ -1,7 +1,7 @@
 .SUFFIXES : .cpp .o
 
-OBJECTS = global.o main.o  Scene.o GameScene.o character.o  collider.o building.o map.o gang.o CCard.o CPlayer.o  GlobalFunctions.o timer.o GameScene_GUI.o lua_glue.o
-SRCS = global.cpp main.cpp debug.cpp Scene.cpp GameScene.cpp character.cpp collider.cpp building.cpp map.cpp gang.cpp CCard.cpp CPlayer.cpp GlobalFunctions.cpp timer.cpp GameScene_GUI.cpp lua_glue.cpp
+OBJECTS = global.o main.o  Scene.o GameScene.o character.o  collider.o building.o map.o gang.o CCard.o CPlayer.o  GlobalFunctions.o timer.o GameScene_GUI.o lua_glue.o Object.o bomb.o
+SRCS = global.cpp main.cpp debug.cpp Scene.cpp GameScene.cpp character.cpp collider.cpp building.cpp map.cpp gang.cpp CCard.cpp CPlayer.cpp GlobalFunctions.cpp timer.cpp GameScene_GUI.cpp lua_glue.cpp Object.cpp bomb.cpp
 
 CC = gcc
 CXX = g++

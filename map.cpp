@@ -3,11 +3,15 @@
 
 #include "map.h"
 #include "global.h"
+#include "Object.h"
 
 
 void Map::init(SDL_Surface* back)
 {
-    buildings_image = load_image("game_1s_building.png");
+
+    ImageManager* im = ImageManager::get_instance();
+    buildings_image = im->get_image( ImageList::eBuilding);
+    //buildings_image = load_image("game_1s_building.png");
     if(buildings_image == NULL)
     {
         error("ERROR: When load default building image",AT);

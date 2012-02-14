@@ -1,6 +1,7 @@
 #include "common.h"
 #include "Scene.h"
 #include "lua_glue.h"
+#include "Object.h"
 
 
 GameScene::GameScene()
@@ -24,7 +25,11 @@ void GameScene::init()
     gangs.push_back(new Gang());
     gangs.push_back(new Gang());
 
+<<<<<<< HEAD
     for(int i=0; i<gangs.size(); i++)
+=======
+    for(unsigned int i=0; i<gangs.size(); i++)
+>>>>>>> big_reafactor
         gangs[i]->init();
 
     interest_timer.start();
@@ -33,6 +38,10 @@ void GameScene::init()
 
     delta_time.start();
 
+    SDL_Rect r;
+    r.x = hero->x;
+    r.y = hero->y;
+    bm.put_bomb(r);
 }
 
 void GameScene::clean_up()
@@ -42,12 +51,20 @@ void GameScene::clean_up()
         gang->clean_up();
 
         
+<<<<<<< HEAD
     for(int i=0; i<gangs.size();i++) {
+=======
+    for(unsigned int i=0; i<gangs.size();i++) {
+>>>>>>> big_reafactor
         gangs[i]->clean_up();
         delete(gangs[i]);
     }
 
+<<<<<<< HEAD
 	SDL_FreeSurface(background);
+=======
+//	SDL_FreeSurface(background);
+>>>>>>> big_reafactor
 
 	if( hero!= NULL)
 		delete(hero);
@@ -68,11 +85,17 @@ void GameScene::do_event()
 void GameScene::do_logic()
 {
 
+    bm.update();
+
     check_collide();
 
     gang->update();
 
+<<<<<<< HEAD
     for(int i=0; i<gangs.size(); i++) {
+=======
+    for(unsigned int i=0; i<gangs.size(); i++) {
+>>>>>>> big_reafactor
         //fprintf(stderr,"i is %d at :%s\n",i,AT);
         gangs[i]->update();
         //gangs[i]->move(10);
@@ -125,7 +148,13 @@ void GameScene::show()
 
     gang->show(screen);
 
+<<<<<<< HEAD
     for(int i=0; i<gangs.size(); i++)
+=======
+    bm.show();
+
+    for(unsigned int i=0; i<gangs.size(); i++)
+>>>>>>> big_reafactor
         gangs[i]->show(screen);
 
     message_box_->show();
@@ -256,7 +285,10 @@ void GameScene::init_variables()
 
 void GameScene::load_background_image()
 {
-    background = load_image("game_bg.png");
+    //background = load_image("game_bg.png");
+
+    ImageManager* im = ImageManager::get_instance();
+    background = im->get_image( ImageList::eGameBG);
 
     if(background == NULL)
     {

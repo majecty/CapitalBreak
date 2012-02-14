@@ -3,6 +3,7 @@
 #include "common.h"
 #include "character.h"
 #include <stdint.h>
+#include "Object.h"
 
 void Character::init() {;}
 bool Character::move(Uint32 deltaTicks) {return true ;}
@@ -45,7 +46,9 @@ void Hero::init()
 	xVel = 0;
 	yVel = 0;
 	next_person = NULL;
-	image = load_image("character_hero.png");;
+        ImageManager* im = ImageManager::get_instance();
+        image = im->get_image( ImageList::eHero);
+	//image = load_image("character_hero.png");;
 	set_clip();
 
 	aPlayer.SetRank(eFirstRank);
@@ -53,7 +56,6 @@ void Hero::init()
 
 void Hero::clean_up()
 {
-	SDL_FreeSurface(image);
 }
 bool Hero::move(Uint32 deltaTicks)
 {
@@ -105,6 +107,12 @@ void Hero::show(SDL_Surface* screen)
 
 }
 
+// ------ Hero's private method 
+//
+void Hero::put_bomb()
+{
+    
+}
 
 void Hero::handleInput()
 {
@@ -142,7 +150,7 @@ void Hero::handleInput()
 bool Hero::check_collide(Collider* other)
 {
 	SDL_Rect* other_box;
-	SDL_Rect offset;
+	//SDL_Rect offset;
 	other_box = other->get_box();
 
 	
@@ -249,7 +257,8 @@ void Hero::move_back()
 		next_person->move_back();
 }
 
-void Hero::add_person( ){
+void Hero::add_person( )
+{
 	if (next_person != NULL) {
 		next_person->add_person();
 	}

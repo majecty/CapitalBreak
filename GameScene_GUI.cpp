@@ -1,6 +1,7 @@
 
 #include "common.h"
 #include "Scene.h"
+#include "object.h"
 
 Top::Top(int x, int y, int w, int h)
 {
@@ -44,8 +45,13 @@ void Top::show(SDL_Surface* background)
 }
 void WalletBar::init(int x, int y, int w, int h)
 {
-	cards_image = load_image("game_1s_card.png");
-	faces_image = load_image("game_face.png");
+
+        ImageManager* im = ImageManager::get_instance();
+        cards_image = im->get_image( ImageList::eCard);
+        faces_image = im->get_image( ImageList::eHeroFace);
+
+//	cards_image = load_image("game_1s_card.png");
+//	faces_image = load_image("game_face.png");
 	offset.x = x; offset.y = y; offset.w = w; offset.h = h;
 
 	for(int i=0;i<6;i++) {
@@ -90,8 +96,8 @@ void WalletBar::init(int x, int y, int w, int h)
 void WalletBar::clean_up()
 {
 
-	SDL_FreeSurface(cards_image);
-	SDL_FreeSurface(faces_image);
+//	SDL_FreeSurface(cards_image);
+//	SDL_FreeSurface(faces_image);
 }
 
 void WalletBar::show( )
